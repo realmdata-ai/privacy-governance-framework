@@ -1,0 +1,72 @@
+{
+  "case_id": "RM-EX-01",
+  "derived_by": "Sub-A, hand arithmetic from PGF v1 text",
+  "scenarios": [
+    {
+      "scenario_id": "S1",
+      "likelihood_score": 4,
+      "likelihood_tier": "Medium",
+      "inherent_likelihood_score": 7,
+      "inherent_likelihood_tier": "High",
+      "severity_index": 3,
+      "severity_band": "Minor",
+      "severity_floor_applied": false,
+      "factor_scores": {"b": 2, "c": 1, "d": 0, "e": 0, "g": 0},
+      "likelihood_model": "threat_based",
+      "residual_tier": "Low",
+      "inherent_tier": "Low",
+      "trace": "Likelihood (SR-18-A-LIK-INDEX, SR-18-A-LIK-BANDS): residual L1+L2+L3+L4 = 2+1+0+1 = 4 -> band 4-6 -> Medium; override (SR-18-A-LIK-OVERRIDE) needs L3=3 and L2>=2: L3=0 -> not engaged. Inherent (SR-18-A-LIK-INHERENT, L3 set to 3) = 2+1+3+1 = 7 -> band 7-8 -> High; override: L2=1 < 2 -> not engaged. Severity (SR-18-A-SEV-INDEX, weights 1): B = data class Confidential 2 + age modifier 0 (current) + special 0 + vulnerability 0 = 2; C = subjects 2500 in [100, 9999] -> 1 + aggregation 0 = 1; D = within organisation 0; E = 0; G = direct collection, clear notice 0; index = 1*2 + 1*1 + 1*0 + 1*0 + 1*0 = 3, floor 0 not binding -> 3 < 3.5 -> Minor (SR-18-A-SEV-BANDS); floors (SR-18-A-SEV-FLOORS): neither condition true -> Minor. Matrix (SR-08-B-MATRIX, row = severity, column = likelihood): (Minor, Medium) = Low; inherent (Minor, High) = Low."
+    },
+    {
+      "scenario_id": "S2",
+      "likelihood_score": 3,
+      "likelihood_tier": "Low",
+      "inherent_likelihood_score": 5,
+      "inherent_likelihood_tier": "Medium",
+      "severity_index": 3,
+      "severity_band": "Minor",
+      "severity_floor_applied": false,
+      "factor_scores": {"b": 2, "c": 1, "d": 0, "e": 0, "g": 0},
+      "likelihood_model": "threat_based",
+      "residual_tier": "Low",
+      "inherent_tier": "Low",
+      "trace": "Likelihood: residual 1+1+1+0 = 3 -> band 0-3 -> Low; override not engaged (L3=1). Inherent 1+1+3+0 = 5 -> band 4-6 -> Medium; override: L3=3 but L2=1 < 2 -> not engaged. Severity: identical factor values to S1 -> 2+0+0+0 + 1+0 + 0 + 0 + 0 = 3 -> Minor; no floor. Matrix: (Minor, Low) = Low; inherent (Minor, Medium) = Low."
+    }
+  ],
+  "track_a": {
+    "residual_tier": "Low",
+    "inherent_tier": "Low",
+    "rule": "max over scenarios",
+    "trace": "Residual max(Low, Low) = Low; inherent max(Low, Low) = Low (SR-08-A-TIER-DEF, SR-18-A-FINAL step 5: highest scenario tier, never averaged)."
+  },
+  "track_b": {
+    "index": 1,
+    "level": "Minor",
+    "trace": "Track (b) index = max(0, regime 0 + financial/operational 0 + reputational 1 + sandbox 0) = 1 -> band 0-1 -> Minor (SR-18-A-FACTOR-F). Reported separately; does not enter the matrix and never offsets track (a) (SR-08-A-TRACKB)."
+  },
+  "gates": {
+    "g_l": "PASS",
+    "g_dpia": false,
+    "g_tia": "NOT_ENGAGED",
+    "pet_module": "NOT_APPLICABLE",
+    "g_36_required_step": "not_applicable_no_dpia"
+  },
+  "pet_module_detail": null,
+  "decision": {
+    "authority": "Processing Owner",
+    "may_proceed": true,
+    "status": "accepted",
+    "available_for_acceptance": true,
+    "dpo_advice_required": false,
+    "reasons": [
+      "Low residual tier: within the Processing Owner's authority; the Processing Owner recorded the acceptance on 26 October 2026 (artificial record), so processing may continue",
+      "G-L passed (SR-18-A-GATES order 1); the acceptance table applies only after G-L (SR-08-A-AUTH)",
+      "Track (a) residual tier Low -> Processing Owner may accept; record in the evidence pack (SR-08-B-AUTH)",
+      "No DPIA exists, so G-36 is not evaluated and DPO advice is not mandatory under the 'where a DPIA exists' rule; no mandatory DPO-advice trigger applies (no Art. 9/10 data, no Art. 22 decision, no PET module, default weights, no anonymity conclusion) (SR-08-B-DPOTRIG)",
+      "PET module not applicable: archetype 4, no de-identified, synthetic, aggregate or federated artefact",
+      "Target risk equal to residual (Low)"
+    ]
+  },
+  "dp_ledger": null,
+  "notes": "dp_ledger null: no DP mechanism is used. may_proceed = true expresses that the rules place the decision within the Processing Owner's authority and impose no blocking gate; it is not a statement that the processing is lawful (G-L is a separate recorded input). Teaching point: the Minor row of the matrix is Low at every likelihood, so the measures change the likelihood band of S1 (High -> Medium) without changing the tier."
+}

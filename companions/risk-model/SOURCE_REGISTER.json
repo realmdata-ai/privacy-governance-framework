@@ -1,0 +1,1503 @@
+{
+  "register": "PGF Risk Model companion — clause-level source register",
+  "version": "0.1.0-preview.1",
+  "pgf_baseline_commit": "02ff78357f3b24f607651f0bf9f01c6c279b587b",
+  "hash_algorithm": "sha256",
+  "line_note": "approx_line / line_range refer to the baseline files; headings and tables may span adjacent lines. Each entry paraphrases or quotes the clause; the PGF file is authoritative.",
+  "documents": {
+    "PGF-08": {
+      "file": "PGF/08_Privacy_Risk_Appetite_Statement_EN.md",
+      "title": "Privacy Risk Appetite Statement",
+      "sha256": "a5bfae04fb0c3a86a1e593cca144d877f1187d982e8a40e633538bd12a15ce3c"
+    },
+    "PGF-10": {
+      "file": "PGF/10_Data_Classification_Policy_EN.md",
+      "title": "Data Classification Policy",
+      "sha256": "9e6f7d154ca5223b858f3d425e337d8c85fd2f4d39a26fcc12bc10896beca963"
+    },
+    "PGF-18": {
+      "file": "PGF/18_Privacy_Risk_Assessment_Methodology_EN.md",
+      "title": "Privacy Risk Assessment Methodology",
+      "sha256": "e1e405a582c666735e67477b5cfbe9a0cd1aab711bb40c2e12f878a39ea9568e"
+    },
+    "PGF-19": {
+      "file": "PGF/19_DPIA_Methodology_and_Template_EN.md",
+      "title": "DPIA Methodology and Template",
+      "sha256": "1be4e7e8ddf5ed793281b3ed091314764ef1d90212ab2fb765ec5b1a61a47b6c"
+    },
+    "PGF-20": {
+      "file": "PGF/20_Transfer_Impact_Assessment_Methodology_EN.md",
+      "title": "Transfer Impact Assessment Methodology",
+      "sha256": "1179d04be7008a773230214df59d99f4a512b78a986ebd3e3d79a03f0202329d"
+    },
+    "PGF-22": {
+      "file": "PGF/22_Privacy_Risk_Register_EN.md",
+      "title": "Privacy Risk Register",
+      "sha256": "33dbcf4eb65b89d5e39eb529f269843113f54dc40588b4a69c1ebc43244a34f9"
+    },
+    "PGF-28": {
+      "file": "PGF/28_Privacy_Metrics_Dashboard_EN.md",
+      "title": "Privacy Metrics Dashboard",
+      "sha256": "7d28fc3dd5ca327ca9bbd4dc25dd6826e178e147bc9e94e26031ab714d20190e"
+    },
+    "PGF-31": {
+      "file": "PGF/31_Governance_Reporting_Template_EN.md",
+      "title": "Governance Reporting Template",
+      "sha256": "cafde39af2b6705e3a656466746a03b5c9936c7f2d6c9a208831d34d9e6a8778"
+    }
+  },
+  "entries": [
+    {
+      "id": "SR-08-A-TIER-DEF",
+      "doc": "PGF-08",
+      "part": "A",
+      "section": "Glossary — Residual-risk tier; Track (a)/(b)",
+      "approx_line": 84,
+      "line_range": [
+        83,
+        84
+      ],
+      "clause": "Residual-risk tier is Low/Medium/High/Critical, the track (a) result after measures via the Section 4 matrix for each harm scenario; the highest scenario tier is the tier of the processing. Track (b) never offsets track (a).",
+      "used_for": [
+        "aggregation_max",
+        "tracks"
+      ]
+    },
+    {
+      "id": "SR-08-A-BUDGET-DEF",
+      "doc": "PGF-08",
+      "part": "A",
+      "section": "Glossary — Cumulative disclosure budget",
+      "approx_line": 85,
+      "clause": "Optional limit on total privacy loss (ε and δ) per source population over the lifetime of its ledger, without calendar reset; may be complemented by an operational cap per period.",
+      "used_for": [
+        "dp_ledger"
+      ]
+    },
+    {
+      "id": "SR-08-A-PRINC-GL",
+      "doc": "PGF-08",
+      "part": "A",
+      "section": "2. Principles — lawfulness first",
+      "approx_line": 97,
+      "clause": "G-L runs before any risk decision; failure means stop or redesign; nothing can cure a G-L failure.",
+      "used_for": [
+        "gate_order",
+        "g_l"
+      ]
+    },
+    {
+      "id": "SR-08-A-PRINC-SEVLED",
+      "doc": "PGF-08",
+      "part": "A",
+      "section": "2. Principles — severity-led calibration",
+      "approx_line": 101,
+      "clause": "Lower likelihood never reduces a Catastrophic scenario below High nor a Significant scenario below Medium; relaxation needs independent evidence and an Executive Management decision.",
+      "used_for": [
+        "matrix_floors",
+        "monotonicity"
+      ]
+    },
+    {
+      "id": "SR-08-A-PRINC-TRACKS",
+      "doc": "PGF-08",
+      "part": "A",
+      "section": "2. Principles — two tracks",
+      "approx_line": 103,
+      "clause": "Track (b) is reported separately and never lowers, offsets or averages track (a).",
+      "used_for": [
+        "tracks"
+      ]
+    },
+    {
+      "id": "SR-08-A-STATEMENT",
+      "doc": "PGF-08",
+      "part": "A",
+      "section": "3. Risk Appetite Statement",
+      "approx_line": 119,
+      "line_range": [
+        117,
+        129
+      ],
+      "clause": "Unlawful processing outside appetite; Critical not acceptable; High accepted only by one designated Executive Management member after G-36; Medium/Low within delegated authority; optional lifetime ε/δ budget with no calendar reset and optional operational cap.",
+      "used_for": [
+        "authority",
+        "dp_ledger"
+      ]
+    },
+    {
+      "id": "SR-08-A-LIKSCALE",
+      "doc": "PGF-08",
+      "part": "A",
+      "section": "4. Likelihood Scale",
+      "approx_line": 139,
+      "line_range": [
+        135,
+        144
+      ],
+      "clause": "Four likelihood tiers Low/Medium/High/Near-certain; threat-based for identified processing, PET module for releases; the disclosure indicator is not a probability and failure gates prevail over any average.",
+      "used_for": [
+        "likelihood_scale"
+      ]
+    },
+    {
+      "id": "SR-08-A-SEVSCALE",
+      "doc": "PGF-08",
+      "part": "A",
+      "section": "4. Severity Scale (track (a))",
+      "approx_line": 150,
+      "line_range": [
+        146,
+        155
+      ],
+      "clause": "Minor / Moderate / Significant / Catastrophic with conceptual descriptions; consent is not a severity factor.",
+      "used_for": [
+        "severity_scale"
+      ]
+    },
+    {
+      "id": "SR-08-A-TRACKB",
+      "doc": "PGF-08",
+      "part": "A",
+      "section": "4. Organisational Consequence Scale (track (b))",
+      "approx_line": 159,
+      "line_range": [
+        157,
+        166
+      ],
+      "clause": "Track (b) four-level scale reported to ERM; does not enter the matrix.",
+      "used_for": [
+        "track_b"
+      ]
+    },
+    {
+      "id": "SR-08-A-MATRIX",
+      "doc": "PGF-08",
+      "part": "A",
+      "section": "4. Residual-Risk Tier Matrix (track (a)) and Guidance",
+      "approx_line": 170,
+      "line_range": [
+        168,
+        177
+      ],
+      "clause": "4x4 matrix, rows severity, columns likelihood; severity-led floors; may be made stricter; relaxation only within floors with independent evidence.",
+      "used_for": [
+        "matrix"
+      ]
+    },
+    {
+      "id": "SR-08-A-GDPRMAP",
+      "doc": "PGF-08",
+      "part": "A",
+      "section": "4. Mapping of Internal Tiers to GDPR Thresholds",
+      "approx_line": 193,
+      "line_range": [
+        189,
+        200
+      ],
+      "clause": "DPIA triage independent of tiers; G-36 evaluated for every DPIA; residual High/Critical is a strong indicator, legal conclusion recorded separately; breach and transfer tests not mapped to tiers.",
+      "used_for": [
+        "g_dpia",
+        "g_36",
+        "g_tia"
+      ]
+    },
+    {
+      "id": "SR-08-A-AUTH",
+      "doc": "PGF-08",
+      "part": "A",
+      "section": "5. Acceptance Authority, Escalation and Mandatory DPO Advice — table and rules",
+      "approx_line": 206,
+      "line_range": [
+        202,
+        227
+      ],
+      "clause": "Low PO; Medium PO with EPPO concurrence; High one named Executive Management member after G-36; Critical not acceptable. G-L first; single decider; no self-concurrence; DPO advises on every DPIA and at Medium and above, never approves.",
+      "used_for": [
+        "authority"
+      ]
+    },
+    {
+      "id": "SR-08-A-DPOTRIG",
+      "doc": "PGF-08",
+      "part": "A",
+      "section": "5. Table of Mandatory DPO Advice and Escalation Triggers",
+      "approx_line": 233,
+      "line_range": [
+        229,
+        239
+      ],
+      "clause": "Triggers regardless of tier: PET-module failure; Art. 22 / high-risk AI; non-standard weighting; special categories (Art. 9/10); anonymity conclusion.",
+      "used_for": [
+        "dpo_advice"
+      ]
+    },
+    {
+      "id": "SR-08-B-HISTORY",
+      "doc": "PGF-08",
+      "part": "B",
+      "section": "Fictional Document History — versions 1.0, 2.0, 3.0",
+      "approx_line": 287,
+      "line_range": [
+        281,
+        287
+      ],
+      "clause": "v1.0 1 Mar 2026; v2.0 22 Aug 2026 (cumulative budget added); v3.0 adopted 20 Oct 2026, effective 23 Oct 2026 (CPO concurrence for Medium; CRO decides High; lifetime ledger with annual cap).",
+      "used_for": [
+        "chronology",
+        "history"
+      ]
+    },
+    {
+      "id": "SR-08-B-BUDGET",
+      "doc": "PGF-08",
+      "part": "B",
+      "section": "3. Risk Appetite Statement — cumulative disclosure budget",
+      "approx_line": 333,
+      "clause": "Retail customer population, privacy unit one customer: lifetime ε ≤ 10.0, δ ≤ 1×10⁻⁵, basic composition unless a tighter compatible accountant is documented; no calendar reset; annual pacing cap ε ≤ 7.0 of new spending; warning 80%; at 26 Oct 2026 δ ≈ 8.0×10⁻⁶ reached the warning level. Illustrative parameters.",
+      "used_for": [
+        "dp_ledger"
+      ]
+    },
+    {
+      "id": "SR-08-B-MATRIX",
+      "doc": "PGF-08",
+      "part": "B",
+      "section": "4. Residual-Risk Tier Matrix and Rationale",
+      "approx_line": 374,
+      "line_range": [
+        370,
+        387
+      ],
+      "clause": "PanEuropean adopts the template matrix without relaxation; rationale for Significant×Low = Medium and Catastrophic×Low = High.",
+      "used_for": [
+        "matrix"
+      ]
+    },
+    {
+      "id": "SR-08-B-EXAMPLES",
+      "doc": "PGF-08",
+      "part": "B",
+      "section": "4. Worked examples (from Document 18)",
+      "approx_line": 391,
+      "line_range": [
+        389,
+        396
+      ],
+      "clause": "Worked tier/decision examples including PPI (severity floor applied to Art. 9 data used to decide).",
+      "used_for": [
+        "severity_floor",
+        "authority"
+      ]
+    },
+    {
+      "id": "SR-08-B-AUTH",
+      "doc": "PGF-08",
+      "part": "B",
+      "section": "5. Acceptance Authority (v3.0) and following paragraph",
+      "approx_line": 404,
+      "line_range": [
+        402,
+        411
+      ],
+      "clause": "Low PO; Medium PO with CPO concurrence (3 business days, default expiry 12 months); High CRO, 5 business days after G-36 step complete; Critical not acceptable. Where the CPO is the PO, the CRO gives the Medium concurrence.",
+      "used_for": [
+        "authority"
+      ]
+    },
+    {
+      "id": "SR-08-B-DPOTRIG",
+      "doc": "PGF-08",
+      "part": "B",
+      "section": "5. Table of Mandatory Group DPO Advice and Escalation Triggers",
+      "approx_line": 415,
+      "line_range": [
+        413,
+        421
+      ],
+      "clause": "PET-module failure; Art. 22 / AI Act; non-standard weight outside 0.5–2.0; special categories (Art. 9/10) even at Low; anonymity conclusion.",
+      "used_for": [
+        "dpo_advice"
+      ]
+    },
+    {
+      "id": "SR-10-A-CATEGORIES",
+      "doc": "PGF-10",
+      "part": "A",
+      "section": "4. Classification Scheme — personal-data categories 1–5",
+      "approx_line": 130,
+      "line_range": [
+        125,
+        131
+      ],
+      "clause": "Category 3 special category (Art. 9); category 4 criminal-offence data (Art. 10) is not a special category; enhanced regime applies to both.",
+      "used_for": [
+        "factor_b_special",
+        "severity_floor_scope"
+      ]
+    },
+    {
+      "id": "SR-10-B-CLASSES",
+      "doc": "PGF-10",
+      "part": "B",
+      "section": "4. Classification Scheme — PanEuropean data domains",
+      "approx_line": 326,
+      "line_range": [
+        319,
+        338
+      ],
+      "clause": "Credit-scoring data and anti-fraud features Restricted; fraud-case records Restricted / Art. 10; transactional data Confidential.",
+      "used_for": [
+        "factor_b_data_class"
+      ]
+    },
+    {
+      "id": "SR-18-A-RULES",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "How to Use — three rules",
+      "approx_line": 43,
+      "line_range": [
+        41,
+        45
+      ],
+      "clause": "Lawfulness first; two tracks never offset; numbers are evidence, not a legal safe harbour.",
+      "used_for": [
+        "gate_order",
+        "tracks"
+      ]
+    },
+    {
+      "id": "SR-18-A-GLOSSARY",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "Glossary — failure gate, disclosure indicator, privacy unit, harm scenario",
+      "approx_line": 145,
+      "line_range": [
+        134,
+        147
+      ],
+      "clause": "Failure gate; disclosure indicator is an uncalibrated ordinal summary, not a probability; privacy unit.",
+      "used_for": [
+        "pet_module",
+        "dp_ledger",
+        "terminology"
+      ]
+    },
+    {
+      "id": "SR-18-A-GATES",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "2.1 Position in the Decision Sequence: Gates",
+      "approx_line": 169,
+      "line_range": [
+        165,
+        185
+      ],
+      "clause": "Order 1 G-L, 2 G-DPIA, 3 calculation, 4 G-36 (evaluated for every DPIA; High/Critical strong indicator; legal conclusion separate; elapsed period is not authorisation), 5 acceptance by single decider; G-TIA in addition for transfers; calculations on a G-L-failed state are 'not available for acceptance'.",
+      "used_for": [
+        "gate_order",
+        "g_l",
+        "g_dpia",
+        "g_36",
+        "g_tia"
+      ]
+    },
+    {
+      "id": "SR-18-A-ARCH",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.1 Architecture — tracks, seven harm types, archetypes",
+      "approx_line": 195,
+      "line_range": [
+        191,
+        215
+      ],
+      "clause": "Two tracks; seven Factor A harm types; threat-based likelihood for identified data; PET module for disclosure scenario of archetypes 2–3; controls act on likelihood; archetypes 1, 2a, 2b, 3, 4.",
+      "used_for": [
+        "scenarios",
+        "archetype"
+      ]
+    },
+    {
+      "id": "SR-18-A-LIK-FACTORS",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.2 factor table L1–L4",
+      "approx_line": 223,
+      "line_range": [
+        221,
+        228
+      ],
+      "clause": "L1 exposure, L2 threat source, L3 control-effectiveness gap: 0–3; L4 event history 0–2 (no 3); measures count through L3 only where evidenced.",
+      "used_for": [
+        "likelihood"
+      ]
+    },
+    {
+      "id": "SR-18-A-LIK-BANDS",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.2 index-to-level table",
+      "approx_line": 230,
+      "line_range": [
+        230,
+        235
+      ],
+      "clause": "0–3 Low; 4–6 Medium; 7–8 High; 9–11 Near-certain.",
+      "used_for": [
+        "likelihood"
+      ]
+    },
+    {
+      "id": "SR-18-A-LIK-INDEX",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.2 integer rule",
+      "approx_line": 237,
+      "clause": "The likelihood index is always an integer (sum of integer scores); no weights apply.",
+      "used_for": [
+        "likelihood"
+      ]
+    },
+    {
+      "id": "SR-18-A-LIK-OVERRIDE",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.2 Override rule",
+      "approx_line": 239,
+      "clause": "Where L3 = 3 against L2 ≥ 2, the level is at least High whatever the index.",
+      "used_for": [
+        "likelihood"
+      ]
+    },
+    {
+      "id": "SR-18-A-LIK-INHERENT",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.2 Inherent and residual likelihood",
+      "approx_line": 241,
+      "clause": "Inherent: L3 assessed as 3 (without measures); residual: L3 as evidenced; residual used for the residual tier.",
+      "used_for": [
+        "likelihood",
+        "inherent_residual"
+      ]
+    },
+    {
+      "id": "SR-18-A-LIK-CONSENT",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.2 consent/legal basis rule",
+      "approx_line": 243,
+      "clause": "Consent, contract or other legal basis does not reduce likelihood or severity.",
+      "used_for": [
+        "likelihood",
+        "severity"
+      ]
+    },
+    {
+      "id": "SR-18-A-DIAGNOSTICS",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.2 Base-dataset disclosure diagnostics (archetype 1)",
+      "approx_line": 247,
+      "clause": "Diagnostic metrics on the quasi-identifier view are an input to PET planning, not the likelihood of any harm scenario.",
+      "used_for": [
+        "diagnostic_indicator"
+      ]
+    },
+    {
+      "id": "SR-18-A-PET-STATUS",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.3.0 Legal status; periodic re-assessment; per-metric results",
+      "approx_line": 255,
+      "line_range": [
+        255,
+        259
+      ],
+      "clause": "Module results are evidence, not a legal safe harbour; anonymity is a contextual Recital 26 conclusion; every metric reported individually; a composite never replaces individual results.",
+      "used_for": [
+        "pet_module"
+      ]
+    },
+    {
+      "id": "SR-18-A-PET-GATES",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.3.0 Failure gates G-M1 … G-M5",
+      "approx_line": 263,
+      "line_range": [
+        261,
+        269
+      ],
+      "clause": "G-M1 mandatory metric outside threshold (unfavourable bound); G-M2 unmitigated feasible disclosure path; G-M3 prohibited attribute (legal Art. 9 vs internal policy); G-M4 DP statement incomplete or ledger/cap exceeded; G-M5 missing/invalid/not assessed → INCOMPLETE, blocks like FAIL. FAIL → as-proposed High; reproduced failure → Near-certain (internal routing); not available for acceptance.",
+      "used_for": [
+        "pet_module",
+        "gates"
+      ]
+    },
+    {
+      "id": "SR-18-A-PET-NORM",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.3.0 Normalisation table and validity rules",
+      "approx_line": 273,
+      "line_range": [
+        271,
+        285
+      ],
+      "clause": "0 = no-disclosure baseline, 1 = threshold; rate: v/t; signed advantage: max(0,v)/t; balanced accuracy: |a−0.5|/(t−0.5); AUC likewise; similarity ratio: (1−v)/(1−t); unbounded distance: t/v (v = 0 is a G-M2 qualitative path); ε, δ not normalised. Threshold at/beyond baseline → INCOMPLETE; out-of-domain value → invalid; default exclusive thresholds; weights non-negative summing to 1.",
+      "used_for": [
+        "pet_module",
+        "normalisation"
+      ]
+    },
+    {
+      "id": "SR-18-A-PET-INDICATOR",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.3.0 Disclosure indicator and module-outcome table",
+      "approx_line": 289,
+      "line_range": [
+        289,
+        297
+      ],
+      "clause": "Indicator = Σ normalised × weight; not a probability; translated only for PASS: < 0.5 Low; 0.5–1.0 Medium; INCOMPLETE not assessed; FAIL High; FAIL reproduced Near-certain.",
+      "used_for": [
+        "pet_module",
+        "likelihood"
+      ]
+    },
+    {
+      "id": "SR-18-A-PET-UNCERT",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.3.0 Uncertainty and interval methods; boundary check table",
+      "approx_line": 299,
+      "line_range": [
+        299,
+        313
+      ],
+      "clause": "95% CI; gate uses unfavourable bound (upper for lower-is-safer, lower for higher-is-safer; orientation-invariant for accuracy/AUC; max(0, upper) for signed advantages); Wilson for proportions, bootstrap percentile otherwise; illustrative bounds labelled; boundary examples for threshold 0.60.",
+      "used_for": [
+        "pet_module",
+        "confidence_bounds"
+      ]
+    },
+    {
+      "id": "SR-18-A-PET-DEFAULTS",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.3.0 Default thresholds",
+      "approx_line": 315,
+      "clause": "Default thresholds are organisation-set illustrative values, not normative.",
+      "used_for": [
+        "pet_module"
+      ]
+    },
+    {
+      "id": "SR-18-A-SDC",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.3.4 Aggregate Statistics and Tabular Releases",
+      "approx_line": 362,
+      "line_range": [
+        358,
+        371
+      ],
+      "clause": "SDC gates: minimum cell size, dominance, differencing, reconstruction, record-level battery, prohibited attribute.",
+      "used_for": [
+        "pet_module"
+      ]
+    },
+    {
+      "id": "SR-18-A-DPSTMT",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.3.5 Differential Privacy Statements",
+      "approx_line": 377,
+      "line_range": [
+        373,
+        388
+      ],
+      "clause": "Privacy unit, adjacency, mechanism and accountant, ε and δ (δ not a failure probability), composition including failed observable runs, output access, implementation assurance, limits of empirical tests; MIA bound (e^ε+δ)/(1+e^ε) under narrow assumptions, not used in the score.",
+      "used_for": [
+        "dp_statement",
+        "g_m4"
+      ]
+    },
+    {
+      "id": "SR-18-A-LEDGER",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.3.6 Repeated Releases and Cumulative Disclosure",
+      "approx_line": 394,
+      "line_range": [
+        390,
+        402
+      ],
+      "clause": "Lifetime ledger per population and privacy unit; no calendar reset; post-processing not charged; basic composition always valid; later smaller δ does not reduce cumulative δ; overlapping observers composed as one party unless shown separate; operational cap never replaces lifetime ledger; every observable output charged, commit-only not adopted without analysis; exceeding budget or cap fails G-M4.",
+      "used_for": [
+        "dp_ledger"
+      ]
+    },
+    {
+      "id": "SR-18-A-SEV-GUIDE",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.4 Guidance — ordinal scale",
+      "approx_line": 406,
+      "clause": "Point scale is ordinal; adding ordinal scores is a structured aid to judgement, not a measurement; band cut-points reviewed with a sensitivity analysis.",
+      "used_for": [
+        "severity",
+        "interpretation"
+      ]
+    },
+    {
+      "id": "SR-18-A-SEV-STRUCT",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.4 factor overview",
+      "approx_line": 408,
+      "line_range": [
+        408,
+        419
+      ],
+      "clause": "Factor A tag; B, C, D, E, G summed; F track (b) only; organisation may add factors but may not remove harm types.",
+      "used_for": [
+        "severity"
+      ]
+    },
+    {
+      "id": "SR-18-A-SEV-FLOORS",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.4 Severity floors",
+      "approx_line": 423,
+      "clause": "At least Significant where (i) identifiable special-category data are disclosed to an unlimited audience or used to make decisions about the person, or (ii) realistic risk of physical harm; weights cannot lower below floor.",
+      "used_for": [
+        "severity_floor"
+      ]
+    },
+    {
+      "id": "SR-18-A-NO-DOUBLE",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.4 No double counting",
+      "approx_line": 425,
+      "clause": "A characteristic is scored in one factor only; a PET or control is reflected in likelihood, not as a severity discount.",
+      "used_for": [
+        "severity",
+        "invariants"
+      ]
+    },
+    {
+      "id": "SR-18-A-FACTOR-A",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "Factor A — Harm Type",
+      "approx_line": 431,
+      "line_range": [
+        427,
+        441
+      ],
+      "clause": "Seven harm-type tags; not a score; relevance statement for each.",
+      "used_for": [
+        "factor_a"
+      ]
+    },
+    {
+      "id": "SR-18-A-FACTOR-B",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "Factor B — Data Class, age modifier, Special Categories, Vulnerability",
+      "approx_line": 449,
+      "line_range": [
+        443,
+        486
+      ],
+      "clause": "Data class Public 0 / Internal 1 / Confidential 2 / Restricted 3; age −1 for stale currency-dependent data (not for special categories or permanent attributes; never for synthetic data); special categories (Art. 9) and criminal-offence data (Art. 10) +2; vulnerability 0 / +1 / +2 (children).",
+      "used_for": [
+        "factor_b"
+      ]
+    },
+    {
+      "id": "SR-18-A-FACTOR-C",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "Factor C — Number of Affected Data Subjects, Source Aggregation, Pilot Restriction",
+      "approx_line": 494,
+      "line_range": [
+        488,
+        514
+      ],
+      "clause": "< 100: 0; 100–9,999: 1; 10,000–999,999: 2; ≥ 1,000,000: 3; aggregation of two or more independent sources +1; pilots no separate discount.",
+      "used_for": [
+        "factor_c"
+      ]
+    },
+    {
+      "id": "SR-18-A-FACTOR-D",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "Factor D — Reach / Containment",
+      "approx_line": 522,
+      "line_range": [
+        516,
+        528
+      ],
+      "clause": "Within organisation 0; shared with partner/processor/recipient +1; open unconditional publication +2; recipient control quality is L3, not severity.",
+      "used_for": [
+        "factor_d"
+      ]
+    },
+    {
+      "id": "SR-18-A-FACTOR-E",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "Factor E — Automated Decision-Making",
+      "approx_line": 534,
+      "line_range": [
+        530,
+        539
+      ],
+      "clause": "+2 where the harm is produced through an Art. 22 decision (incl. determining score, C-634/21) or corrupted data feeding one; not for pure disclosure.",
+      "used_for": [
+        "factor_e"
+      ]
+    },
+    {
+      "id": "SR-18-A-FACTOR-F",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "Factor F — Organisational Consequences (track (b))",
+      "approx_line": 553,
+      "line_range": [
+        541,
+        562
+      ],
+      "clause": "Regime +1/0; financial/operational 0–3; reputational 0–3; sandbox −1 (track (b) only); index = max(0, sum); 0–1 Minor, 2–3 Moderate, 4–5 Significant, ≥ 6 Catastrophic.",
+      "used_for": [
+        "track_b"
+      ]
+    },
+    {
+      "id": "SR-18-A-FACTOR-G",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "Factor G — Data Provenance and Reasonable Expectations",
+      "approx_line": 568,
+      "line_range": [
+        564,
+        580
+      ],
+      "clause": "Direct clear notice 0; vague purpose +1; third party expected 0; outside expectations +1; scraping same context +1; recontextualised +2; non-identifiable 0; no notice/basis → G-L gate; unattributed → calculation gate.",
+      "used_for": [
+        "factor_g",
+        "gates"
+      ]
+    },
+    {
+      "id": "SR-18-A-FACTOR-CAPS",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.4 maxima",
+      "approx_line": 582,
+      "clause": "Maxima follow from the tables: B 7, C 4, D 2, E 2, G 2; no further caps.",
+      "used_for": [
+        "severity_range"
+      ]
+    },
+    {
+      "id": "SR-18-A-UTILITY",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "3.5 Other Metrics (Data Quality and Utility)",
+      "approx_line": 598,
+      "clause": "Utility metrics are reported separately and may not compensate for privacy risk.",
+      "used_for": [
+        "no_compensation"
+      ]
+    },
+    {
+      "id": "SR-18-A-PASSPORT",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "4.1 Project passport",
+      "approx_line": 627,
+      "line_range": [
+        614,
+        631
+      ],
+      "clause": "Archetype; G-L record; scenarios; adversary profile; mandatory vs diagnostic metrics; G-M2 definitions; DP statement; weight vector default (1,1,1,1,1), corridor 0.5–2.0, outside corridor EPPO approval + DPO advice; diagnostic alert mode (never for mandatory metrics); provenance attribution gate.",
+      "used_for": [
+        "weights",
+        "pet_module"
+      ]
+    },
+    {
+      "id": "SR-18-A-PET-STEPS",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "4.2 B. PET Assessment Module steps",
+      "approx_line": 652,
+      "line_range": [
+        644,
+        659
+      ],
+      "clause": "Step 1 per-metric results with CI; Step 2 failure gates prevail; Step 3 normalisation; Step 4 weighting (category × within-category); Step 5 indicator; Step 6 likelihood level.",
+      "used_for": [
+        "pet_module"
+      ]
+    },
+    {
+      "id": "SR-18-A-SEV-INDEX",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "4.3 Severity — Step 2",
+      "approx_line": 674,
+      "clause": "Severity index = w_B·B + w_C·C + w_D·D + w_E·E + w_G·G, floor 0; A tag; F separate.",
+      "used_for": [
+        "severity"
+      ]
+    },
+    {
+      "id": "SR-18-A-SEV-BANDS",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "4.3 Severity — Step 3 table and contiguity note",
+      "approx_line": 677,
+      "line_range": [
+        675,
+        684
+      ],
+      "clause": "< 3.5 Minor; 3.5 to < 6.5 Moderate; 6.5 to < 8.5 Significant; ≥ 8.5 Catastrophic; contiguous, no rounding; default-weight bands 0–3, 4–6, 7–8, ≥ 9; floors then apply.",
+      "used_for": [
+        "severity"
+      ]
+    },
+    {
+      "id": "SR-18-A-FINAL",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "4.4 Final Residual Risk Level and Decision Steps",
+      "approx_line": 692,
+      "line_range": [
+        688,
+        703
+      ],
+      "clause": "Step 0 G-L; 1 likelihood; 2 severity after floors; 3 matrix (inherent and residual); 4 PET outcome (failed → not available for acceptance); 5 highest residual scenario tier; 6 project rules may only be stricter; 7 G-36; 8 acceptance; 9 track (b). Scenarios never averaged.",
+      "used_for": [
+        "aggregation_max",
+        "gate_order"
+      ]
+    },
+    {
+      "id": "SR-18-A-EVIDENCE",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "4.5 Traceability and Evidence Pack",
+      "approx_line": 749,
+      "line_range": [
+        705,
+        751
+      ],
+      "clause": "Blocks 0–4; missing mandatory element is a declared gap, not a silent default; configuration versions retained; anonymity conclusion is a separate legal conclusion.",
+      "used_for": [
+        "missing_never_zero",
+        "history"
+      ]
+    },
+    {
+      "id": "SR-18-A-REVIEW",
+      "doc": "PGF-18",
+      "part": "A",
+      "section": "7. Review and Amendment",
+      "approx_line": 803,
+      "line_range": [
+        797,
+        803
+      ],
+      "clause": "Defaults not retroactive; calculation obsolete on material change; decision on an obsolete calculation not valid for the changed case.",
+      "used_for": [
+        "history"
+      ]
+    },
+    {
+      "id": "SR-18-B-LIKANCH",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "3.2 PanEuropean likelihood anchors",
+      "approx_line": 861,
+      "line_range": [
+        857,
+        868
+      ],
+      "clause": "Bank-specific anchors for L1–L4; bands, override and inherent/residual as Part A.",
+      "used_for": [
+        "likelihood"
+      ]
+    },
+    {
+      "id": "SR-18-B-BATTERY",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "3.2 proxy metrics and attack battery defaults",
+      "approx_line": 884,
+      "line_range": [
+        872,
+        896
+      ],
+      "clause": "Illustrative default thresholds (singling out < 1%, det. linkage < 1%, FS precision@100 < 5%, k-NN < 10%, ZCAP < 0.10, info gain < 0.30, ML inference < 0.10).",
+      "used_for": [
+        "pet_module"
+      ]
+    },
+    {
+      "id": "SR-18-B-PET-RULES",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "3.3.0 Module Rules (PanEuropean)",
+      "approx_line": 902,
+      "clause": "≥ 5,000 records per class, five repetitions, 95% CI; unacceptable level = metric threshold unless stated; qualitative paths DCR = 0 and cell attributing a sensitive value to < 10 persons; G-M3 internal policy excludes special-category attributes from open releases.",
+      "used_for": [
+        "pet_module"
+      ]
+    },
+    {
+      "id": "SR-18-B-SYN",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "3.3.2 Data Synthesis defaults",
+      "approx_line": 912,
+      "line_range": [
+        910,
+        922
+      ],
+      "clause": "MIA accuracy < 60%; AUC < 0.60; TPR@FPR0.1% ≤ 1.0% (gate only); DCR P5 ≥ holdout; NNDR > 0.70; linkability and inference advantage ≤ 0.05 (gate only); ε ≤ 3.0 default; δ by project.",
+      "used_for": [
+        "pet_module"
+      ]
+    },
+    {
+      "id": "SR-18-B-FL",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "3.3.3 Federated Learning",
+      "approx_line": 926,
+      "line_range": [
+        924,
+        936
+      ],
+      "clause": "Declared inputs and Art. 10 boundary; ε ≤ 3.0 across all rounds; secure aggregation required; MIA AUC < 0.60; gradient-reconstruction test not applicable for observers in scope, INCOMPLETE fallback if secure aggregation lapses.",
+      "used_for": [
+        "pet_module",
+        "fl_boundary"
+      ]
+    },
+    {
+      "id": "SR-18-B-SDC",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "3.3.4 Aggregate defaults",
+      "approx_line": 942,
+      "line_range": [
+        940,
+        947
+      ],
+      "clause": "Min cell ≥ 10; differencing none below 10; reconstruction ≤ 1%; battery at project thresholds; prohibited attribute internal policy; table outside scope → INCOMPLETE (G-M5).",
+      "used_for": [
+        "pet_module"
+      ]
+    },
+    {
+      "id": "SR-18-B-DP",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "3.3.5 DP statements (PanEuropean)",
+      "approx_line": 951,
+      "clause": "Person-level unit, add/remove adjacency, δ ≤ 1/(100·n) heuristic; MIA bound for information only.",
+      "used_for": [
+        "dp_statement"
+      ]
+    },
+    {
+      "id": "SR-18-B-LEDGER",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "3.3.6 Repeated Releases (PanEuropean)",
+      "approx_line": 955,
+      "clause": "Lifetime ledger, no calendar reset; every run including failed/cancelled observable runs; basic composition; all observers composed as one party; exceeding budget or annual cap fails G-M4.",
+      "used_for": [
+        "dp_ledger"
+      ]
+    },
+    {
+      "id": "SR-18-B-FACTOR-B-SPECIAL",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "3.4 Factor B — Special Categories of Data (Art. 9 and Art. 10)",
+      "approx_line": 986,
+      "line_range": [
+        984,
+        991
+      ],
+      "clause": "Modifier covers Art. 9 and Art. 10 data; fraud-case records and PSI matches are criminal-offence data; +2 when present.",
+      "used_for": [
+        "factor_b"
+      ]
+    },
+    {
+      "id": "SR-18-B-P2-LIK",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "Project 2 — 4.B.1/4.B.2 passport and likelihood",
+      "approx_line": 1199,
+      "line_range": [
+        1181,
+        1218
+      ],
+      "clause": "Project 2 metrics, weights (membership 0.50, memorisation 0.50), thresholds (ε ≤ 2.0, δ 1×10⁻⁹), G-M2 definitions, normalisation formulas, S2 threat-based 1/1/0(3)/1.",
+      "used_for": [
+        "pet_module"
+      ]
+    },
+    {
+      "id": "SR-18-B-P2-SEV",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "Project 2 — 4.B.3 Severity",
+      "approx_line": 1237,
+      "line_range": [
+        1222,
+        1237
+      ],
+      "clause": "S1, S2 severity 3+0+0+3+1+0+0+0 = 7 Significant; track (b) regime +1.",
+      "used_for": [
+        "severity"
+      ]
+    },
+    {
+      "id": "SR-18-B-P3-LIK",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "Project 3 — 4.C.1/4.C.2 passport and likelihood",
+      "approx_line": 1301,
+      "line_range": [
+        1284,
+        1320
+      ],
+      "clause": "SDC gates; weights singling out 0.20, linkability 0.50 (equal shares), inference 0.30; singling-out threshold 0.5%; G-M2 definitions; table outside scope → G-M5.",
+      "used_for": [
+        "pet_module"
+      ]
+    },
+    {
+      "id": "SR-18-B-P3-SEV",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "Project 3 — 4.C.3 Severity",
+      "approx_line": 1338,
+      "line_range": [
+        1324,
+        1338
+      ],
+      "clause": "S1 severity 3+0+3+0+2+0+0 = 8 Significant.",
+      "used_for": [
+        "severity"
+      ]
+    },
+    {
+      "id": "SR-18-B-APPX-MATRIX",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "Appendix to Part B — matrix, rounding note, chronology",
+      "approx_line": 1490,
+      "line_range": [
+        1486,
+        1499
+      ],
+      "clause": "Matrix reproduced; contributions rounded to three decimals, indicators summed from unrounded contributions; decisions apply authority in force from 23 Oct 2026; earlier decisions under authority then in force.",
+      "used_for": [
+        "matrix",
+        "rounding",
+        "chronology"
+      ]
+    },
+    {
+      "id": "SR-18-B-EX1.1",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "Appendix — Example 1.1",
+      "approx_line": 1516,
+      "line_range": [
+        1503,
+        1548
+      ],
+      "clause": "Audit sample: likelihood 4 Medium / inherent 6; diagnostics indicator 0.857 (not likelihood); severity 3 Minor; Low.",
+      "used_for": [
+        "cross_check"
+      ]
+    },
+    {
+      "id": "SR-18-B-EX1.2",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "Appendix — Example 1.2",
+      "approx_line": 1554,
+      "line_range": [
+        1550,
+        1583
+      ],
+      "clause": "G-L failed as found; calculation documents as-found state; 'G-L failed — not available for acceptance'.",
+      "used_for": [
+        "g_l"
+      ]
+    },
+    {
+      "id": "SR-18-B-EX2.1",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "Appendix — Example 2.1",
+      "approx_line": 1605,
+      "line_range": [
+        1589,
+        1607
+      ],
+      "clause": "ε 2.1 > 2.0 (G-M1) and δ 8×10⁻⁶ ≠ configured (G-M4) → FAIL despite indicator 0.656; as-proposed High; run charged to ledger because output observed.",
+      "used_for": [
+        "pet_module",
+        "dp_ledger"
+      ]
+    },
+    {
+      "id": "SR-18-B-EX2.1R",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "Appendix — Example 2.1-R",
+      "approx_line": 1629,
+      "line_range": [
+        1609,
+        1646
+      ],
+      "clause": "All gates pass on unfavourable bounds; indicator 0.537 → Medium; ledger ε 6.5, δ ≈ 8.0×10⁻⁶ by basic composition; S1 Medium, S2 Medium; track (a) Medium; track (b) Moderate.",
+      "used_for": [
+        "pet_module",
+        "dp_ledger"
+      ]
+    },
+    {
+      "id": "SR-18-B-EX2.2",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "Appendix — Example 2.2",
+      "approx_line": 1664,
+      "line_range": [
+        1648,
+        1664
+      ],
+      "clause": "All gates fail; reproduced → Near-certain; indicator 1.441; ledger would reach ε 10.3, δ ≈ 2.4×10⁻⁵ (G-M4).",
+      "used_for": [
+        "pet_module",
+        "dp_ledger"
+      ]
+    },
+    {
+      "id": "SR-18-B-EX3.1",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "Appendix — Example 3.1",
+      "approx_line": 1692,
+      "line_range": [
+        1670,
+        1698
+      ],
+      "clause": "SDC gates pass; battery passes on upper bounds; indicator 0.363 → Low; Low × Significant = Medium; anonymity conclusion separate.",
+      "used_for": [
+        "pet_module"
+      ]
+    },
+    {
+      "id": "SR-18-B-EX3.2",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "Appendix — Example 3.2",
+      "approx_line": 1718,
+      "line_range": [
+        1700,
+        1718
+      ],
+      "clause": "SDC and linkage failures; reconstruction reproduced → Near-certain; indicator 1.203; High not available for acceptance.",
+      "used_for": [
+        "pet_module"
+      ]
+    },
+    {
+      "id": "SR-18-B-EX3.3",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "Appendix — Example 3.3 (blocked case)",
+      "approx_line": 1726,
+      "line_range": [
+        1720,
+        1742
+      ],
+      "clause": "G-L failed on four facts; release blocked; G-M5 and G-M3 also apply; indicator 0.100; severity for information 10 Catastrophic.",
+      "used_for": [
+        "g_l",
+        "pet_module"
+      ]
+    },
+    {
+      "id": "SR-18-B-EX4.3",
+      "doc": "PGF-18",
+      "part": "B",
+      "section": "Appendix — Example 4.3",
+      "approx_line": 1822,
+      "line_range": [
+        1800,
+        1831
+      ],
+      "clause": "S1 severity 9 Catastrophic, residual Medium → High; inherent Near-certain → Critical (not a decision point).",
+      "used_for": [
+        "cross_check"
+      ]
+    },
+    {
+      "id": "SR-19-A-TRIAGE",
+      "doc": "PGF-19",
+      "part": "A",
+      "section": "3.1 Statutory and Supervisory Triggers (WP248 nine criteria)",
+      "approx_line": 133,
+      "line_range": [
+        124,
+        137
+      ],
+      "clause": "Art. 35(1), 35(3), Art. 35(4) lists, nine WP248 criteria with two-or-more presumption.",
+      "used_for": [
+        "g_dpia"
+      ]
+    },
+    {
+      "id": "SR-19-A-STEP-4.7",
+      "doc": "PGF-19",
+      "part": "A",
+      "section": "4.7 G-36 — Prior Consultation Test",
+      "approx_line": 182,
+      "clause": "G-36 evaluated for every DPIA; statutory test independent of internal tiers; High/Critical strong indicator; legal conclusion recorded separately by Legal with DPO advice; stricter internal routing labelled; elapsed period is not authorisation.",
+      "used_for": [
+        "g_36"
+      ]
+    },
+    {
+      "id": "SR-19-A-STEP-4.8",
+      "doc": "PGF-19",
+      "part": "A",
+      "section": "4.8 Decision and Sign-Off",
+      "approx_line": 183,
+      "clause": "Single decider after G-36 (after consultation where met); Critical not acceptable; DPO does not approve.",
+      "used_for": [
+        "authority",
+        "gate_order"
+      ]
+    },
+    {
+      "id": "SR-19-B-STEP-4.7",
+      "doc": "PGF-19",
+      "part": "B",
+      "section": "4. DPIA Procedure — 4.7 and 4.8 (PanEuropean)",
+      "approx_line": 383,
+      "line_range": [
+        383,
+        384
+      ],
+      "clause": "Legal & Compliance records G-36; where met the bank consults the HBDI before processing; CRO decides on consultation; internal policy routes every residual High to consultation unless General Counsel records reasons; decision after G-36 step: Low PO, Medium PO + CPO, High CRO, Critical not acceptable.",
+      "used_for": [
+        "g_36",
+        "authority"
+      ]
+    },
+    {
+      "id": "SR-19-B-TRANSITIONAL",
+      "doc": "PGF-19",
+      "part": "B",
+      "section": "4. Transitional rule",
+      "approx_line": 387,
+      "clause": "Decisions before 23 Oct 2026 taken under the authority then in force; conditional acceptances re-assessed under v3.0 at expiry or next material change.",
+      "used_for": [
+        "history",
+        "chronology"
+      ]
+    },
+    {
+      "id": "SR-19-B-REGISTER",
+      "doc": "PGF-19",
+      "part": "B",
+      "section": "Appendix — DPIA Register Excerpt",
+      "approx_line": 454,
+      "line_range": [
+        446,
+        455
+      ],
+      "clause": "Status at 26 Oct 2026 for six DPIAs, including DPIA-PSI-01 High, G-36 met, decision pending, sessions paused; DPIA-FL-01 Medium accepted with conditions.",
+      "used_for": [
+        "cases"
+      ]
+    },
+    {
+      "id": "SR-19-B-PSI-FL",
+      "doc": "PGF-19",
+      "part": "B",
+      "section": "Appendix — Summaries: DPIA-PSI-01 and DPIA-FL-01",
+      "approx_line": 550,
+      "line_range": [
+        541,
+        551
+      ],
+      "clause": "Triage, G-L (Art. 10 for PSI; declared-input boundary for FL), risk assessment with scores, DPO advice, G-36 and decisions (historical and current).",
+      "used_for": [
+        "RM-EX-02",
+        "RM-EX-05",
+        "RM-EX-07"
+      ]
+    },
+    {
+      "id": "SR-20-A-GTIA",
+      "doc": "PGF-20",
+      "part": "A",
+      "section": "Glossary — G-TIA",
+      "approx_line": 93,
+      "clause": "G-TIA outcome is pass or fail; it is not a risk tier.",
+      "used_for": [
+        "g_tia"
+      ]
+    },
+    {
+      "id": "SR-20-B-PSI",
+      "doc": "PGF-20",
+      "part": "B",
+      "section": "Report TIA-PSI-01 — Document 18 elements requested",
+      "approx_line": 408,
+      "clause": "Informative severity of matched list disclosure: Restricted 3 + criminal-offence data 2 + scale 2 + reach 1 = 8 Significant (corrected 26 Oct 2026).",
+      "used_for": [
+        "cross_check"
+      ]
+    },
+    {
+      "id": "SR-22-A-DEFS",
+      "doc": "PGF-22",
+      "part": "A",
+      "section": "Glossary — inherent, residual, target risk",
+      "approx_line": 86,
+      "line_range": [
+        86,
+        90
+      ],
+      "clause": "Inherent: tier without measures (L3 max; PET module as proposed); residual: after implemented and evidenced measures, the decision basis; target: planned tier and date; conditional acceptance.",
+      "used_for": [
+        "inherent_residual_target"
+      ]
+    },
+    {
+      "id": "SR-22-A-SCOPE",
+      "doc": "PGF-22",
+      "part": "A",
+      "section": "2. Scope — G-L failures and failed G-TIA never accepted",
+      "approx_line": 104,
+      "line_range": [
+        104,
+        106
+      ],
+      "clause": "A G-L failure is a compliance issue, never 'accepted'; a failed G-TIA is 'Suspended' or 'Not accepted'.",
+      "used_for": [
+        "g_l",
+        "g_tia",
+        "status"
+      ]
+    },
+    {
+      "id": "SR-22-A-STATUS",
+      "doc": "PGF-22",
+      "part": "A",
+      "section": "3. Status Values",
+      "approx_line": 140,
+      "line_range": [
+        136,
+        148
+      ],
+      "clause": "Open — decision pending; In treatment; Accepted — conditional (expiry); Accepted; Not accepted — stopped or redesign; Suspended; Closed.",
+      "used_for": [
+        "processing_status"
+      ]
+    },
+    {
+      "id": "SR-22-A-LIFECYCLE",
+      "doc": "PGF-22",
+      "part": "A",
+      "section": "4. Record Lifecycle",
+      "approx_line": 156,
+      "line_range": [
+        150,
+        157
+      ],
+      "clause": "Re-assessment on expiry or material change; changed calculation method not retroactive.",
+      "used_for": [
+        "history"
+      ]
+    },
+    {
+      "id": "SR-22-B-EXCERPT",
+      "doc": "PGF-22",
+      "part": "B",
+      "section": "Appendix — Register Excerpt",
+      "approx_line": 311,
+      "line_range": [
+        305,
+        315
+      ],
+      "clause": "Inherent → residual (target), track (b), decision and status for each record at 26 Oct 2026.",
+      "used_for": [
+        "cases"
+      ]
+    },
+    {
+      "id": "SR-22-B-PSI",
+      "doc": "PGF-22",
+      "part": "B",
+      "section": "Fully Expanded Record — PRR-PSI-01",
+      "approx_line": 350,
+      "line_range": [
+        341,
+        363
+      ],
+      "clause": "Inherent High, residual High, target Medium (L3 1→0), track (b) Moderate, decision pending CRO, superseded acceptance of 25 Mar 2026, status Open — decision pending, sessions paused.",
+      "used_for": [
+        "RM-EX-02",
+        "RM-EX-07"
+      ]
+    },
+    {
+      "id": "SR-28-B-MG205",
+      "doc": "PGF-28",
+      "part": "B",
+      "section": "Metric M-G2-05 — Cumulative disclosure-budget utilisation",
+      "approx_line": 588,
+      "clause": "Lifetime limit ε ≤ 10.0 and δ ≤ 1×10⁻⁵; pacing cap ε ≤ 7.0 per calendar year; warning at 80% of either lifetime limit (template definition at line 171; High alert at line 649).",
+      "used_for": [
+        "dp_ledger"
+      ]
+    },
+    {
+      "id": "SR-31-B-LEDGER",
+      "doc": "PGF-31",
+      "part": "B",
+      "section": "Risk profile — cumulative disclosure budget (M-G2-05)",
+      "approx_line": 430,
+      "clause": "Ledger ε 6.5 (65%), δ ≈ 8.0×10⁻⁶ (80%) — warning level reached; driven by the failed first generator run that remains in the ledger.",
+      "used_for": [
+        "dp_ledger"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "case_id": "RM-EX-01",
+  "contract_version": "0.1",
+  "title": "Simple internal processing: customer-support ticket log (artificial, Low tier)",
+  "pgf_baseline": "02ff78357f3b24f607651f0bf9f01c6c279b587b",
+  "assessment_date": "2026-10-26",
+  "risk_calculation_project": {
+    "archetype": "4",
+    "weights": {"w_b": 1, "w_c": 1, "w_d": 1, "w_e": 1, "w_g": 1},
+    "source": {"doc": "ARTIFICIAL", "reason": "Identified processing as its permanent state (PGF-18 Part A §3.1 archetype 4); default weight vector (PGF-18 Part A §4.1)"}
+  },
+  "gates": {
+    "g_l": {
+      "outcome": "PASS",
+      "basis": "Lawful basis recorded (handling the customer's own request); Art. 13 notice at collection; purpose unchanged; no Art. 9 or Art. 10 data; no Art. 22 decision; no transfer outside the EEA",
+      "source": {"doc": "ARTIFICIAL", "reason": "Artificial G-L record for a teaching case"}
+    },
+    "g_dpia": {
+      "dpia_required": false,
+      "wp248_criteria_met": [],
+      "basis": "No statutory trigger, no supervisory-authority list entry, none of the nine WP248 rev.01 criteria met; triage record kept with DPO advice on the triage",
+      "source": {"doc": "ARTIFICIAL", "reason": "Artificial triage record"}
+    },
+    "g_tia": {
+      "outcome": "NOT_ENGAGED",
+      "basis": "No transfer outside the EEA",
+      "source": {"doc": "ARTIFICIAL", "reason": "Artificial fact"}
+    },
+    "g_36": {
+      "conclusion": null,
+      "status": "not_applicable",
+      "reason": "G-36 is evaluated for every DPIA; no DPIA exists for this processing",
+      "by_role": null,
+      "date": null,
+      "source": {"doc": "ARTIFICIAL", "reason": "Follows from g_dpia.dpia_required = false"}
+    }
+  },
+  "scenarios": [
+    {
+      "scenario_id": "S1",
+      "description": "Loss of confidentiality: a support agent, or someone using an agent's credentials, copies the ticket log and it is disclosed or misused (e.g. targeted phishing quoting real orders)",
+      "factor_a": {
+        "harm_types": ["loss_of_confidentiality_integrity_availability", "financial_loss"],
+        "source": {"doc": "ARTIFICIAL", "reason": "Scenario defined for the teaching case"}
+      },
+      "likelihood": {
+        "model": "threat_based",
+        "given_as": "score",
+        "residual": {"l1": 2, "l2": 1, "l3": 0, "l4": 1},
+        "inherent": {"l1": 2, "l2": 1, "l3": 3, "l4": 1},
+        "evidence": {
+          "l1": "12 named agents use the log every working day (routine access)",
+          "l2": "Vetted staff; no motivated or capable attacker identified (documented assumption)",
+          "l3_residual": "Role-based access control, bulk export disabled, monthly access-log review: implemented and tested (artificial evidence ref EVP-ART-0001)",
+          "l4": "Insider misuse of similar support data reported in the sector; no event in the organisation's own processing in the last 24 months"
+        },
+        "source": {"doc": "ARTIFICIAL", "reason": "Scores assigned on the artificial evidence above against the PGF-18 Part A §3.2 anchors"}
+      },
+      "severity": {
+        "factor_b": {
+          "data_class": {"value": "Confidential", "given_as": "raw"},
+          "data_age": {"value": "current", "given_as": "raw"},
+          "special_category": {"value": "absent", "given_as": "raw"},
+          "vulnerability": {"value": "none", "given_as": "raw"}
+        },
+        "factor_c": {
+          "subjects": {"subjects_per_year": 2500, "given_as": "raw"},
+          "source_aggregation": {"value": "single_source", "given_as": "raw"},
+          "pilot_restriction": {"value": "not_a_pilot", "given_as": "raw"}
+        },
+        "factor_d": {"reach": {"value": "within_organisation", "given_as": "raw"}},
+        "factor_e": {"adm": {"value": "no", "given_as": "raw"}},
+        "factor_g": {"provenance": {"value": "direct_clear_notice", "given_as": "raw"}},
+        "floor_conditions": {
+          "special_category_unlimited_audience_or_decision": false,
+          "realistic_physical_harm": false
+        },
+        "source": {"doc": "ARTIFICIAL", "reason": "Structured fields only (name, e-mail, order number, product, issue category, status); ~2,500 customers a year; one ticketing system in the organisation's own environment; direct collection with clear notice"}
+      }
+    },
+    {
+      "scenario_id": "S2",
+      "description": "Loss of control: ticket data drift into a use the customer was not told about (e.g. targeting marketing campaigns)",
+      "factor_a": {
+        "harm_types": ["unlawful_processing_loss_of_control"],
+        "source": {"doc": "ARTIFICIAL", "reason": "Scenario defined for the teaching case"}
+      },
+      "likelihood": {
+        "model": "threat_based",
+        "given_as": "score",
+        "residual": {"l1": 1, "l2": 1, "l3": 1, "l4": 0},
+        "inherent": {"l1": 1, "l2": 1, "l3": 3, "l4": 0},
+        "evidence": {
+          "l1": "Extracts for other purposes are occasional (periodic), restricted to named roles",
+          "l2": "Unintended drift of use; no motivated party identified",
+          "l3_residual": "Extract-approval workflow and purpose restriction implemented, partially tested (artificial evidence ref EVP-ART-0002)",
+          "l4": "No relevant events known"
+        },
+        "source": {"doc": "ARTIFICIAL", "reason": "Scores assigned on the artificial evidence above against the PGF-18 Part A §3.2 anchors"}
+      },
+      "severity": {
+        "factor_b": {
+          "data_class": {"value": "Confidential", "given_as": "raw"},
+          "data_age": {"value": "current", "given_as": "raw"},
+          "special_category": {"value": "absent", "given_as": "raw"},
+          "vulnerability": {"value": "none", "given_as": "raw"}
+        },
+        "factor_c": {
+          "subjects": {"subjects_per_year": 2500, "given_as": "raw"},
+          "source_aggregation": {"value": "single_source", "given_as": "raw"},
+          "pilot_restriction": {"value": "not_a_pilot", "given_as": "raw"}
+        },
+        "factor_d": {"reach": {"value": "within_organisation", "given_as": "raw"}},
+        "factor_e": {"adm": {"value": "no", "given_as": "raw"}},
+        "factor_g": {"provenance": {"value": "direct_clear_notice", "given_as": "raw"}},
+        "floor_conditions": {
+          "special_category_unlimited_audience_or_decision": false,
+          "realistic_physical_harm": false
+        },
+        "source": {"doc": "ARTIFICIAL", "reason": "Same data and population as S1"}
+      }
+    }
+  ],
+  "harm_type_relevance": {
+    "discrimination_adverse_automated_decision": "not relevant: no decision about a customer is taken from the log",
+    "identity_fraud": "not separately assessed: no identity documents or credentials are held; phishing-related loss is covered by S1",
+    "reputational_social_harm": "not relevant: order and product data carry no stigmatising content",
+    "physical_psychological_chilling_exclusion": "not relevant: no special-category or vulnerability data; no service decision",
+    "source": {"doc": "ARTIFICIAL", "reason": "Relevance statement required by PGF-18 Part A §3.4 Factor A"}
+  },
+  "track_b": {
+    "factor_f": {
+      "applicable_regime": {"value": "none", "given_as": "raw"},
+      "financial_operational": {"score": 0, "given_as": "score"},
+      "reputational": {"score": 1, "given_as": "score"},
+      "sandbox": {"value": "none", "given_as": "raw"}
+    },
+    "source": {"doc": "ARTIFICIAL", "reason": "Artificial ERM-scale judgements"}
+  },
+  "pet_module": null,
+  "dp_ledger": null,
+  "governance": {
+    "decision_rules_version": "Document 8 v3.0",
+    "processing_owner_is_cpo": false,
+    "dpia_exists": false,
+    "processing_state": "in operation",
+    "processing_owner": "Head of Customer Support",
+    "dpo_advice": null,
+    "dpo_advice_triggers": [],
+    "history": [],
+    "current_decision": {
+      "decided_by": "Processing Owner",
+      "outcome": "accepted",
+      "date": "2026-10-26",
+      "expiry": null,
+      "dpo_advice_recorded": false,
+      "source": {"doc": "ARTIFICIAL", "reason": "Artificial decision record: the Processing Owner records acceptance of the Low residual tier in the evidence pack"}
+    },
+    "source": {"doc": "ARTIFICIAL", "reason": "Artificial organisation applying the PGF-08 Part B acceptance rules"}
+  },
+  "notes": "pet_module and dp_ledger are null because nothing is de-identified, synthesised, aggregated, federated or released, and no DP mechanism is used (status: not_applicable)."
+}

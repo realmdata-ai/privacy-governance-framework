@@ -6,7 +6,7 @@ These separately versioned resources support reading, implementing and testing t
 
 | Resource | Start here | Contents |
 |---|---|---|
-| Risk model | Preview preparation in progress | Introduction, worked examples, research counterexamples and reference tooling; a separate preview snapshot will be added after its validation status is made explicit. |
+| Risk model | [README](risk-model/README.md) | Introduction, two worked examples, formula review and 27 research counterexample tests. Full specification and reference/golden reconciliation remain pending. |
 | Privacy red teaming | [README](privacy-red-team/README.md) | Playbook, twelve test cards, a worked campaign and thirteen artificial fixtures. |
 | Adoption | [README](adoption-guide/README.md) | Adoption routes, a complete worked case, checklist and filled evidence records. |
 

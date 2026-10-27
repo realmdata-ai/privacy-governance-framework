@@ -1,0 +1,89 @@
+{
+  "case_id": "RM-EX-02",
+  "derived_by": "Sub-A, hand arithmetic from PGF v1 text",
+  "scenarios": [
+    {
+      "scenario_id": "S1",
+      "likelihood_score": 7,
+      "likelihood_tier": "High",
+      "inherent_likelihood_score": 9,
+      "inherent_likelihood_tier": "Near-certain",
+      "severity_index": 8,
+      "severity_band": "Significant",
+      "residual_tier": "High",
+      "inherent_tier": "High",
+      "trace": "Likelihood (SR-18-A-LIK-INDEX, SR-18-A-LIK-BANDS): residual 2+2+1+2 = 7 -> band 7-8 -> High; override (SR-18-A-LIK-OVERRIDE) needs L3=3: L3=1 -> not engaged. Inherent (L3=3): 2+2+3+2 = 9 -> band 9-11 -> Near-certain; override engaged (L3=3, L2=2) but 'at least High' does not lower Near-certain. Severity (SR-18-A-SEV-INDEX, weights 1): B = Restricted 3 + age 0 + special/criminal-offence data (Art. 10) 2 (SR-18-B-FACTOR-B-SPECIAL) + vulnerability 0 = 5; C = scale 1 (100-9,999 matches a year) + aggregation 1 = 2; D = 0; E = 0; G = third-party source outside typical expectations 1; index = 5+2+0+0+1 = 8 -> [6.5, 8.5) -> Significant (SR-18-A-SEV-BANDS). Floors: literal reading not engaged (Art. 10 data are not special-category data, PGF-10); alternative reading would require at least Significant -> same band. Matrix (SR-08-B-MATRIX): (Significant, High) = High; inherent (Significant, Near-certain) = High. Target (PGF-22 PRR-PSI-01): L3 1 -> 0 gives 2+2+0+2 = 6 -> Medium; (Significant, Medium) = Medium; Low unreachable while severity is Significant (Significant row floor = Medium).",
+      "likelihood_model": "threat_based",
+      "severity_floor_applied": false,
+      "factor_scores": {
+        "b": 5,
+        "c": 2,
+        "d": 0,
+        "e": 0,
+        "g": 1
+      }
+    },
+    {
+      "scenario_id": "S2",
+      "likelihood_score": 6,
+      "likelihood_tier": "Medium",
+      "inherent_likelihood_score": 8,
+      "inherent_likelihood_tier": "High",
+      "severity_index": 6,
+      "severity_band": "Moderate",
+      "residual_tier": "Low",
+      "inherent_tier": "Medium",
+      "trace": "Likelihood: residual 2+3+1+0 = 6 -> band 4-6 -> Medium; override not engaged (L3=1). Inherent 2+3+3+0 = 8 -> band 7-8 -> High; override engaged (L3=3, L2=3) -> at least High -> High. Severity: B = Confidential 2 + 0 + special 0 (customer identifiers carry no offence information) + 0 = 2; C = scale 3 (>= 1,000,000 identifiers) + aggregation 0 = 3; D = shared with a recipient 1; E = 0; G = 0; index = 2+3+1+0+0 = 6 -> [3.5, 6.5) -> Moderate; no floor. Matrix: (Moderate, Medium) = Low; inherent (Moderate, High) = Medium.",
+      "likelihood_model": "threat_based",
+      "severity_floor_applied": false,
+      "factor_scores": {
+        "b": 2,
+        "c": 3,
+        "d": 1,
+        "e": 0,
+        "g": 0
+      }
+    }
+  ],
+  "track_a": {
+    "residual_tier": "High",
+    "inherent_tier": "High",
+    "rule": "max over scenarios",
+    "trace": "Residual max(High, Low) = High; inherent max(High, Medium) = High. S1 determines the tier."
+  },
+  "track_b": {
+    "index": null,
+    "level": "Moderate",
+    "trace": "Given as a level in PGF-22 PRR-PSI-01; subfactor scores are not stated in v1, so the index is not recomputed. Reported to ERM separately; does not change track (a)."
+  },
+  "gates": {
+    "g_l": "PASS",
+    "g_dpia": true,
+    "g_tia": "PASS",
+    "pet_module": "NOT_APPLICABLE",
+    "g_36_required_step": "consult_before_processing"
+  },
+  "pet_module_detail": null,
+  "decision": {
+    "authority": "CRO",
+    "may_proceed": false,
+    "status": "pending_prior_consultation",
+    "available_for_acceptance": true,
+    "dpo_advice_required": true,
+    "history_status": {
+      "PRR-PSI-01-2026-03-25": "superseded"
+    },
+    "reasons": [
+      "Status: Open — decision pending (prior consultation); sessions paused since 26 October 2026 (PGF-22 PRR-PSI-01)",
+      "G-L passed; G-DPIA: DPIA required (four WP248 criteria); G-TIA passed for the one-sided design",
+      "Track (a) residual tier High (S1) -> single decider is the Chief Risk Officer under PGF-08 Part B v3.0 Section 5 (SR-08-B-AUTH)",
+      "G-36 recorded by Legal & Compliance on 26 October 2026: test MET. This is a recorded legal conclusion supplied as input, not derived from the tier; the High tier is consistent with it (strong indicator, SR-18-A-GATES order 4)",
+      "Where G-36 is met, the supervisory authority is consulted before processing (here: before any further session); the CRO decides on the submission and, within 5 business days after the consultation step is complete, on the residual risk (SR-19-B-STEP-4.7, SR-08-B-AUTH)",
+      "DPO advice mandatory and recorded (DPIA exists; Art. 10 data trigger) (SR-08-B-DPOTRIG)",
+      "The conditional acceptance of 25 March 2026 (Medium) is superseded and confers no current authority (see RM-EX-07)",
+      "Supervisory Board Risk Committee to be informed (High tier)"
+    ]
+  },
+  "dp_ledger": null,
+  "notes": "may_proceed = false because the consultation step and the CRO decision are both outstanding; this is a governance status, not a legal conclusion. pet_module NOT_APPLICABLE follows v1's own classification of DPIA-PSI-01 under Project 4 (ambiguity A-04). Severity subfactors omitted from v1's stated sums are taken as 0 only because the stated totals require it (ambiguity A-05)."
+}

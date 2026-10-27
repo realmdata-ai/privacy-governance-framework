@@ -1,0 +1,377 @@
+{
+  "case_id": "RM-EX-02",
+  "contract_version": "0.1",
+  "title": "PSI anti-fraud matching with a partner bank (PGF-19 DPIA-PSI-01) as re-assessed on 26 October 2026",
+  "pgf_baseline": "02ff78357f3b24f607651f0bf9f01c6c279b587b",
+  "assessment_date": "2026-10-26",
+  "risk_calculation_project": {
+    "archetype": "4",
+    "weights": {
+      "w_b": 1,
+      "w_c": 1,
+      "w_d": 1,
+      "w_e": 1,
+      "w_g": 1
+    },
+    "source": {
+      "doc": "PGF-19",
+      "part": "B",
+      "section": "7. Relationship to Other Framework Documents (Project 4 for DPIA-PSI-01); 4.D.1 weight vector (PGF-18)",
+      "approx_line": 414
+    }
+  },
+  "gates": {
+    "g_l": {
+      "outcome": "PASS",
+      "basis": "Art. 6(1)(f) fraud prevention with balancing test; Art. 10: matches are criminal-offence data, processing authorised by the national law identified in the G-L record with safeguards (enhanced regime, analyst review before any action); banking confidentiality assessed; Art. 14 information; Chapter V via TIA-PSI-01",
+      "source": {
+        "doc": "PGF-19",
+        "part": "B",
+        "section": "Summaries: DPIA-PSI-01 and DPIA-FL-01 — G-L row",
+        "approx_line": 549
+      }
+    },
+    "g_dpia": {
+      "dpia_required": true,
+      "wp248_criteria_met": [
+        "matching_or_combining_datasets",
+        "sensitive_or_highly_personal_data",
+        "large_scale",
+        "prevents_exercise_of_right_or_use_of_service"
+      ],
+      "basis": "Four WP248 rev.01 criteria -> presumption that a DPIA is required",
+      "source": {
+        "doc": "PGF-19",
+        "part": "B",
+        "section": "Summaries: DPIA-PSI-01 — Triage row",
+        "approx_line": 548
+      }
+    },
+    "g_tia": {
+      "outcome": "PASS",
+      "mechanism": "art46",
+      "basis": "Art. 46 (SCC Module 1): fail for the former mutual-output design (10 Feb 2026); pass for the one-sided design without any output to the partner (20 Mar 2026), conditional on partner-input controls; sessions paused on 26 Oct 2026 is not a G-TIA hold",
+      "source": {
+        "doc": "PGF-22",
+        "part": "B",
+        "section": "Fully Expanded Record — PRR-PSI-01, G-TIA Status",
+        "approx_line": 360
+      }
+    },
+    "g_36": {
+      "conclusion": "MET",
+      "by_role": "Legal & Compliance (General Counsel), with Group DPO advice",
+      "date": "2026-10-26",
+      "reasons": "S1 high risk remains after the analyst-review measure (residual likelihood High; transliteration near misses); harm attaches to being linked to a criminal offence on a third-country source; further likelihood-reducing measures not yet tested. The internal tier supports but is not the basis of the conclusion",
+      "status": "recorded",
+      "consultation": "not_submitted",
+      "consultation_status": "HBDI to be consulted before any further session; submission to be decided by the Chief Risk Officer (planned)",
+      "source": {
+        "doc": "PGF-19",
+        "part": "B",
+        "section": "Summaries: DPIA-PSI-01 — DPO advice, G-36, decision row",
+        "approx_line": 551
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "scenario_id": "S1",
+      "description": "Wrongful match leading to adverse action against a customer (a match links the customer to confirmed fraud, a criminal offence)",
+      "factor_a": {
+        "harm_types": [
+          "discrimination_adverse_automated_decision",
+          "financial_loss",
+          "physical_psychological_chilling_exclusion"
+        ],
+        "source": {
+          "doc": "PGF-19",
+          "part": "B",
+          "section": "Summaries: DPIA-PSI-01 — Risk assessment row, S1 (harm: adverse decision, financial loss, exclusion)",
+          "approx_line": 550
+        }
+      },
+      "likelihood": {
+        "model": "threat_based",
+        "given_as": "score",
+        "residual": {
+          "l1": 2,
+          "l2": 2,
+          "l3": 1,
+          "l4": 2
+        },
+        "inherent": {
+          "l1": 2,
+          "l2": 2,
+          "l3": 3,
+          "l4": 2
+        },
+        "evidence": {
+          "l3_residual": "Analyst review before action; partner list quality required by contract, partly tested",
+          "l4": "Near misses from name transliteration in the pilot"
+        },
+        "source": {
+          "doc": "PGF-19",
+          "part": "B",
+          "section": "Summaries: DPIA-PSI-01 — Risk assessment row, S1",
+          "approx_line": 550
+        }
+      },
+      "severity": {
+        "factor_b": {
+          "data_class": {
+            "value": "Restricted",
+            "given_as": "raw"
+          },
+          "data_age": {
+            "value": "current",
+            "given_as": "raw",
+            "derivation": "not stated; no age reduction applied in the stated sum, and the reduction never applies to Art. 9/10 data"
+          },
+          "special_category": {
+            "value": "present",
+            "articles": [
+              "art10"
+            ],
+            "basis": "Art. 10 (criminal-offence data): a match links the customer to confirmed fraud",
+            "given_as": "raw"
+          },
+          "vulnerability": {
+            "score": 0,
+            "given_as": "score",
+            "derivation": "not listed in the stated sum 3+2+1+1+1 = 8; implied 0"
+          }
+        },
+        "factor_c": {
+          "subjects": {
+            "score": 1,
+            "given_as": "score",
+            "value": "100–9,999 matches a year"
+          },
+          "source_aggregation": {
+            "value": "two_or_more_sources",
+            "given_as": "raw"
+          },
+          "pilot_restriction": {
+            "value": "not_a_pilot",
+            "given_as": "raw"
+          }
+        },
+        "factor_d": {
+          "reach": {
+            "score": 0,
+            "given_as": "score",
+            "derivation": "not listed in the stated sum; implied 0 (adverse action is taken within the bank)"
+          }
+        },
+        "factor_e": {
+          "adm": {
+            "score": 0,
+            "given_as": "score",
+            "derivation": "not listed in the stated sum; analyst review before any action, so not a solely automated decision"
+          }
+        },
+        "factor_g": {
+          "provenance": {
+            "value": "third_party_outside_expectations",
+            "given_as": "raw"
+          }
+        },
+        "floor_conditions": {
+          "special_category_unlimited_audience_or_decision": false,
+          "realistic_physical_harm": false,
+          "floor_note": "Literal reading: floor (i) of PGF-18 Part A §3.4 names 'special-category data', and PGF-10 Part A §4 states that criminal-offence data are not a special category, so the floor is not engaged by Art. 10 data. The alternative reading (Factor B's 'Special Categories' row covers Art. 9 and Art. 10) would engage it. Here the index already reaches Significant, so both readings give the same band (subA_notes A-02)."
+        },
+        "source": {
+          "doc": "PGF-19",
+          "part": "B",
+          "section": "Summaries: DPIA-PSI-01 — Risk assessment row, S1 severity 'Restricted 3 + criminal-offence data 2 + scale 1 + aggregation 1 + provenance 1 = 8'",
+          "approx_line": 550
+        }
+      }
+    },
+    {
+      "scenario_id": "S2",
+      "description": "Disclosure of customer relationships to the partner or in the destination country",
+      "factor_a": {
+        "harm_types": [
+          "loss_of_confidentiality_integrity_availability"
+        ],
+        "source": {
+          "doc": "PGF-19",
+          "part": "B",
+          "section": "Summaries: DPIA-PSI-01 — Risk assessment row, S2",
+          "approx_line": 550
+        }
+      },
+      "likelihood": {
+        "model": "threat_based",
+        "given_as": "score",
+        "residual": {
+          "l1": 2,
+          "l2": 3,
+          "l3": 1,
+          "l4": 0
+        },
+        "inherent": {
+          "l1": 2,
+          "l2": 3,
+          "l3": 3,
+          "l4": 0
+        },
+        "evidence": {
+          "l2": "Including compelled use of the partner by an authority",
+          "l3_residual": "Blinded protocol messages; key held by the bank in the EEA; one-sided design without any output to the partner; input padded to a fixed public bound; independent protocol review (illustrative assumptions, TIA-PSI-01)"
+        },
+        "source": {
+          "doc": "PGF-19",
+          "part": "B",
+          "section": "Summaries: DPIA-PSI-01 — Risk assessment row, S2",
+          "approx_line": 550
+        }
+      },
+      "severity": {
+        "factor_b": {
+          "data_class": {
+            "value": "Confidential",
+            "given_as": "raw"
+          },
+          "data_age": {
+            "value": "current",
+            "given_as": "raw",
+            "derivation": "not stated; no reduction in the stated sum"
+          },
+          "special_category": {
+            "value": "absent",
+            "given_as": "raw",
+            "derivation": "stated: the data concerned are the bank's customer identifiers, carrying no offence-related information, so the Art. 10 modifier does not apply"
+          },
+          "vulnerability": {
+            "score": 0,
+            "given_as": "score",
+            "derivation": "not listed in the stated sum 2+3+1 = 6; implied 0"
+          }
+        },
+        "factor_c": {
+          "subjects": {
+            "score": 3,
+            "given_as": "score",
+            "value": "≥ 1,000,000 identifiers input"
+          },
+          "source_aggregation": {
+            "score": 0,
+            "given_as": "score",
+            "derivation": "not listed in the stated sum; implied 0"
+          },
+          "pilot_restriction": {
+            "value": "not_a_pilot",
+            "given_as": "raw"
+          }
+        },
+        "factor_d": {
+          "reach": {
+            "value": "shared_with_recipient",
+            "given_as": "raw"
+          }
+        },
+        "factor_e": {
+          "adm": {
+            "value": "no",
+            "given_as": "raw"
+          }
+        },
+        "factor_g": {
+          "provenance": {
+            "score": 0,
+            "given_as": "score",
+            "derivation": "not listed in the stated sum; implied 0"
+          }
+        },
+        "floor_conditions": {
+          "special_category_unlimited_audience_or_decision": false,
+          "realistic_physical_harm": false
+        },
+        "source": {
+          "doc": "PGF-19",
+          "part": "B",
+          "section": "Summaries: DPIA-PSI-01 — Risk assessment row, S2 severity 'Confidential 2 + scale 3 + reach 1 = 6'",
+          "approx_line": 550
+        }
+      }
+    }
+  ],
+  "track_b": {
+    "level": {
+      "value": "Moderate",
+      "given_as": "level"
+    },
+    "source": {
+      "doc": "PGF-22",
+      "part": "B",
+      "section": "Fully Expanded Record — PRR-PSI-01, Track (b) Level (subfactor scores not stated)",
+      "approx_line": 353
+    }
+  },
+  "pet_module": null,
+  "dp_ledger": null,
+  "governance": {
+    "decision_rules_version": "Document 8 v3.0",
+    "processing_owner_is_cpo": false,
+    "dpia_exists": true,
+    "processing_owner": "Head of Fraud Prevention",
+    "processing_state": "sessions paused since 2026-10-26 by the Processing Owner; next monthly session not held",
+    "dpo_advice": {
+      "date": "2026-10-26",
+      "content": "G-36 test met; consult the HBDI before any further session; pause the sessions",
+      "response": "followed"
+    },
+    "dpo_advice_triggers": [
+      "dpia_exists",
+      "art_10_data"
+    ],
+    "history": [
+      {
+        "decision_id": "PRR-PSI-01-2026-03-25",
+        "date": "2026-03-25",
+        "decider": "Head of Fraud Prevention",
+        "rules_in_force": "Document 8 v1.0",
+        "tier": "Medium",
+        "outcome": "accepted_with_conditions",
+        "expiry": "2027-03-25",
+        "decision": "Medium accepted with conditions (analyst review before any action; transliteration rules; TIA-PSI-01 valid with its partner-input controls)",
+        "g_36_then": "NOT_MET (2026-03-24)",
+        "status_now": "superseded on 2026-10-26 (calculation omitted the Art. 10 severity modifier); see RM-EX-07",
+        "superseded_by": {
+          "record": "DPIA-PSI-01 / PRR-PSI-01 re-assessment of 26 October 2026 (Art. 10 severity modifier applied; G-36 re-evaluated: met)",
+          "date": "2026-10-26"
+        },
+        "source": {
+          "doc": "PGF-19",
+          "part": "B",
+          "section": "Summaries: DPIA-PSI-01 — DPO advice, G-36, decision row (historical part)",
+          "approx_line": 551
+        }
+      }
+    ],
+    "current_decision": {
+      "decided_by": "none",
+      "outcome": "pending",
+      "date": null,
+      "expiry": null,
+      "dpo_advice_recorded": true,
+      "source": {
+        "doc": "PGF-22",
+        "part": "B",
+        "section": "Fully Expanded Record — PRR-PSI-01, Decision and Single Decider: 'Pending. Decider: the Chief Risk Officer'",
+        "approx_line": 356
+      }
+    },
+    "source": {
+      "doc": "PGF-22",
+      "part": "B",
+      "section": "Fully Expanded Record — PRR-PSI-01 (Decision, Status, Change History)",
+      "approx_line": 356
+    }
+  },
+  "notes": "pet_module null: PGF v1 assesses DPIA-PSI-01 under Project 4 (archetype 4, threat-based likelihood for both scenarios); protocol evidence enters S2 through L3 and TIA-PSI-01. Whether a PSI intersection should instead be archetype 3 is recorded as ambiguity A-04 in subA_notes. dp_ledger null: no DP mechanism. Zero-valued severity subfactors that the v1 summary omits from its stated sums are encoded as given_as 'score' with a derivation, never as silent defaults."
+}

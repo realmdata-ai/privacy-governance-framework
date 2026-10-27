@@ -1,0 +1,61 @@
+{
+  "grid_id": "RM-GRID",
+  "contract_version": "0.1",
+  "pgf_baseline": "02ff78357f3b24f607651f0bf9f01c6c279b587b",
+  "purpose": "Probe values only (no expected results). Expected values are in expected_grid.json and are not to be read by the implementation side while implementing.",
+  "matrix_probes": {
+    "severity_levels": ["Minor", "Moderate", "Significant", "Catastrophic"],
+    "likelihood_levels": ["Low", "Medium", "High", "Near-certain"]
+  },
+  "severity_index_probes": [0, 3, 3.49, 3.5, 4, 6, 6.49, 6.5, 7, 8, 8.49, 8.5, 9, 17, 34],
+  "severity_raw_sum_probes": [-1],
+  "severity_invalid_probes": ["NaN", "Infinity", null],
+  "weighted_severity_probes": [
+    {"probe_id": "W1", "weights": {"w_b": 0.5, "w_c": 0.5, "w_d": 0.5, "w_e": 0.5, "w_g": 0.5}, "factors": {"B": 7, "C": 4, "D": 2, "E": 2, "G": 2}},
+    {"probe_id": "W2", "weights": {"w_b": 0.5, "w_c": 1, "w_d": 1, "w_e": 1, "w_g": 1}, "factors": {"B": 7, "C": 0, "D": 0, "E": 0, "G": 0}},
+    {"probe_id": "W3", "weights": {"w_b": 2.0, "w_c": 0.5, "w_d": 1, "w_e": 1, "w_g": 1}, "factors": {"B": 3, "C": 1, "D": 0, "E": 0, "G": 0}},
+    {"probe_id": "W4", "weights": {"w_b": 1.5, "w_c": 1, "w_d": 1, "w_e": 1, "w_g": 1}, "factors": {"B": 3, "C": 0, "D": 0, "E": 0, "G": 0}},
+    {"probe_id": "W5", "weights": {"w_b": 0.7, "w_c": 0.7, "w_d": 1, "w_e": 1, "w_g": 1}, "factors": {"B": 2, "C": 3, "D": 0, "E": 0, "G": 0}},
+    {"probe_id": "W6", "weights": {"w_b": 0.7, "w_c": 1.15, "w_d": 1, "w_e": 1, "w_g": 1}, "factors": {"B": 6, "C": 2, "D": 0, "E": 0, "G": 0}},
+    {"probe_id": "W7", "weights": {"w_b": 2.0, "w_c": 2.0, "w_d": 2.0, "w_e": 2.0, "w_g": 2.0}, "factors": {"B": 7, "C": 4, "D": 2, "E": 2, "G": 2}}
+  ],
+  "severity_floor_probes": [
+    {"probe_id": "F1", "index": 5, "floor_conditions": {"special_category_unlimited_audience_or_decision": true, "realistic_physical_harm": false}},
+    {"probe_id": "F2", "index": 2, "floor_conditions": {"special_category_unlimited_audience_or_decision": false, "realistic_physical_harm": true}},
+    {"probe_id": "F3", "index": 10, "floor_conditions": {"special_category_unlimited_audience_or_decision": true, "realistic_physical_harm": false}},
+    {"probe_id": "F4", "index": 3, "floor_conditions": {"special_category_unlimited_audience_or_decision": false, "realistic_physical_harm": false}}
+  ],
+  "likelihood_index_probes": [0, 3, 4, 6, 7, 8, 9, 11],
+  "likelihood_invalid_probes": [
+    {"probe_id": "LI1", "components": {"l1": 3, "l2": 3, "l3": 3, "l4": 3}},
+    {"probe_id": "LI2", "components": {"l1": -1, "l2": 0, "l3": 0, "l4": 0}},
+    {"probe_id": "LI3", "components": {"l1": 1.5, "l2": 1, "l3": 1, "l4": 0}},
+    {"probe_id": "LI4", "components": {"l1": 2, "l2": 2, "l3": null, "l4": 1}}
+  ],
+  "likelihood_override_probes": [
+    {"probe_id": "O1", "components": {"l1": 0, "l2": 2, "l3": 3, "l4": 0}},
+    {"probe_id": "O2", "components": {"l1": 0, "l2": 1, "l3": 3, "l4": 0}},
+    {"probe_id": "O3", "components": {"l1": 0, "l2": 3, "l3": 3, "l4": 2}},
+    {"probe_id": "O4", "components": {"l1": 3, "l2": 3, "l3": 3, "l4": 2}},
+    {"probe_id": "O5", "components": {"l1": 0, "l2": 2, "l3": 2, "l4": 0}},
+    {"probe_id": "O6", "components": {"l1": 0, "l2": 0, "l3": 3, "l4": 0}}
+  ],
+  "pet_outcome_probes": [
+    {"probe_id": "P1", "outcome": "PASS", "indicator": 0},
+    {"probe_id": "P2", "outcome": "PASS", "indicator": 0.4999},
+    {"probe_id": "P3", "outcome": "PASS", "indicator": 0.5},
+    {"probe_id": "P4", "outcome": "PASS", "indicator": 1.0},
+    {"probe_id": "P5", "outcome": "PASS", "indicator": 1.0001},
+    {"probe_id": "P6", "outcome": "INCOMPLETE", "indicator": 0.2},
+    {"probe_id": "P7", "outcome": "FAIL", "indicator": 0.3, "reproduced": false},
+    {"probe_id": "P8", "outcome": "FAIL", "indicator": 1.4, "reproduced": true}
+  ],
+  "track_b_raw_sum_probes": [-1, 0, 1, 2, 3, 4, 5, 6, 7],
+  "end_to_end_probes": [
+    {"probe_id": "E1", "severity_index": 8.5, "likelihood_components": {"l1": 2, "l2": 2, "l3": 1, "l4": 2}},
+    {"probe_id": "E2", "severity_index": 8.49, "likelihood_components": {"l1": 3, "l2": 3, "l3": 3, "l4": 2}},
+    {"probe_id": "E3", "severity_index": 3.49, "likelihood_components": {"l1": 3, "l2": 3, "l3": 3, "l4": 2}},
+    {"probe_id": "E4", "severity_index": 9, "likelihood_components": {"l1": 0, "l2": 0, "l3": 0, "l4": 0}},
+    {"probe_id": "E5", "severity_index": 6.5, "likelihood_components": {"l1": 0, "l2": 0, "l3": 0, "l4": 0}}
+  ]
+}

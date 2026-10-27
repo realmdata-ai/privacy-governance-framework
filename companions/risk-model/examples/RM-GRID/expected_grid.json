@@ -1,0 +1,169 @@
+{
+  "grid_id": "RM-GRID",
+  "derived_by": "Sub-A, hand reading of PGF v1 tables and hand arithmetic",
+  "pgf_baseline": "02ff78357f3b24f607651f0bf9f01c6c279b587b",
+  "matrix": {
+    "source": [
+      {"register_id": "SR-08-A-MATRIX", "doc": "PGF-08", "part": "A", "section": "4. Likelihood, Severity and Residual-Risk Tiers — Residual-Risk Tier Matrix (track (a))", "approx_line": 170},
+      {"register_id": "SR-08-B-MATRIX", "doc": "PGF-08", "part": "B", "section": "4. Residual-Risk Tier Matrix — 'PanEuropean adopts the template matrix without relaxation'", "approx_line": 374},
+      {"register_id": "SR-18-B-APPX-MATRIX", "doc": "PGF-18", "part": "B", "section": "Appendix to Part B — matrix reproduced", "approx_line": 1490}
+    ],
+    "orientation": "rows = severity level, columns = likelihood level",
+    "cells": [
+      {"severity": "Minor", "likelihood": "Low", "tier": "Low"},
+      {"severity": "Minor", "likelihood": "Medium", "tier": "Low"},
+      {"severity": "Minor", "likelihood": "High", "tier": "Low"},
+      {"severity": "Minor", "likelihood": "Near-certain", "tier": "Low"},
+      {"severity": "Moderate", "likelihood": "Low", "tier": "Low"},
+      {"severity": "Moderate", "likelihood": "Medium", "tier": "Low"},
+      {"severity": "Moderate", "likelihood": "High", "tier": "Medium"},
+      {"severity": "Moderate", "likelihood": "Near-certain", "tier": "Medium"},
+      {"severity": "Significant", "likelihood": "Low", "tier": "Medium"},
+      {"severity": "Significant", "likelihood": "Medium", "tier": "Medium"},
+      {"severity": "Significant", "likelihood": "High", "tier": "High"},
+      {"severity": "Significant", "likelihood": "Near-certain", "tier": "High"},
+      {"severity": "Catastrophic", "likelihood": "Low", "tier": "High"},
+      {"severity": "Catastrophic", "likelihood": "Medium", "tier": "High"},
+      {"severity": "Catastrophic", "likelihood": "High", "tier": "Critical"},
+      {"severity": "Catastrophic", "likelihood": "Near-certain", "tier": "Critical"}
+    ],
+    "properties_checked_by_hand": [
+      "Part A template values and Part B values are identical in all 16 cells",
+      "Severity-led floors (SR-08-A-PRINC-SEVLED): every Catastrophic cell >= High; every Significant cell >= Medium",
+      "Monotone: non-decreasing along every row (left to right) and every column (top to bottom) under Low < Medium < High < Critical",
+      "Critical appears only in Catastrophic x {High, Near-certain}",
+      "Minor row is constant Low"
+    ]
+  },
+  "severity_bands": {
+    "source": [
+      {"register_id": "SR-18-A-SEV-BANDS", "doc": "PGF-18", "part": "A", "section": "4.3 Severity — Step 3 mapping table and contiguity note", "approx_line": 677},
+      {"register_id": "SR-18-A-SEV-INDEX", "doc": "PGF-18", "part": "A", "section": "4.3 Severity — Step 2 (index = w_B·B + w_C·C + w_D·D + w_E·E + w_G·G, floor 0)", "approx_line": 674}
+    ],
+    "rule": "index < 3.5 Minor; 3.5 <= index < 6.5 Moderate; 6.5 <= index < 8.5 Significant; index >= 8.5 Catastrophic; no rounding",
+    "probes": [
+      {"index": 0, "band": "Minor", "trace": "0 < 3.5; lower range limit (index floor 0)"},
+      {"index": 3, "band": "Minor", "trace": "3 < 3.5; integer band 0-3"},
+      {"index": 3.49, "band": "Minor", "trace": "3.49 < 3.5"},
+      {"index": 3.5, "band": "Moderate", "trace": "3.5 <= 3.5 < 6.5 (lower bound inclusive)"},
+      {"index": 4, "band": "Moderate", "trace": "integer band 4-6"},
+      {"index": 6, "band": "Moderate", "trace": "6 < 6.5"},
+      {"index": 6.49, "band": "Moderate", "trace": "6.49 < 6.5"},
+      {"index": 6.5, "band": "Significant", "trace": "6.5 <= 6.5 < 8.5"},
+      {"index": 7, "band": "Significant", "trace": "integer band 7-8"},
+      {"index": 8, "band": "Significant", "trace": "8 < 8.5"},
+      {"index": 8.49, "band": "Significant", "trace": "8.49 < 8.5"},
+      {"index": 8.5, "band": "Catastrophic", "trace": "8.5 >= 8.5"},
+      {"index": 9, "band": "Catastrophic", "trace": "integer band >= 9"},
+      {"index": 17, "band": "Catastrophic", "trace": "upper range limit with default weights: B 7 + C 4 + D 2 + E 2 + G 2 = 17 (SR-18-A-FACTOR-CAPS)"},
+      {"index": 34, "band": "Catastrophic", "trace": "upper range limit with every weight at the corridor maximum 2.0: 2 x 17 = 34 (SR-18-A-PASSPORT weight corridor 0.5-2.0)"}
+    ],
+    "raw_sum_probes": [
+      {"raw_weighted_sum": -1, "index": 0, "band": "Minor", "trace": "index = max(0, -1) = 0 (floor 0); a negative raw sum can arise only through the data-age modifier -1 (ambiguity A-03)"}
+    ],
+    "invalid_probes": [
+      {"index": "NaN", "result": "invalid", "trace": "not a real number; no band is assigned; never defaults to Minor"},
+      {"index": "Infinity", "result": "invalid", "trace": "outside any finite factor range; no band"},
+      {"index": null, "result": "incomplete", "trace": "missing index; calculation not complete; never defaults to 0/Minor"}
+    ]
+  },
+  "weighted_severity": {
+    "source": [
+      {"register_id": "SR-18-A-SEV-INDEX", "doc": "PGF-18", "part": "A", "section": "4.3 Step 2", "approx_line": 674},
+      {"register_id": "SR-18-A-PASSPORT", "doc": "PGF-18", "part": "A", "section": "4.1 Weight Vector — default (1,1,1,1,1); corridor 0.5–2.0", "approx_line": 627}
+    ],
+    "arithmetic": "exact decimal arithmetic on the stated weights; PGF-18 states that fractional indices map to exactly one level 'without rounding'",
+    "probes": [
+      {"probe_id": "W1", "index": 8.5, "band": "Catastrophic", "trace": "0.5 x (7+4+2+2+2) = 0.5 x 17 = 8.5 -> >= 8.5"},
+      {"probe_id": "W2", "index": 3.5, "band": "Moderate", "trace": "0.5 x 7 = 3.5 -> [3.5, 6.5)"},
+      {"probe_id": "W3", "index": 6.5, "band": "Significant", "trace": "2.0 x 3 + 0.5 x 1 = 6.0 + 0.5 = 6.5 -> [6.5, 8.5)"},
+      {"probe_id": "W4", "index": 4.5, "band": "Moderate", "trace": "1.5 x 3 = 4.5"},
+      {"probe_id": "W5", "index": 3.5, "band": "Moderate", "trace": "0.7 x 2 + 0.7 x 3 = 1.4 + 2.1 = 3.5 exactly -> Moderate. Binary floating point gives 3.4999999999999996 and would wrongly yield Minor (ambiguity A-06)"},
+      {"probe_id": "W6", "index": 6.5, "band": "Significant", "trace": "0.7 x 6 + 1.15 x 2 = 4.2 + 2.3 = 6.5 exactly -> Significant (binary floating point gives 6.499999999999999)"},
+      {"probe_id": "W7", "index": 34, "band": "Catastrophic", "trace": "2.0 x 17 = 34"}
+    ]
+  },
+  "severity_floors": {
+    "source": [{"register_id": "SR-18-A-SEV-FLOORS", "doc": "PGF-18", "part": "A", "section": "3.4 Severity floors", "approx_line": 423}],
+    "rule": "whatever the index, at least Significant where (i) identifiable special-category data are disclosed to an unlimited audience or used to make decisions about the person, or (ii) there is a realistic risk of physical harm; floors only raise",
+    "probes": [
+      {"probe_id": "F1", "band_from_index": "Moderate", "band": "Significant", "trace": "5 -> Moderate; floor (i) -> at least Significant -> Significant"},
+      {"probe_id": "F2", "band_from_index": "Minor", "band": "Significant", "trace": "2 -> Minor; floor (ii) -> Significant"},
+      {"probe_id": "F3", "band_from_index": "Catastrophic", "band": "Catastrophic", "trace": "10 -> Catastrophic; floor does not lower"},
+      {"probe_id": "F4", "band_from_index": "Minor", "band": "Minor", "trace": "3 -> Minor; no floor condition"}
+    ]
+  },
+  "likelihood_bands": {
+    "source": [
+      {"register_id": "SR-18-A-LIK-FACTORS", "doc": "PGF-18", "part": "A", "section": "3.2 factor table L1–L4", "approx_line": 223},
+      {"register_id": "SR-18-A-LIK-BANDS", "doc": "PGF-18", "part": "A", "section": "3.2 index bands", "approx_line": 230},
+      {"register_id": "SR-18-A-LIK-INDEX", "doc": "PGF-18", "part": "A", "section": "3.2 'always an integer ... no weights'", "approx_line": 237}
+    ],
+    "rule": "index = L1+L2+L3+L4, L1..L3 in {0,1,2,3}, L4 in {0,1,2}; 0-3 Low, 4-6 Medium, 7-8 High, 9-11 Near-certain",
+    "probes": [
+      {"index": 0, "level": "Low", "trace": "lower range limit"},
+      {"index": 3, "level": "Low", "trace": "top of 0-3"},
+      {"index": 4, "level": "Medium", "trace": "bottom of 4-6"},
+      {"index": 6, "level": "Medium", "trace": "top of 4-6"},
+      {"index": 7, "level": "High", "trace": "bottom of 7-8"},
+      {"index": 8, "level": "High", "trace": "top of 7-8"},
+      {"index": 9, "level": "Near-certain", "trace": "bottom of 9-11"},
+      {"index": 11, "level": "Near-certain", "trace": "upper range limit 3+3+3+2 = 11"}
+    ],
+    "invalid_probes": [
+      {"probe_id": "LI1", "result": "invalid", "trace": "L4 = 3 outside its domain {0,1,2} (the L4 '3' cell is '—'); index 12 is unreachable"},
+      {"probe_id": "LI2", "result": "invalid", "trace": "L1 = -1 outside {0..3}"},
+      {"probe_id": "LI3", "result": "invalid", "trace": "L1 = 1.5 not an integer; the index is always an integer"},
+      {"probe_id": "LI4", "result": "incomplete", "trace": "L3 missing; never defaults to 0; no level assigned"}
+    ]
+  },
+  "likelihood_override": {
+    "source": [{"register_id": "SR-18-A-LIK-OVERRIDE", "doc": "PGF-18", "part": "A", "section": "3.2 Override rule", "approx_line": 239}],
+    "rule": "if L3 = 3 and L2 >= 2 then level = max(level_from_index, High)",
+    "probes": [
+      {"probe_id": "O1", "index": 5, "level": "High", "trace": "0+2+3+0 = 5 -> Medium; L3=3, L2=2 -> at least High -> High"},
+      {"probe_id": "O2", "index": 4, "level": "Medium", "trace": "0+1+3+0 = 4 -> Medium; L2=1 -> override not engaged"},
+      {"probe_id": "O3", "index": 8, "level": "High", "trace": "0+3+3+2 = 8 -> High; override engaged, no change"},
+      {"probe_id": "O4", "index": 11, "level": "Near-certain", "trace": "3+3+3+2 = 11 -> Near-certain; override never lowers"},
+      {"probe_id": "O5", "index": 4, "level": "Medium", "trace": "0+2+2+0 = 4 -> Medium; L3=2 -> not engaged"},
+      {"probe_id": "O6", "index": 3, "level": "Low", "trace": "0+0+3+0 = 3 -> Low; L2=0 -> not engaged"}
+    ],
+    "note": "Whether the override also applies to the inherent likelihood (where L3 is set to 3 by definition) is ambiguity A-01; PGF-19 DPIA-FL-01 S2 reports inherent 6 -> Medium with L2 = 2."
+  },
+  "pet_outcome_mapping": {
+    "source": [{"register_id": "SR-18-A-PET-INDICATOR", "doc": "PGF-18", "part": "A", "section": "3.3.0 Disclosure indicator and module-outcome table", "approx_line": 289}],
+    "probes": [
+      {"probe_id": "P1", "level": "Low", "trace": "PASS, 0 < 0.5"},
+      {"probe_id": "P2", "level": "Low", "trace": "PASS, 0.4999 < 0.5"},
+      {"probe_id": "P3", "level": "Medium", "trace": "PASS, 0.5 <= 0.5 <= 1.0"},
+      {"probe_id": "P4", "level": "Medium", "trace": "PASS, 1.0 <= 1.0 (upper bound inclusive)"},
+      {"probe_id": "P5", "level": null, "result": "invalid", "trace": "PASS with indicator > 1 cannot arise: an indicator above 1 implies a weighted metric above its threshold, i.e. FAIL (SR-18-A-PET-INDICATOR); the input is inconsistent"},
+      {"probe_id": "P6", "level": null, "result": "release_blocked", "trace": "INCOMPLETE (G-M5): not assessed, no likelihood level; indicator ignored"},
+      {"probe_id": "P7", "level": "High", "result": "not_available_for_acceptance", "trace": "FAIL: as-proposed likelihood High regardless of indicator 0.3"},
+      {"probe_id": "P8", "level": "Near-certain", "result": "not_available_for_acceptance", "trace": "FAIL reproduced (persists in every repetition, whole CI beyond threshold): internal routing rule -> Near-certain (as-proposed)"}
+    ]
+  },
+  "track_b_bands": {
+    "source": [{"register_id": "SR-18-A-FACTOR-F", "doc": "PGF-18", "part": "A", "section": "3.4 Factor F — track (b) index table and floor", "approx_line": 553}],
+    "rule": "index = max(0, sum of subfactor scores); 0-1 Minor, 2-3 Moderate, 4-5 Significant, >= 6 Catastrophic; range 0..7 (regime 0..1 + financial 0..3 + reputational 0..3 + sandbox -1..0)",
+    "probes": [
+      {"raw_sum": -1, "index": 0, "level": "Minor"},
+      {"raw_sum": 0, "index": 0, "level": "Minor"},
+      {"raw_sum": 1, "index": 1, "level": "Minor"},
+      {"raw_sum": 2, "index": 2, "level": "Moderate"},
+      {"raw_sum": 3, "index": 3, "level": "Moderate"},
+      {"raw_sum": 4, "index": 4, "level": "Significant"},
+      {"raw_sum": 5, "index": 5, "level": "Significant"},
+      {"raw_sum": 6, "index": 6, "level": "Catastrophic"},
+      {"raw_sum": 7, "index": 7, "level": "Catastrophic"}
+    ]
+  },
+  "end_to_end": [
+    {"probe_id": "E1", "severity_band": "Catastrophic", "likelihood_index": 7, "likelihood_level": "High", "tier": "Critical", "trace": "8.5 -> Catastrophic; 2+2+1+2 = 7 -> High; matrix -> Critical"},
+    {"probe_id": "E2", "severity_band": "Significant", "likelihood_index": 11, "likelihood_level": "Near-certain", "tier": "High", "trace": "8.49 -> Significant; 11 -> Near-certain; matrix -> High"},
+    {"probe_id": "E3", "severity_band": "Minor", "likelihood_index": 11, "likelihood_level": "Near-certain", "tier": "Low", "trace": "3.49 -> Minor; Minor row constant Low"},
+    {"probe_id": "E4", "severity_band": "Catastrophic", "likelihood_index": 0, "likelihood_level": "Low", "tier": "High", "trace": "9 -> Catastrophic; 0 -> Low; severity-led floor cell -> High"},
+    {"probe_id": "E5", "severity_band": "Significant", "likelihood_index": 0, "likelihood_level": "Low", "tier": "Medium", "trace": "6.5 -> Significant; 0 -> Low; matrix -> Medium"}
+  ],
+  "notes": "Grid derived by reading the PGF-08 tables cell by cell. Probes with result 'invalid' or 'incomplete' must not produce a level; producing Minor/Low/PASS for them is a defect. Floating-point probes W5/W6 encode the reading that PGF-18's 'without rounding' requires exact arithmetic on stated decimal weights (A-06)."
+}
