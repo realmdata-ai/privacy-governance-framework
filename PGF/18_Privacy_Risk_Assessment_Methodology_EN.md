@@ -923,7 +923,7 @@ TP-SYN-LINK and TP-SYN-INF are the Bank's own documented test procedures, follow
 
 ### **3.3.3 Federated Learning**
 
-The only federated scheme is the anti-fraud consortium with other EU banks (Cross-Border Data Transfer Policy, Document 12; evidence pack EVP-2026-0041). Each bank's customer data stay with that bank; model updates leave it. The consortium members assess their joint-controllership arrangement under Art. 26; federated learning does not change the legal status of the data or of the updates.
+The only federated scheme is the anti-fraud consortium with other EU banks (Cross-Border Data Transfer Policy, Document 12; evidence pack EVP-2026-0041). Each bank's customer data stay with that bank; model updates leave it. The consortium members assess their joint-controllership arrangement under Art. 26; federated learning does not change the legal status of the data or of the updates. The project passport records the training inputs and labels and the G-L conclusion on Art. 10 (Document 19, DPIA-FL-01): only the customer's own transaction attributes and victim-side labels for confirmed unauthorised transactions are used; labels that attribute or suggest an offence by the customer, and counterparty identifiers, are excluded. Any change to the inputs re-opens G-L and the Factor B assessment.
 
 | Metric / control | Default threshold |
 | :---- | :---- |

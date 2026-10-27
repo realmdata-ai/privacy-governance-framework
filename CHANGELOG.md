@@ -37,7 +37,8 @@ First public release candidate. Derived from the authors' internal source set **
 ### Neutrality and examples
 - Vendor products and real third-party providers removed from templates and worked examples. Fictional providers are used instead.
 - Worked example (PanEuropean Bank AG, fictional) aligned to a single snapshot at the regulatory reference date.
-- Art. 10 (criminal-offence data) severity modifier applied consistently (review finding W4-04). Doc 18 Part B now matches Part A. The anti-fraud matching case (DPIA-PSI-01 / PRR-PSI-01) was re-assessed on 26 October 2026: residual High; Art. 36 prior consultation test met; Chief Risk Officer decision pending; sessions paused. The earlier Medium acceptance is kept as superseded history.
+- Art. 10 (criminal-offence data) severity modifier applied consistently (review finding W4-04). Doc 18 Part B now matches Part A. The anti-fraud matching case (DPIA-PSI-01 / PRR-PSI-01) was re-assessed on 26 October 2026: residual High; Art. 36 prior consultation test met; Chief Risk Officer decision pending; sessions paused. The earlier Medium acceptance is kept as superseded history. The informative severity in TIA-PSI-01 uses the correct data class (Restricted).
+- Art. 10 boundary of the federated-learning case recorded (review finding W4-05): victim-side training labels only, with offence-attributing labels and counterparty data excluded; re-assessment triggers stated. Tiers unchanged.
 
 ### Standards and international adaptation
 - New `STANDARDS_CROSSWALK.md`: NIST Privacy Framework 1.0 at category level; GDPR/EDPB; ENISA; Canada (OPC/OIPC accountability guidance, PIPEDA, Québec).
