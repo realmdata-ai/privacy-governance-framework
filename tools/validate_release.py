@@ -300,6 +300,11 @@ def main():
     seen = {}
     for nn, (meta, body) in parsed.items():
         for m in tier_re.finditer(body):
+            between = m.group(0)[len(m.group(1)):]
+            if re.search(r"(?:DPIA|TIA|PRR)-[A-Z0-9]", between):
+                continue  # the tier belongs to another identifier mentioned in between
+            if re.search(r"\b(inherent|target|previous|former)\s+$", between[: between.rfind(m.group(2))], re.I):
+                continue  # 'inherent Critical, residual High' — not the residual tier
             seen.setdefault(m.group(1), set()).add((m.group(2), CANON[nn]))
     for rid, s in seen.items():
         tiers = {t for t, _ in s}
