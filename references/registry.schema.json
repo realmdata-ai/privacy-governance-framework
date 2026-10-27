@@ -1,136 +1,137 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "PGF curated privacy reference registry",
-  "type": "object",
-  "required": [
-    "schema_version",
-    "catalogue_version",
-    "snapshot_date",
-    "repository",
-    "sources"
-  ],
-  "properties": {
-    "schema_version": {
-      "const": "1.0"
-    },
-    "catalogue_version": {
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "PGF curated privacy reference registry",
+ "type": "object",
+ "required": [
+  "schema_version",
+  "catalogue_version",
+  "snapshot_date",
+  "repository",
+  "sources"
+ ],
+ "properties": {
+  "schema_version": {
+   "const": "1.0"
+  },
+  "catalogue_version": {
+   "type": "string"
+  },
+  "snapshot_date": {
+   "type": "string",
+   "format": "date"
+  },
+  "repository": {
+   "type": "string",
+   "format": "uri"
+  },
+  "sources": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "group",
+     "title",
+     "jurisdiction",
+     "source_type",
+     "status",
+     "official_url",
+     "topics",
+     "pgf_document_ids",
+     "curation_note",
+     "verification",
+     "next_review_due"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9-]+$"
+     },
+     "group": {
       "type": "string"
-    },
-    "snapshot_date": {
+     },
+     "title": {
+      "type": "string",
+      "minLength": 1
+     },
+     "jurisdiction": {
+      "type": "string"
+     },
+     "source_type": {
+      "enum": [
+       "legislation",
+       "legal_instrument_resources",
+       "official_register",
+       "official_technical_standards_register",
+       "official_status_explanation",
+       "regulator_guidance",
+       "regulator_report",
+       "judgment",
+       "engineering_guidance",
+       "voluntary_framework",
+       "control_catalogue",
+       "professional_standard",
+       "draft_framework",
+       "draft_guidance",
+       "legislative_proposal",
+       "legislative_proposal_status",
+       "institutional_framework"
+      ]
+     },
+     "status": {
+      "type": "string",
+      "minLength": 1
+     },
+     "official_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+     },
+     "topics": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+       "type": "string"
+      }
+     },
+     "pgf_document_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+       "type": "string",
+       "pattern": "^PGF-(0[1-9]|[12][0-9]|3[01])$"
+      }
+     },
+     "curation_note": {
+      "type": "string"
+     },
+     "verification": {
+      "type": "object",
+      "required": [
+       "last_checked",
+       "level",
+       "full_clause_by_clause_review"
+      ],
+      "properties": {
+       "last_checked": {
+        "type": "string",
+        "format": "date"
+       },
+       "level": {
+        "type": "string"
+       },
+       "full_clause_by_clause_review": {
+        "type": "boolean"
+       }
+      }
+     },
+     "next_review_due": {
       "type": "string",
       "format": "date"
-    },
-    "repository": {
-      "type": "string",
-      "format": "uri"
-    },
-    "sources": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "object",
-        "required": [
-          "id",
-          "group",
-          "title",
-          "jurisdiction",
-          "source_type",
-          "status",
-          "official_url",
-          "topics",
-          "pgf_document_ids",
-          "curation_note",
-          "verification",
-          "next_review_due"
-        ],
-        "properties": {
-          "id": {
-            "type": "string",
-            "pattern": "^[A-Z][A-Z0-9-]+$"
-          },
-          "group": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string",
-            "minLength": 1
-          },
-          "jurisdiction": {
-            "type": "string"
-          },
-          "source_type": {
-            "enum": [
-              "legislation",
-              "legal_instrument_resources",
-              "official_register",
-              "official_technical_standards_register",
-              "official_status_explanation",
-              "regulator_guidance",
-              "regulator_report",
-              "judgment",
-              "engineering_guidance",
-              "voluntary_framework",
-              "control_catalogue",
-              "professional_standard",
-              "draft_framework",
-              "draft_guidance",
-              "legislative_proposal",
-              "legislative_proposal_status"
-            ]
-          },
-          "status": {
-            "type": "string",
-            "minLength": 1
-          },
-          "official_url": {
-            "type": "string",
-            "format": "uri",
-            "pattern": "^https://"
-          },
-          "topics": {
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-              "type": "string"
-            }
-          },
-          "pgf_document_ids": {
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-              "type": "string",
-              "pattern": "^PGF-(0[1-9]|[12][0-9]|3[01])$"
-            }
-          },
-          "curation_note": {
-            "type": "string"
-          },
-          "verification": {
-            "type": "object",
-            "required": [
-              "last_checked",
-              "level",
-              "full_clause_by_clause_review"
-            ],
-            "properties": {
-              "last_checked": {
-                "type": "string",
-                "format": "date"
-              },
-              "level": {
-                "type": "string"
-              },
-              "full_clause_by_clause_review": {
-                "type": "boolean"
-              }
-            }
-          },
-          "next_review_due": {
-            "type": "string",
-            "format": "date"
-          }
-        }
-      }
+     }
     }
+   }
   }
+ }
 }

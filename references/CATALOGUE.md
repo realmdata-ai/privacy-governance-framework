@@ -390,7 +390,7 @@ Generated from [registry.json](registry.json). Suggested PGF entry points are na
 
 [Canada Revenue Agency — Privacy Management Framework](https://www.canada.ca/en/revenue-agency/corporate/security/privacy-management-framework.html)
 
-- **Jurisdiction / type:** Canada (federal institution) · regulator_guidance.
+- **Jurisdiction / type:** Canada (federal institution) · institutional_framework.
 - **Status:** departmental framework; example only.
 - **Why it matters:** Example of a compact departmental programme overview under the federal Privacy Act regime. Not a private-sector standard; no conformity with it or with the Privacy Act is claimed.
 - **PGF entry points:** PGF-02, PGF-04.
@@ -401,7 +401,7 @@ Generated from [registry.json](registry.json). Suggested PGF entry points are na
 
 [Innovation, Science and Economic Development Canada — Privacy Management Framework](https://ised-isde.canada.ca/site/ised/en/transparency/atip-services/references/ised-privacy-management-framework)
 
-- **Jurisdiction / type:** Canada (federal institution) · regulator_guidance.
+- **Jurisdiction / type:** Canada (federal institution) · institutional_framework.
 - **Status:** departmental framework; example only.
 - **Why it matters:** Second departmental example of a compact programme overview. Not a private-sector standard; no conformity is claimed.
 - **PGF entry points:** PGF-02, PGF-04.
