@@ -223,6 +223,12 @@ def main():
         for pat, fl, msg, sev, allowed in FORBIDDEN:
             if nn in allowed: continue
             for m in re.finditer(pat, body, fl):
+                ls = body.rfind("\n", 0, m.start()) + 1
+                le = body.find("\n", m.end())
+                line_text = body[ls: le if le > 0 else len(body)]
+                # PGF document-history rows may quote removed terms (e.g. '"Supervision" removed'); vendor names never
+                if "changes from internal ver.2" in line_text and "vendor" not in msg:
+                    continue
                 R.add(sev, "forbidden", f"{name}:{lineno(body, m.start())}", f"{msg}: '{m.group(0)}'")
         shielded = body
         for s in OFFICIAL_US_OK: shielded = shielded.replace(s, "")
