@@ -384,13 +384,13 @@ This document is reviewed at least annually under the Policy Review Cycle (Docum
 Version 2.0 was adopted by the Management Board of PanEuropean Bank AG on 20 October 2026 and took effect on 23 October 2026. Document owner: Chief Privacy Officer. The Risk Committee of the Supervisory Board was informed on 23 October 2026. This document is not a Supervisory Board reserved consent matter.
 ## **Appendix A — Programme Report, Third Quarter 2026 (illustrative)**
 
-*PanEuropean Bank AG — privacy programme report (G8.1) for the quarter ended 30 September 2026. Draft by the Privacy Operations Lead on 14 October 2026; Group DPO factual review on 19 October 2026; approved by the Chief Privacy Officer on 21 October 2026; presented to the Management Board on 22 October 2026 and to the Risk Committee of the Supervisory Board on 23 October 2026. Prepared under version 1.0 and presented in the format of version 2.0. All figures are illustrative.*
+*PanEuropean Bank AG — privacy programme report (G8.1) for the quarter ended 30 September 2026. Draft by the Privacy Operations Lead on 14 October 2026; Group DPO factual review on 19 October 2026; approved by the Chief Privacy Officer on 21 October 2026; presented to the Management Board on 22 October 2026 and to the Risk Committee of the Supervisory Board on 23 October 2026. Prepared under version 1.0 and presented in the format of version 2.0. The report states facts known at its approval on 21 October 2026; later events are set out in Addendum A.1 (status at 26 October 2026). All figures are illustrative.*
 
 ***Executive Summary***
 
 * **Statutory events:** no missed statutory deadline in the quarter (CG-01(b) = 0). One personal data breach was notified to the HBDI within 72 hours of awareness (BR-2026-0117)
 * **Risk profile:** two High records — automated credit decisions (PRR-CS-INFER-01, PRR-CS-LAUNCH-01). Prior consultation with the HBDI submitted on 15 September 2026 and pending; the processing is **not in production**; the Chief Risk Officer's decision is pending; launch is planned for 1 February 2027, not before the consultation step and that decision
-* **Transfers:** the customer-service assistant's US transfer (TIA-LLM-01) is on **hold** — G-TIA incomplete; the AI path is suspended and EU customer service is human-only
+* **Transfers:** the customer-service assistant's US transfer (TIA-LLM-01) passed its G-TIA on 22 June 2026; its monitoring review is open, because the US surveillance-law position after the lapse of FISA section 702 on 12 June 2026 still has to be verified against primary legal sources (General Counsel; outcome reported separately — see Addendum A.1)
 * **New High item:** the cumulative disclosure budget for the retail customer population stands at about 80% of its δ limit; a decision on the use of the remaining headroom is requested from the Management Board
 * **Programme:** mandatory training coverage reached 98.4%; overdue DPIAs fell from 6 to 2 (within tolerance, not yet at target)
 
@@ -422,11 +422,11 @@ Version 2.0 was adopted by the Management Board of PanEuropean Bank AG on 20 Oct
 | :---- | :---- | :---- | :---- | :---- |
 | PRR-CS-INFER-01 | High (inherent Critical) | Chief Risk Officer — decision pending | G-36 test met (Legal & Compliance, 10 September 2026; Group DPO advice 9 September 2026); consultation submitted to the HBDI 15 September 2026; HBDI information request 6 October 2026, answered 13 October 2026; written advice awaited | Not in production; credit decisions are taken by credit staff. "Consulted" does not mean "approved"; an elapsed period is not an authorisation |
 | PRR-CS-LAUNCH-01 | High (inherited from INFER-01) | Chief Risk Officer — decision pending | As above | Launch planned 1 February 2027 |
-| PRR-LLM-01 | Medium | Head of Customer Service, 25 June 2026 — acceptance not in effect | G-36 not met | TIA-LLM-01: the pass of 22 June 2026 is historical; current status G-TIA incomplete — HOLD, pending verification of the US surveillance-law position (due 30 November 2026); AI path suspended under SCC Clause 14(f); EU customer service human-only |
+| PRR-LLM-01 | Medium (conditional) | Head of Customer Service, 25 June 2026; expiry 25 June 2027 | G-36 not met | TIA-LLM-01 passed on 22 June 2026; monitoring review open at the report date — verification of the US surveillance-law position after 12 June 2026 (General Counsel). Subsequent status: see Addendum A.1 |
 | PRR-PSI-01 | Medium (conditional) | Head of Fraud Prevention, 25 March 2026; expiry 25 March 2027 | G-36 not met | One-sided design without any output to the partner bank; sessions suspended 12 February 2026 after the G-TIA failure of the former design and resumed 1 April 2026; TIA re-evaluation due by 20 March 2027 |
 
 * **Conditional acceptances expiring (M-S5-05):** none in Q4 2026. For information, three expire in Q1 2027 — PRR-CLOUD-01 (20 March 2027), PRR-CS-TRAIN-01 (25 March 2027 or next calibration; re-assessment with the Chief Privacy Officer's concurrence under Document 8, version 3.0) and PRR-PSI-01 (25 March 2027)
-* **Transfers (M-C4-06, M-C4-03):** one transfer on hold (TIA-LLM-01); no transfer suspended in Q3 (the PSI suspension of 12 February – 31 March 2026 is closed)
+* **Transfers (M-C4-06, M-C4-03):** no transfer on hold or suspended in Q3 (the PSI suspension of 12 February – 31 March 2026 is closed); one open monitoring review (TIA-LLM-01) at the report date — see Addendum A.1 for its outcome
 * **Cumulative disclosure budget (M-G2-05):** retail customer population, lifetime limit ε ≤ 10.0 and δ ≤ 1×10⁻⁵. Ledger: ε 6.5 (65%); δ ≈ 8.0×10⁻⁶ (80%) — the δ warning level of Document 28 is reached (High item; Chief Privacy Officer informed under Section 6.4). The δ figure is driven by the first credit-scoring generator run (δ 8×10⁻⁶), which failed the PET module but remains in the ledger
 * **Track (b), separately:** PRR-LLM-01 Moderate; PRR-PSI-01 Moderate; other records as in Document 22. Track (b) is not netted against track (a)
 
@@ -455,7 +455,7 @@ The Chief Privacy Officer position was created on 20 October 2026 by converting 
 
 | Decision | Owner | Due | Status and evidence |
 | :---- | :---- | :---- | :---- |
-| Re-baseline the governance documents to the new role model | Management Board | 20 October 2026 | Completed — Charter version 3.0, Documents 4, 5, 6 version 4.0, Document 8 version 3.0 and related documents adopted 20 October 2026; Supervisory Board consent to the Charter and to Document 8, Section 3 given 23 October 2026 |
+| Re-baseline the governance documents to the new role model | Management Board | 20 October 2026 | Completed — Charter version 3.0, Documents 4, 5, 6 version 4.0, Document 8 version 3.0 and related documents adopted 20 October 2026; Supervisory Board consent to the Charter and to Document 8, Section 3 requested for its meeting of 23 October 2026 (outcome: Addendum A.1) |
 | Designate the Chief Privacy Officer | Management Board | 20 October 2026 | Completed — designation minuted 20 October 2026 |
 | Complete Phase 3 of the implementation roadmap | Chief Privacy Officer | 31 December 2026 | In progress |
 | First cycle of the legacy privacy-by-design review | Chief Privacy Officer with the Processing Owners | 31 December 2027 | In progress — plan adopted 20 October 2026 (Document 16) |
@@ -469,11 +469,24 @@ The Chief Privacy Officer position was created on 20 October 2026 by converting 
 * **Consequences of inaction —** a lower-priority release could exhaust the headroom before March 2027, delaying the recalibration required by the expiry of DPIA-CS-TRAIN-01
 * **Competent decider —** Management Board (allocation within an existing limit, process G2.1); the Risk Committee of the Supervisory Board is informed
 
-*Outcome (illustrative): the Management Board approved option (2) on 22 October 2026; the decision is minuted and will be tracked in the Q4 2026 report.*
+*Outcome: see Addendum A.1.*
 
 ***Data-Quality Statement***
 
-Data cut-off 30 September 2026, 24:00 CET; post-period events included up to 21 October 2026. Sources: Document 28 dashboard, Privacy Risk Register, issues log, breach record, Learning Hub. Quality flags: M-C2-05 shows paused DPIAs as a separate line from Q3 2026; M-S8-07 and M-S8-09 are first measured in Q4 2026. No metric was published with a "not verified" flag.
+Data cut-off 30 September 2026, 24:00 CET; post-period events included up to 21 October 2026, the date of approval. Events after that date are not part of the approved report; they are set out in Addendum A.1. Sources: Document 28 dashboard, Privacy Risk Register, issues log, breach record, Learning Hub. Quality flags: M-C2-05 shows paused DPIAs as a separate line from Q3 2026; M-S8-07 and M-S8-09 are first measured in Q4 2026. No metric was published with a "not verified" flag.
+
+
+***Addendum A.1 — Update on events after approval (status at 26 October 2026)***
+
+*Prepared by the Privacy Operations Lead and approved by the Chief Privacy Officer on 26 October 2026; distributed for information to the members of the Management Board and to the chair of the Risk Committee of the Supervisory Board on 26 October 2026. The addendum does not change the approved Q3 report or its metrics (cut-off 30 September 2026); it records later events and the current risk status. Included in the Q4 2026 report.*
+
+| Date | Event | Source |
+| :---- | :---- | :---- |
+| 22 October 2026 | The Management Board approved option (2) on the use of the remaining δ headroom (priority for the credit-scoring recalibration and the federated-learning rounds); minuted; tracked in the Q4 2026 report | Management Board minutes |
+| 23 October 2026 | The Supervisory Board gave its consent to Charter version 3.0 and to Document 8, Section 3; Document 8, version 3.0 took effect | Supervisory Board minutes; Document 8 |
+| 26 October 2026 | TIA-LLM-01 monitoring review: General Counsel recorded **G-TIA incomplete — HOLD**, because the verification against primary legal sources could not be completed; the 22 June 2026 pass is no longer a current pass. The Head of Customer Service suspended the AI path under SCC Clause 14(f); EU customer service is human-only; the conditional acceptance of 25 June 2026 is not in effect. Verification target: 30 November 2026 | Document 20, TIA-LLM-01; Document 22, PRR-LLM-01 |
+
+*Current risk status at 26 October 2026 (changes against the approved report only):* PRR-LLM-01 — status Suspended (G-TIA hold), acceptance not in effect; transfers on hold: 1 (TIA-LLM-01). All other records as in the approved report.
 
 # **Normative Basis and References**
 
