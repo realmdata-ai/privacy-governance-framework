@@ -1,6 +1,6 @@
 # Curated privacy reference catalogue
 
-**Version 0.1.0 · Snapshot 26 October 2026**
+**Version 0.2.0 · Snapshot 26 October 2026**
 
 Generated from [registry.json](registry.json). Suggested PGF entry points are navigation hints, not verified control equivalence. Read [verification and maintenance rules](MAINTENANCE.md) before relying on a record.
 
@@ -105,6 +105,17 @@ Generated from [registry.json](registry.json). Suggested PGF entry points are na
 - **Topics:** governance, assurance.
 - **Verification:** official section reviewed; checked 2026-10-26; full clause review: no; next review due 2027-01-24.
 
+### US-DPF-LIST
+
+[Data Privacy Framework List (U.S. Department of Commerce) — participating organisations](https://www.dataprivacyframework.gov/list)
+
+- **Jurisdiction / type:** United States (EU–U.S. DPF, UK Extension, Swiss–U.S. DPF) · official_register.
+- **Status:** dynamic official register; check the organisation record at the time of each transfer decision.
+- **Why it matters:** Evidence source for the recipient's current participation, not a legal basis by itself. Record per flow: exact legal entity and covered entities, framework (EU–U.S. DPF / UK Extension / Swiss–U.S. DPF), HR or non-HR data, the official status wording, profile URL, checked_at, reviewer and evidence reference. The list is not copied into PGF; no vendor is endorsed. A special status such as 'Active – Re-certification under Review' is read with the official explanation, not converted to 'inactive'. The main page requires JavaScript.
+- **PGF entry points:** PGF-07, PGF-12, PGF-17, PGF-20.
+- **Topics:** transfers, DPF, vendor assessment.
+- **Verification:** official page indexed dynamic content not reviewed; checked 2026-10-26; full clause review: no; next review due 2027-01-24.
+
 ## EU regulator guidance and case law
 
 ### EDPB-ROLES-07-2020
@@ -205,6 +216,17 @@ Generated from [registry.json](registry.json). Suggested PGF entry points are na
 - **PGF entry points:** PGF-12, PGF-20.
 - **Topics:** transfers, fundamental_rights.
 - **Verification:** access restricted; checked 2026-10-26; full clause review: no; next review due 2027-01-24.
+
+### EDPB-DPF-FAQ-2024
+
+[EDPB — EU–U.S. Data Privacy Framework FAQ for European businesses (16 July 2024)](https://www.edpb.europa.eu/system/files/2024-07/edpb_dpf_faq-for-businesses_en.pdf)
+
+- **Jurisdiction / type:** EU/EEA · regulator_guidance.
+- **Status:** published 2024-07-16.
+- **Why it matters:** Q3 explains how to check that a US recipient is certified and that the certification covers the data concerned (including HR data). Guidance, not law; the adequacy decision is the legal basis.
+- **PGF entry points:** PGF-12, PGF-17, PGF-20.
+- **Topics:** transfers, DPF.
+- **Verification:** official document reviewed for q3; checked 2026-10-26; full clause review: no; next review due 2027-01-24.
 
 ## NIST and engineering guidance
 
@@ -364,6 +386,28 @@ Generated from [registry.json](registry.json). Suggested PGF entry points are na
 - **Topics:** breach, records.
 - **Verification:** official page reviewed; checked 2026-10-26; full clause review: no; next review due 2027-01-24.
 
+### CA-CRA-PMF
+
+[Canada Revenue Agency — Privacy Management Framework](https://www.canada.ca/en/revenue-agency/corporate/security/privacy-management-framework.html)
+
+- **Jurisdiction / type:** Canada (federal institution) · regulator_guidance.
+- **Status:** departmental framework; example only.
+- **Why it matters:** Example of a compact departmental programme overview under the federal Privacy Act regime. Not a private-sector standard; no conformity with it or with the Privacy Act is claimed.
+- **PGF entry points:** PGF-02, PGF-04.
+- **Topics:** programme, accountability.
+- **Verification:** official page reviewed; checked 2026-10-26; full clause review: no; next review due 2027-01-24.
+
+### CA-ISED-PMF
+
+[Innovation, Science and Economic Development Canada — Privacy Management Framework](https://ised-isde.canada.ca/site/ised/en/transparency/atip-services/references/ised-privacy-management-framework)
+
+- **Jurisdiction / type:** Canada (federal institution) · regulator_guidance.
+- **Status:** departmental framework; example only.
+- **Why it matters:** Second departmental example of a compact programme overview. Not a private-sector standard; no conformity is claimed.
+- **PGF entry points:** PGF-02, PGF-04.
+- **Topics:** programme, accountability.
+- **Verification:** official page reviewed; checked 2026-10-26; full clause review: no; next review due 2027-01-24.
+
 ## Jurisdictional extensions
 
 ### UK-GDPR
@@ -398,6 +442,17 @@ Generated from [registry.json](registry.json). Suggested PGF entry points are na
 - **PGF entry points:** PGF-07, PGF-12, PGF-14, PGF-19.
 - **Topics:** accountability, PIA, transfers.
 - **Verification:** access limited not substantively reviewed; checked 2026-10-26; full clause review: no; next review due 2027-01-24.
+
+### CH-US-DPF
+
+[Swiss–U.S. Data Privacy Framework — FDPIC announcement and DPF Swiss FAQ](https://www.edoeb.admin.ch/en/15082024-new-swiss-us-data-privacy-framework)
+
+- **Jurisdiction / type:** Switzerland / United States · regulator_guidance.
+- **Status:** Swiss adequacy for certified US recipients applies from 15 September 2024 (FDPIC).
+- **Why it matters:** Separate Swiss legal route: it requires the recipient's Swiss–U.S. DPF certification and the Swiss legal basis; an EU–U.S. DPF certification does not by itself cover Swiss transfers. Companion FAQ: https://www.dataprivacyframework.gov/program-articles/FAQs%20%E2%80%93%20Swiss%E2%80%93U.S.-Data-Privacy-Framework-%28Swiss%E2%80%93U.S.-DPF%29-%281%E2%80%934%29
+- **PGF entry points:** PGF-07, PGF-12, PGF-20.
+- **Topics:** transfers, DPF, Switzerland.
+- **Verification:** official page reviewed; checked 2026-10-26; full clause review: no; next review due 2027-01-24.
 
 ## Watchlist — drafts and proposals
 

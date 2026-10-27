@@ -1,1121 +1,1252 @@
 {
-  "schema_version": "1.0",
-  "catalogue_version": "0.1.0",
-  "title": "PGF curated privacy reference registry",
-  "language": "en-GB",
-  "snapshot_date": "2026-10-26",
-  "repository": "https://github.com/realmdata-ai/privacy-governance-framework",
-  "purpose": "Selected primary references and entry points; not a legal opinion, exhaustive legal inventory or compliance certification.",
-  "maintenance": "Manual curation before each PGF release; see MAINTENANCE.md. Review-due dates do not schedule automated work.",
-  "scope": "EU/EEA and Canada core; NIST/ENISA engineering references; limited UK/Swiss extensions and an explicit draft/proposal watchlist.",
-  "sources": [
-    {
-      "id": "EU-GDPR",
-      "group": "EU and EEA — law and transfer mechanisms",
-      "title": "General Data Protection Regulation — Regulation (EU) 2016/679",
-      "jurisdiction": "EU/EEA",
-      "source_type": "legislation",
-      "status": "in_force; check consolidated amendments and applicability",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
-      "topics": [
-        "accountability",
-        "rights",
-        "DPIA",
-        "transfers",
-        "breach"
-      ],
-      "pgf_document_ids": [
-        "PGF-01",
-        "PGF-02",
-        "PGF-05",
-        "PGF-07",
-        "PGF-12",
-        "PGF-14",
-        "PGF-15",
-        "PGF-17",
-        "PGF-19",
-        "PGF-20",
-        "PGF-21"
-      ],
-      "curation_note": "Core legal baseline. Use the version applicable to the processing date; an ELI link to the original act does not pin the latest consolidated text.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "access_restricted",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "EU-SCC-2021",
-      "group": "EU and EEA — law and transfer mechanisms",
-      "title": "Standard Contractual Clauses — Commission transfer resources (Decision (EU) 2021/914)",
-      "jurisdiction": "EU/EEA",
-      "source_type": "legal_instrument_resources",
-      "status": "2021 transfer SCC resources; select the applicable module",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en",
-      "topics": [
-        "transfers",
-        "processors"
-      ],
-      "pgf_document_ids": [
-        "PGF-12",
-        "PGF-17",
-        "PGF-20"
-      ],
-      "curation_note": "Read the actual decision and clauses from this official page. SCC selection, recipient scope and supplementary measures are separate decisions.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "EU-ADEQUACY",
-      "group": "EU and EEA — law and transfer mechanisms",
-      "title": "European Commission register of adequacy decisions",
-      "jurisdiction": "EU/EEA",
-      "source_type": "official_register",
-      "status": "living_register; scope and current validity must be checked",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en",
-      "topics": [
-        "transfers"
-      ],
-      "pgf_document_ids": [
-        "PGF-07",
-        "PGF-12",
-        "PGF-20"
-      ],
-      "curation_note": "Check destination, sector, recipient eligibility and validity. An applicable Article 45 decision follows a different route from an Article 46 SCC/TIA assessment.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "EU-DORA",
-      "group": "EU and EEA — law and transfer mechanisms",
-      "title": "Digital Operational Resilience Act — Regulation (EU) 2022/2554",
-      "jurisdiction": "EU/EEA",
-      "source_type": "legislation",
-      "status": "in_force; applies from 17 January 2025 subject to entity scope",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj/eng",
-      "topics": [
-        "security",
-        "breach",
-        "vendors",
-        "governance"
-      ],
-      "pgf_document_ids": [
-        "PGF-03",
-        "PGF-07",
-        "PGF-14",
-        "PGF-17",
-        "PGF-27",
-        "PGF-30"
-      ],
-      "curation_note": "Financial-sector profile. Read applicable delegated/implementing rules; DORA and GDPR notification channels have different tests and clocks.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "access_restricted",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "EU-DORA-REPORTING",
-      "group": "EU and EEA — law and transfer mechanisms",
-      "title": "EBA — Joint technical standards on major incident reporting",
-      "jurisdiction": "EU/EEA",
-      "source_type": "official_technical_standards_register",
-      "status": "adopted_and_published; check final linked instruments",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/operational-resilience/joint-technical-standards-major-incident-reporting",
-      "topics": [
-        "breach",
-        "security"
-      ],
-      "pgf_document_ids": [
-        "PGF-07",
-        "PGF-14",
-        "PGF-24"
-      ],
-      "curation_note": "Entry point to reporting content, time limits and templates, including Delegated Regulation 2025/301. Check triggers, extensions and exceptions in the final legal text.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "EU-AI-ACT",
-      "group": "EU and EEA — law and transfer mechanisms",
-      "title": "Artificial Intelligence Act — Regulation (EU) 2024/1689",
-      "jurisdiction": "EU/EEA",
-      "source_type": "legislation",
-      "status": "in_force_with_phased_application; amended timetable requires verification",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
-      "topics": [
-        "AI",
-        "DPIA",
-        "governance"
-      ],
-      "pgf_document_ids": [
-        "PGF-03",
-        "PGF-06",
-        "PGF-07",
-        "PGF-15",
-        "PGF-19",
-        "PGF-30"
-      ],
-      "curation_note": "Privacy interface only: roles, human oversight, notices and fundamental-rights assessment may overlap. The original act must be read with the 2026 AI Omnibus and applicable transition rules.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "access_restricted",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "EU-AI-OMNIBUS-STATUS",
-      "group": "EU and EEA — law and transfer mechanisms",
-      "title": "European Commission — AI Omnibus enters into force",
-      "jurisdiction": "EU/EEA",
-      "source_type": "official_status_explanation",
-      "status": "entered_into_force_27_July_2026; differentiated_application_dates",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force",
-      "topics": [
-        "AI",
-        "regulatory_change"
-      ],
-      "pgf_document_ids": [
-        "PGF-03",
-        "PGF-07",
-        "PGF-19",
-        "PGF-30"
-      ],
-      "curation_note": "Official status explanation, not a substitute for the amending regulation. Distinguish Annex III and product-embedded high-risk rules and already applicable obligations.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "EU-NIS2",
-      "group": "EU and EEA — law and transfer mechanisms",
-      "title": "NIS2 Directive — Directive (EU) 2022/2555",
-      "jurisdiction": "EU/EEA",
-      "source_type": "legislation",
-      "status": "directive; national_transposition_and_sector_interaction_required",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj/eng",
-      "topics": [
-        "security",
-        "breach",
-        "governance"
-      ],
-      "pgf_document_ids": [
-        "PGF-03",
-        "PGF-07",
-        "PGF-14",
-        "PGF-17",
-        "PGF-30"
-      ],
-      "curation_note": "Adjacent cybersecurity regime. Determine national implementation, entity scope and the sector-specific relationship with DORA before assigning obligations.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "access_restricted",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "DE-AKTG-111",
-      "group": "EU and EEA — law and transfer mechanisms",
-      "title": "German Stock Corporation Act — section 111",
-      "jurisdiction": "Germany",
-      "source_type": "legislation",
-      "status": "current_official_section; German_AG_example_only",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.gesetze-im-internet.de/aktg/__111.html",
-      "topics": [
-        "governance",
-        "assurance"
-      ],
-      "pgf_document_ids": [
-        "PGF-02",
-        "PGF-04",
-        "PGF-05",
-        "PGF-27",
-        "PGF-31"
-      ],
-      "curation_note": "Separates management from supervision while permitting reserved consent matters. This is not a universal board model.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_section_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "EDPB-ROLES-07-2020",
-      "group": "EU regulator guidance and case law",
-      "title": "Guidelines 07/2020 on controller and processor concepts",
-      "jurisdiction": "EU/EEA",
-      "source_type": "regulator_guidance",
-      "status": "final_version; 7 July 2021",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.edpb.europa.eu/documents/guideline/guidelines-072020-on-the-concepts-of-controller-and-processor-in-the-gdpr_en",
-      "topics": [
-        "accountability",
-        "processors",
-        "joint_controllers"
-      ],
-      "pgf_document_ids": [
-        "PGF-02",
-        "PGF-03",
-        "PGF-05",
-        "PGF-17",
-        "PGF-21"
-      ],
-      "curation_note": "Classify the role per activity before allocating obligations or selecting a contract. Guidance is not itself legislation.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "WP29-DPO-243",
-      "group": "EU regulator guidance and case law",
-      "title": "Guidelines on Data Protection Officers — WP243 rev.01",
-      "jurisdiction": "EU/EEA",
-      "source_type": "regulator_guidance",
-      "status": "endorsed_WP29_guidance; revised_5_April_2017",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.cnil.fr/sites/default/files/atoms/files/guidelines_on_dpos_5_april_2017.pdf",
-      "topics": [
-        "DPO",
-        "governance",
-        "confidentiality"
-      ],
-      "pgf_document_ids": [
-        "PGF-02",
-        "PGF-04",
-        "PGF-05",
-        "PGF-06",
-        "PGF-26",
-        "PGF-27"
-      ],
-      "curation_note": "Use actual tasks to assess independence and conflicts. Includes confidential access to the DPO, resources and DPIA advice.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_document_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "WP29-DPIA-248",
-      "group": "EU regulator guidance and case law",
-      "title": "DPIA and high-risk processing — EDPB endorsement of WP248 rev.01",
-      "jurisdiction": "EU/EEA",
-      "source_type": "regulator_guidance",
-      "status": "endorsed_WP29_guidance; national_SA_lists_also_apply",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.edpb.europa.eu/documents/guideline/data-protection-impact-assessments-high-risk-processing_en",
-      "topics": [
-        "DPIA",
-        "risk_assessment"
-      ],
-      "pgf_document_ids": [
-        "PGF-08",
-        "PGF-16",
-        "PGF-18",
-        "PGF-19",
-        "PGF-24"
-      ],
-      "curation_note": "The nine criteria inform triage; a scoring questionnaire cannot override Article 35 or an applicable supervisory-authority list.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "EDPB-PBD-04-2019",
-      "group": "EU regulator guidance and case law",
-      "title": "Guidelines 4/2019 — Article 25, data protection by design and by default",
-      "jurisdiction": "EU/EEA",
-      "source_type": "regulator_guidance",
-      "status": "final_v2.0; adopted_20_October_2020",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.edpb.europa.eu/documents/guideline/guidelines-42019-on-article-25-data-protection-by-design-and-by-default_en",
-      "topics": [
-        "privacy_by_design",
-        "minimisation"
-      ],
-      "pgf_document_ids": [
-        "PGF-09",
-        "PGF-10",
-        "PGF-11",
-        "PGF-16",
-        "PGF-18"
-      ],
-      "curation_note": "Connect design/default requirements to lifecycle decisions and evidence, rather than treating DPIA approval as the whole design process.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "EDPB-TRANSFER-01-2020",
-      "group": "EU regulator guidance and case law",
-      "title": "Recommendations 01/2020 — supplementary transfer measures",
-      "jurisdiction": "EU/EEA",
-      "source_type": "regulator_guidance",
-      "status": "final_v2.0; adopted_18_June_2021",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.edpb.europa.eu/documents/recommendation/recommendations-012020-on-measures-that-supplement-transfer-tools-to_en",
-      "topics": [
-        "transfers",
-        "PET",
-        "risk_assessment"
-      ],
-      "pgf_document_ids": [
-        "PGF-12",
-        "PGF-17",
-        "PGF-18",
-        "PGF-20"
-      ],
-      "curation_note": "Mechanism-specific assessment of laws/practices and effective supplementary measures. Do not treat organisational risk acceptance as a cure for an ineffective transfer tool.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_document_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "EDPB-BREACH-09-2022",
-      "group": "EU regulator guidance and case law",
-      "title": "Guidelines 9/2022 — personal data breach notification under GDPR",
-      "jurisdiction": "EU/EEA",
-      "source_type": "regulator_guidance",
-      "status": "final_v2.0; adopted_28_March_2023",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.edpb.europa.eu/system/files/2023-04/edpb_guidelines_202209_personal_data_breach_notification_v2.0_en.pdf",
-      "topics": [
-        "breach",
-        "processors",
-        "records"
-      ],
-      "pgf_document_ids": [
-        "PGF-05",
-        "PGF-14",
-        "PGF-17",
-        "PGF-24",
-        "PGF-28"
-      ],
-      "curation_note": "Separate breach existence, recording, controller notification tests and processor-to-controller escalation. Includes controller awareness and phased reporting.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_document_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "EDPB-DPO-CEF-2023",
-      "group": "EU regulator guidance and case law",
-      "title": "Coordinated Enforcement Action 2023 — designation and position of DPOs",
-      "jurisdiction": "EU/EEA",
-      "source_type": "regulator_report",
-      "status": "adopted_16_January_2024",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.edpb.europa.eu/system/files/2024-01/edpb_report_20240116_cef_dpo_en.pdf",
-      "topics": [
-        "DPO",
-        "governance",
-        "assurance"
-      ],
-      "pgf_document_ids": [
-        "PGF-02",
-        "PGF-04",
-        "PGF-05",
-        "PGF-06",
-        "PGF-26",
-        "PGF-27"
-      ],
-      "curation_note": "Findings and recommendations on resources, expertise, conflicts, independence and access to senior management; distinguish recommendations from statutory duties.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_document_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "CJEU-XFAB-C453-21",
-      "group": "EU regulator guidance and case law",
-      "title": "CJEU — X-FAB Dresden, C-453/21",
-      "jurisdiction": "EU/EEA",
-      "source_type": "judgment",
-      "status": "judgment_9_February_2023",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A62021CJ0453",
-      "topics": [
-        "DPO",
-        "conflicts_of_interest"
-      ],
-      "pgf_document_ids": [
-        "PGF-02",
-        "PGF-04",
-        "PGF-05",
-        "PGF-06",
-        "PGF-26"
-      ],
-      "curation_note": "Case-by-case assessment of conflicting duties, including determining purposes and means. A RACI letter alone does not establish a conflict.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_indexed_text_and_regulator_crosscheck",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "CJEU-SCHREMS-II",
-      "group": "EU regulator guidance and case law",
-      "title": "CJEU — Data Protection Commissioner v Facebook Ireland and Schrems, C-311/18",
-      "jurisdiction": "EU/EEA",
-      "source_type": "judgment",
-      "status": "judgment_16_July_2020",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62018CJ0311",
-      "topics": [
-        "transfers",
-        "fundamental_rights"
-      ],
-      "pgf_document_ids": [
-        "PGF-12",
-        "PGF-20"
-      ],
-      "curation_note": "Transfer safeguards and essentially equivalent protection. Read the judgment and its application to the selected mechanism.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "access_restricted",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "ENISA-PSEUDO-2019",
-      "group": "NIST and engineering guidance",
-      "title": "ENISA — Pseudonymisation techniques and best practices",
-      "jurisdiction": "EU/international",
-      "source_type": "engineering_guidance",
-      "status": "published_3_December_2019",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.enisa.europa.eu/publications/pseudonymisation-techniques-and-best-practices",
-      "topics": [
-        "pseudonymisation",
-        "PET",
-        "threat_models"
-      ],
-      "pgf_document_ids": [
-        "PGF-09",
-        "PGF-10",
-        "PGF-16",
-        "PGF-18"
-      ],
-      "curation_note": "Engineering techniques, adversaries and attacks. Pseudonymisation does not by itself establish anonymity.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "ENISA-ENGINEERING-2022",
-      "group": "NIST and engineering guidance",
-      "title": "ENISA — Data Protection Engineering",
-      "jurisdiction": "EU/international",
-      "source_type": "engineering_guidance",
-      "status": "published_2022",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.enisa.europa.eu/publications/data-protection-engineering",
-      "topics": [
-        "privacy_by_design",
-        "PET",
-        "engineering"
-      ],
-      "pgf_document_ids": [
-        "PGF-09",
-        "PGF-16",
-        "PGF-18",
-        "PGF-27"
-      ],
-      "curation_note": "Engineering reference for implementing protection principles; not a PGF certification scheme.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "NIST-PF-1-0",
-      "group": "NIST and engineering guidance",
-      "title": "NIST Privacy Framework — Version 1.0",
-      "jurisdiction": "International/US",
-      "source_type": "voluntary_framework",
-      "status": "final; January_2020",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01162020.pdf",
-      "topics": [
-        "governance",
-        "risk_assessment",
-        "controls"
-      ],
-      "pgf_document_ids": [
-        "PGF-02",
-        "PGF-05",
-        "PGF-08",
-        "PGF-18",
-        "PGF-21",
-        "PGF-23",
-        "PGF-27",
-        "PGF-28",
-        "PGF-30",
-        "PGF-31"
-      ],
-      "curation_note": "Stable baseline for PGF function/category mapping. A conceptual crosswalk is not proof of compliance or effectiveness.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_document_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "NIST-800-226",
-      "group": "NIST and engineering guidance",
-      "title": "NIST SP 800-226 — Guidelines for Evaluating Differential Privacy Guarantees",
-      "jurisdiction": "International/US",
-      "source_type": "engineering_guidance",
-      "status": "final; March_2025",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://csrc.nist.gov/pubs/sp/800/226/final",
-      "topics": [
-        "differential_privacy",
-        "PET",
-        "composition"
-      ],
-      "pgf_document_ids": [
-        "PGF-08",
-        "PGF-09",
-        "PGF-18",
-        "PGF-27"
-      ],
-      "curation_note": "Check privacy unit, adjacency, accountant, composition and implementation hazards. Parameters and empirical attack scores are not legal safe harbours.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_and_selected_document_sections_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "NIST-IR-8062",
-      "group": "NIST and engineering guidance",
-      "title": "NIST IR 8062 — Privacy engineering and risk management in federal systems",
-      "jurisdiction": "International/US",
-      "source_type": "engineering_guidance",
-      "status": "final; January_2017",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://csrc.nist.gov/pubs/ir/8062/final",
-      "topics": [
-        "risk_assessment",
-        "privacy_engineering"
-      ],
-      "pgf_document_ids": [
-        "PGF-08",
-        "PGF-16",
-        "PGF-18"
-      ],
-      "curation_note": "Reference vocabulary and privacy engineering objectives. Its federal-system context must be acknowledged when adapting it.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "NIST-800-53-R5",
-      "group": "NIST and engineering guidance",
-      "title": "NIST SP 800-53 Rev.5 — Security and Privacy Controls",
-      "jurisdiction": "International/US",
-      "source_type": "control_catalogue",
-      "status": "Rev.5; official_page_notes_control_release_5.2.0_27_August_2025",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
-      "topics": [
-        "controls",
-        "security",
-        "accountability"
-      ],
-      "pgf_document_ids": [
-        "PGF-03",
-        "PGF-09",
-        "PGF-16",
-        "PGF-17",
-        "PGF-27"
-      ],
-      "curation_note": "Pin the control catalogue release when mapping PT and related controls. The landing page links CPRT; Rev.5 PDF and current catalogue updates are not interchangeable.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "NIST-CSF-2-0",
-      "group": "NIST and engineering guidance",
-      "title": "NIST Cybersecurity Framework — Version 2.0",
-      "jurisdiction": "International/US",
-      "source_type": "voluntary_framework",
-      "status": "final_framework; check_current_official_resources",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.nist.gov/cyberframework",
-      "topics": [
-        "security",
-        "governance",
-        "interfaces"
-      ],
-      "pgf_document_ids": [
-        "PGF-03",
-        "PGF-07",
-        "PGF-14",
-        "PGF-17",
-        "PGF-27"
-      ],
-      "curation_note": "Use for the InfoSec interface. Cybersecurity risk management does not replace privacy risk assessment.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "IIA-GIAS-2024",
-      "group": "NIST and engineering guidance",
-      "title": "IIA — Global Internal Audit Standards, 2024",
-      "jurisdiction": "International",
-      "source_type": "professional_standard",
-      "status": "effective_9_January_2025; applicability_depends_on_adoption_and_sector_rules",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.theiia.org/globalassets/site/standards/globalinternalauditstandards_2024january9.pdf",
-      "topics": [
-        "assurance",
-        "governance"
-      ],
-      "pgf_document_ids": [
-        "PGF-02",
-        "PGF-04",
-        "PGF-05",
-        "PGF-27"
-      ],
-      "curation_note": "Reference independent assurance and board/audit-committee governance, including Standards6.2 and9.4. This is not a universal GDPR statutory requirement; do not reproduce the copyrighted standard.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_document_selected_sections_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "CA-PIPEDA",
-      "group": "Canada",
-      "title": "Personal Information Protection and Electronic Documents Act (PIPEDA)",
-      "jurisdiction": "Canada/federal",
-      "source_type": "legislation",
-      "status": "in_force; official_consolidation_current_to_30_September_2026",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://laws-lois.justice.gc.ca/eng/acts/P-8.6/",
-      "topics": [
-        "accountability",
-        "consent",
-        "rights",
-        "breach"
-      ],
-      "pgf_document_ids": [
-        "PGF-01",
-        "PGF-02",
-        "PGF-07",
-        "PGF-13",
-        "PGF-14",
-        "PGF-15",
-        "PGF-17"
-      ],
-      "curation_note": "Determine commercial-activity, federal/provincial and cross-border applicability. GDPR lawful-basis tables do not transpose directly.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "CA-BREACH-REG",
-      "group": "Canada",
-      "title": "Breach of Security Safeguards Regulations — SOR/2018-64",
-      "jurisdiction": "Canada/federal",
-      "source_type": "legislation",
-      "status": "official_consolidation_current_to_30_September_2026",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2018-64/",
-      "topics": [
-        "breach",
-        "records"
-      ],
-      "pgf_document_ids": [
-        "PGF-07",
-        "PGF-14",
-        "PGF-17"
-      ],
-      "curation_note": "Read with PIPEDA sections10.1–10.3. Keep all required breach records; distinguish records from notification thresholds.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "CA-QC-PRIVATE",
-      "group": "Canada",
-      "title": "Act respecting the protection of personal information in the private sector — P-39.1",
-      "jurisdiction": "Canada/Quebec",
-      "source_type": "legislation",
-      "status": "official_consolidation_current_to_15_October_2026",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1",
-      "topics": [
-        "accountability",
-        "PIA",
-        "rights",
-        "transfers",
-        "breach"
-      ],
-      "pgf_document_ids": [
-        "PGF-01",
-        "PGF-02",
-        "PGF-07",
-        "PGF-12",
-        "PGF-13",
-        "PGF-14",
-        "PGF-15",
-        "PGF-19",
-        "PGF-20"
-      ],
-      "curation_note": "Read the consolidated private-sector Act as amended by Law25. Do not import article numbers from the public-sector Act or assume PIPEDA and Quebec are identical.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_text_metadata_and_selected_sections_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "CA-QC-ANON",
-      "group": "Canada",
-      "title": "Regulation respecting the anonymization of personal information — A-2.1, r.0.1",
-      "jurisdiction": "Canada/Quebec",
-      "source_type": "legislation",
-      "status": "regulation; official_index_identified; full_text_access_retry_required",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.legisquebec.gouv.qc.ca/fr/document/rc/A-2.1%2C%20r.%200.1?langCont=en",
-      "topics": [
-        "anonymisation",
-        "PET",
-        "reassessment"
-      ],
-      "pgf_document_ids": [
-        "PGF-07",
-        "PGF-10",
-        "PGF-11",
-        "PGF-18"
-      ],
-      "curation_note": "Enabling laws include private-sector P-39.1 as well as the public-sector Act. Verify the current full text and its assessment/reassessment requirements before relying on clauses.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_indexed_text_only_direct_fetch_failed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "CA-OPC-PROGRAMME",
-      "group": "Canada",
-      "title": "OPC/OIPC — Getting Accountability Right with a Privacy Management Program",
-      "jurisdiction": "Canada",
-      "source_type": "regulator_guidance",
-      "status": "published_2012; current_official_guidance_page",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/pipeda-compliance-help/pipeda-compliance-and-training-tools/gl_acc_201204/",
-      "topics": [
-        "accountability",
-        "programme",
-        "assurance"
-      ],
-      "pgf_document_ids": [
-        "PGF-02",
-        "PGF-04",
-        "PGF-06",
-        "PGF-21",
-        "PGF-23",
-        "PGF-27",
-        "PGF-28",
-        "PGF-29",
-        "PGF-30",
-        "PGF-31"
-      ],
-      "curation_note": "Direct programme-design reference for organisational commitment, programme controls and ongoing review. Guidance is distinct from legislation.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "CA-OPC-BREACH",
-      "group": "Canada",
-      "title": "OPC — Mandatory reporting of breaches of security safeguards",
-      "jurisdiction": "Canada/federal",
-      "source_type": "regulator_guidance",
-      "status": "current_official_guidance_page",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.priv.gc.ca/en/privacy-topics/privacy-for-businesses/privacy-breaches-at-your-business/gd_pb_201810/?seq_no=2",
-      "topics": [
-        "breach",
-        "records"
-      ],
-      "pgf_document_ids": [
-        "PGF-05",
-        "PGF-07",
-        "PGF-14"
-      ],
-      "curation_note": "Operational explanation of real risk of significant harm, notification and records. Do not import the GDPR72h deadline.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "UK-GDPR",
-      "group": "Jurisdictional extensions",
-      "title": "UK GDPR — official legislation portal",
-      "jurisdiction": "United_Kingdom",
-      "source_type": "legislation",
-      "status": "verify_current_consolidated_text_and_commencement_before_use",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.legislation.gov.uk/eur/2016/679/contents",
-      "topics": [
-        "accountability",
-        "rights",
-        "transfers"
-      ],
-      "pgf_document_ids": [
-        "PGF-07",
-        "PGF-12",
-        "PGF-14",
-        "PGF-15"
-      ],
-      "curation_note": "UK extension only. Read with DPA2018 and commenced DUAA2025 changes; EU and UK texts are distinct.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "access_limited_not_substantively_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "UK-DUAA-2025",
-      "group": "Jurisdictional extensions",
-      "title": "Data (Use and Access) Act 2025",
-      "jurisdiction": "United_Kingdom",
-      "source_type": "legislation",
-      "status": "phased_commencement; verify_provision_by_provision",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.legislation.gov.uk/ukpga/2025/18/contents",
-      "topics": [
-        "regulatory_change",
-        "rights",
-        "AI"
-      ],
-      "pgf_document_ids": [
-        "PGF-07",
-        "PGF-15",
-        "PGF-19"
-      ],
-      "curation_note": "Enactment is not the same as commencement of every provision. The portal response could not be rendered by the automated reader.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "access_limited_not_substantively_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "CH-FADP",
-      "group": "Jurisdictional extensions",
-      "title": "Swiss Federal Act on Data Protection — SR235.1",
-      "jurisdiction": "Switzerland",
-      "source_type": "legislation",
-      "status": "verify_current_consolidated_text_before_use",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.fedlex.admin.ch/eli/cc/2022/491/en",
-      "topics": [
-        "accountability",
-        "PIA",
-        "transfers"
-      ],
-      "pgf_document_ids": [
-        "PGF-07",
-        "PGF-12",
-        "PGF-14",
-        "PGF-19"
-      ],
-      "curation_note": "Swiss extension only; the data protection adviser and consultation rules differ from the EU DPO model. Fedlex requires a JavaScript-capable reader.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "access_limited_not_substantively_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2027-01-24"
-    },
-    {
-      "id": "WATCH-NIST-PF-1-1",
-      "group": "Watchlist — drafts and proposals",
-      "title": "NIST Privacy Framework — Version1.1 development",
-      "jurisdiction": "International/US",
-      "source_type": "draft_framework",
-      "status": "Initial_Public_Draft; not_final_as_checked",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.nist.gov/privacy-framework/new-projects/privacy-framework-version-11",
-      "topics": [
-        "regulatory_change",
-        "governance",
-        "risk_assessment"
-      ],
-      "pgf_document_ids": [
-        "PGF-07",
-        "PGF-18"
-      ],
-      "curation_note": "Track separately from the final1.0 mapping. Do not combine draft and final control identifiers.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2026-11-25"
-    },
-    {
-      "id": "WATCH-EDPB-ANON-02-2026",
-      "group": "Watchlist — drafts and proposals",
-      "title": "EDPB Guidelines02/2026 on Anonymisation",
-      "jurisdiction": "EU/EEA",
-      "source_type": "draft_guidance",
-      "status": "public_consultation_ongoing; v1_page_dated_8_July_2026",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.edpb.europa.eu/documents/guideline/guidelines-022026-on-anonymisation_en",
-      "topics": [
-        "anonymisation",
-        "regulatory_change"
-      ],
-      "pgf_document_ids": [
-        "PGF-07",
-        "PGF-10",
-        "PGF-18"
-      ],
-      "curation_note": "Relevant emerging guidance, explicitly not final. Recheck status before freezing a release.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2026-11-25"
-    },
-    {
-      "id": "WATCH-CA-C36",
-      "group": "Watchlist — drafts and proposals",
-      "title": "BillC-36 — Protecting Privacy and Consumer Data Act (45th Parliament, first session)",
-      "jurisdiction": "Canada/federal",
-      "source_type": "legislative_proposal",
-      "status": "introduced_15_June_2026; tracker_at_second_reading; not_enacted",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.parl.ca/legisinfo/en/bill/45-1/c-36",
-      "topics": [
-        "regulatory_change",
-        "accountability"
-      ],
-      "pgf_document_ids": [
-        "PGF-07"
-      ],
-      "curation_note": "Track the actual legislative stage; it has not replaced PIPEDA. Direct tracker access was403; official indexed tracker and House Journals were checked.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_indexed_tracker_and_house_record",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2026-11-25"
-    },
-    {
-      "id": "WATCH-EU-DATA-OMNIBUS",
-      "group": "Watchlist — drafts and proposals",
-      "title": "Digital Omnibus — Council negotiating position, 21October2026",
-      "jurisdiction": "EU/EEA",
-      "source_type": "legislative_proposal_status",
-      "status": "Council_mandate_agreed; not_enacted_GDPR_amendment",
-      "version_or_status_as_of": "2026-10-26",
-      "official_url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/21/digital-rulebook-council-agrees-position-to-simplify-data-protection-privacy-and-cyber-reporting-rules/",
-      "topics": [
-        "regulatory_change",
-        "breach",
-        "transfers"
-      ],
-      "pgf_document_ids": [
-        "PGF-07"
-      ],
-      "curation_note": "Distinguish this data/GDPR/cyber proposal from the separate AI Omnibus. A proposed notification deadline is not the current GDPR deadline.",
-      "verification": {
-        "last_checked": "2026-10-26",
-        "level": "official_page_reviewed",
-        "full_clause_by_clause_review": false
-      },
-      "next_review_due": "2026-11-25"
-    }
-  ]
+ "schema_version": "1.0",
+ "catalogue_version": "0.2.0",
+ "title": "PGF curated privacy reference registry",
+ "language": "en-GB",
+ "snapshot_date": "2026-10-26",
+ "repository": "https://github.com/realmdata-ai/privacy-governance-framework",
+ "purpose": "Selected primary references and entry points; not a legal opinion, exhaustive legal inventory or compliance certification.",
+ "maintenance": "Manual curation before each PGF release; see MAINTENANCE.md. Review-due dates do not schedule automated work.",
+ "scope": "EU/EEA and Canada core; NIST/ENISA engineering references; limited UK/Swiss extensions and an explicit draft/proposal watchlist.",
+ "sources": [
+  {
+   "id": "EU-GDPR",
+   "group": "EU and EEA — law and transfer mechanisms",
+   "title": "General Data Protection Regulation — Regulation (EU) 2016/679",
+   "jurisdiction": "EU/EEA",
+   "source_type": "legislation",
+   "status": "in_force; check consolidated amendments and applicability",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
+   "topics": [
+    "accountability",
+    "rights",
+    "DPIA",
+    "transfers",
+    "breach"
+   ],
+   "pgf_document_ids": [
+    "PGF-01",
+    "PGF-02",
+    "PGF-05",
+    "PGF-07",
+    "PGF-12",
+    "PGF-14",
+    "PGF-15",
+    "PGF-17",
+    "PGF-19",
+    "PGF-20",
+    "PGF-21"
+   ],
+   "curation_note": "Core legal baseline. Use the version applicable to the processing date; an ELI link to the original act does not pin the latest consolidated text.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "access_restricted",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "EU-SCC-2021",
+   "group": "EU and EEA — law and transfer mechanisms",
+   "title": "Standard Contractual Clauses — Commission transfer resources (Decision (EU) 2021/914)",
+   "jurisdiction": "EU/EEA",
+   "source_type": "legal_instrument_resources",
+   "status": "2021 transfer SCC resources; select the applicable module",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en",
+   "topics": [
+    "transfers",
+    "processors"
+   ],
+   "pgf_document_ids": [
+    "PGF-12",
+    "PGF-17",
+    "PGF-20"
+   ],
+   "curation_note": "Read the actual decision and clauses from this official page. SCC selection, recipient scope and supplementary measures are separate decisions.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "EU-ADEQUACY",
+   "group": "EU and EEA — law and transfer mechanisms",
+   "title": "European Commission register of adequacy decisions",
+   "jurisdiction": "EU/EEA",
+   "source_type": "official_register",
+   "status": "living_register; scope and current validity must be checked",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en",
+   "topics": [
+    "transfers"
+   ],
+   "pgf_document_ids": [
+    "PGF-07",
+    "PGF-12",
+    "PGF-20"
+   ],
+   "curation_note": "Check destination, sector, recipient eligibility and validity. An applicable Article 45 decision follows a different route from an Article 46 SCC/TIA assessment.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "EU-DORA",
+   "group": "EU and EEA — law and transfer mechanisms",
+   "title": "Digital Operational Resilience Act — Regulation (EU) 2022/2554",
+   "jurisdiction": "EU/EEA",
+   "source_type": "legislation",
+   "status": "in_force; applies from 17 January 2025 subject to entity scope",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj/eng",
+   "topics": [
+    "security",
+    "breach",
+    "vendors",
+    "governance"
+   ],
+   "pgf_document_ids": [
+    "PGF-03",
+    "PGF-07",
+    "PGF-14",
+    "PGF-17",
+    "PGF-27",
+    "PGF-30"
+   ],
+   "curation_note": "Financial-sector profile. Read applicable delegated/implementing rules; DORA and GDPR notification channels have different tests and clocks.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "access_restricted",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "EU-DORA-REPORTING",
+   "group": "EU and EEA — law and transfer mechanisms",
+   "title": "EBA — Joint technical standards on major incident reporting",
+   "jurisdiction": "EU/EEA",
+   "source_type": "official_technical_standards_register",
+   "status": "adopted_and_published; check final linked instruments",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/operational-resilience/joint-technical-standards-major-incident-reporting",
+   "topics": [
+    "breach",
+    "security"
+   ],
+   "pgf_document_ids": [
+    "PGF-07",
+    "PGF-14",
+    "PGF-24"
+   ],
+   "curation_note": "Entry point to reporting content, time limits and templates, including Delegated Regulation 2025/301. Check triggers, extensions and exceptions in the final legal text.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "EU-AI-ACT",
+   "group": "EU and EEA — law and transfer mechanisms",
+   "title": "Artificial Intelligence Act — Regulation (EU) 2024/1689",
+   "jurisdiction": "EU/EEA",
+   "source_type": "legislation",
+   "status": "in_force_with_phased_application; amended timetable requires verification",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+   "topics": [
+    "AI",
+    "DPIA",
+    "governance"
+   ],
+   "pgf_document_ids": [
+    "PGF-03",
+    "PGF-06",
+    "PGF-07",
+    "PGF-15",
+    "PGF-19",
+    "PGF-30"
+   ],
+   "curation_note": "Privacy interface only: roles, human oversight, notices and fundamental-rights assessment may overlap. The original act must be read with the 2026 AI Omnibus and applicable transition rules.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "access_restricted",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "EU-AI-OMNIBUS-STATUS",
+   "group": "EU and EEA — law and transfer mechanisms",
+   "title": "European Commission — AI Omnibus enters into force",
+   "jurisdiction": "EU/EEA",
+   "source_type": "official_status_explanation",
+   "status": "entered_into_force_27_July_2026; differentiated_application_dates",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force",
+   "topics": [
+    "AI",
+    "regulatory_change"
+   ],
+   "pgf_document_ids": [
+    "PGF-03",
+    "PGF-07",
+    "PGF-19",
+    "PGF-30"
+   ],
+   "curation_note": "Official status explanation, not a substitute for the amending regulation. Distinguish Annex III and product-embedded high-risk rules and already applicable obligations.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "EU-NIS2",
+   "group": "EU and EEA — law and transfer mechanisms",
+   "title": "NIS2 Directive — Directive (EU) 2022/2555",
+   "jurisdiction": "EU/EEA",
+   "source_type": "legislation",
+   "status": "directive; national_transposition_and_sector_interaction_required",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj/eng",
+   "topics": [
+    "security",
+    "breach",
+    "governance"
+   ],
+   "pgf_document_ids": [
+    "PGF-03",
+    "PGF-07",
+    "PGF-14",
+    "PGF-17",
+    "PGF-30"
+   ],
+   "curation_note": "Adjacent cybersecurity regime. Determine national implementation, entity scope and the sector-specific relationship with DORA before assigning obligations.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "access_restricted",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "DE-AKTG-111",
+   "group": "EU and EEA — law and transfer mechanisms",
+   "title": "German Stock Corporation Act — section 111",
+   "jurisdiction": "Germany",
+   "source_type": "legislation",
+   "status": "current_official_section; German_AG_example_only",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.gesetze-im-internet.de/aktg/__111.html",
+   "topics": [
+    "governance",
+    "assurance"
+   ],
+   "pgf_document_ids": [
+    "PGF-02",
+    "PGF-04",
+    "PGF-05",
+    "PGF-27",
+    "PGF-31"
+   ],
+   "curation_note": "Separates management from supervision while permitting reserved consent matters. This is not a universal board model.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_section_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "EDPB-ROLES-07-2020",
+   "group": "EU regulator guidance and case law",
+   "title": "Guidelines 07/2020 on controller and processor concepts",
+   "jurisdiction": "EU/EEA",
+   "source_type": "regulator_guidance",
+   "status": "final_version; 7 July 2021",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.edpb.europa.eu/documents/guideline/guidelines-072020-on-the-concepts-of-controller-and-processor-in-the-gdpr_en",
+   "topics": [
+    "accountability",
+    "processors",
+    "joint_controllers"
+   ],
+   "pgf_document_ids": [
+    "PGF-02",
+    "PGF-03",
+    "PGF-05",
+    "PGF-17",
+    "PGF-21"
+   ],
+   "curation_note": "Classify the role per activity before allocating obligations or selecting a contract. Guidance is not itself legislation.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "WP29-DPO-243",
+   "group": "EU regulator guidance and case law",
+   "title": "Guidelines on Data Protection Officers — WP243 rev.01",
+   "jurisdiction": "EU/EEA",
+   "source_type": "regulator_guidance",
+   "status": "endorsed_WP29_guidance; revised_5_April_2017",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.cnil.fr/sites/default/files/atoms/files/guidelines_on_dpos_5_april_2017.pdf",
+   "topics": [
+    "DPO",
+    "governance",
+    "confidentiality"
+   ],
+   "pgf_document_ids": [
+    "PGF-02",
+    "PGF-04",
+    "PGF-05",
+    "PGF-06",
+    "PGF-26",
+    "PGF-27"
+   ],
+   "curation_note": "Use actual tasks to assess independence and conflicts. Includes confidential access to the DPO, resources and DPIA advice.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_document_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "WP29-DPIA-248",
+   "group": "EU regulator guidance and case law",
+   "title": "DPIA and high-risk processing — EDPB endorsement of WP248 rev.01",
+   "jurisdiction": "EU/EEA",
+   "source_type": "regulator_guidance",
+   "status": "endorsed_WP29_guidance; national_SA_lists_also_apply",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.edpb.europa.eu/documents/guideline/data-protection-impact-assessments-high-risk-processing_en",
+   "topics": [
+    "DPIA",
+    "risk_assessment"
+   ],
+   "pgf_document_ids": [
+    "PGF-08",
+    "PGF-16",
+    "PGF-18",
+    "PGF-19",
+    "PGF-24"
+   ],
+   "curation_note": "The nine criteria inform triage; a scoring questionnaire cannot override Article 35 or an applicable supervisory-authority list.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "EDPB-PBD-04-2019",
+   "group": "EU regulator guidance and case law",
+   "title": "Guidelines 4/2019 — Article 25, data protection by design and by default",
+   "jurisdiction": "EU/EEA",
+   "source_type": "regulator_guidance",
+   "status": "final_v2.0; adopted_20_October_2020",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.edpb.europa.eu/documents/guideline/guidelines-42019-on-article-25-data-protection-by-design-and-by-default_en",
+   "topics": [
+    "privacy_by_design",
+    "minimisation"
+   ],
+   "pgf_document_ids": [
+    "PGF-09",
+    "PGF-10",
+    "PGF-11",
+    "PGF-16",
+    "PGF-18"
+   ],
+   "curation_note": "Connect design/default requirements to lifecycle decisions and evidence, rather than treating DPIA approval as the whole design process.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "EDPB-TRANSFER-01-2020",
+   "group": "EU regulator guidance and case law",
+   "title": "Recommendations 01/2020 — supplementary transfer measures",
+   "jurisdiction": "EU/EEA",
+   "source_type": "regulator_guidance",
+   "status": "final_v2.0; adopted_18_June_2021",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.edpb.europa.eu/documents/recommendation/recommendations-012020-on-measures-that-supplement-transfer-tools-to_en",
+   "topics": [
+    "transfers",
+    "PET",
+    "risk_assessment"
+   ],
+   "pgf_document_ids": [
+    "PGF-12",
+    "PGF-17",
+    "PGF-18",
+    "PGF-20"
+   ],
+   "curation_note": "Mechanism-specific assessment of laws/practices and effective supplementary measures. Do not treat organisational risk acceptance as a cure for an ineffective transfer tool.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_document_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "EDPB-BREACH-09-2022",
+   "group": "EU regulator guidance and case law",
+   "title": "Guidelines 9/2022 — personal data breach notification under GDPR",
+   "jurisdiction": "EU/EEA",
+   "source_type": "regulator_guidance",
+   "status": "final_v2.0; adopted_28_March_2023",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.edpb.europa.eu/system/files/2023-04/edpb_guidelines_202209_personal_data_breach_notification_v2.0_en.pdf",
+   "topics": [
+    "breach",
+    "processors",
+    "records"
+   ],
+   "pgf_document_ids": [
+    "PGF-05",
+    "PGF-14",
+    "PGF-17",
+    "PGF-24",
+    "PGF-28"
+   ],
+   "curation_note": "Separate breach existence, recording, controller notification tests and processor-to-controller escalation. Includes controller awareness and phased reporting.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_document_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "EDPB-DPO-CEF-2023",
+   "group": "EU regulator guidance and case law",
+   "title": "Coordinated Enforcement Action 2023 — designation and position of DPOs",
+   "jurisdiction": "EU/EEA",
+   "source_type": "regulator_report",
+   "status": "adopted_16_January_2024",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.edpb.europa.eu/system/files/2024-01/edpb_report_20240116_cef_dpo_en.pdf",
+   "topics": [
+    "DPO",
+    "governance",
+    "assurance"
+   ],
+   "pgf_document_ids": [
+    "PGF-02",
+    "PGF-04",
+    "PGF-05",
+    "PGF-06",
+    "PGF-26",
+    "PGF-27"
+   ],
+   "curation_note": "Findings and recommendations on resources, expertise, conflicts, independence and access to senior management; distinguish recommendations from statutory duties.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_document_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "CJEU-XFAB-C453-21",
+   "group": "EU regulator guidance and case law",
+   "title": "CJEU — X-FAB Dresden, C-453/21",
+   "jurisdiction": "EU/EEA",
+   "source_type": "judgment",
+   "status": "judgment_9_February_2023",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A62021CJ0453",
+   "topics": [
+    "DPO",
+    "conflicts_of_interest"
+   ],
+   "pgf_document_ids": [
+    "PGF-02",
+    "PGF-04",
+    "PGF-05",
+    "PGF-06",
+    "PGF-26"
+   ],
+   "curation_note": "Case-by-case assessment of conflicting duties, including determining purposes and means. A RACI letter alone does not establish a conflict.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_indexed_text_and_regulator_crosscheck",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "CJEU-SCHREMS-II",
+   "group": "EU regulator guidance and case law",
+   "title": "CJEU — Data Protection Commissioner v Facebook Ireland and Schrems, C-311/18",
+   "jurisdiction": "EU/EEA",
+   "source_type": "judgment",
+   "status": "judgment_16_July_2020",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62018CJ0311",
+   "topics": [
+    "transfers",
+    "fundamental_rights"
+   ],
+   "pgf_document_ids": [
+    "PGF-12",
+    "PGF-20"
+   ],
+   "curation_note": "Transfer safeguards and essentially equivalent protection. Read the judgment and its application to the selected mechanism.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "access_restricted",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "ENISA-PSEUDO-2019",
+   "group": "NIST and engineering guidance",
+   "title": "ENISA — Pseudonymisation techniques and best practices",
+   "jurisdiction": "EU/international",
+   "source_type": "engineering_guidance",
+   "status": "published_3_December_2019",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.enisa.europa.eu/publications/pseudonymisation-techniques-and-best-practices",
+   "topics": [
+    "pseudonymisation",
+    "PET",
+    "threat_models"
+   ],
+   "pgf_document_ids": [
+    "PGF-09",
+    "PGF-10",
+    "PGF-16",
+    "PGF-18"
+   ],
+   "curation_note": "Engineering techniques, adversaries and attacks. Pseudonymisation does not by itself establish anonymity.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "ENISA-ENGINEERING-2022",
+   "group": "NIST and engineering guidance",
+   "title": "ENISA — Data Protection Engineering",
+   "jurisdiction": "EU/international",
+   "source_type": "engineering_guidance",
+   "status": "published_2022",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.enisa.europa.eu/publications/data-protection-engineering",
+   "topics": [
+    "privacy_by_design",
+    "PET",
+    "engineering"
+   ],
+   "pgf_document_ids": [
+    "PGF-09",
+    "PGF-16",
+    "PGF-18",
+    "PGF-27"
+   ],
+   "curation_note": "Engineering reference for implementing protection principles; not a PGF certification scheme.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "NIST-PF-1-0",
+   "group": "NIST and engineering guidance",
+   "title": "NIST Privacy Framework — Version 1.0",
+   "jurisdiction": "International/US",
+   "source_type": "voluntary_framework",
+   "status": "final; January_2020",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01162020.pdf",
+   "topics": [
+    "governance",
+    "risk_assessment",
+    "controls"
+   ],
+   "pgf_document_ids": [
+    "PGF-02",
+    "PGF-05",
+    "PGF-08",
+    "PGF-18",
+    "PGF-21",
+    "PGF-23",
+    "PGF-27",
+    "PGF-28",
+    "PGF-30",
+    "PGF-31"
+   ],
+   "curation_note": "Stable baseline for PGF function/category mapping. A conceptual crosswalk is not proof of compliance or effectiveness.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_document_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "NIST-800-226",
+   "group": "NIST and engineering guidance",
+   "title": "NIST SP 800-226 — Guidelines for Evaluating Differential Privacy Guarantees",
+   "jurisdiction": "International/US",
+   "source_type": "engineering_guidance",
+   "status": "final; March_2025",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://csrc.nist.gov/pubs/sp/800/226/final",
+   "topics": [
+    "differential_privacy",
+    "PET",
+    "composition"
+   ],
+   "pgf_document_ids": [
+    "PGF-08",
+    "PGF-09",
+    "PGF-18",
+    "PGF-27"
+   ],
+   "curation_note": "Check privacy unit, adjacency, accountant, composition and implementation hazards. Parameters and empirical attack scores are not legal safe harbours.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_and_selected_document_sections_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "NIST-IR-8062",
+   "group": "NIST and engineering guidance",
+   "title": "NIST IR 8062 — Privacy engineering and risk management in federal systems",
+   "jurisdiction": "International/US",
+   "source_type": "engineering_guidance",
+   "status": "final; January_2017",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://csrc.nist.gov/pubs/ir/8062/final",
+   "topics": [
+    "risk_assessment",
+    "privacy_engineering"
+   ],
+   "pgf_document_ids": [
+    "PGF-08",
+    "PGF-16",
+    "PGF-18"
+   ],
+   "curation_note": "Reference vocabulary and privacy engineering objectives. Its federal-system context must be acknowledged when adapting it.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "NIST-800-53-R5",
+   "group": "NIST and engineering guidance",
+   "title": "NIST SP 800-53 Rev.5 — Security and Privacy Controls",
+   "jurisdiction": "International/US",
+   "source_type": "control_catalogue",
+   "status": "Rev.5; official_page_notes_control_release_5.2.0_27_August_2025",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+   "topics": [
+    "controls",
+    "security",
+    "accountability"
+   ],
+   "pgf_document_ids": [
+    "PGF-03",
+    "PGF-09",
+    "PGF-16",
+    "PGF-17",
+    "PGF-27"
+   ],
+   "curation_note": "Pin the control catalogue release when mapping PT and related controls. The landing page links CPRT; Rev.5 PDF and current catalogue updates are not interchangeable.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "NIST-CSF-2-0",
+   "group": "NIST and engineering guidance",
+   "title": "NIST Cybersecurity Framework — Version 2.0",
+   "jurisdiction": "International/US",
+   "source_type": "voluntary_framework",
+   "status": "final_framework; check_current_official_resources",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.nist.gov/cyberframework",
+   "topics": [
+    "security",
+    "governance",
+    "interfaces"
+   ],
+   "pgf_document_ids": [
+    "PGF-03",
+    "PGF-07",
+    "PGF-14",
+    "PGF-17",
+    "PGF-27"
+   ],
+   "curation_note": "Use for the InfoSec interface. Cybersecurity risk management does not replace privacy risk assessment.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "IIA-GIAS-2024",
+   "group": "NIST and engineering guidance",
+   "title": "IIA — Global Internal Audit Standards, 2024",
+   "jurisdiction": "International",
+   "source_type": "professional_standard",
+   "status": "effective_9_January_2025; applicability_depends_on_adoption_and_sector_rules",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.theiia.org/globalassets/site/standards/globalinternalauditstandards_2024january9.pdf",
+   "topics": [
+    "assurance",
+    "governance"
+   ],
+   "pgf_document_ids": [
+    "PGF-02",
+    "PGF-04",
+    "PGF-05",
+    "PGF-27"
+   ],
+   "curation_note": "Reference independent assurance and board/audit-committee governance, including Standards6.2 and9.4. This is not a universal GDPR statutory requirement; do not reproduce the copyrighted standard.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_document_selected_sections_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "CA-PIPEDA",
+   "group": "Canada",
+   "title": "Personal Information Protection and Electronic Documents Act (PIPEDA)",
+   "jurisdiction": "Canada/federal",
+   "source_type": "legislation",
+   "status": "in_force; official_consolidation_current_to_30_September_2026",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://laws-lois.justice.gc.ca/eng/acts/P-8.6/",
+   "topics": [
+    "accountability",
+    "consent",
+    "rights",
+    "breach"
+   ],
+   "pgf_document_ids": [
+    "PGF-01",
+    "PGF-02",
+    "PGF-07",
+    "PGF-13",
+    "PGF-14",
+    "PGF-15",
+    "PGF-17"
+   ],
+   "curation_note": "Determine commercial-activity, federal/provincial and cross-border applicability. GDPR lawful-basis tables do not transpose directly.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "CA-BREACH-REG",
+   "group": "Canada",
+   "title": "Breach of Security Safeguards Regulations — SOR/2018-64",
+   "jurisdiction": "Canada/federal",
+   "source_type": "legislation",
+   "status": "official_consolidation_current_to_30_September_2026",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2018-64/",
+   "topics": [
+    "breach",
+    "records"
+   ],
+   "pgf_document_ids": [
+    "PGF-07",
+    "PGF-14",
+    "PGF-17"
+   ],
+   "curation_note": "Read with PIPEDA sections10.1–10.3. Keep all required breach records; distinguish records from notification thresholds.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "CA-QC-PRIVATE",
+   "group": "Canada",
+   "title": "Act respecting the protection of personal information in the private sector — P-39.1",
+   "jurisdiction": "Canada/Quebec",
+   "source_type": "legislation",
+   "status": "official_consolidation_current_to_15_October_2026",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1",
+   "topics": [
+    "accountability",
+    "PIA",
+    "rights",
+    "transfers",
+    "breach"
+   ],
+   "pgf_document_ids": [
+    "PGF-01",
+    "PGF-02",
+    "PGF-07",
+    "PGF-12",
+    "PGF-13",
+    "PGF-14",
+    "PGF-15",
+    "PGF-19",
+    "PGF-20"
+   ],
+   "curation_note": "Read the consolidated private-sector Act as amended by Law25. Do not import article numbers from the public-sector Act or assume PIPEDA and Quebec are identical.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_text_metadata_and_selected_sections_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "CA-QC-ANON",
+   "group": "Canada",
+   "title": "Regulation respecting the anonymization of personal information — A-2.1, r.0.1",
+   "jurisdiction": "Canada/Quebec",
+   "source_type": "legislation",
+   "status": "regulation; official_index_identified; full_text_access_retry_required",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.legisquebec.gouv.qc.ca/fr/document/rc/A-2.1%2C%20r.%200.1?langCont=en",
+   "topics": [
+    "anonymisation",
+    "PET",
+    "reassessment"
+   ],
+   "pgf_document_ids": [
+    "PGF-07",
+    "PGF-10",
+    "PGF-11",
+    "PGF-18"
+   ],
+   "curation_note": "Enabling laws include private-sector P-39.1 as well as the public-sector Act. Verify the current full text and its assessment/reassessment requirements before relying on clauses.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_indexed_text_only_direct_fetch_failed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "CA-OPC-PROGRAMME",
+   "group": "Canada",
+   "title": "OPC/OIPC — Getting Accountability Right with a Privacy Management Program",
+   "jurisdiction": "Canada",
+   "source_type": "regulator_guidance",
+   "status": "published_2012; current_official_guidance_page",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/pipeda-compliance-help/pipeda-compliance-and-training-tools/gl_acc_201204/",
+   "topics": [
+    "accountability",
+    "programme",
+    "assurance"
+   ],
+   "pgf_document_ids": [
+    "PGF-02",
+    "PGF-04",
+    "PGF-06",
+    "PGF-21",
+    "PGF-23",
+    "PGF-27",
+    "PGF-28",
+    "PGF-29",
+    "PGF-30",
+    "PGF-31"
+   ],
+   "curation_note": "Direct programme-design reference for organisational commitment, programme controls and ongoing review. Guidance is distinct from legislation.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "CA-OPC-BREACH",
+   "group": "Canada",
+   "title": "OPC — Mandatory reporting of breaches of security safeguards",
+   "jurisdiction": "Canada/federal",
+   "source_type": "regulator_guidance",
+   "status": "current_official_guidance_page",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.priv.gc.ca/en/privacy-topics/privacy-for-businesses/privacy-breaches-at-your-business/gd_pb_201810/?seq_no=2",
+   "topics": [
+    "breach",
+    "records"
+   ],
+   "pgf_document_ids": [
+    "PGF-05",
+    "PGF-07",
+    "PGF-14"
+   ],
+   "curation_note": "Operational explanation of real risk of significant harm, notification and records. Do not import the GDPR72h deadline.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "UK-GDPR",
+   "group": "Jurisdictional extensions",
+   "title": "UK GDPR — official legislation portal",
+   "jurisdiction": "United_Kingdom",
+   "source_type": "legislation",
+   "status": "verify_current_consolidated_text_and_commencement_before_use",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.legislation.gov.uk/eur/2016/679/contents",
+   "topics": [
+    "accountability",
+    "rights",
+    "transfers"
+   ],
+   "pgf_document_ids": [
+    "PGF-07",
+    "PGF-12",
+    "PGF-14",
+    "PGF-15"
+   ],
+   "curation_note": "UK extension only. Read with DPA2018 and commenced DUAA2025 changes; EU and UK texts are distinct.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "access_limited_not_substantively_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "UK-DUAA-2025",
+   "group": "Jurisdictional extensions",
+   "title": "Data (Use and Access) Act 2025",
+   "jurisdiction": "United_Kingdom",
+   "source_type": "legislation",
+   "status": "phased_commencement; verify_provision_by_provision",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.legislation.gov.uk/ukpga/2025/18/contents",
+   "topics": [
+    "regulatory_change",
+    "rights",
+    "AI"
+   ],
+   "pgf_document_ids": [
+    "PGF-07",
+    "PGF-15",
+    "PGF-19"
+   ],
+   "curation_note": "Enactment is not the same as commencement of every provision. The portal response could not be rendered by the automated reader.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "access_limited_not_substantively_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "CH-FADP",
+   "group": "Jurisdictional extensions",
+   "title": "Swiss Federal Act on Data Protection — SR235.1",
+   "jurisdiction": "Switzerland",
+   "source_type": "legislation",
+   "status": "verify_current_consolidated_text_before_use",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.fedlex.admin.ch/eli/cc/2022/491/en",
+   "topics": [
+    "accountability",
+    "PIA",
+    "transfers"
+   ],
+   "pgf_document_ids": [
+    "PGF-07",
+    "PGF-12",
+    "PGF-14",
+    "PGF-19"
+   ],
+   "curation_note": "Swiss extension only; the data protection adviser and consultation rules differ from the EU DPO model. Fedlex requires a JavaScript-capable reader.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "access_limited_not_substantively_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "WATCH-NIST-PF-1-1",
+   "group": "Watchlist — drafts and proposals",
+   "title": "NIST Privacy Framework — Version1.1 development",
+   "jurisdiction": "International/US",
+   "source_type": "draft_framework",
+   "status": "Initial_Public_Draft; not_final_as_checked",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.nist.gov/privacy-framework/new-projects/privacy-framework-version-11",
+   "topics": [
+    "regulatory_change",
+    "governance",
+    "risk_assessment"
+   ],
+   "pgf_document_ids": [
+    "PGF-07",
+    "PGF-18"
+   ],
+   "curation_note": "Track separately from the final1.0 mapping. Do not combine draft and final control identifiers.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2026-11-25"
+  },
+  {
+   "id": "WATCH-EDPB-ANON-02-2026",
+   "group": "Watchlist — drafts and proposals",
+   "title": "EDPB Guidelines02/2026 on Anonymisation",
+   "jurisdiction": "EU/EEA",
+   "source_type": "draft_guidance",
+   "status": "public_consultation_ongoing; v1_page_dated_8_July_2026",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.edpb.europa.eu/documents/guideline/guidelines-022026-on-anonymisation_en",
+   "topics": [
+    "anonymisation",
+    "regulatory_change"
+   ],
+   "pgf_document_ids": [
+    "PGF-07",
+    "PGF-10",
+    "PGF-18"
+   ],
+   "curation_note": "Relevant emerging guidance, explicitly not final. Recheck status before freezing a release.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2026-11-25"
+  },
+  {
+   "id": "WATCH-CA-C36",
+   "group": "Watchlist — drafts and proposals",
+   "title": "BillC-36 — Protecting Privacy and Consumer Data Act (45th Parliament, first session)",
+   "jurisdiction": "Canada/federal",
+   "source_type": "legislative_proposal",
+   "status": "introduced_15_June_2026; tracker_at_second_reading; not_enacted",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.parl.ca/legisinfo/en/bill/45-1/c-36",
+   "topics": [
+    "regulatory_change",
+    "accountability"
+   ],
+   "pgf_document_ids": [
+    "PGF-07"
+   ],
+   "curation_note": "Track the actual legislative stage; it has not replaced PIPEDA. Direct tracker access was403; official indexed tracker and House Journals were checked.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_indexed_tracker_and_house_record",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2026-11-25"
+  },
+  {
+   "id": "WATCH-EU-DATA-OMNIBUS",
+   "group": "Watchlist — drafts and proposals",
+   "title": "Digital Omnibus — Council negotiating position, 21October2026",
+   "jurisdiction": "EU/EEA",
+   "source_type": "legislative_proposal_status",
+   "status": "Council_mandate_agreed; not_enacted_GDPR_amendment",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/21/digital-rulebook-council-agrees-position-to-simplify-data-protection-privacy-and-cyber-reporting-rules/",
+   "topics": [
+    "regulatory_change",
+    "breach",
+    "transfers"
+   ],
+   "pgf_document_ids": [
+    "PGF-07"
+   ],
+   "curation_note": "Distinguish this data/GDPR/cyber proposal from the separate AI Omnibus. A proposed notification deadline is not the current GDPR deadline.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2026-11-25"
+  },
+  {
+   "id": "US-DPF-LIST",
+   "group": "EU and EEA — law and transfer mechanisms",
+   "title": "Data Privacy Framework List (U.S. Department of Commerce) — participating organisations",
+   "jurisdiction": "United States (EU–U.S. DPF, UK Extension, Swiss–U.S. DPF)",
+   "source_type": "official_register",
+   "status": "dynamic_official_register; check the organisation record at the time of each transfer decision",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.dataprivacyframework.gov/list",
+   "topics": [
+    "transfers",
+    "DPF",
+    "vendor assessment"
+   ],
+   "pgf_document_ids": [
+    "PGF-07",
+    "PGF-12",
+    "PGF-17",
+    "PGF-20"
+   ],
+   "curation_note": "Evidence source for the recipient's current participation, not a legal basis by itself. Record per flow: exact legal entity and covered entities, framework (EU–U.S. DPF / UK Extension / Swiss–U.S. DPF), HR or non-HR data, the official status wording, profile URL, checked_at, reviewer and evidence reference. The list is not copied into PGF; no vendor is endorsed. A special status such as 'Active – Re-certification under Review' is read with the official explanation, not converted to 'inactive'. The main page requires JavaScript.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_indexed_dynamic_content_not_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "EDPB-DPF-FAQ-2024",
+   "group": "EU regulator guidance and case law",
+   "title": "EDPB — EU–U.S. Data Privacy Framework FAQ for European businesses (16 July 2024)",
+   "jurisdiction": "EU/EEA",
+   "source_type": "regulator_guidance",
+   "status": "published_2024-07-16",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.edpb.europa.eu/system/files/2024-07/edpb_dpf_faq-for-businesses_en.pdf",
+   "topics": [
+    "transfers",
+    "DPF"
+   ],
+   "pgf_document_ids": [
+    "PGF-12",
+    "PGF-17",
+    "PGF-20"
+   ],
+   "curation_note": "Q3 explains how to check that a US recipient is certified and that the certification covers the data concerned (including HR data). Guidance, not law; the adequacy decision is the legal basis.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_document_reviewed_for_q3",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "CH-US-DPF",
+   "group": "Jurisdictional extensions",
+   "title": "Swiss–U.S. Data Privacy Framework — FDPIC announcement and DPF Swiss FAQ",
+   "jurisdiction": "Switzerland / United States",
+   "source_type": "regulator_guidance",
+   "status": "Swiss adequacy for certified US recipients applies from 15 September 2024 (FDPIC)",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.edoeb.admin.ch/en/15082024-new-swiss-us-data-privacy-framework",
+   "topics": [
+    "transfers",
+    "DPF",
+    "Switzerland"
+   ],
+   "pgf_document_ids": [
+    "PGF-07",
+    "PGF-12",
+    "PGF-20"
+   ],
+   "curation_note": "Separate Swiss legal route: it requires the recipient's Swiss–U.S. DPF certification and the Swiss legal basis; an EU–U.S. DPF certification does not by itself cover Swiss transfers. Companion FAQ: https://www.dataprivacyframework.gov/program-articles/FAQs%20%E2%80%93%20Swiss%E2%80%93U.S.-Data-Privacy-Framework-%28Swiss%E2%80%93U.S.-DPF%29-%281%E2%80%934%29",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "CA-CRA-PMF",
+   "group": "Canada",
+   "title": "Canada Revenue Agency — Privacy Management Framework",
+   "jurisdiction": "Canada (federal institution)",
+   "source_type": "regulator_guidance",
+   "status": "departmental_framework; example only",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://www.canada.ca/en/revenue-agency/corporate/security/privacy-management-framework.html",
+   "topics": [
+    "programme",
+    "accountability"
+   ],
+   "pgf_document_ids": [
+    "PGF-02",
+    "PGF-04"
+   ],
+   "curation_note": "Example of a compact departmental programme overview under the federal Privacy Act regime. Not a private-sector standard; no conformity with it or with the Privacy Act is claimed.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  },
+  {
+   "id": "CA-ISED-PMF",
+   "group": "Canada",
+   "title": "Innovation, Science and Economic Development Canada — Privacy Management Framework",
+   "jurisdiction": "Canada (federal institution)",
+   "source_type": "regulator_guidance",
+   "status": "departmental_framework; example only",
+   "version_or_status_as_of": "2026-10-26",
+   "official_url": "https://ised-isde.canada.ca/site/ised/en/transparency/atip-services/references/ised-privacy-management-framework",
+   "topics": [
+    "programme",
+    "accountability"
+   ],
+   "pgf_document_ids": [
+    "PGF-02",
+    "PGF-04"
+   ],
+   "curation_note": "Second departmental example of a compact programme overview. Not a private-sector standard; no conformity is claimed.",
+   "verification": {
+    "last_checked": "2026-10-26",
+    "level": "official_page_reviewed",
+    "full_clause_by_clause_review": false
+   },
+   "next_review_due": "2027-01-24"
+  }
+ ]
 }

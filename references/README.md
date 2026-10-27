@@ -10,7 +10,7 @@ A maintained entry point to laws, court decisions, regulator guidance and engine
 - [Registry schema](registry.schema.json).
 - [Curation and change rules](MAINTENANCE.md).
 
-The initial collection contains **39 selected entries**. It covers the EU/EEA and Canada, NIST and ENISA engineering references, selected UK/Swiss extensions, and an explicit watchlist. It is selective: US state/sector law, additional Canadian provincial and sector laws, and other jurisdictions require separate curation.
+The collection contains **44 selected entries** (v0.2.0 added the official DPF List, the EDPB DPF FAQ, the Swiss–U.S. DPF route and two Canadian departmental programme examples). It covers the EU/EEA and Canada, NIST and ENISA engineering references, selected UK/Swiss extensions, and an explicit watchlist. It is selective: US state/sector law, additional Canadian provincial and sector laws, and other jurisdictions require separate curation.
 
 ## How to use it
 

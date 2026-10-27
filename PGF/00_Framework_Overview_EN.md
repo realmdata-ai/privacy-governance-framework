@@ -56,6 +56,17 @@ The GDPR is the baseline. Adaptation guidance is given for Canada (PIPEDA and Qu
 - full legal analysis for any specific jurisdiction;
 - certification.
 
+## 1a. Positioning
+
+- **What PGF is.** PGF is an operational implementation toolkit. It links legal requirements and risks to processes, roles, decisions, evidence and worked examples.
+- **How it relates to NIST.** It complements the risk-based NIST Privacy Framework. NIST is not merely declarative: its Core, Profiles and Implementation Tiers define outcomes and let an organisation select priorities. PGF can help to implement a chosen NIST profile; it does not replace NIST, and its crosswalk is at category level.
+- **Three kinds of rule.** Each rule in PGF is one of the following:
+  - an applicable legal obligation;
+  - an internal rule the organisation adopts (labelled as internal policy where it is stricter than the law);
+  - an illustrative default to be calibrated.
+- **Proportionality.** Adoption is modular and proportionate. The organisational form, roles and resources scale with the organisation; PGF requires neither a new post nor a new committee, nor every technical test in every context. Applicable legal duties apply from the start regardless of how much of PGF has been adopted (Section 4).
+- **Canadian programme examples.** Compact departmental programme overviews such as those of the Canada Revenue Agency and of Innovation, Science and Economic Development Canada are useful examples of the same idea. They concern federal institutions; PGF claims no conformity with them.
+
 ## 2. Design principles
 
 1. **Lawfulness before risk.** A legal compliance gate (G-L) runs before any risk decision. It covers lawful basis, conditions for special-category and criminal-offence data, purpose compatibility, transparency, automated decisions, transfer tools and statutory deadlines. No risk appetite, committee decision, metric or opinion can cure a failure.
