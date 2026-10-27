@@ -534,7 +534,7 @@ Use of derived data. For model development, portfolio analytics and statistics, 
 
 ### 8. Automated Decision-Making and Profiling
 
-**Automated credit decisions (planned).** We plan to introduce automated initial decisions for unsecured consumer loans up to EUR 25,000 requested in the app, not before 1 February 2027. The introduction depends on the completion of our prior consultation with our data protection supervisory authority and on our internal decision; until then, credit decisions are taken by our credit staff. We will update this notice before automated decisions start. When they start, our credit-scoring system will take the initial decision automatically, and we will rely on Art. 22(2)(a): the decision will be necessary for entering into the credit agreement you request. The rest of this paragraph describes the planned system.
+**Automated credit decisions (planned).** We plan to introduce automated initial decisions for unsecured consumer loans up to EUR 25,000 requested in the app, not before 1 February 2027. The introduction depends on the completion of our prior consultation with our data protection supervisory authority and on our internal decision; until then, credit decisions are taken by our credit staff. We will update this notice before automated decisions start. When they start, our credit-scoring system will decide clear approvals and clear refusals automatically, and a credit officer will decide borderline cases before any decision takes effect. For the automated decisions we will rely on Art. 22(2)(a): the decision will be necessary for entering into the credit agreement you request. The rest of this paragraph describes the planned system.
 
 * *Main factors and data used:* the income and regular expenditure you declare and we verify from your account; your existing credit obligations and repayment history with us; information from EuroCredit Bureau, including its score; how you have used your PanEuropean accounts over the last 12 months (for example, overdraft use and returned direct debits); your employment status and its duration; and the amount and term you request.
 * *How they influence the result:* a higher share of income already committed to repayments, recent payment defaults or frequent overdraft use lower the score; stable verified income and a clean repayment record raise it.
@@ -565,7 +565,7 @@ Use of derived data. For model development, portfolio analytics and statistics, 
 
 * our core banking platform provider (EEA)
 * Example Cloud Services Pvt Ltd (fictional, India) — remote technical support with access to production systems
-* Example AI Provider Inc. (fictional, United States) — the AI assistant in our customer-service chat; under our contract, it deletes chat data within 30 days and does not use them to train its models (illustrative terms)
+* Example AI Provider Inc. (fictional, United States) — the AI assistant in our customer-service chat; under our contract, it deletes chat data within 30 days and does not use them to train its models (illustrative terms). Since 26 October 2026 the assistant is suspended while we complete a legal review of the transfer; until then your enquiries are handled by our staff only and no data are sent to this provider
 * our screening-list provider, marketing service providers and the security provider for our branches
 
 **Within PanEuropean.** Our branches in France, Italy, Spain and Poland are part of PanEuropean Bank AG, not separate recipients. We tell you, for transparency, that data are used across branches for bank-wide risk management and financial-crime monitoring.
@@ -578,7 +578,7 @@ Your core banking data are stored in the European Economic Area. Some data are a
 | :---- | :---- | :---- |
 | India | Example Cloud Services Pvt Ltd — remote technical support (access to our systems by this separate provider from India is a transfer) | Standard contractual clauses, Commission Implementing Decision (EU) 2021/914 (controller-to-processor module), with supplementary measures identified in a transfer impact assessment (Art. 46) |
 | India | Partner bank — anti-fraud matching using private set intersection | Standard contractual clauses (controller-to-controller module) with a transfer impact assessment (Art. 46); the privacy-enhancing technique does not replace the safeguard |
-| United States | Example AI Provider Inc. — customer-service AI assistant | Standard contractual clauses (controller-to-processor module) with a transfer impact assessment (Art. 46); the provider is not certified under the EU-U.S. Data Privacy Framework (illustrative assumption), so the adequacy decision does not apply |
+| United States | Example AI Provider Inc. — customer-service AI assistant | Standard contractual clauses (controller-to-processor module) with a transfer impact assessment (Art. 46); the provider is not certified under the EU-U.S. Data Privacy Framework (illustrative assumption), so the adequacy decision does not apply. Transfers are suspended since 26 October 2026 pending the completion of the transfer impact assessment |
 
 You can obtain a copy of these safeguards from dpo@paneuropean-bank.example.
 

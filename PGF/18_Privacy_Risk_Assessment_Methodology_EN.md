@@ -1801,7 +1801,7 @@ Automated credit decisions on retail applications (about 400,000 applications a 
 
 | Scenario | L1 | L2 | L3 (residual / inherent) | L4 | Index (residual / inherent) | Likelihood |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| S1 — systematic adverse or discriminatory automated credit decisions, including through corrupted bureau data | 3 (in the planned production design every application is decided automatically) | 2 (known error modes: drift, proxy variables) | 0 (pre-deployment bias testing, independent model validation, quarterly fairness monitoring, human review on request — tested) / 3 | 1 (sector events) | 6 / 9 | Medium / Near-certain |
+| S1 — systematic adverse or discriminatory automated credit decisions, including through corrupted bureau data | 3 (in the planned production design clear approvals and clear refusals are decided automatically; borderline scores go to a credit officer before any decision takes effect (Document 19, Art. 22 necessity record)) | 2 (known error modes: drift, proxy variables) | 0 (pre-deployment bias testing, independent model validation, quarterly fairness monitoring, human review on request — tested) / 3 | 1 (sector events) | 6 / 9 | Medium / Near-certain |
 | S2 — loss of confidentiality of application and bureau data (identity fraud, financial loss) | 2 (routine access by credit officers; bureau interface) | 3 (organised fraud groups) | 0 (access control, encryption, logging, penetration-tested) / 3 | 1 | 6 / 9 | Medium / Near-certain |
 | S3 — re-use of scoring data for marketing | Not scored: incompatible purpose (Art. 6(4)) — prevented by G-L and enforced by purpose-binding in the data platform | | | | | |
 
