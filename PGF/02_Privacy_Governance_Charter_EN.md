@@ -357,7 +357,9 @@ DPO Mandate
 
 * ***[No conflict of interests — the DPO may fulfil other tasks only if they do not result in a conflict of interests (Art. 38(6)); in particular, the DPO holds no position that determines the purposes or means of processing. Conflicts are assessed case by case, in the light of the DPO's actual tasks (CJEU C-453/21 X-FAB; EDPB Coordinated Enforcement Action 2023 report on DPOs), and the assessment is recorded on designation and reviewed annually]***
 
-* ***[What the DPO does not do — the DPO does not authorise processing, accept risk on the controller's behalf, determine purposes or means, hold a veto, or make determinations that bind the controller. In particular, whether data are anonymous information (Recital 26) or whether an operation is a transfer within Chapter V GDPR is a controller determination made by Legal at the G-L gate on documented evidence (Documents 12, 18 and 20); the DPO advises on it and monitors it]***
+* ***[What the DPO does not do — the DPO does not authorise processing, accept risk on the controller's behalf, determine purposes or means, hold a veto, or make determinations that bind the controller. In particular, both determinations below are the controller's; the DPO advises on them and monitors them]***
+  * ***[Whether data are anonymous information (Recital 26): the conclusion is taken by the Processing Owner on Legal's documented legal assessment, supported by the PET Assessment Module (Document 18), and re-assessed periodically.]***
+  * ***[Whether an operation is a transfer within Chapter V GDPR: a legal determination recorded by Legal at the G-L gate on documented evidence (Documents 12 and 20).]***
 
 * ***[Accountability of the DPO — the DPO is accountable for the quality and timeliness of its own statutory tasks (advice, monitoring, DPIA advice, SA cooperation, its own reports); it is not responsible for the controller's compliance (WP243 rev.01, §4.1)]***
 
@@ -756,7 +758,7 @@ Group DPO Mandate
 
 * No conflict of interests — the Group DPO holds no position that determines purposes or means of processing, does not report to the CDO, the CISO or any business-line head, and the conflict assessment is recorded on designation and reviewed annually
 
-* What the Group DPO does not do — the Group DPO does not approve residual risk, block launches, decide on breach notification, or determine whether data are anonymous or whether an operation is a Chapter V transfer; those determinations are made by General Counsel at the G-L gate on documented evidence (Documents 12, 18 and 20), on the Group DPO's advice
+* What the Group DPO does not do — the Group DPO does not approve residual risk, block launches, decide on breach notification, or determine whether data are anonymous or whether an operation is a Chapter V transfer; the anonymity conclusion is taken by the responsible Processing Owner on General Counsel's documented legal assessment, supported by the PET Assessment Module (Document 18), and the transfer determination is recorded by General Counsel at the G-L gate (Documents 12 and 20) — in both cases on the Group DPO's advice
 
 * Regulatory basis: GDPR Arts. 37–39, 24(1); WP243 rev.01, §§2.6, 3.3–3.5; CJEU C-453/21 X-FAB; CJEU C-534/20 Leistritz; EDPB Coordinated Enforcement Action 2023 report on DPOs; §38(2) with §6(4) BDSG
 

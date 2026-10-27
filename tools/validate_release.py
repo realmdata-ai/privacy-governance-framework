@@ -134,6 +134,9 @@ def numbered(heads, body=""):
     # bold pseudo-headings such as '***4.6 Processing Owner***' also count as numbered sections
     for m in re.finditer(r"^[*_]{1,3}(\d+(?:\.\d+)+)\.?\s", body, re.M):
         nums.add(m.group(1))
+    # numbered steps in the first cell of a table row, e.g. '| 4.8 Decision | ...' or '| ***[4.8 …]*** |'
+    for m in re.finditer(r"^\|\s*[*_\[]*(\d+(?:\.\d+)+)\.?\s", body, re.M):
+        nums.add(m.group(1))
     # plain-line subheadings such as '3.1 ERM (Enterprise Risk Management)'
     for m in re.finditer(r"^(\d+(?:\.\d+)+)\.?\s+[A-Z(]", body, re.M):
         nums.add(m.group(1))
