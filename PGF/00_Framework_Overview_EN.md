@@ -120,7 +120,14 @@ For an organisation that needs a working programme before it adopts all 31 docum
 5. **Publish the notice** (01, external part) and train staff (30).
 6. **Close the loop.** Set up monitoring and an independent audit (27), a minimal metrics set (28) and board reporting (31).
 
-The other documents add depth: classification, retention, consent, privacy by design, the PET methodology, the process map, the staffing model and the review cycle. Adopt them as the programme matures.
+The other documents add depth: classification, retention, consent, privacy by design, the PET methodology, the process map, the staffing model and the review cycle. Their full documentation can be adopted in phases as the programme matures.
+
+**Phased adoption does not postpone legal duties.** From the start of any processing, the organisation must already:
+- apply retention and deletion rules;
+- obtain valid consent, and handle its withdrawal, where consent is the lawful basis;
+- build data protection by design and by default into any new processing before it launches (Art. 25).
+
+The documents only formalise these duties. Similarly, Document 18 must be in place before any decision or release that relies on its method.
 
 ## 5. Document register
 
