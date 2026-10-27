@@ -272,14 +272,15 @@ G-L and DPIA duties apply under every mechanism. PETs, trusted execution environ
 
 | Metric type | Allowed domain and configuration | Normalised value |
 | :---- | :---- | :---- |
-| ***[Rate or advantage with a zero baseline (singling-out rate, linkage success, inference advantage, CAP advantage) — lower is safer]*** | ***[Value in [0, 1]; threshold > 0. A negative advantage (attack worse than its baseline) is recorded as observed and normalised as 0]*** | ***[max(0, value) / threshold]*** |
-| ***[Accuracy of a balanced membership test (baseline 0.5)]*** | ***[Accuracy in [0, 1]; threshold > 0.5. An attack performing below chance is still informative (it can be inverted), so orientation is ignored]*** | ***[advantage = 2 × \|accuracy − 0.5\|; normalised = \|accuracy − 0.5\| / (threshold − 0.5)]*** |
-| ***[AUC-ROC (baseline 0.5)]*** | ***[AUC in [0, 1]; threshold > 0.5; orientation ignored as for accuracy]*** | ***[\|AUC − 0.5\| / (threshold − 0.5)]*** |
-| ***[Bounded similarity ratio where 1 means no disclosure (e.g. NNDR) — higher is safer]*** | ***[Value in [0, 1]; threshold < 1]*** | ***[(1 − value) / (1 − threshold)]*** |
+| ***[Rate with a zero baseline (singling-out rate, linkage success, share of records reconstructed) — lower is safer]*** | ***[Value in [0, 1]; threshold in (0, 1]]*** | ***[value / threshold]*** |
+| ***[Signed advantage with a zero baseline (inference advantage, CAP advantage, information gain expressed as an advantage) — lower is safer]*** | ***[Value in [−1, 1]; threshold in (0, 1]. A negative advantage (attack worse than its baseline) is recorded as observed; the gate and the indicator use the effective value max(0, value)]*** | ***[max(0, value) / threshold]*** |
+| ***[Accuracy of a balanced membership test (baseline 0.5)]*** | ***[Accuracy in [0, 1]; threshold in (0.5, 1]. Orientation-invariant: an attack performing below chance can be inverted, so the gate and the indicator both use the effective accuracy 0.5 + \|accuracy − 0.5\|]*** | ***[advantage = 2 × \|accuracy − 0.5\|; normalised = \|accuracy − 0.5\| / (threshold − 0.5)]*** |
+| ***[AUC-ROC (baseline 0.5)]*** | ***[AUC in [0, 1]; threshold in (0.5, 1]; the gate and the indicator both use the effective AUC 0.5 + \|AUC − 0.5\|]*** | ***[\|AUC − 0.5\| / (threshold − 0.5)]*** |
+| ***[Bounded similarity ratio where 1 means no disclosure (e.g. NNDR) — higher is safer]*** | ***[Value in [0, 1]; threshold in [0, 1)]*** | ***[(1 − value) / (1 − threshold)]*** |
 | ***[Unbounded distance where larger is safer (e.g. DCR percentile) — higher is safer]*** | ***[Value ≥ 0; threshold > 0, set from the holdout baseline. A value of 0 (an exact copy of a source record) is an unacceptable qualitative path under G-M2 and is not normalised]*** | ***[threshold / value]*** |
 | ***[Formal DP parameters (ε, δ)]*** | ***[ε ≥ 0; 0 ≤ δ < 1]*** | ***[Not normalised and not averaged; checked as configuration gates (G-M1/G-M4) and documented in the DP statement (Section 3.3.5)]*** |
 
-***[A threshold equal to the baseline, or on the wrong side of it (for example an accuracy threshold of 0.5 or less), makes the configuration invalid; the module is then INCOMPLETE (G-M5). A value outside its allowed domain is an invalid result (G-M5). Each threshold states whether it is inclusive; a value exactly at an exclusive threshold fails.]***
+***[A threshold equal to the baseline, or on the wrong side of it (for example an accuracy threshold of 0.5 or less), makes the configuration invalid; the module is then INCOMPLETE (G-M5). A value outside its allowed domain is an invalid result (G-M5). Each threshold states whether it is inclusive. Unless the project passport states otherwise, thresholds of lower-is-safer metrics are exclusive upper limits (the metric passes only if its unfavourable bound is strictly below the threshold) and thresholds of higher-is-safer metrics are exclusive lower limits (it passes only if its unfavourable bound is strictly above the threshold); a value exactly at an exclusive threshold fails.]***
 
 ***[Weights are non-negative and sum to 1 over the weighted metrics. Gate-only and diagnostic metrics have no weight and are outside the indicator.]***
 
@@ -295,7 +296,21 @@ G-L and DPIA duties apply under every mechanism. PETs, trusted execution environ
 | ***[FAIL (any gate)]*** | ***[High (as-proposed; not available for acceptance)]*** |
 | ***[FAIL reproduced (internal routing rule above)]*** | ***[Near-certain (as-proposed; internal routing convention; observed success reported separately; not available for acceptance)]*** |
 
-**Uncertainty.** ***[Attack metrics are estimates. The evidence pack records, for each attack metric, the evaluation sample size, the number of repetitions and a 95% confidence interval. The gate uses the unfavourable bound: the upper bound for a lower-is-safer metric, the lower bound for a higher-is-safer metric. Where that bound crosses the threshold while the point estimate does not, the metric fails unless the test is repeated with a larger sample. The disclosure indicator uses point estimates.]***
+**Uncertainty.** ***[Attack metrics are estimates. The evidence pack records, for each attack metric, the evaluation sample size, the number of repetitions and a 95% confidence interval. The gate uses the unfavourable bound: the upper bound for a lower-is-safer metric, the lower bound for a higher-is-safer metric. For accuracy and AUC the unfavourable bound is orientation-invariant: it is the larger effective value over both ends of the interval, max(0.5 + \|lower − 0.5\|, 0.5 + \|upper − 0.5\|), so that an interval lying below chance, or crossing 0.5, is evaluated as strictly as one above it. For signed advantages the unfavourable bound is max(0, upper bound). Where that bound crosses the threshold while the point estimate does not, the metric fails unless the test is repeated with a larger sample. The disclosure indicator uses effective point estimates.]***
+
+***[Interval methods. Binomial proportions (accuracy of a balanced test, hit rates, singling-out and linkage rates, precision at k, share of records reconstructed) use Wilson score intervals. AUC, advantages, information-gain measures and distance-based metrics use bootstrap percentile intervals; the passport states the resampling unit (record or person) and the number of resamples. "Repetitions" are independent re-runs of the attack with fresh random seeds and, where applicable, fresh member/non-member splits; the evidence pack reports the spread across repetitions as well as the interval. Where an example in this document is illustrative, interval bounds may be stated as assumptions; they must then be labelled as such and never presented as computed from real observations.]***
+
+***[Boundary check (accuracy threshold exclusive, < 0.60):]***
+
+| ***[Observed accuracy or interval]*** | ***[Effective unfavourable value]*** | ***[Gate]*** |
+| :---- | :---- | :---- |
+| ***[0.50]*** | ***[0.50]*** | ***[pass]*** |
+| ***[0.40]*** | ***[0.60 (inverted)]*** | ***[fail — exactly at the exclusive threshold]*** |
+| ***[0.60]*** | ***[0.60]*** | ***[fail — exactly at the exclusive threshold]*** |
+| ***[0.10, interval [0.09, 0.11]]*** | ***[0.91]*** | ***[fail — an inverted attack is near-perfect]*** |
+| ***[0.90]*** | ***[0.90]*** | ***[fail]*** |
+| ***[0.52, interval [0.45, 0.58] (crosses 0.5)]*** | ***[max(0.55, 0.58) = 0.58]*** | ***[pass]*** |
+| ***[0.45, interval [0.38, 0.52] (crosses 0.5)]*** | ***[max(0.62, 0.52) = 0.62]*** | ***[fail]*** |
 
 **Default thresholds.** ***[The default thresholds in Part B are organisation-set illustrative values calibrated for a stated adversary profile and disclosure channel. They are not derived from a normative source. Releases to a broad or unlimited audience normally require stricter, context-based values; ISO/IEC 27559 and NIST SP 800-188 describe context-based approaches.]***
 
@@ -346,7 +361,7 @@ G-L and DPIA duties apply under every mechanism. PETs, trusted execution environ
 
 | Check | What It Measures | Typical gate |
 | :---- | :---- | :---- |
-| ***[Minimum cell size (threshold rule)]*** | ***[Smallest number of persons contributing to any published cell after suppression]*** | ***[≥ [10]]*** |
+| ***[Minimum cell size (threshold rule)]*** | ***[Smallest number of persons contributing to any published cell after suppression]*** | ***[≥ [10] — illustrative internal SDC setting, calibrated to context; not an anonymity guarantee]*** |
 | ***[Dominance rule (for magnitude tables)]*** | ***[Whether one or a few contributors dominate a cell total]*** | ***[(n, k) rule set by the project]*** |
 | ***[Differencing check]*** | ***[Whether any cell below the minimum can be derived by subtracting published cells, within the release and against all previous releases from the same population]*** | ***[No derivable cell below the minimum]*** |
 | ***[Reconstruction test]*** | ***[Share of source records that can be reconstructed exactly from the full set of published statistics]*** | ***[≤ project threshold]*** |
@@ -894,7 +909,7 @@ The proxy metrics and attack battery of Section 3.2 are applied to the transform
 
 | Metric | What It Measures | Default threshold |
 | :---- | :---- | :---- |
-| MIA accuracy (balanced evaluation set; shadow-model attack) | Whether an attacker can tell if a record was in the generator's training data; normalised as advantage 2 × (accuracy − 0.5) | < 60% (advantage < 0.20) |
+| MIA accuracy (balanced evaluation set; shadow-model attack) | Whether an attacker can tell if a record was in the generator's training data; normalised as advantage 2 × \|accuracy − 0.5\| (orientation-invariant; the gate uses the effective accuracy 0.5 + \|accuracy − 0.5\|) | < 60% (advantage < 0.20) |
 | MIA AUC-ROC (loss-based attack) | The same, threshold-free | < 0.60 |
 | MIA TPR at FPR = 0.1% | Exposure of the most vulnerable records | ≤ 1.0% (gate only) |
 | DCR P5 | 5th percentile of the distance from synthetic records to the closest training record, compared with the same statistic for a holdout of real records | ≥ holdout baseline (project value) |
@@ -924,7 +939,7 @@ Because no validated gradient-reconstruction test is available, the Bank does no
 
 | Check | Default gate |
 | :---- | :---- |
-| Minimum cell size after suppression | ≥ 10 persons |
+| Minimum cell size after suppression | ≥ 10 persons (illustrative internal SDC setting, calibrated to the release context; not an anonymity guarantee) |
 | Differencing check within the release and against all previous releases from the same population | No derivable cell below 10 |
 | Reconstruction test (exact reconstruction of source records from the published tables) | ≤ 1% of source records |
 | Record-level attack battery on reconstructed records (Section 3.2 attack battery) | Project thresholds |
@@ -1481,7 +1496,7 @@ This appendix contains numerical examples for the four Risk Calculation Projects
 
 Contributions in the tables are rounded to three decimals; indicators are the sums of unrounded contributions. A disclosure indicator is an uncalibrated ordinal summary, not a probability.
 
-**Chronology.** The decisions shown apply the acceptance authority in force from 20 October 2026 (Document 8, version 3.0; this document, version 1.2). The Chief Privacy Officer position exists only from that date. Where a case was first decided earlier (for example DPIA-CS-TRAIN-01 in Document 19), the earlier decision was taken under the authority then in force — without any Chief Privacy Officer involvement — and a conditional acceptance is re-assessed under the current rules at its expiry or at the next material change.
+**Chronology.** The decisions shown apply the acceptance authority in force from 23 October 2026 (Document 8, version 3.0, adopted on 20 October 2026 and effective on the Supervisory Board's consent on 23 October 2026; this document, version 1.2, adopted on 20 October 2026). The Chief Privacy Officer position exists from 20 October 2026; the current decision rules apply only from 23 October 2026. Where a case was first decided earlier (for example DPIA-CS-TRAIN-01 in Document 19), the earlier decision was taken under the authority then in force — without any Chief Privacy Officer involvement — and a conditional acceptance is re-assessed under the current rules at its expiry or at the next material change.
 
 ## **Project 1 — Base Dataset Assessment**
 
@@ -1595,7 +1610,7 @@ The run is charged to the lifetime privacy-loss ledger (ε 2.1, δ 8×10⁻⁶),
 
 The reconfigured generator: higher noise multiplier, per-customer contribution bound, δ configured at 1×10⁻⁹; ε = 1.8 (Rényi DP accountant).
 
-Evaluation design (illustrative assumptions, not the results of a real test): membership attacks on a balanced set of 5,000 training members and 5,000 holdout non-members; TP-SYN-LINK and TP-SYN-INF on 5,000 training records and a control set of 5,000 records not used in training; five repetitions; 95% intervals (Wilson for proportions, bootstrap for distances). The gate uses the unfavourable bound.
+Evaluation design (illustrative assumptions, not the results of a real test): membership attacks on a balanced set of 5,000 training members and 5,000 holdout non-members; TP-SYN-LINK and TP-SYN-INF on 5,000 training records and a control set of 5,000 records not used in training; five repetitions (independent re-runs with fresh seeds and fresh member/non-member splits); 95% intervals — Wilson score intervals for proportions (accuracy, hit rates, linkage and inference success rates), bootstrap percentile intervals (2,000 resamples of records) for AUC, advantages and distances; all interval bounds shown are illustrative assumptions, not computed from real observations. The gate uses the orientation-invariant unfavourable bound.
 
 | Metric | Value | 95% CI (illustrative) | Threshold | Gate on the unfavourable bound | Normalised | Weight | Contribution |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
@@ -1622,13 +1637,13 @@ Disclosure indicator = 0.537. **Module outcome: PASS**, 0.5 ≤ indicator ≤ 1.
 | Example 2.1-R generator | 1.8 | 1×10⁻⁹ | Rényi DP | Privacy Engineers; Data Science (synthetic dataset) |
 | **Cumulative (basic composition)** | **6.5** | **≈ 8.0×10⁻⁶** | Sum of ε and sum of δ | Composed as if one party observed all outputs |
 
-Assumptions: no other DP mechanism has been run on this population; each run's (ε, δ) guarantee holds for the customer-level privacy unit; observers are treated as able to combine outputs (conservative); basic composition is used because the runs' accounting states are not combined in one accountant. Caps (Document 8, Section 3): lifetime ε ≤ 10.0 and δ ≤ 1×10⁻⁵ — respected (headroom ε 3.5, δ about 2.0×10⁻⁶); operational cap on new spending in calendar year 2026, ε ≤ 7.0 — respected (6.5). The composed guarantee for the population is therefore (ε 6.5, δ ≈ 8.0×10⁻⁶): the δ of the Example 2.1 run stays in the ledger, and the new run's configured δ of 1×10⁻⁹ does not lower it. The PASS is conditional on these assumptions; any further DP run on this population is checked against the remaining headroom before it starts.
+Assumptions: no other DP mechanism has been run on this population; each run's (ε, δ) guarantee holds for the customer-level privacy unit; observers are treated as able to combine outputs (conservative); basic composition is used because the runs' accounting states are not combined in one accountant. Caps (Document 8, Section 3; illustrative internal appetite parameters, not legal thresholds): lifetime ε ≤ 10.0 and δ ≤ 1×10⁻⁵ — respected (headroom ε 3.5, δ about 2.0×10⁻⁶); operational cap on new spending in calendar year 2026, ε ≤ 7.0 — respected (6.5). The composed guarantee for the population is therefore (ε 6.5, δ ≈ 8.0×10⁻⁶): the δ of the Example 2.1 run stays in the ledger, and the new run's configured δ of 1×10⁻⁹ does not lower it. The PASS is conditional on these assumptions; any further DP run on this population is checked against the remaining headroom before it starts.
 
 **DP bound, for information only.** Under the narrow assumptions of Section 3.3.5 (membership test between adjacent datasets, uniform prior, worst-case attacker), accuracy ≤ (e^1.8 + 10⁻⁹)/(1 + e^1.8) ≈ 0.858. The observed MIA accuracy of 53% is compatible with this bound; neither value is a re-identification probability or an anonymity guarantee.
 
 **Scenario tiers.** S1: Medium × Significant = **Medium**. S2 (threat-based, Section 4.B.2): residual Low × Significant = Medium; inherent Medium × Significant = Medium. **Track (a) tier: Medium.** Track (b): applicable regime +1, financial 1, reputational 1 → index 3 → Moderate (reported to ERM; does not affect track (a)).
 
-**Decision (DPIA-CS-TRAIN-01, Document 19).** G-36: Legal & Compliance concluded, with Group DPO advice, that the Art. 36(1) test is not met — no scenario remains at a high risk to rights and freedoms after the measures — and recorded the reasons. Acceptance under the current rules (Document 8, version 3.0): Medium — the Processing Owner (Head of Credit Decisions) with the Chief Privacy Officer's concurrence; Group DPO advice recorded; conditional acceptance expiring after 12 months or at the next calibration, whichever is earlier, and conditional on ε ≤ 2.0 per run and on the ledger caps. (Before 20 October 2026 the Medium tier was accepted by the Processing Owner with Group DPO advice, without concurrence by a Chief Privacy Officer — see Chronology above.)
+**Decision (DPIA-CS-TRAIN-01, Document 19).** G-36: Legal & Compliance concluded, with Group DPO advice, that the Art. 36(1) test is not met — no scenario remains at a high risk to rights and freedoms after the measures — and recorded the reasons. Acceptance under the current rules (Document 8, version 3.0): Medium — the Processing Owner (Head of Credit Decisions) with the Chief Privacy Officer's concurrence; Group DPO advice recorded; conditional acceptance expiring after 12 months or at the next calibration, whichever is earlier, and conditional on ε ≤ 2.0 per run and on the ledger caps. (Before 23 October 2026, when the current acceptance rules took effect, the Medium tier was accepted by the Processing Owner with Group DPO advice, without concurrence by a Chief Privacy Officer — see Chronology above.)
 
 # **Example 2.2**
 
@@ -1658,7 +1673,7 @@ Sufficiently aggregated statistics: generalised categories, small cells suppress
 
 **SDC gates:** smallest published cell 14 (≥ 10 — pass); differencing within the release and against the two previous releases — no derivable cell below 10 (pass); exact reconstruction 0.4% of source records, 0.35%–0.45% over five attack runs (highest value ≤ 1% — pass); every published table within the test scope (G-M5 — pass); attributes excluded by internal policy — none (G-M3 — pass).
 
-Evaluation design (illustrative assumptions, not the results of a real test): record-level attacks on a random sample of 20,000 reconstructed records against an auxiliary dataset simulating public registers and social-network data; Fellegi-Sunter precision@100 over six repetitions (600 candidate pairs); 95% Wilson intervals; the gate uses the upper bound.
+Evaluation design (illustrative assumptions, not the results of a real test): record-level attacks on a random sample of 20,000 reconstructed records against an auxiliary dataset simulating public registers and social-network data; Fellegi-Sunter precision@100 over six repetitions (600 candidate pairs; independent re-runs with fresh random samples); 95% intervals — Wilson score intervals for proportions (precision@100, share of records reconstructed, singling-out and linkage rates), bootstrap percentile intervals (2,000 resamples of records) for information-gain and inference-advantage measures; all interval bounds shown are illustrative assumptions, not computed from real observations. The gate uses the unfavourable bound.
 
 **Attack battery on reconstructed records:**
 
