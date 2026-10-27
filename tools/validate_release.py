@@ -67,7 +67,9 @@ FORBIDDEN = [
     (r"\bAnthropic\b|\bClaude\b", 0, "real vendor name (EDITORIAL_RULES §6)", "ERROR", set()),
     (r"Realm Inveo|REALM Data|realm-data", 0, "organisation/product branding in body (§6)", "ERROR", {"00"}),
     (r"Privacy Management Framework", re.I, "legacy name; use Privacy Governance Framework (§1)", "ERROR", set()),
-    (r"\bSupervision\b", 0, "calque 'Supervision' (§2)", "ERROR", set()),
+    # 'Supervision' as a role name is a calque; official terms such as 'market surveillance/supervision
+    # authority' or 'Banking Supervision' are legitimate
+    (r"(?<![Mm]arket )(?<!Banking )(?<!Prudential )\bSupervision\b(?! [Aa]uthorit)", 0, "calque 'Supervision' (§2)", "ERROR", set()),
     (r"\bcontours?\b", re.I, "calque 'contour' (§2)", "ERROR", set()),
     (r"Privacy\s*[/\-]\s*Risk Committee", 0, "committee spelling (§3)", "ERROR", set()),
     (r"[Ѐ-ӿ]", 0, "Cyrillic characters", "ERROR", set()),
@@ -91,7 +93,10 @@ CLAIMS = [
      "BaFin is not the GDPR supervisory authority for Art. 33/36 (EDITORIAL_RULES §3, §4.4)"),
     (r"pseudonymi[sz]\w*[^.\n]{0,60}(is|as) (an )?anonymi[sz]ation (technique|method)",
      "pseudonymisation is not an anonymisation technique (Art. 4(5), Recital 26)"),
-    (r"DPO[^.\n]{0,40}\b(prevails|veto)\b", "DPO does not prevail/veto (EDITORIAL_RULES §4.1)"),
+    # only the DPO (or its decision/assessment/opinion) as the subject that prevails or vetoes — not, e.g.,
+    # 'a task allocated to the DPO — that allocation prevails'
+    (r"DPO(?:['’]s)?(?:\s+(?:decision|assessment|opinion|view|position|judgement))?\s+(?:prevails|has\s+(?:a\s+)?veto|holds\s+(?:a\s+)?veto|may\s+veto|vetoes)",
+     "DPO does not prevail/veto (EDITORIAL_RULES §4.1)"),
     (r"DPO[^.\n]{0,60}\baccepts?\b[^.\n]{0,30}\b(residual )?risk", "DPO never accepts risk on the controller's behalf (§4.1)"),
     (r"\bno residual (re-?identification )?risk\b", "zero-risk anonymity test is not the legal standard (Recital 26)"),
     (r"Bill C-27[^.\n]{0,80}\b(in force|applies|requires)\b", "Bill C-27 died on prorogation (Jan 2025)"),
@@ -128,6 +133,9 @@ def numbered(heads, body=""):
     nums = set()
     # bold pseudo-headings such as '***4.6 Processing Owner***' also count as numbered sections
     for m in re.finditer(r"^[*_]{1,3}(\d+(?:\.\d+)+)\.?\s", body, re.M):
+        nums.add(m.group(1))
+    # plain-line subheadings such as '3.1 ERM (Enterprise Risk Management)'
+    for m in re.finditer(r"^(\d+(?:\.\d+)+)\.?\s+[A-Z(]", body, re.M):
         nums.add(m.group(1))
     for h in heads:
         m = re.match(r"^[*_]*(?:Section\s+|Part\s+[AB][\s—:-]+)?(\d+(?:\.\d+)*)\.?\b", h.strip())
@@ -239,16 +247,29 @@ def main():
         name = CANON[nn]
         for pat, why in CLAIMS:
             for m in re.finditer(pat, body, re.I):
-                if why.startswith("BaFin") and re.search(r"separate|parallel|DORA|not the|distinct", m.group(0), re.I):
-                    continue  # statement that correctly distinguishes the GDPR and financial-supervision channels
-                if why.startswith("DPO") and re.search(r"\b(not|never|no|cannot|neither|nor|without)\b", m.group(0), re.I):
-                    continue  # negated statement, e.g. 'the DPO does not accept risk' 
-                R.add("ERROR", "claims", f"{name}:{lineno(body, m.start())}", f"{why} — '{m.group(0)[:90]}'")
-        for m in LOGISTIC.finditer(body):
-            ctx = body[max(0, m.start() - 600): m.end() + 600]
-            if not re.search(r"hypothesis", ctx, re.I) or not re.search(r"prior", ctx, re.I):
-                R.add("ERROR", "claims", f"{name}:{lineno(body, m.start())}",
-                      "logistic(ε) bound used without stated hypothesis-test assumptions and priors (§5.6)")
+                hit = m.group(0)
+                # sentence around the hit, to recognise correct statements that merely mention the wrong claim
+                s0 = body.rfind(".", 0, m.start()) + 1
+                s1 = body.find(".", m.end())
+                sentence = body[s0: s1 if s1 > 0 else len(body)]
+                line_text = body[body.rfind("\n", 0, m.start()) + 1: body.find("\n", m.end()) if body.find("\n", m.end()) > 0 else len(body)]
+                if "changes from internal ver.2" in line_text:
+                    continue  # PGF document-history rows describe what was removed or corrected
+                negated = re.search(r"\b(not|never|no|cannot|neither|nor|without|is NOT)\b", sentence, re.I)
+                if why.startswith("BaFin") and (negated or re.search(r"separate|parallel|DORA|distinct", sentence, re.I)):
+                    continue  # correctly distinguishes the GDPR and financial-supervision channels
+                if why.startswith(("DPO", "δ")) and negated:
+                    continue  # negated safeguard, e.g. 'the DPO does not accept risk', 'δ is not a probability'
+                if why.startswith("DPO never accepts") and re.search(
+                        r"Processing Owner|Executive Management|Management Board|\bCRO\b|EPPO|Committee", hit):
+                    continue  # the accepting subject is management, not the DPO
+                R.add("ERROR", "claims", f"{name}:{lineno(body, m.start())}", f"{why} — '{hit[:90]}'")
+        # logistic(ε): the assumptions must be stated somewhere in the same document (e.g. §3.3.5);
+        # later mentions (examples, changelog) may then refer back to them
+        if LOGISTIC.search(body) and not (re.search(r"hypothesis[- ]test", body, re.I) and re.search(r"\bprior", body, re.I)):
+            m = LOGISTIC.search(body)
+            R.add("ERROR", "claims", f"{name}:{lineno(body, m.start())}",
+                  "logistic(ε) bound used without stated hypothesis-test assumptions and priors (§5.6)")
 
     # worked-example identifiers: each ID should carry one risk tier wherever a tier is stated next to it
     tier_re = re.compile(r"\b((?:DPIA|TIA|PRR)-[A-Z0-9]+(?:-[A-Z0-9]+)*-\d{2})\b[^.\n|]{0,80}?\b(Low|Medium|High|Critical)\b")
