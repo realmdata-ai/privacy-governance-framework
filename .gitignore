@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+# build outputs (PDF/ZIP are release assets, not sources)
+/build/
+*.pdf
+*.zip
+*.docx

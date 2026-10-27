@@ -1,0 +1,24 @@
+# Publication allowlist for the public source repository `privacy-governance-framework`
+# Syntax: <glob relative to workspace root> [-> <target path in export>]
+# Anything not listed here is NOT exported. tools/export_publication.py additionally enforces a deny policy
+# (_INTERNAL, _SUP, _AUDIT, _BUS, old ver.2 sources, DGF, G4A, DOCX/PDF/ZIP, EDITORIAL_RULES, CC_STATUS).
+
+# Canonical content (Overview + 31 components)
+PGF/[0-3][0-9]_*_EN.md
+
+# Supporting files
+PGF/README.md                -> README.md
+PGF/CHANGELOG.md             -> CHANGELOG.md
+PGF/GLOSSARY.md              -> PGF/GLOSSARY.md
+PGF/STANDARDS_CROSSWALK.md   -> PGF/STANDARDS_CROSSWALK.md
+PGF/SOURCE_MANIFEST.json     -> PGF/SOURCE_MANIFEST.json
+PGF/RELEASE_READINESS.md     -> PGF/RELEASE_READINESS.md
+
+# Citation / licence drafts (final LICENSE file only after rights confirmation; see publication/README.md)
+publication/CITATION.cff     -> CITATION.cff
+publication/LICENCE_PROPOSED.md -> LICENCE_PROPOSED.md
+
+# Build and check tools (own code; MIT proposed)
+tools/validate_release.py
+tools/export_publication.py
+publication/ALLOWLIST.txt
