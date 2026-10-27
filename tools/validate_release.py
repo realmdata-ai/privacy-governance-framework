@@ -201,6 +201,21 @@ def main():
         for need in ["Normative basis", "Document history"]:
             if nn != "00" and not re.search(rf"^#+\s.*{need}", body, re.M | re.I):
                 R.add("ERROR", "structure", name, f"section '{need}…' missing")
+        # content completeness: a release-candidate status in front matter is not enough
+        if nn != "00":
+            for part in ("Part A", "Part B"):
+                if not re.search(rf"^#+\s.*{part}\b", body, re.M):
+                    R.add("ERROR", "completeness", name, f"'{part}' heading missing (incomplete content file)")
+            if len(body.split()) < 1500:
+                R.add("WARN", "completeness", name, f"only {len(body.split())} words — check that the file is complete")
+        if nn == "24":
+            pb = re.search(r"^#+\s.*Part B\b", body, re.M)
+            parts = {"Part A": body[:pb.start()] if pb else body, "Part B": body[pb.start():] if pb else ""}
+            ids = [f"G{i}" for i in range(1, 10)] + [f"C{i}" for i in range(1, 6)] + [f"S{i}" for i in range(1, 10)]
+            for label, text in parts.items():
+                missing = [pid for pid in ids if not re.search(rf"\b{pid}\b", text)]
+                if missing:
+                    R.add("ERROR", "completeness", name, f"process map {label} lacks processes {missing}")
 
     # forbidden strings & spelling
     for nn, (meta, body) in parsed.items():
