@@ -144,7 +144,7 @@ This document is the single source of truth for the distribution of responsibili
 | Data Protection Coordinator (DPC) | ***[Execution tier, a distributed role within the business unit]*** | ***[Document 4, Section 7]*** |
 | Legal | ***[Owner of the legal compliance gate (G-L) and of legal determinations]*** | ***[Document 3, Section 3.4]*** |
 | CISO / Information Security | ***[Owner of security events and technical containment]*** | ***[Document 3, Section 3.2]*** |
-| ***[ICT risk function (financial entities subject to DORA)]*** | ***[Owner of ICT-related incident classification and reporting to the financial supervisor]*** | ***[Document 3, Section 3.2]*** |
+| ***[ICT risk function (financial entities subject to DORA)]*** | ***[Owner of ICT-related incident classification and reporting to the financial supervisor]*** | ***[Document 3, Sections 3.2 and 3.14]*** |
 | Independent Internal Audit | ***[Third line; reports functionally to the Governing Body's Audit Committee]*** | ***[Document 3, Section 3.10; Document 27]*** |
 | ***[Business unit]*** | ***[Owner of a product/process outside the privacy function; performs work for its Processing Owner]*** | ***[Document 3, Sections 3.9–3.10]*** |
 | ***[IT Management]*** | ***[Owner of technical implementation]*** | ***[Document 3, Section 3.6]*** |
@@ -164,7 +164,10 @@ The governing processes in this section correspond to governing processes G1–G
 | ***G2.2 — Risk Assessment Methodology (Document 18)*** | Privacy Operations Lead, ***[ERM]*** | EPPO | Privacy Risk Committee | DPO, Legal, CISO | Executive Management, Independent Internal Audit |
 | ***G3 — Maintaining and Reviewing the RACI Model*** | Privacy Operations Lead | EPPO | Executive Management | DPO, Legal, Processing Owners | All roles |
 | ***G4 — Regulatory Monitoring*** | Privacy Officer(s), Legal | EPPO | — | DPO | Privacy Operations Lead; Executive Management (material changes) |
+| ***G4.2 — Public-Authority and Law-Enforcement Access Requests*** | Legal, Privacy Officer(s) | Legal | — | DPO, CISO | EPPO, Processing Owner |
 | ***G5 — Developing Policies and Standards*** | Privacy Operations Lead | EPPO | Executive Management (Governing Body consent only where reserved) | DPO (C\*), Legal, CISO, Processing Owners | Governing Body committee, all roles |
+| ***G5.1 — Privacy Notice and Transparency Management (Arts. 12–14): framework and organisation-wide notices*** | Privacy Operations Lead, Legal | EPPO | Executive Management (where the notice is adopted as part of Document 1) | DPO (C\*) | Processing Owners |
+| ***G5.1 — Privacy Notice and Transparency Management: notice content for a processing activity*** | Privacy Officer(s), ***[Business unit]*** | Processing Owner | — | DPO (C\*), Legal | EPPO |
 | ***G6.1 — Compliance Monitoring and DPO-Organised Audits (GDPR Art. 39(1)(b))*** | DPO, Privacy Officer(s) under DPO direction | DPO | — | EPPO, Legal, auditees | Executive Management; Governing Body Audit Committee where the DPO considers it necessary; Independent Internal Audit |
 | ***G6.2a — Internal-Audit Charter/Mandate, Risk-Based Audit Plan and Significant Plan Changes (covering privacy)*** | ***[Chief Audit Executive]*** / Independent Internal Audit | ***[Chief Audit Executive]*** | Governing Body Audit Committee (approves) | Executive Management, EPPO, DPO (input to risk assessment) | Governing Body Risk Committee |
 | ***G6.2b — Independent Assurance Opinion on the Programme (Document 27)*** | Independent Internal Audit (may be supplemented by an external auditor) | ***[Chief Audit Executive]*** | — | DPO, EPPO (as auditees and information sources) | Governing Body Audit Committee, Executive Management |
@@ -174,6 +177,8 @@ The governing processes in this section correspond to governing processes G1–G
 | ***G9 — Processing Owner Mandate Designation*** | Privacy Operations Lead (prepares the proposal and the Document 25 entry) | EPPO | Executive Management (designates the holder and the delegated tier) | DPO, Legal | The designated Processing Owner, Privacy Risk Committee (management level), Data Protection Coordinator of the line; Governing Body's Risk Committee (oversight) |
 
 > **Guidance.** G9 is never self-appointment: the business line does not designate its own Processing Owner. Executive Management designates the holder and the delegated acceptance tier (Section 7) on the EPPO's proposal; the designee is Informed and confirms acceptance of the mandate.
+
+> **Guidance — sub-processes of the process map.** The sub-processes added by Document 24 (Section 2.3) each have one row with a single "A": G4.2 and G5.1 above; C2.2 and the legitimate-interest part of C2.3 in Section 5.2; S6.3 in Section 6; G4.1 (Regulator Engagement, Inquiries and Inspections — G4.1(a) controller response, G4.1(b) DPO cooperation and contact point), C2.1 (AI Act classification and FRIA interface) and the Art. 26 part of C2.3 in the statutory-activities table of Section 6.
 
 ## **5. RACI — Core Processes (C1–C5)**
 
@@ -220,6 +225,8 @@ Subsections 5.1–5.5 are numbered in accordance with the current version of the
 | :---- | :---- | :---- | :---- | :---- | :---- |
 | ***[Intake and triage of the data processing request]*** | Privacy Officer(s) | Privacy Operations Lead | — | Processing Owner, ***[Business unit]*** | DPO |
 | ***[G-L — legal compliance gate]*** | Legal, Privacy Officer(s) | Legal | — | DPO (C\*) | Processing Owner, EPPO |
+| ***[C2.3 — Legitimate-interest assessment (Art. 6(1)(f), as part of G-L)]*** | Privacy Officer(s) | Legal | — | DPO (C\*) | Processing Owner, EPPO |
+| ***[C2.2 — Children's data safeguards (where the activity concerns children)]*** | Privacy Officer(s), ***[Business unit]*** | Processing Owner | — | Legal, DPO | EPPO |
 | ***[G-DPIA — DPIA triage]*** | Privacy Officer(s) | Processing Owner | — | DPO (C\*) | Privacy Operations Lead |
 | ***[Conducting the DPIA (controller's assessment, GDPR Art. 35(1))]*** | Privacy Officer(s), ***[Business unit]*** | Processing Owner | — | DPO (C\*), CISO, Legal | EPPO |
 | ***[DPO advice on the DPIA (GDPR Arts. 35(2), 39(1)(c))]*** | DPO | DPO | — | — | Processing Owner, EPPO |
@@ -284,7 +291,8 @@ Subsections 5.1–5.5 are numbered in accordance with the current version of the
 | ***S4 — Record of Processing Activities (RoPA, Art. 30)*** | Privacy Officer(s) | Privacy Operations Lead | — | Processing Owners (confirm entries), ***[Data Governance]*** | DPO, EPPO |
 | ***S5 — Privacy Risk Register*** | Privacy Operations Lead | EPPO | — | Processing Owners (risk owners of entries), DPO, CISO, ***[ERM]*** | Executive Management, Governing Body Risk Committee |
 | ***S6.1 — Vendor Privacy Due Diligence (Document 17)*** | Privacy Officer(s), ***[Procurement]*** | Privacy Operations Lead | — | CISO, Legal | DPO |
-| ***S6.2 — Engaging a Processor or Recipient (GDPR Art. 28 contract or data-sharing agreement)*** | ***[Procurement]***, Legal | Processing Owner | — | DPO, CISO, EPPO | Executive Management (critical ICT third-party arrangements) |
+| ***S6.2 — Engaging a Processor or Recipient (GDPR Art. 28 contract or data-sharing agreement)*** | ***[Procurement]***, Legal | Processing Owner | — | DPO, CISO, EPPO | Executive Management (arrangements for ICT services supporting critical or important functions, where DORA applies) |
+| ***S6.3 — Corporate Transactions (M&A): Privacy Due Diligence and Data Migration*** | Legal, Privacy Officer(s); the EPPO leads the privacy workstream | ***[Processing Owner of the transaction]*** | — | DPO, CISO | Executive Management |
 | ***S7.1 — Security Event Detection, Triage and Containment*** | CISO / ***[SOC]*** | CISO | — | Privacy Operations Lead | DPO |
 | ***S7.2 — Personal Data Breach Qualification and Recording (every breach, Art. 33(5); Document 14)*** | Privacy Officer(s) | EPPO | — | DPO, CISO, Legal | Processing Owner |
 | ***S7.3 — GDPR Notification Decision (Art. 33 to the competent SA — the lead SA for cross-border processing; Art. 34 to data subjects)*** | EPPO (prepares; files through the agreed SA channel) | Designated Executive Management member (with a named deputy for the 72-hour clock) | — | DPO (C\*; contact point for the SA), Legal, CISO | Governing Body Risk Committee, Processing Owner |
@@ -304,10 +312,10 @@ Subsections 5.1–5.5 are numbered in accordance with the current version of the
 | :---- | :---- | :---- | :---- | :---- | :---- |
 | ***[Designating the DPO and communicating the contact details to the SA and publishing them (GDPR Art. 37(1), (7))]*** | EPPO, ***[HR]*** | Executive Management | Executive Management (Governing Body consent only if reserved) | Legal | Governing Body committee, DPO, all staff |
 | ***[Ensuring DPO resources, access and independence (GDPR Art. 38(1)–(3), (6))]*** | EPPO | Executive Management | — | DPO | Governing Body committee |
-| ***[Cooperation with the SA and acting as its contact point (GDPR Art. 39(1)(d)–(e))]*** | DPO | DPO | — | Legal, EPPO | Executive Management |
-| ***[Controller response to SA inquiries, investigations and orders]*** | Legal, Privacy Operations Lead | EPPO | Executive Management (where the response commits the controller) | DPO (C\*) | Governing Body committee |
-| ***[Joint-controller arrangement (GDPR Art. 26)]*** | Legal | Processing Owner | — | DPO, EPPO | Privacy Operations Lead |
-| ***[Fundamental rights impact assessment and other AI Act deployer duties — interface only (Document 3, Section 3.5)]*** | ***[AI governance function]*** | Processing Owner | — | DPO, Legal | EPPO |
+| ***[G4.1(b) — Cooperation with the SA and acting as its contact point (GDPR Art. 39(1)(d)–(e))]*** | DPO | DPO | — | Legal, EPPO | Executive Management |
+| ***[G4.1(a) — Controller response to SA inquiries, investigations and orders]*** | Legal, Privacy Operations Lead | EPPO | Executive Management (where the response commits the controller) | DPO (C\*) | Governing Body committee |
+| ***[C2.3 — Joint-controller arrangement (GDPR Art. 26)]*** | Legal | Processing Owner | — | DPO, EPPO | Privacy Operations Lead |
+| ***[C2.1 — Fundamental rights impact assessment and other AI Act deployer duties — interface only (Document 3, Section 3.5)]*** | ***[AI governance function]*** | Processing Owner | — | DPO, Legal | EPPO |
 
 ## **7. Residual-Risk Acceptance Authority and Escalation**
 
@@ -325,7 +333,7 @@ Subsections 5.1–5.5 are numbered in accordance with the current version of the
 * ***[The DPO may escalate directly to the highest management level (Executive Management); the DPO informs the Governing Body committee if the DPO considers it necessary. Escalation does not suspend a decision unless Executive Management so decides; it never transfers the decision to the DPO]***
 * ***[The DPO's advice and any escalation are recorded; neither the content of the advice nor the fact of escalation may be used to the DPO's detriment (GDPR Art. 38(3))]***
 
-The escalation rule set out here does not replace the conflict-resolution matrix of the Interface & Integration Model (Document 3, Section 5) — that matrix applies to general disagreements between the privacy function and another corporate function (for example, over the prioritisation of initiatives or process organisation), whereas this section governs specifically the acceptance of residual risk and the handling of DPO advice — a specialised procedure established by the Charter (Section 8), not a general cross-functional mechanism.
+The escalation rule set out here does not replace the conflict-resolution matrix of the Interface & Integration Model (Document 3, Section 5) — that matrix applies to general disagreements between the privacy function and another corporate function (for example, over the prioritisation of initiatives or process organisation), whereas this section governs specifically the acceptance of residual risk and the handling of DPO advice — a specialised procedure established by the Charter (Section 8), not a general cross-functional mechanism. Escalation of programme metrics and findings to management and oversight bodies follows the master escalation matrix of Document 31, Section 6.4; that matrix does not change the acceptance authority above, never delays a statutory clock and does not affect the DPO's direct escalation channel or the independent channel of the Chief Audit Executive.
 
 ## **8. Relationship to Other Framework Documents**
 
@@ -369,7 +377,7 @@ Effective date: 20 October 2026   ·   Version: 4.0   ·   Document owner: Chief
 | 1.0 | 1 March 2026 | First version of the document, developed concurrently with the Organisational Design Strategy |
 | 2.0 | 22 August 2026 | Section 7 converted to the Processing Owner model: the residual-risk decision was split into "Assessment" and "Decision"; corrected the reference to the mandate holder register — Document 25, Section 10 |
 | 3.0 | 18 September 2026 | Section 5 aligned with the Privacy Governance Process Map (Document 24): subsections 5.1–5.5 labelled as processes C1–C5; risk calculation project register maintained in PEP; added the row "Processing Owner Mandate Designation (G9)" to Section 4 |
-| 4.0 | 20 October 2026 | Role model re-baselined after an internal review of DPO independence: Chief Privacy Officer designated as EPPO; Group DPO limited to its statutory tasks (advice, monitoring, DPIA advice, SA contact point); Approve/Decide column added; G-L, G-DPIA, G-36 and G-TIA rows added; G6 split into DPO compliance monitoring and Internal Audit assurance, with the Audit Committee approving the internal-audit charter and plan; Art. 38(5) confidentiality safeguard for DPO rows; processor extension row for Art. 33(2); G9 designation moved to the Management Board; GDPR breach notification separated from DORA reporting; Privacy Risk Committee re-established at management level |
+| 4.0 | 20 October 2026 | Role model re-baselined after an internal review of DPO independence: Chief Privacy Officer designated as EPPO; Group DPO limited to its statutory tasks (advice, monitoring, DPIA advice, SA contact point); Approve/Decide column added; G-L, G-DPIA, G-36 and G-TIA rows added; G6 split into DPO compliance monitoring and Internal Audit assurance, with the Audit Committee approving the internal-audit charter and plan; Art. 38(5) confidentiality safeguard for DPO rows; processor extension row for Art. 33(2); G9 designation moved to the Management Board; GDPR breach notification separated from DORA reporting; Privacy Risk Committee re-established at management level; rows for the sub-processes of the process map version 2.0 (G4.1, G4.2, G5.1, C2.1–C2.3, S6.3) added; Processing Owner list extended to the mandate holders designated on 20 October 2026 |
 
 ## **Glossary of Terms**
 
@@ -421,21 +429,21 @@ This document is the single source of truth for the distribution of responsibili
 | Management Board (Vorstand) | Management tier; manages the bank and takes management decisions; designated member for privacy matters: the CRO | Charter, Sections 8–9 |
 | Chief Privacy Officer (EPPO) | Management tier; reports to the CRO | Charter, Section 8; Organisational Design Strategy, Section 4 |
 | Privacy Risk Committee | Management-level committee chaired by the CRO; members: Chief Privacy Officer, CIO, CISO, General Counsel, Head of Compliance; the Group DPO attends as a non-voting adviser | Charter, Section 9; Organisational Design Strategy, Section 4 |
-| Processing Owner | Mandate held by existing heads: Credit Decisions, Digital Banking, Marketing, Customer Service, Fraud Prevention; CIO for IT-operated processing (holders — Document 25, Section 10) | Charter, Section 8; Document 6, Section 4.6 |
+| Processing Owner | Mandate held, by designation of the Management Board on the Chief Privacy Officer's proposal (G9), by the heads of Credit Decisions, Digital Banking, Marketing, Customer Service, Fraud Prevention, Insurance Distribution, Compliance (AML screening), Payment Services, Human Resources and Branch Network, the CIO for IT-operated processing, and the Chief Privacy Officer for the privacy function's own processing (holders — Document 25, Section 10) | Charter, Section 8; Document 6, Section 4.6 |
 | Group DPO | Independent statutory role; reports directly to the Management Board | Charter, Section 8; Document 6, Section 4.1 |
 | Privacy Operations Lead (POL) | Management tier; reports to the Chief Privacy Officer | Charter, Section 9; Organisational Design Strategy, Section 4 |
 | Privacy Officer(s) / Privacy Engineer(s) | Execution | Organisational Design Strategy, Section 5 |
 | Data Protection Coordinator (DPC) | Execution, a distributed role in the business lines | Organisational Design Strategy, Section 7 |
 | Legal (General Counsel) | Owner of the legal compliance gate (G-L) | Interface & Integration Model, Section 3.4 |
 | CISO | Owner of information security, security events and containment | Interface & Integration Model, Section 3.2 |
-| ICT Risk Control function | DORA ICT risk function; owner of major ICT-related incident classification and reporting to the financial supervisor | Interface & Integration Model, Section 3.2 |
+| ICT Risk Control function | DORA ICT risk function; owner of major ICT-related incident classification and reporting to the financial supervisor | Interface & Integration Model, Sections 3.2 and 3.14 |
 | Group Internal Audit | Third line; reports functionally to the Audit Committee of the Supervisory Board | Interface & Integration Model, Section 3.10; Document 27 |
 | IT Management (CIO) | Owner of technical implementation and PEP infrastructure | Interface & Integration Model, Section 3.6 |
 | Chief Data Officer (CDO) | Data Governance (classification scheme, Data Catalogue) | Interface & Integration Model, Section 3.3 |
 | Chief Risk Officer (CRO) / ERM | Management Board member; ERM taxonomy | Interface & Integration Model, Section 3.1 |
-| Business units (Credit Decisions, Digital Banking, Marketing, Customer Service, Fraud Prevention) | Perform work for their Processing Owner | Interface & Integration Model, Sections 3.9–3.10 |
+| Business units (Credit Decisions, Digital Banking, Marketing, Customer Service, Fraud Prevention, Insurance Distribution, Compliance, Payment Services, Human Resources, Branch Network) | Perform work for their Processing Owner | Interface & Integration Model, Sections 3.9–3.10 |
 
-The Privacy Risk Committee is a management committee, not a committee of the Supervisory Board. The Supervisory Board and its Risk and Audit Committees appear in this matrix in three capacities: in the I column (oversight, receipt of reports and assurance); in the Approve/Decide column next to the Management Board where the Supervisory Board's rules of procedure reserve consent for a specific matter under AktG §111(4) — at PanEuropean, in the privacy area, only the adoption of the Privacy Governance Charter and the removal of the Group DPO; and, for the Audit Committee, as the approver of the internal-audit charter, the risk-based audit plan and significant plan changes (row G6.2a), under the bank's internal-audit charter and in line with the IIA Global Internal Audit Standards 2024 (Standards 6.2 and 9.4) — a governance and professional-practice basis, not a GDPR obligation. None of these capacities involves taking management decisions or accepting operational risk.
+The Privacy Risk Committee is a management committee, not a committee of the Supervisory Board. The Supervisory Board and its Risk and Audit Committees appear in this matrix in three capacities: in the I column (oversight, receipt of reports and assurance); in the Approve/Decide column next to the Management Board where the Supervisory Board's rules of procedure reserve consent for a specific matter under AktG §111(4) — at PanEuropean, in the privacy area, only the adoption of the Privacy Governance Charter, the board-level privacy risk appetite (Document 8, Section 3) and the removal of the Group DPO; and, for the Audit Committee, as the approver of the internal-audit charter, the risk-based audit plan and significant plan changes (row G6.2a), under the bank's internal-audit charter and in line with the IIA Global Internal Audit Standards 2024 (Standards 6.2 and 9.4) — a governance and professional-practice basis, not a GDPR obligation. None of these capacities involves taking management decisions or accepting operational risk.
 
 ## **4. RACI — Governing Processes (G1–G9)**
 
@@ -448,7 +456,10 @@ The governing processes in this section correspond to governing processes G1–G
 | G2.2 — Risk Assessment Methodology (Document 18) | Privacy Operations Lead, ERM | Chief Privacy Officer | Privacy Risk Committee | Group DPO, General Counsel, CISO | Management Board, Group Internal Audit |
 | G3 — Maintaining and Reviewing the RACI Model | Privacy Operations Lead | Chief Privacy Officer | Management Board | Group DPO, General Counsel, Processing Owners | All roles |
 | G4 — Regulatory Monitoring (GDPR, BDSG and national law, EDPB guidance, AI Act, DORA interfaces) | Privacy Officer(s), Legal | Chief Privacy Officer | — | Group DPO | Privacy Operations Lead; Management Board (material changes) |
+| G4.2 — Authority Access Requests (prosecutors, courts, tax authorities; requests forwarded by processors under SCC Clause 15) | General Counsel, Privacy Officer(s) | General Counsel | — | Group DPO, CISO | Chief Privacy Officer, relevant Processing Owner |
 | G5 — Developing Policies and Standards | Privacy Operations Lead | Chief Privacy Officer | Management Board (Supervisory Board consent for the Charter only) | Group DPO (C\*), General Counsel, CISO, Processing Owners | Risk Committee of the Supervisory Board, all roles |
+| G5.1 — Privacy Notices: framework and Customer Privacy Notice | Privacy Officer(s), General Counsel | Chief Privacy Officer | Management Board for the Customer Privacy Notice (Document 1) | Group DPO (C\*) | Processing Owners |
+| G5.1 — Privacy Notices: content for a processing activity | Privacy Officer(s), business unit | Relevant Processing Owner | — | Group DPO (C\*), General Counsel | Chief Privacy Officer |
 | G6.1 — Compliance Monitoring and DPO-Organised Audits | Group DPO, Privacy Officer(s) under DPO direction | Group DPO | — | Chief Privacy Officer, General Counsel, auditees | Management Board; Audit Committee where the Group DPO considers it necessary; Group Internal Audit |
 | G6.2a — Internal-Audit Charter, Risk-Based Audit Plan (including privacy audits) and Significant Plan Changes | Group Internal Audit | Chief Audit Executive | Audit Committee of the Supervisory Board (approves) | Management Board, Chief Privacy Officer, Group DPO (input to risk assessment) | Risk Committee of the Supervisory Board |
 | G6.2b — Independent Assurance Opinion on the Programme | Group Internal Audit (supplemented by an external audit firm for specialist PET topics) | Chief Audit Executive | — | Group DPO, Chief Privacy Officer (as auditees) | Audit Committee of the Supervisory Board, Management Board |
@@ -482,6 +493,8 @@ The credit-scoring case (`DPIA-CS-TRAIN-01` for model training on synthetic data
 | :---- | :---- | :---- | :---- | :---- | :---- |
 | Intake and Triage of a New Data Processing Request (e.g., a new scoring feature) | Privacy Officer(s) | Privacy Operations Lead | — | Head of Credit Decisions (Processing Owner) | Group DPO |
 | G-L — Legal Compliance Gate (Art. 6 basis; Art. 9 condition; Art. 22(2)(a) contract necessity and Art. 22(3) safeguards for scoring) | Legal, Privacy Officer(s) | General Counsel | — | Group DPO (C\*) | Processing Owner, Chief Privacy Officer |
+| C2.3 — Legitimate-Interest Assessment (Art. 6(1)(f), as part of G-L) | Privacy Officer(s) | General Counsel | — | Group DPO (C\*) | Processing Owner, Chief Privacy Officer |
+| C2.2 — Children's Data Safeguards (e.g., app marketing features switched off for users under 16) | Privacy Officer(s), business unit | Relevant Processing Owner | — | General Counsel, Group DPO | Chief Privacy Officer |
 | G-DPIA — DPIA Triage | Privacy Officer(s) | Processing Owner | — | Group DPO (C\*) | Privacy Operations Lead |
 | Conducting the DPIA (e.g., `DPIA-CS-LAUNCH-01`) | Privacy Officer(s), Credit Decisions | Head of Credit Decisions (Processing Owner) | — | Group DPO (C\*), CISO, General Counsel | Chief Privacy Officer |
 | Group DPO Advice on the DPIA | Group DPO | Group DPO | — | — | Processing Owner, Chief Privacy Officer |
@@ -527,11 +540,13 @@ Example Cloud Services Pvt Ltd is fictional. Remote access to production systems
 
 ***5.5 Consent Management (C5)***
 
+E-mail and push marketing is used below as the example. For the other consent purposes the Processing Owner is the Head of Digital Banking (personalised-offers pilot; app biometric log-in) and the Head of Insurance Distribution (PPI health data); the rows apply to them in the same way.
+
 | Activity | R | A | D | C | I |
 | :---- | :---- | :---- | :---- | :---- | :---- |
 | Designing the Consent Request for Marketing Communications and Profiling | Marketing | Head of Marketing (Processing Owner) | — | General Counsel, Group DPO | Privacy Operations Lead |
 | Collecting Consent for Marketing Communications | Marketing | Head of Marketing (Processing Owner) | — | General Counsel | Group DPO |
-| Storing and Recording Consent in the CRM Platform | Privacy Engineer(s) / IT Management | Privacy Operations Lead | — | — | Group DPO |
+| Storing and Recording Consent in the Consent Management System (CMS; separate from the CRM) | Privacy Engineer(s) / IT Management | Privacy Operations Lead | — | — | Group DPO |
 | Processing Consent Withdrawal | Marketing / IT Management | Head of Marketing (Processing Owner) | — | — | Privacy Operations Lead, Group DPO |
 
 ## **6. RACI — Supporting Processes (S1–S9) and Statutory Activities**
@@ -545,12 +560,13 @@ Example Cloud Services Pvt Ltd is fictional. Remote access to production systems
 | S4 — Record of Processing Activities (RoPA) | Privacy Officer(s) | Privacy Operations Lead | — | Processing Owners (confirm entries), Data Governance | Group DPO, Chief Privacy Officer |
 | S5 — Privacy Risk Register ("Conduct & Privacy Risk") | Privacy Operations Lead | Chief Privacy Officer | — | Processing Owners, Group DPO, CISO, CRO | Management Board, Risk Committee of the Supervisory Board |
 | S6.1 — Vendor Privacy Due Diligence (core banking platform provider, Example Cloud Services Pvt Ltd, Example AI Provider Inc.) | Privacy Officer(s), Procurement | Privacy Operations Lead | — | CISO, General Counsel | Group DPO |
-| S6.2 — Engaging a Processor (Art. 28 contract) or Sharing Data with an Independent Controller (data-sharing agreement — e.g., EuroCredit Bureau) | Procurement, Legal | Relevant Processing Owner | — | Group DPO, CISO, Chief Privacy Officer | Management Board (critical ICT third-party arrangements under DORA) |
+| S6.2 — Engaging a Processor (Art. 28 contract) or Sharing Data with an Independent Controller (data-sharing agreement — e.g., EuroCredit Bureau) | Procurement, Legal | Relevant Processing Owner | — | Group DPO, CISO, Chief Privacy Officer | Management Board (arrangements for ICT services supporting critical or important functions under DORA) |
+| S6.3 — Corporate Transactions (M&A): Privacy Due Diligence and Data Migration — no transaction in progress at 26 October 2026 | General Counsel, Privacy Officer(s); the Chief Privacy Officer leads the privacy workstream | Processing Owner of the transaction | — | Group DPO, CISO | Management Board |
 | S7.1 — Security Event Detection, Triage and Containment | CISO / SOC | CISO | — | Privacy Operations Lead | Group DPO |
 | S7.2 — Personal Data Breach Qualification and Recording (every breach) | Privacy Officer(s) | Chief Privacy Officer | — | Group DPO, CISO, General Counsel | Relevant Processing Owner |
 | S7.3 — GDPR Notification Decision (Art. 33 to the HBDI as lead SA; Art. 34 to customers) | Chief Privacy Officer | CRO (designated Management Board member; deputy: COO) | — | Group DPO (C\*; contact point for the HBDI), General Counsel, CISO | Risk Committee of the Supervisory Board, relevant Processing Owner |
 | S7.4 — DORA Major ICT-Related Incident Classification and Reporting to the Financial Supervisor (ECB/BaFin) | ICT Risk Control function, CISO | Head of ICT Risk Control | — | Chief Privacy Officer, Group DPO (where personal data are involved) | Management Board, Risk Committee of the Supervisory Board |
-| S7.5 — Processor Extension: Notifying a Client Controller of a Breach (where PanEuropean acts as processor, e.g., payment services operated for a group company under an Art. 28 contract) | Privacy Officer(s), CISO | Head of the service unit providing the client service | — | General Counsel (contract terms), Group DPO | Chief Privacy Officer |
+| S7.5 — Processor Extension: Notifying a Client Controller of a Breach (where PanEuropean acts as processor, e.g., payment services operated for a group company under an Art. 28 contract) | Privacy Officer(s), CISO | Head of Payment Services (owner of the client service; RoPA-P-PAY-01) | — | General Counsel (contract terms), Group DPO | Chief Privacy Officer |
 | S8 — Staff Training on Privacy | HR (delivery) / Privacy Operations Lead (content) | Chief Privacy Officer | — | Group DPO | All roles |
 | S8.1 — Group DPO Awareness-Raising Activities | Group DPO | Group DPO | — | Privacy Operations Lead | Chief Privacy Officer |
 | S9 — Operating the PEP Platform | Privacy Engineer(s) | Privacy Operations Lead | — | IT Management, CISO | Group DPO, Chief Privacy Officer |
@@ -561,10 +577,10 @@ Example Cloud Services Pvt Ltd is fictional. Remote access to production systems
 | :---- | :---- | :---- | :---- | :---- | :---- |
 | Designating the Group DPO and Communicating the Contact Details to the HBDI (Art. 37(1), (7)); Removal of the Group DPO | Chief Privacy Officer, HR | Management Board | Management Board (removal: with the Supervisory Board's consent, reserved matter) | General Counsel | Risk Committee of the Supervisory Board, Group DPO, all staff |
 | Ensuring Group DPO Resources, Access and Independence (Art. 38) | Chief Privacy Officer | Management Board | — | Group DPO | Risk Committee of the Supervisory Board |
-| Cooperation with the HBDI and Concerned SAs; Contact Point | Group DPO | Group DPO | — | General Counsel, Chief Privacy Officer | Management Board |
-| Bank Response to SA Inquiries, Investigations and Orders | Legal, Privacy Operations Lead | Chief Privacy Officer | Management Board (where the response commits the bank) | Group DPO (C\*) | Risk Committee of the Supervisory Board |
-| Joint-Controller Arrangement for the Federated-Learning Anti-Fraud Consortium (Art. 26) | Legal | Head of Fraud Prevention (Processing Owner) | — | Group DPO, Chief Privacy Officer | Privacy Operations Lead |
-| AI Act Deployer Duties for Credit Scoring, including the Fundamental Rights Impact Assessment — interface only | Model Risk / AI governance function | Head of Credit Decisions (Processing Owner) | — | Group DPO, General Counsel | Chief Privacy Officer |
+| G4.1(b) — Cooperation with the HBDI and Concerned SAs; Contact Point | Group DPO | Group DPO | — | General Counsel, Chief Privacy Officer | Management Board |
+| G4.1(a) — Bank Response to SA Inquiries, Investigations and Orders | Legal, Privacy Operations Lead | Chief Privacy Officer | Management Board (where the response commits the bank) | Group DPO (C\*) | Risk Committee of the Supervisory Board |
+| C2.3 — Joint-Controller Arrangement for the Federated-Learning Anti-Fraud Consortium (Art. 26) | Legal | Head of Fraud Prevention (Processing Owner) | — | Group DPO, Chief Privacy Officer | Privacy Operations Lead |
+| C2.1 — AI Act Deployer Duties for Credit Scoring, including the Fundamental Rights Impact Assessment — interface only | Model Risk / AI governance function | Head of Credit Decisions (Processing Owner) | — | Group DPO, General Counsel | Chief Privacy Officer |
 
 ## **7. Residual-Risk Acceptance Authority and Escalation**
 
@@ -633,4 +649,4 @@ Version 4.0 of this document was adopted by the Management Board of PanEuropean 
 
 | Release | Date | Summary |
 | :---- | :---- | :---- |
-| 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: role model re-baselined by decision type (EPPO, Processing Owner, Executive Management, Governing Body, Independent Internal Audit, Legal, CISO added; DPO limited to its statutory tasks and C\* on every DPIA); Approve/Decide column added; mandatory gates G-L, G-DPIA, G-36, G-TIA added as rows; residual-risk acceptance table aligned with EDITORIAL_RULES §4.3 (High → one named Executive Management decider, with G-36 evaluated for every DPIA and prior consultation whenever the Art. 36 test is met; Critical not acceptable); G6 split into DPO compliance monitoring and Internal Audit assurance, with the Audit Committee approving the internal-audit charter and plan; Art. 38(5) confidentiality safeguard for DPO rows; processor extension row for Art. 33(2); G9 designation by Executive Management (no self-appointment); G-TIA branched by mechanism (Art. 45 adequacy check / Art. 46 TIA plus supplementary measures / Art. 49 documented conditions); transfer cannot proceed after a failed G-TIA; GDPR breach notification separated from DORA reporting; Art. 22(3) human review assigned to the deciding business line; the generic oversight label of ver.2 replaced by named bodies; Processing Owner added to the role list; example dates shifted by −12 months; normative basis and international adaptation added. |
+| 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: role model re-baselined by decision type (EPPO, Processing Owner, Executive Management, Governing Body, Independent Internal Audit, Legal, CISO added; DPO limited to its statutory tasks and C\* on every DPIA); Approve/Decide column added; mandatory gates G-L, G-DPIA, G-36, G-TIA added as rows; residual-risk acceptance table aligned with EDITORIAL_RULES §4.3 (High → one named Executive Management decider, with G-36 evaluated for every DPIA and prior consultation whenever the Art. 36 test is met; Critical not acceptable); G6 split into DPO compliance monitoring and Internal Audit assurance, with the Audit Committee approving the internal-audit charter and plan; Art. 38(5) confidentiality safeguard for DPO rows; processor extension row for Art. 33(2); G9 designation by Executive Management (no self-appointment); G-TIA branched by mechanism (Art. 45 adequacy check / Art. 46 TIA plus supplementary measures / Art. 49 documented conditions); transfer cannot proceed after a failed G-TIA; GDPR breach notification separated from DORA reporting; Art. 22(3) human review assigned to the deciding business line; the generic oversight label of ver.2 replaced by named bodies; Processing Owner added to the role list; example dates shifted by −12 months; normative basis and international adaptation added. Integration pass: rows with a single "A" for the Document 24 sub-processes G4.1, G4.2, G5.1, C2.1, C2.2, C2.3 and S6.3; Part B Processing Owner list aligned with Document 25, Section 10; consent management system (CMS) named in C5; cross-reference to the master escalation matrix (Document 31). |

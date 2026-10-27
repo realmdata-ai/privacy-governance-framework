@@ -164,7 +164,9 @@ For each document: its **purpose**, its key **contents**, and its **relationship
 - **Purpose:** establishes the programme — its objectives, mandate, governance bodies, decision rights and boundaries. It is the parent document of the model.
 - **Contents:**
   - definitions of the roles (controller, Executive Management, Governing Body, EPPO, Processing Owner, DPO, Internal Audit);
-  - the Processing Owner mandate;
+  - what is governed and who governs (Section 4);
+  - roles, mandates and decision rights, including the Processing Owner mandate (Section 8);
+  - the governance tiers — Oversight / Management / Execution, with the DPO and the Processing Owner outside the tiers (Section 9; detailed in Document 04);
   - DPO independence and escalation;
   - the governance gates;
   - the programme's processes.
@@ -185,7 +187,7 @@ For each document: its **purpose**, its key **contents**, and its **relationship
 - **Contents:**
   - role list, including the EPPO and the Processing Owner;
   - allocation principles;
-  - RACI tables for governing, core and supporting processes;
+  - RACI tables for governing, core and supporting processes, the sub-processes of the process map and the statutory activities;
   - escalation rules, including the recording of reasons when DPO advice is not followed.
 - **Relationships:** projected into Document 25 and operationalised in 26. Escalation thresholds come from 08.
 
@@ -217,6 +219,7 @@ For each document: its **purpose**, its key **contents**, and its **relationship
   - tiers mapped to the statutory high-risk test;
   - acceptance authority by tier (Critical is not acceptable);
   - conditional acceptance with an expiry date;
+  - an optional cumulative disclosure budget (lifetime ledger per source population);
   - escalation.
 - **Relationships:** supplies scales and authority to Documents 18–20 and 22. Applied in the process map (24) and reported through 31.
 
@@ -360,16 +363,17 @@ For each document: its **purpose**, its key **contents**, and its **relationship
 
 **24 Privacy Governance Process Map**
 - **Purpose:** the complete process model.
-- **Contents:** 23 processes in three groups; a value chain per group; a step-by-step event-driven decomposition with triggers, inputs and outputs, participants, gates and metrics.
+- **Contents:** 23 processes in three groups, with the Document 05 sub-rows and seven added sub-processes; a value chain per group; a step-by-step event-driven decomposition with triggers, inputs and outputs, participants, gates and metrics (metric identifiers from Document 28). The hierarchy is inspired by the APQC Process Classification Framework; no PCF levels or identifiers are claimed.
 
 | Group | Processes |
 |---|---|
-| Governing (G1–G9) | G1 Strategy and Policy · G2 Risk Limits · G3 RACI Model · G4 Regulatory Monitoring · G5 Policies · G6 Audit and Monitoring · G7 Metrics and KPIs · G8 Board Reporting · G9 Processing Owner Mandate Designation |
-| Core (C1–C5) | C1 Risk Calculation Project Development · C2 Request and Transformation (including DPIA and prior consultation) · C3 Data Subject Rights · C4 Cross-Border Transfer · C5 Consent Management |
-| Supporting (S1–S9) | S1 Data Classification · S2 Retention and Disposal · S3 Data Inventory · S4 Processing Register (RoPA) · S5 Risk Register · S6 Vendor Due Diligence · S7 Incident and Breach Management · S8 Staff Training · S9 Operation of Automation Tooling |
+| Governing (G1–G9) | G1 Privacy Strategy · G2 Risk Limits and Methodology (G2.1, G2.2) · G3 Maintaining and Reviewing the RACI Model · G4 Regulatory Monitoring (G4.1 Regulator Engagement, Inquiries and Inspections; G4.2 Public-Authority and Law-Enforcement Access Requests) · G5 Policies and Standards (G5.1 Privacy Notice and Transparency Management) · G6 Compliance Monitoring and Assurance (G6.1, G6.2a, G6.2b) · G7 Metrics and KPIs · G8 Governance Reporting (G8.1, G8.2) · G9 Processing Owner Mandate Designation |
+| Core (C1–C5) | C1 Risk Calculation Project Development · C2 Data Request and Transformation, including DPIA and prior consultation (C2.1 AI Act Classification and FRIA Interface; C2.2 Children's Data Safeguards; C2.3 Legitimate-Interest Assessment and Joint-Controller Arrangements) · C3 Data Subject Rights · C4 Cross-Border Data Transfer · C5 Consent Management |
+| Supporting (S1–S9) | S1 Data Classification · S2 Retention and Disposal (S2.1, S2.2) · S3 Data Inventory · S4 Record of Processing Activities (RoPA) · S5 Privacy Risk Register · S6 Vendor and Third-Party Due Diligence (S6.1, S6.2; S6.3 Corporate Transactions (M&A)) · S7 Incident and Breach Management (S7.1–S7.5) · S8 Staff Training and Awareness (S8, S8.1) · S9 Operating the Automation Tooling |
 
 **25 Process Owner Register**
-- **Purpose:** a board- and audit-facing projection of who is accountable for each process. It is derived from the RACI (05) and is not an independent source of truth.
+- **Purpose:** a board- and audit-facing projection of who is accountable for each process and sub-process. It is derived from the RACI (05) and the process map (24) and is not an independent source of truth.
+- **Contents:** register rows per process and sub-process; the register of Processing Owner mandate holders designated by Executive Management (Section 10).
 
 **26 Operational Role and Staffing Model**
 - **Purpose:** maps roles to positions.
@@ -404,8 +408,8 @@ Every privacy decision follows the same path:
 3. Legal compliance gate (G-L).
 4. DPIA triage (G-DPIA) and, where needed, a DPIA with DPO advice.
 5. Calculation (Document 18).
-6. Decision by the authorised owner (Document 8).
-7. Prior consultation (G-36) where high risk remains.
+6. Prior-consultation test (G-36), evaluated for every DPIA; consultation of the competent supervisory authority where high risk remains.
+7. Decision by the single authorised decider (Document 8).
 8. Records: RoPA, risk register and evidence pack.
 9. Monitoring and reporting.
 
@@ -491,4 +495,4 @@ To cite a specific component: "PGF-18 Privacy Risk Assessment Methodology, in Ne
 
 | Release | Date | Notes |
 |---|---|---|
-| 1.0.0-rc.1 | 2026-10-26 | First public release candidate. Rewritten from the internal ver.2 overview. Adds: abstract; design principles; quick start; process summary; crosswalk summary; limitations; how to cite; competing interests; references. Document register updated to the corrected governance model. |
+| 1.0.0-rc.1 | 2026-10-26 | First public release candidate. Rewritten from the internal ver.2 overview. Adds: abstract; design principles; quick start; process summary; crosswalk summary; limitations; how to cite; competing interests; references. Document register updated to the corrected governance model. Integration pass: Document 24 process names and sub-processes (G4.1, G4.2, G5.1, C2.1–C2.3, S6.3) listed; Charter sections and governance tiers named; G-36 shown before the decision in the process path; Document 25 entry completed. |

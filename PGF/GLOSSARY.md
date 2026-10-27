@@ -23,6 +23,9 @@ This glossary is the authoritative list of terms used across the Privacy Governa
 | **Data Protection Officer (DPO)** | The statutory role under GDPR Arts. 37–39. The DPO informs and advises, monitors compliance (including compliance audits it organises), gives advice on DPIAs, and cooperates with and is the contact point for the supervisory authority. The DPO acts independently, reports directly to the highest management level, and is accountable for the quality of its own tasks. The DPO does not authorise processing, accept risk on the controller's behalf or determine purposes and means. |
 | **Privacy Officer (Canada)** | The individual accountable for compliance under PIPEDA Principle 4.1, or the person in charge of the protection of personal information under Québec's private-sector Act. Not equivalent to an EU statutory DPO. |
 | **Privacy Operations Lead** | Runs day-to-day privacy operations. Owns Risk Calculation Projects (Document 18). |
+| **Data Protection Coordinator (DPC)** | An Execution-tier role inside a business unit that ensures the operational application of the model in that unit. A communication channel between the business unit and the privacy function; no decision authority (Documents 4 and 5). |
+| **Governance tiers** | Oversight / Management / Execution — the three tiers of the privacy function (Document 4, Section 4). The DPO and the Processing Owner sit outside the tiers. |
+| **Processing Owner mandate** | The designation, by Executive Management on the EPPO's proposal (process G9), of the holder of the Processing Owner role and its delegated tier. A business line cannot designate itself; the current holders are recorded in Document 25, Section 10. |
 | **Privacy Risk Committee** | A management-level committee chaired by the EPPO or a member of Executive Management. The DPO attends as an independent, non-voting adviser. |
 | **Independent Internal Audit** | The third line. Gives the independent assurance opinion on the privacy programme and reports functionally to the Governing Body's Audit Committee. |
 | **Competent supervisory authority (SA)** | The GDPR data protection authority competent for the processing. For cross-border processing this is the lead SA (Art. 56) together with the concerned SAs. Never a financial supervisor. |
@@ -57,6 +60,8 @@ This glossary is the authoritative list of terms used across the Privacy Governa
 |---|---|
 | **Security event** | Any information-security event, handled by InfoSec. |
 | **Personal data breach** | A breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data (Art. 4(12)). There is no harm threshold for whether a breach exists. Every breach is documented (Art. 33(5)). Risk determines only whether the SA and individuals must be notified. |
+| **Awareness** | The point at which the controller has a reasonable degree of certainty that a security incident has occurred that has led to personal data being compromised (EDPB Guidelines 9/2022). The 72-hour clock of Art. 33(1) runs from awareness (Document 14). |
+| **Breach record** | The record of every personal data breach required by Art. 33(5): facts, effects, remedial action and the reasoning for the notification decisions. A statutory record, kept independently and linked to other registers by identifier (Document 14). |
 | **Privacy incident** | A wider internal category that includes unlawful processing without a security breach. |
 | **Major ICT-related incident** | A DORA category for financial entities, classified under Delegated Regulation (EU) 2024/1772 and reported to the financial supervisor. Separate from GDPR breach notification. |
 | **Breach of security safeguards (Canada)** | A PIPEDA concept. Reportable to the OPC, with notification of individuals, where it creates a real risk of significant harm. Records of every breach are kept for 24 months. |
@@ -76,5 +81,7 @@ This glossary is the authoritative list of terms used across the Privacy Governa
 
 | Term | Definition |
 |---|---|
-| **Process groups** | Governing (G1–G9), core (C1–C5) and supporting (S1–S9) processes (Document 24). |
+| **Process groups** | Governing (G1–G9), core (C1–C5) and supporting (S1–S9) processes (Document 24). The model is inspired by the APQC Process Classification Framework hierarchy; it does not claim PCF levels or identifiers. |
+| **Process owner** | The role that is Accountable ("A") for a process or sub-process in the RACI Matrix (Document 5). There is no separate "owner badge"; where a process is split into sub-rows with different Accountable roles (for example S7.1–S7.5), each sub-row has its own owner (Documents 24 and 25). |
+| **Sub-process** | A part of a process with its own Accountable role or trigger, numbered under its parent. Besides the Document 5 sub-rows (G2.1/G2.2, G6.1/G6.2a/G6.2b, G8.1/G8.2, S2.1/S2.2, S6.1/S6.2, S7.1–S7.5, S8.1), Document 24 adds: G4.1 Regulator Engagement, Inquiries and Inspections; G4.2 Public-Authority and Law-Enforcement Access Requests; G5.1 Privacy Notice and Transparency Management; C2.1 AI Act Classification and FRIA Interface; C2.2 Children's Data Safeguards; C2.3 Legitimate-Interest Assessment and Joint-Controller Arrangements; S6.3 Corporate Transactions (M&A). |
 | **No duplicate registers** | One authoritative record per fact. Views, extracts and linked evidence records are allowed. Independent statutory records required by law are always allowed. |

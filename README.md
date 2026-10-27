@@ -50,4 +50,4 @@ The set comes with a 23-process governance model and is designed to help an orga
 
 ## Status
 
-**Work in progress (private staging).** Component documents 01–31 are added as each editorial batch is completed and checked. This is a release candidate under review. See `PGF/RELEASE_READINESS.md` for the status of each finding and any known open items.
+This is a release candidate under review. See `PGF/RELEASE_READINESS.md` for the status of each finding and any known open items.

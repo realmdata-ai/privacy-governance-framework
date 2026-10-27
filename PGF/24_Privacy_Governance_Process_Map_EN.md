@@ -157,12 +157,12 @@ The following activities, missing from the internal ver.2 map, are added as sub-
 | Code | Sub-process | Parent | Owner (A) | Basis in Document 5 | Card |
 | :---- | :---- | :---- | :---- | :---- | :---- |
 | G4.1 | Regulator Engagement, Inquiries and Inspections | G4 | EPPO for the controller's response (decision by Executive Management where the response commits the controller); DPO for its own cooperation and contact-point tasks | Statutory rows "Cooperation with and contact point for the SA" and "Controller response to SA inquiries, investigations and orders" | 4.5.1 |
-| G4.2 | Public-Authority and Law-Enforcement Access Requests | G4 | Legal | Document 3, Section 3.4 (row to be added to Document 5) | 4.5.2 |
-| G5.1 | Privacy Notice and Transparency Management (Arts. 12–14) | G5 | EPPO (notice content for a processing activity: Processing Owner) | G5 (row to be added to Document 5) | 4.6.1 |
+| G4.2 | Public-Authority and Law-Enforcement Access Requests | G4 | Legal | Document 5, row G4.2; Document 3, Section 3.4 | 4.5.2 |
+| G5.1 | Privacy Notice and Transparency Management (Arts. 12–14) | G5 | EPPO (notice content for a processing activity: Processing Owner) | Document 5, rows G5.1 | 4.6.1 |
 | C2.1 | AI Act Classification and FRIA Interface | C2 | Processing Owner (preparation: AI governance function) | Statutory row "AI Act deployer duties / FRIA — interface" | 5.4 |
-| C2.2 | Children's Data Safeguards | C2 | Processing Owner | C2 (row to be added to Document 5) | 5.5 |
+| C2.2 | Children's Data Safeguards | C2 | Processing Owner | Document 5, Section 5.2, row C2.2 | 5.5 |
 | C2.3 | Legitimate-Interest Assessment and Joint-Controller Arrangements | C2 | LIA: Legal (as part of G-L); Art. 26 arrangement: Processing Owner | Statutory row "Joint-controller arrangement (Art. 26)"; G-L row | 5.6 |
-| S6.3 | Corporate Transactions (M&A): Privacy Due Diligence and Data Migration | S6 | Processing Owner of the transaction (lead: EPPO) | S6 (row to be added to Document 5) | 6.8 |
+| S6.3 | Corporate Transactions (M&A): Privacy Due Diligence and Data Migration | S6 | Processing Owner of the transaction (lead: EPPO) | Document 5, row S6.3 | 6.8 |
 
 ### 2.4 Statutory activities of Document 5 and where they appear on the map
 
@@ -184,7 +184,7 @@ The following activities, missing from the internal ver.2 map, are added as sub-
 * **RACI references** cite the Document 5 row (for example "Document 5, row S7.3") or activity (for example "Document 5, Section 5.2, G-36"). Notation: A — Accountable; R — Responsible; D — Approve/Decide where different from A; C — Consulted; C\* — mandatory consultation (advice sought and recorded; never approval); I — Informed.
 * **DPO confidentiality (Art. 38(5); WP243 rev.01, §2.6).** Where the EPPO or anyone else is "I" or "C" on a step performed by the DPO, this never means automatic disclosure of the content of a request made to the DPO or of the requester's identity; need-to-know, redaction or aggregate reporting apply, and the DPO decides how its own work is distributed.
 * **Tools** are named by function (for example "risk-calculation platform", "incident management system"); Document 9 is the single connection point to specific tooling.
-* **Metrics** are named here; their definitions, denominators, treatment of zero cases and cut-off rules are kept in the Privacy Metrics Dashboard (Document 28). Metrics on statutory deadlines are reported per case: a missed statutory deadline is a breach of obligation and is escalated even when an aggregate KPI stays green.
+* **Metrics** are named here with their Document 28 identifiers (M-…); their definitions, denominators, treatment of zero cases and cut-off rules are kept in the Privacy Metrics Dashboard (Document 28, Section 6.10). Metrics on statutory deadlines are reported per case: a missed statutory deadline is a breach of obligation and is escalated even when an aggregate KPI stays green.
 
 ## 4. Governing Processes (G1–G9)
 
@@ -263,10 +263,10 @@ flowchart LR
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Time from trigger to adopted strategy | Process | days | Decrease | Strategy does not lag behind the triggering event |
-| Share of cycles completed on schedule | Process | % | Increase | Discipline of the planning cycle |
-| Unscheduled strategy revisions in the year | Outcome | count | Decrease | Durability of the previous strategy |
-| Share of strategic priorities delivered on schedule | Outcome | % | Increase | Realism of the adopted direction |
+| M-G1-01 — Time from trigger to adopted strategy | Process | days | Decrease | Strategy does not lag behind the triggering event |
+| M-G1-02 — Share of cycles completed on schedule | Process | % | Increase | Discipline of the planning cycle |
+| M-G1-03 — Unscheduled strategy revisions in the year | Outcome | count | Decrease | Durability of the previous strategy |
+| M-G1-04 — Share of strategic priorities delivered on schedule | Outcome | % | Increase | Realism of the adopted direction |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -325,10 +325,10 @@ flowchart LR
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Time since the last appetite / methodology review | Process | days | Decrease | Currency relative to the review cycle (Document 29) |
-| Share of reviews started on schedule | Process | % | Increase | Planned rather than reactive review |
-| Share of residual-risk decisions requiring a documented deviation from the authority table | Outcome | % | Decrease | Fit of the tiers to practice |
-| Cases where ERM disagreed with the privacy tiers | Outcome | count | Decrease | Misalignment with the corporate appetite |
+| M-G2-01 — Time since the last appetite / methodology review | Process | days | Decrease | Currency relative to the review cycle (Document 29) |
+| M-G2-02 — Share of reviews started on schedule | Process | % | Increase | Planned rather than reactive review |
+| M-G2-03 — Share of residual-risk decisions requiring a documented deviation from the authority table | Outcome | % | Decrease | Fit of the tiers to practice |
+| M-G2-04 — Cases where ERM disagreed with the privacy tiers | Outcome | count | Decrease | Misalignment with the corporate appetite |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -384,10 +384,10 @@ flowchart LR
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Average time from organisational change to RACI update | Process | days | Decrease | The model does not lag |
-| Changes not reflected at quarter-end | Process | count | Decrease | Maintenance discipline |
-| Discrepancies between Document 25 and Document 5 found in audit | Outcome | count | Decrease | The register stays a projection |
-| Processes or sub-processes without a single Accountable role | Outcome | count | Decrease (target 0) | Single-Accountable principle (Document 5, Section 2) |
+| M-G3-01 — Average time from organisational change to RACI update | Process | days | Decrease | The model does not lag |
+| M-G3-02 — Changes not reflected at quarter-end | Process | count | Decrease | Maintenance discipline |
+| M-G3-03 — Discrepancies between Document 25 and Document 5 found in audit | Outcome | count | Decrease | The register stays a projection |
+| M-G3-04 — Processes or sub-processes without a single Accountable role | Outcome | count | Decrease (target 0) | Single-Accountable principle (Document 5, Section 2) |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -439,10 +439,10 @@ flowchart LR
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Average time from publication to assessment | Process | days | Decrease | Timeliness of monitoring |
-| Jurisdictions and sources tracked | Process | count | Increase | Coverage |
-| Changes identified externally (audit, SA) rather than internally | Outcome | count | Decrease | Gaps in monitoring |
-| Share of assessed changes that led to a revision | Outcome | % | — | Accuracy of the initial significance assessment |
+| M-G4-01 — Average time from publication to assessment | Process | days | Decrease | Timeliness of monitoring |
+| M-G4-02 — Jurisdictions and sources tracked | Process | count | Increase | Coverage |
+| M-G4-03 — Changes identified externally (audit, SA) rather than internally | Outcome | count | Decrease | Gaps in monitoring |
+| M-G4-04 — Share of assessed changes that led to a revision | Outcome | % | — | Accuracy of the initial significance assessment |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -494,10 +494,10 @@ Nothing in this sub-process restricts the DPO's own cooperation with the SA (Art
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Share of SA deadlines met (per case; denominator: SA requests with a deadline in the period) | Process | % | Increase (target 100%) | Statutory and procedural deadlines |
-| Average time from receipt to registered matter | Process | days | Decrease | Early control of deadlines |
-| Corrective measures or fines received | Outcome | count | Decrease | External signal of compliance |
-| Open SA commitments past their date | Outcome | count | Decrease | Follow-through |
+| M-G4.1-01 — Share of SA deadlines met (per case; denominator: SA requests with a deadline in the period) | Process | % | Increase (target 100%) | Statutory and procedural deadlines |
+| M-G4.1-02 — Average time from receipt to registered matter | Process | days | Decrease | Early control of deadlines |
+| M-G4.1-03 — Corrective measures or fines received | Outcome | count | Decrease | External signal of compliance |
+| M-G4.1-04 — Open SA commitments past their date | Outcome | count | Decrease | Follow-through |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -514,7 +514,7 @@ Nothing in this sub-process restricts the DPO's own cooperation with the SA (Art
 **Triggers:** a production order, subpoena, request for information or seizure; a request received by a processor or importer (reported under the contract, for example SCC Clause 15).  
 **Business value:** lawful cooperation with authorities without over-disclosure; defensible records.
 
-**Owner and decision rights.** R — Legal, Privacy Officer(s); A — Legal; C — DPO, CISO (secure transmission); I — EPPO, Processing Owner (Document 3, Section 3.4; row to be added to Document 5).
+**Owner and decision rights.** R — Legal, Privacy Officer(s); A — Legal; C — DPO, CISO (secure transmission); I — EPPO, Processing Owner (Document 3, Section 3.4; Document 5, row G4.2).
 
 | Input | Document | Supplier |
 | :---- | :---- | :---- |
@@ -541,10 +541,10 @@ Nothing in this sub-process restricts the DPO's own cooperation with the SA (Art
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Requests assessed by Legal before disclosure | Process | % | Increase (target 100%) | No disclosure without legal review |
-| Average response time against the authority's deadline | Process | days | Decrease | Timely cooperation |
-| Disclosures found broader than required in audit | Outcome | count | Decrease (target 0) | Minimisation |
-| Third-country requests received by importers | Outcome | count | — | Input to TIA re-evaluation |
+| M-G4.2-01 — Requests assessed by Legal before disclosure | Process | % | Increase (target 100%) | No disclosure without legal review |
+| M-G4.2-02 — Average response time against the authority's deadline | Process | days | Decrease | Timely cooperation |
+| M-G4.2-03 — Disclosures found broader than required in audit | Outcome | count | Decrease (target 0) | Minimisation |
+| M-G4.2-04 — Third-country requests received by importers | Outcome | count | — | Input to TIA re-evaluation |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -597,10 +597,10 @@ Nothing in this sub-process restricts the DPO's own cooperation with the SA (Art
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Average time from need to adopted policy | Process | days | Decrease | Policy work is not a bottleneck |
-| Share of policies adopted as overlays | Process | % | Increase | No duplicate rules |
-| Policies needing unscheduled review in the first year | Outcome | count | Decrease | Drafting quality |
-| Share of processes applying the policy without exceptions | Outcome | % | Increase | Practical applicability |
+| M-G5-01 — Average time from need to adopted policy | Process | days | Decrease | Policy work is not a bottleneck |
+| M-G5-02 — Share of policies adopted as overlays | Process | % | Increase | No duplicate rules |
+| M-G5-03 — Policies needing unscheduled review in the first year | Outcome | count | Decrease | Drafting quality |
+| M-G5-04 — Share of processes applying the policy without exceptions | Outcome | % | Increase | Practical applicability |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -618,7 +618,7 @@ Nothing in this sub-process restricts the DPO's own cooperation with the SA (Art
 **Triggers:** a C2 decision on new or changed processing (the G-L transparency item); a RoPA change affecting purposes, recipients, transfers or retention; a regulatory change (G4); a complaint or SA finding on transparency.  
 **Business value:** accurate notices; no processing launched without transparency; fewer complaints.
 
-**Owner and decision rights.** Notice framework and publication: R — Privacy Operations Lead, Legal; A — EPPO; D — Executive Management where the notice is adopted as part of Document 1; C\* — DPO. Notice content for a specific processing activity: A — Processing Owner; C — Legal, DPO (row to be added to Document 5).
+**Owner and decision rights.** Notice framework and publication: R — Privacy Operations Lead, Legal; A — EPPO; D — Executive Management where the notice is adopted as part of Document 1; C\* — DPO. Notice content for a specific processing activity: A — Processing Owner; C — Legal, DPO (Document 5, rows G5.1).
 
 | Input | Document | Supplier |
 | :---- | :---- | :---- |
@@ -643,9 +643,9 @@ Nothing in this sub-process restricts the DPO's own cooperation with the SA (Art
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Processing changes launched before the notice update | Outcome | count | Decrease (target 0) | G-L transparency item |
-| RoPA entries not reflected in the notice | Outcome | count | Decrease | Consistency |
-| Average time from C2 decision to published update | Process | days | Decrease | No delay to launches |
+| M-G5.1-01 — Processing changes launched before the notice update | Outcome | count | Decrease (target 0) | G-L transparency item |
+| M-G5.1-02 — RoPA entries not reflected in the notice | Outcome | count | Decrease | Consistency |
+| M-G5.1-03 — Average time from C2 decision to published update | Process | days | Decrease | No delay to launches |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -705,10 +705,10 @@ Nothing in this sub-process restricts the DPO's own cooperation with the SA (Art
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Share of map processes covered by monitoring or audit in the period | Process | % | Increase | Coverage |
-| Average time from audit plan to report | Process | days | Decrease | Timeliness |
-| Share of non-conformities remediated on schedule | Outcome | % | Increase | Effectiveness of remediation |
-| Recurring non-conformities in the same process | Outcome | count | Decrease | Root causes addressed |
+| M-G6-01 — Share of map processes covered by monitoring or audit in the period | Process | % | Increase | Coverage |
+| M-G6-02 — Average time from audit plan to report | Process | days | Decrease | Timeliness |
+| M-G6-03 — Share of non-conformities remediated on schedule | Outcome | % | Increase | Effectiveness of remediation |
+| M-G6-04 — Recurring non-conformities in the same process | Outcome | count | Decrease | Root causes addressed |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -756,10 +756,10 @@ Nothing in this sub-process restricts the DPO's own cooperation with the SA (Art
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Share of processes whose metrics were updated on time | Process | % | Increase | Completeness |
-| Time from period close to dashboard publication | Process | hours | Decrease | Speed |
-| Management decisions explicitly based on the dashboard | Outcome | count | Increase | Usefulness |
-| Metrics found inconsistent with audit evidence | Outcome | % | Decrease | Reliability |
+| M-G7-01 — Share of processes whose metrics were updated on time | Process | % | Increase | Completeness |
+| M-G7-02 — Time from period close to dashboard publication | Process | hours | Decrease | Speed |
+| M-G7-03 — Management decisions explicitly based on the dashboard | Outcome | count | Increase | Usefulness |
+| M-G7-04 — Metrics found inconsistent with audit evidence | Outcome | % | Decrease | Reliability |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -811,10 +811,10 @@ Nothing in this sub-process restricts the DPO's own cooperation with the SA (Art
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Share of reporting cycles on schedule | Process | % | Increase | Cadence discipline |
-| Time from period close to presentation | Process | days | Decrease | Timeliness |
-| Share of management decisions implemented on schedule | Outcome | % | Increase | Reports lead to action |
-| Requests for information beyond the report | Outcome | count | Decrease | Completeness of the material |
+| M-G8-01 — Share of reporting cycles on schedule | Process | % | Increase | Cadence discipline |
+| M-G8-02 — Time from period close to presentation | Process | days | Decrease | Timeliness |
+| M-G8-03 — Share of management decisions implemented on schedule | Outcome | % | Increase | Reports lead to action |
+| M-G8-04 — Requests for information beyond the report | Outcome | count | Decrease | Completeness of the material |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -868,10 +868,10 @@ Nothing in this sub-process restricts the DPO's own cooperation with the SA (Art
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Average time from change of head to designation | Process | days | Decrease | Accountability gap risk |
-| Share of designations requiring an alternative arrangement | Process | % | — | Frequency of non-standard cases |
-| Residual-risk decisions taken by a person not designated | Outcome | count | Decrease (target 0) | Breach of the accountability model |
-| Register discrepancies found in audit | Outcome | count | Decrease | Currency of the register |
+| M-G9-01 — Average time from change of head to designation | Process | days | Decrease | Accountability gap risk |
+| M-G9-02 — Share of designations requiring an alternative arrangement | Process | % | — | Frequency of non-standard cases |
+| M-G9-03 — Residual-risk decisions taken by a person not designated | Outcome | count | Decrease (target 0) | Breach of the accountability model |
+| M-G9-04 — Register discrepancies found in audit | Outcome | count | Decrease | Currency of the register |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -966,13 +966,13 @@ flowchart LR
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Projects registered or revised in the period | Process | count | — | Load and capacity |
-| Average time from initiation to registration, by track | Process | days | Decrease | C1 is not a bottleneck for C2 |
-| Share of projects on the non-standard track | Process | % | — | Load on the Committee; prompt to review defaults |
-| Overdue periodic reviews | Process | count | Decrease | Review discipline |
-| Projects needing unscheduled review after an incident or audit finding | Outcome | % | Decrease | Calibration quality |
-| Projects used in C2 before approval | Outcome | count | Decrease (target 0) | Control failure |
-| Committee decisions departing from the recorded DPO advice (programme-level diagnostic owned by the EPPO; never used to assess the DPO) | Outcome | % | — | Quality of the decision process |
+| M-C1-01 — Projects registered or revised in the period | Process | count | — | Load and capacity |
+| M-C1-02 — Average time from initiation to registration, by track | Process | days | Decrease | C1 is not a bottleneck for C2 |
+| M-C1-03 — Share of projects on the non-standard track | Process | % | — | Load on the Committee; prompt to review defaults |
+| M-C1-04 — Overdue periodic reviews | Process | count | Decrease | Review discipline |
+| M-C1-05 — Projects needing unscheduled review after an incident or audit finding | Outcome | % | Decrease | Calibration quality |
+| M-C1-06 — Projects used in C2 before approval | Outcome | count | Decrease (target 0) | Control failure |
+| M-C1-07 — Committee decisions departing from the recorded DPO advice (programme-level diagnostic owned by the EPPO; never used to assess the DPO) | Outcome | % | — | Quality of the decision process |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -1104,18 +1104,18 @@ flowchart TD
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| DPIAs initiated / completed in the period | Process | count | — | Load |
-| Average time from intake to decision, by residual tier | Process | days | Decrease | The gate is not a bottleneck |
-| Share of DPIAs with recorded DPO advice before the decision | Process | % | Increase (target 100%) | Art. 35(2) |
-| Share of DPIAs with a recorded G-36 conclusion | Process | % | Increase (target 100%) | G-36 evaluated for every DPIA |
-| Overdue DPIAs | Process | count | Decrease | Discipline |
-| Evidence packs returned for rework | Process | % | Decrease | First-time quality |
-| Approved activities later involved in a personal data breach | Outcome | % | Decrease | Quality of assessment |
-| Share of launches at residual High | Outcome | % | — | Signal for Document 8 review |
-| Prior consultations open, and those where the SA's written advice required changes or the SA used Art. 58 powers | Outcome | count | — | Quality of the prior assessment |
-| Decisions departing from DPO advice (with reasons recorded) | Outcome | count | — | Transparency of decisions (never used to assess the DPO) |
-| Processing found to need a retroactive DPIA | Outcome | count | Decrease | Triage failures |
-| Complaints about previously approved processing | Outcome | count | Decrease | External quality signal |
+| M-C2-01 — DPIAs initiated / completed in the period | Process | count | — | Load |
+| M-C2-02 — Average time from intake to decision, by residual tier | Process | days | Decrease | The gate is not a bottleneck |
+| M-C2-03 — Share of DPIAs with recorded DPO advice before the decision | Process | % | Increase (target 100%) | Art. 35(2) |
+| M-C2-04 — Share of DPIAs with a recorded G-36 conclusion | Process | % | Increase (target 100%) | G-36 evaluated for every DPIA |
+| M-C2-05 — Overdue DPIAs | Process | count | Decrease | Discipline |
+| M-C2-06 — Evidence packs returned for rework | Process | % | Decrease | First-time quality |
+| M-C2-07 — Approved activities later involved in a personal data breach | Outcome | % | Decrease | Quality of assessment |
+| M-C2-08 — Share of launches at residual High | Outcome | % | — | Signal for Document 8 review |
+| M-C2-09 — Prior consultations open, and those where the SA's written advice required changes or the SA used Art. 58 powers | Outcome | count | — | Quality of the prior assessment |
+| M-C2-10, M-C2-11 — Decisions departing from DPO advice (with reasons recorded) | Outcome | count | — | Transparency of decisions (never used to assess the DPO) |
+| M-C2-12 — Processing found to need a retroactive DPIA | Outcome | count | Decrease | Triage failures |
+| M-C2-13 — Complaints about previously approved processing | Outcome | count | Decrease | External quality signal |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -1165,8 +1165,8 @@ flowchart TD
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| AI systems in C2 with a recorded classification | Process | % | Increase (target 100%) | Completeness |
-| High-risk systems with a FRIA completed or scheduled before the applicable date | Outcome | % | Increase (target 100%) | Readiness |
+| M-C2.1-01 — AI systems in C2 with a recorded classification | Process | % | Increase (target 100%) | Completeness |
+| M-C2.1-02 — High-risk systems with a FRIA completed or scheduled before the applicable date | Outcome | % | Increase (target 100%) | Readiness |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -1182,7 +1182,7 @@ flowchart TD
 **Triggers:** C2 intake identifies children among the data subjects; a product change opening a service to minors; a regulatory change on age thresholds (G4).  
 **Business value:** products for families and young customers launched with the right safeguards.
 
-**Owner and decision rights.** R — Privacy Officer(s), business unit; A — Processing Owner; C — Legal, DPO; I — EPPO (row to be added to Document 5).
+**Owner and decision rights.** R — Privacy Officer(s), business unit; A — Processing Owner; C — Legal, DPO; I — EPPO (Document 5, Section 5.2, row C2.2).
 
 | Input | Document | Supplier |
 | :---- | :---- | :---- |
@@ -1204,8 +1204,8 @@ flowchart TD
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Initiatives involving children with a recorded design record | Process | % | Increase (target 100%) | Completeness |
-| Complaints or SA inquiries concerning children's data | Outcome | count | Decrease | External signal |
+| M-C2.2-01 — Initiatives involving children with a recorded design record | Process | % | Increase (target 100%) | Completeness |
+| M-C2.2-02 — Complaints or SA inquiries concerning children's data | Outcome | count | Decrease | External signal |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -1245,9 +1245,9 @@ flowchart TD
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Processing on legitimate interests with a recorded LIA | Process | % | Increase (target 100%) | Defensible basis |
-| Joint-control relationships with an arrangement in force | Process | % | Increase (target 100%) | Art. 26 |
-| Objections (Art. 21) upheld against LIA-based processing | Outcome | count | Decrease | Quality of the balancing |
+| M-C2.3-01 — Processing on legitimate interests with a recorded LIA | Process | % | Increase (target 100%) | Defensible basis |
+| M-C2.3-02 — Joint-control relationships with an arrangement in force | Process | % | Increase (target 100%) | Art. 26 |
+| M-C2.3-03 — Objections (Art. 21) upheld against LIA-based processing | Outcome | count | Decrease | Quality of the balancing |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -1335,12 +1335,12 @@ flowchart TD
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Share of requests answered within one month or a validly notified extension (denominator: requests due in the period; cut-off: date of receipt) | Process | % | Increase (target 100%) | Statutory deadline (Art. 12(3)) |
-| Requests overdue (listed per case) | Process | count | Decrease (target 0) | Missed deadlines are escalated |
-| Average time to fulfil, by right | Process | days | Decrease | Service level (Document 15) |
-| Requests closed for inability to identify | Process | % | Decrease | Refusal as a last resort |
-| Refusals later overturned or challenged via the SA | Outcome | % | Decrease | Quality of reasons |
-| Complaints about incomplete or incorrect fulfilment | Outcome | count | Decrease | Quality of fulfilment |
+| M-C3-01 — Share of requests answered within one month or a validly notified extension (denominator: requests due in the period; cut-off: date of receipt) | Process | % | Increase (target 100%) | Statutory deadline (Art. 12(3)) |
+| M-C3-02 — Requests overdue (listed per case) | Process | count | Decrease (target 0) | Missed deadlines are escalated |
+| M-C3-03 — Average time to fulfil, by right | Process | days | Decrease | Service level (Document 15) |
+| M-C3-04 — Requests closed for inability to identify | Process | % | Decrease | Refusal as a last resort |
+| M-C3-05 — Refusals later overturned or challenged via the SA | Outcome | % | Decrease | Quality of reasons |
+| M-C3-06 — Complaints about incomplete or incorrect fulfilment | Outcome | count | Decrease | Quality of fulfilment |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -1441,11 +1441,11 @@ flowchart TD
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Average time from identification to proceed decision | Process | days | Decrease | C4 is not a bottleneck |
-| Art. 46 transfers with a current TIA (re-evaluated on schedule) | Process | % | Increase (target 100%) | Re-evaluation |
-| Transfers not started or suspended after a failed G-TIA | Outcome | count | — | G-TIA is applied, not overridden |
-| Transfers found in audit without a documented mechanism | Outcome | count | Decrease (target 0) | Identification gaps |
-| Adequacy-based transfers with invalid or lapsed recipient eligibility | Outcome | count | Decrease (target 0) | Art. 45 monitoring |
+| M-C4-01 — Average time from identification to proceed decision | Process | days | Decrease | C4 is not a bottleneck |
+| M-C4-02 — Art. 46 transfers with a current TIA (re-evaluated on schedule) | Process | % | Increase (target 100%) | Re-evaluation |
+| M-C4-03 — Transfers not started or suspended after a failed G-TIA | Outcome | count | — | G-TIA is applied, not overridden |
+| M-C4-04 — Transfers found in audit without a documented mechanism | Outcome | count | Decrease (target 0) | Identification gaps |
+| M-C4-05 — Adequacy-based transfers with invalid or lapsed recipient eligibility | Outcome | count | Decrease (target 0) | Art. 45 monitoring |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -1504,10 +1504,10 @@ flowchart TD
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Average time from withdrawal to halt of reliant processing | Process | hours | Decrease | Effectiveness of withdrawal |
-| Consent records with complete proof fields | Process | % | Increase | Art. 7(1) |
-| Processing after recorded withdrawal found in audit | Outcome | count | Decrease (target 0) | Failure to halt |
-| Systemic issues escalated | Outcome | count | Decrease | Frequency of structural problems |
+| M-C5-01 — Average time from withdrawal to halt of reliant processing | Process | hours | Decrease | Effectiveness of withdrawal |
+| M-C5-02 — Consent records with complete proof fields | Process | % | Increase | Art. 7(1) |
+| M-C5-03 — Processing after recorded withdrawal found in audit | Outcome | count | Decrease (target 0) | Failure to halt |
+| M-C5-04 — Systemic issues escalated | Outcome | count | Decrease | Frequency of structural problems |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -1587,10 +1587,10 @@ flowchart LR
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Share of data classified within the target time | Process | % | Increase | Timeliness |
-| Share of systems with fully labelled fields | Process | % | Increase | Propagation |
-| Re-classifications found in DPIAs or audits | Outcome | count | Decrease | Accuracy |
-| Incidents linked to mis-classified data | Outcome | count | Decrease | Consequence of errors |
+| M-S1-01 — Share of data classified within the target time | Process | % | Increase | Timeliness |
+| M-S1-02 — Share of systems with fully labelled fields | Process | % | Increase | Propagation |
+| M-S1-03 — Re-classifications found in DPIAs or audits | Outcome | count | Decrease | Accuracy |
+| M-S1-04 — Incidents linked to mis-classified data | Outcome | count | Decrease | Consequence of errors |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -1644,10 +1644,10 @@ flowchart LR
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Objects processed on time at the end of the period | Process | % | Increase | Discipline |
-| Objects on legal hold, and their age | Process | count / days | Decrease | Holds do not become permanent |
-| Data held beyond the period found in audit | Outcome | count | Decrease | Storage limitation |
-| Erasure requests blocked by overdue disposal | Outcome | count | Decrease | Effect on rights |
+| M-S2-01 — Objects processed on time at the end of the period | Process | % | Increase | Discipline |
+| M-S2-02 — Objects on legal hold, and their age | Process | count / days | Decrease | Holds do not become permanent |
+| M-S2-03 — Data held beyond the period found in audit | Outcome | count | Decrease | Storage limitation |
+| M-S2-04 — Erasure requests blocked by overdue disposal | Outcome | count | Decrease | Effect on rights |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -1692,10 +1692,10 @@ flowchart LR
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Share of systems with personal data covered | Process | % | Increase | Coverage |
-| Average time from change to updated entry | Process | days | Decrease | Currency |
-| Inventory / RoPA discrepancies found in audit | Outcome | count | Decrease | Consistency of the two sources |
-| Transfers not identified in advance | Outcome | count | Decrease | Completeness of the flow map |
+| M-S3-01 — Share of systems with personal data covered | Process | % | Increase | Coverage |
+| M-S3-02 — Average time from change to updated entry | Process | days | Decrease | Currency |
+| M-S3-03 — Inventory / RoPA discrepancies found in audit | Outcome | count | Decrease | Consistency of the two sources |
+| M-S3-04 — Transfers not identified in advance | Outcome | count | Decrease | Completeness of the flow map |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -1740,10 +1740,10 @@ flowchart LR
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Activities registered within the target time after the decision | Process | % | Increase | Timeliness |
-| Entries with all mandatory fields | Process | % | Increase | Completeness |
-| RoPA / reality discrepancies found in audit | Outcome | count | Decrease | Accuracy |
-| Time to produce the RoPA on an SA request | Outcome | hours | Decrease | Readiness |
+| M-S4-01 — Activities registered within the target time after the decision | Process | % | Increase | Timeliness |
+| M-S4-02 — Entries with all mandatory fields | Process | % | Increase | Completeness |
+| M-S4-03 — RoPA / reality discrepancies found in audit | Outcome | count | Decrease | Accuracy |
+| M-S4-04 — Time to produce the RoPA on an SA request | Outcome | hours | Decrease | Readiness |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -1792,10 +1792,10 @@ flowchart LR
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Average time from identification to record | Process | days | Decrease | Timeliness |
-| Entries reviewed in the last quarter | Process | % | Increase | Currency |
-| Risks reduced in tier after measures | Outcome | % | Increase | Effectiveness of measures |
-| Conditional acceptances past expiry | Outcome | count | Decrease (target 0) | Expiry discipline |
+| M-S5-01 — Average time from identification to record | Process | days | Decrease | Timeliness |
+| M-S5-02 — Entries reviewed in the last quarter | Process | % | Increase | Currency |
+| M-S5-03 — Risks reduced in tier after measures | Outcome | % | Increase | Effectiveness of measures |
+| M-S5-04 — Conditional acceptances past expiry | Outcome | count | Decrease (target 0) | Expiry discipline |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -1845,10 +1845,10 @@ flowchart LR
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Average time to complete due diligence | Process | days | Decrease | Not a bottleneck |
-| Vendors reassessed on cadence | Process | % | Increase | Discipline |
-| Processor contracts with all Art. 28(3) terms | Outcome | % | Increase (target 100%) | Contractual compliance |
-| Incidents at previously approved vendors | Outcome | count | Decrease | Quality of assessment |
+| M-S6-01 — Average time to complete due diligence | Process | days | Decrease | Not a bottleneck |
+| M-S6-02 — Vendors reassessed on cadence | Process | % | Increase | Discipline |
+| M-S6-03 — Processor contracts with all Art. 28(3) terms | Outcome | % | Increase (target 100%) | Contractual compliance |
+| M-S6-04 — Incidents at previously approved vendors | Outcome | count | Decrease | Quality of assessment |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -1866,7 +1866,7 @@ flowchart LR
 **Triggers:** a decision to start a transaction; a data-room set-up; closing and integration planning.  
 **Business value:** privacy liabilities priced in; no unlawful disclosure during due diligence; lawful integration.
 
-**Owner and decision rights.** R — Legal, Privacy Officer(s); A — Processing Owner of the transaction (the executive leading the deal), with the EPPO leading the privacy workstream; C — DPO, CISO; I — Executive Management (row to be added to Document 5).
+**Owner and decision rights.** R — Legal, Privacy Officer(s); A — Processing Owner of the transaction (the executive leading the deal), with the EPPO leading the privacy workstream; C — DPO, CISO; I — Executive Management (Document 5, row S6.3).
 
 | Input | Document | Supplier |
 | :---- | :---- | :---- |
@@ -1890,8 +1890,8 @@ flowchart LR
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Transactions with a privacy workstream from the start | Process | % | Increase (target 100%) | Early involvement |
-| Post-closing processing changes routed through C2 | Outcome | % | Increase (target 100%) | Lawful integration |
+| M-S6.3-01 — Transactions with a privacy workstream from the start | Process | % | Increase (target 100%) | Early involvement |
+| M-S6.3-02 — Post-closing processing changes routed through C2 | Outcome | % | Increase (target 100%) | Lawful integration |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -2002,13 +2002,13 @@ flowchart TD
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Time from detection to containment | Process | hours | Decrease | Speed of response |
-| Time from first report to completed qualification | Process | hours | Decrease | Internal qualification target (Document 14) |
-| Personal data breaches recorded in the breach record (denominator: qualified breaches) | Process | % | Increase (target 100%) | Art. 33(5) |
-| SA notifications made within 72 hours of awareness, or with reasons for delay (denominator: notified breaches; each late case listed) | Outcome | % | Increase (target 100%) | Art. 33(1) |
-| Data-subject communications without undue delay where high risk was found | Outcome | % | Increase (target 100%) | Art. 34 |
-| DORA reports within their time limits (financial entities) | Outcome | % | Increase (target 100%) | DORA |
-| Recurring breaches with the same root cause | Outcome | count | Decrease | Effectiveness of remediation |
+| M-S7-01 — Time from detection to containment | Process | hours | Decrease | Speed of response |
+| M-S7-02 — Time from first report to completed qualification | Process | hours | Decrease | Internal qualification target (Document 14) |
+| M-S7-03 — Personal data breaches recorded in the breach record (denominator: qualified breaches) | Process | % | Increase (target 100%) | Art. 33(5) |
+| M-S7-04 (per-case listing M-S7-13; reasons M-S7-14) — SA notifications made within 72 hours of awareness, or with reasons for delay (denominator: notified breaches; each late case listed) | Outcome | % | Increase (target 100%) | Art. 33(1) |
+| M-S7-05 — Data-subject communications without undue delay where high risk was found | Outcome | % | Increase (target 100%) | Art. 34 |
+| M-S7-06 — DORA reports within their time limits (financial entities) | Outcome | % | Increase (target 100%) | DORA |
+| M-S7-07 — Recurring breaches with the same root cause | Outcome | count | Decrease | Effectiveness of remediation |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -2058,10 +2058,10 @@ flowchart TD
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Staff completing mandatory training on time | Process | % | Increase | Coverage |
-| Role-based programmes updated in the last year | Process | % | Increase | Currency |
-| Human-factor incidents before and after training | Outcome | count | Decrease | Effect |
-| Post-training assessment results | Outcome | % correct | Increase | Retention |
+| M-S8-01 — Staff completing mandatory training on time | Process | % | Increase | Coverage |
+| M-S8-02 — Role-based programmes updated in the last year | Process | % | Increase | Currency |
+| M-S8-03 — Human-factor incidents before and after training | Outcome | count | Decrease | Effect |
+| M-S8-04 — Post-training assessment results | Outcome | % correct | Increase | Retention |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -2104,10 +2104,10 @@ flowchart TD
 
 | Metric | Kind | Unit | Direction | Why it matters |
 | :---- | :---- | :---- | :---- | :---- |
-| Average time from request to validated capability | Process | days | Decrease | Delivery speed |
-| Availability in the period | Process | % | Increase | Reliability |
-| Share of assessments performed with validated tooling | Outcome | % | Increase | Use of the tool |
-| Incidents caused by tool failure | Outcome | count | Decrease | Reliability of dependent processes |
+| M-S9-01 — Average time from request to validated capability | Process | days | Decrease | Delivery speed |
+| M-S9-02 — Availability in the period | Process | % | Increase | Reliability |
+| M-S9-03 — Share of assessments performed with validated tooling | Outcome | % | Increase | Use of the tool |
+| M-S9-04 — Incidents caused by tool failure | Outcome | count | Decrease | Reliability of dependent processes |
 
 | Related process | Nature of the relationship |
 | :---- | :---- |
@@ -2157,7 +2157,7 @@ Part B instantiates every process and sub-process of Part A for PanEuropean. The
 | Privacy Risk Committee | Management-level committee chaired by the CRO; members CPO, CIO, CISO, General Counsel, Head of Compliance; the Group DPO attends as a non-voting adviser |
 | DPO | Group DPO (reports directly to the Management Board), supported by the Deputy Group DPO |
 | Legal | General Counsel (owner of G-L, G-TIA determination and the G-36 conclusion) |
-| Processing Owners (Document 25, Section 10) | Head of Credit Decisions (credit scoring, CS); Head of Digital Banking; Head of Marketing; Head of Customer Service (LLM assistant); Head of Fraud Prevention (PSI, FL); CIO (CLOUD and IT-operated processing) |
+| Processing Owners (Document 25, Section 10) | Designated by the Management Board on 20 October 2026 on the CPO's proposal: Head of Credit Decisions (credit scoring, CS); Head of Digital Banking; Head of Marketing; Head of Customer Service (customer service, including the LLM assistant); Head of Fraud Prevention (PSI, FL); Head of Insurance Distribution (PPI, including PPI health data); Head of Compliance (AML/KYC and sanctions/PEP screening); Head of Payment Services (card payments and settlement); Head of Human Resources; Head of Branch Network (branch video surveillance); CIO (CLOUD and IT-operated processing); CPO (the privacy function's own processing, with the CRO concurring at Medium) |
 | Privacy Operations Lead; Privacy Officers; Privacy Engineers | Privacy operations team under the CPO |
 | Head of Data Governance | Chief Data Officer (CDO) |
 | ICT risk function | ICT Risk Control (Head of ICT Risk Control, CRO area) |
@@ -2165,7 +2165,7 @@ Part B instantiates every process and sub-process of Part A for PanEuropean. The
 | Independent Internal Audit | Group Internal Audit (Chief Audit Executive) |
 | Competent SA | Hessian Commissioner for Data Protection and Freedom of Information (HBDI) as lead SA; CNIL, Garante, AEPD and Prezes UODO as concerned SAs |
 | Financial supervisor | ECB (SSM) / BaFin — never the GDPR SA |
-| Tools (Document 9) | The Bank's privacy engineering platform (PEP, illustrative) for calculation, PET application and evidence packs; Incident Management System (IMS); Consent Management System (CMS, operated by Digital Banking with IT, separate from PEP); rights-request system; GRC system; vendor register linked to the DORA Register of Information; data catalogue (CDO) |
+| Tools (Document 9) | The Bank's privacy engineering platform (PEP, illustrative) for calculation, PET application and evidence packs; Incident Management System (IMS); Consent Management System (CMS, operated by IT Management, separate from the CRM and from PEP); rights-request system; GRC system; vendor register linked to the DORA Register of Information; data catalogue (CDO) |
 
 ***Fictional document history (illustrative)***
 
@@ -2201,7 +2201,7 @@ Part B instantiates every process and sub-process of Part A for PanEuropean. The
 | C2.3 | LIA and Joint-Controller Arrangements | General Counsel (LIA); Processing Owner (Art. 26 — FL consortium: Head of Fraud Prevention) | General Counsel, Privacy Officers | — | Group DPO (C\* on LIA) |
 | C3 | Data Subject Rights | Privacy Operations Lead (Art. 22(3) review: Head of Credit Decisions; complaints to the DPO: Group DPO) | Privacy Officers; business units / IT | — | General Counsel, Group DPO (refusals, restrictions) |
 | C4 | Cross-Border Data Transfer | Activity-level (Part A, Section 5.8) | Privacy Engineers; General Counsel; CISO | Proceed: Processing Owner up to Medium; CRO for High. G-TIA: General Counsel | Group DPO (C\*) |
-| C5 | Consent Management | Processing Owner (Head of Digital Banking; Head of Marketing) | Digital Banking / IT; Privacy Engineers | — | General Counsel, Group DPO |
+| C5 | Consent Management | Processing Owner per purpose (Head of Marketing — e-mail and push marketing; Head of Digital Banking — personalised-offers pilot, app biometric log-in; Head of Insurance Distribution — PPI health data); proof of consent: Privacy Operations Lead | Marketing / Digital Banking / Insurance Distribution; IT Management; Privacy Engineers | — | General Counsel, Group DPO |
 | S1 | Data Classification | CDO | Data Governance | — | CPO, Group DPO, General Counsel, CISO |
 | S2.1 | Retention Schedule | CPO | Privacy Operations Lead, General Counsel | Management Board (as policy) | Group DPO, Processing Owners |
 | S2.2 | Retention and Disposal Execution | Processing Owner | Digital Banking / IT | — | General Counsel |
@@ -2215,7 +2215,7 @@ Part B instantiates every process and sub-process of Part A for PanEuropean. The
 | S7.2 | Breach Qualification and Recording | CPO | Privacy Officers | — | Group DPO, CISO, General Counsel |
 | S7.3 | GDPR Notification Decision | CRO (deputy: COO) | CPO | CRO | Group DPO (C\*; contact point for the HBDI), General Counsel, CISO |
 | S7.4 | DORA Major Incident Reporting | Head of ICT Risk Control | ICT Risk Control, CISO | — | CPO, Group DPO (where personal data are involved) |
-| S7.5 | Processor Extension | Head of the service unit providing the client service | Privacy Officers, CISO | — | General Counsel, Group DPO |
+| S7.5 | Processor Extension | Head of Payment Services (head of the service unit providing the client service) | Privacy Officers, CISO | — | General Counsel, Group DPO |
 | S8 | Staff Training | CPO | HR (delivery); Privacy Operations Lead (content) | — | Group DPO |
 | S8.1 | Group DPO Awareness-Raising | Group DPO | Group DPO | — | Privacy Operations Lead |
 | S9 | Operating PEP (illustrative) | Privacy Operations Lead | Privacy Engineers | — | IT Management, CISO |
@@ -2230,7 +2230,7 @@ The three value chains of Part A (Sections 4.1, 5.1 and 6.1) apply. PanEuropean 
 
 ## B4. Process Cards at PanEuropean
 
-The Part A cards apply with the following PanEuropean specifics. Metric targets are illustrative internal values.
+The Part A cards apply with the following PanEuropean specifics. Metric targets are illustrative internal values; the metric identifiers and definitions are those of Document 28, Section 6.10.
 
 **Governing processes**
 
@@ -2262,16 +2262,16 @@ The Part A cards apply with the following PanEuropean specifics. Metric targets 
 | C2.3 | FL anti-fraud consortium with EU banks under an Art. 26 arrangement (Head of Fraud Prevention); LIAs recorded at G-L wherever Art. 6(1)(f) is relied on | 100% coverage |
 | C3 | Channels: in-app request, privacy@paneuropean-bank.example (privacy operations); "Request a Review" for credit decisions (credit-review@paneuropean-bank.example, Head of Credit Decisions, internal target 5 business days); complaints to dpo@paneuropean-bank.example handled by the Group DPO under Art. 38(4)–(5); rights-request log separate from the RoPA | 100% within one month or a notified extension |
 | C4 | Destinations: India (no adequacy decision — SCCs with TIA), United States (DPF adequacy only for certified recipients); TIAs `TIA-…` under Document 20 | Re-evaluation at least annually |
-| C5 | CMS operated by Digital Banking with IT, separate from PEP; consent design decided by the Processing Owner (Head of Digital Banking or Head of Marketing) with General Counsel and Group DPO advice; proof of consent kept at most 3 years after consent ends (illustrative internal value) | Withdrawal effective within 24 hours |
+| C5 | CMS operated by IT Management, separate from the CRM and from PEP, single source of consent status; consent design and CMS configuration decided by the Processing Owner of the purpose (Head of Marketing, Head of Digital Banking or Head of Insurance Distribution) with General Counsel and Group DPO advice; proof of consent kept at most 3 years after consent ends (illustrative internal value) | Marketing suppression on the day the withdrawal is received; dispatch stopped at once (Document 13) |
 
 **Supporting processes**
 
 | Process | PanEuropean specifics (triggers, inputs, outputs, tools) | Illustrative targets |
 | :---- | :---- | :---- |
 | S1 | CDO's classification scheme, including special categories for payment protection insurance (health data on explicit consent, never used for credit scoring) | Classification within 10 business days |
-| S2.1 / S2.2 | Retention schedule per Document 11 (for example AML records under GwG §8(4), 5 years from the end of the calendar year in which the relationship ended; AMLR Art. 77 from 10 July 2027 shown separately); quarterly disposal runs for structured datasets on PEP, reconciled against the legal-hold register; CCTV and HR data disposed of by their own systems on the same schedule; access logs of Example Cloud Services Pvt Ltd disposed of under the contract term mirroring the schedule | Zero objects held beyond the period |
-| S3 | Data catalogue under the CDO; entries for the LLM assistant (Confidential; processor in the USA) and the FL consortium | 100% systems covered |
-| S4 | RoPA records include RoPA-LLM-01, RoPA-PSI-01 and the FL consortium record | RoPA export within 24 hours of an HBDI request |
+| S2.1 / S2.2 | Retention schedule per Document 11 (for example AML records under GwG §8(4), 5 years from the end of the calendar year in which the relationship ended; AMLR Art. 77 from 10 July 2027 shown separately); monthly disposal (reconciliation) runs for structured datasets on PEP, reconciled against the legal-hold register, with erasure and short-period categories executed off-cycle (Document 11); CCTV and HR data disposed of by their own systems on the same schedule; access logs of Example Cloud Services Pvt Ltd disposed of under the contract term mirroring the schedule | Zero objects held beyond the period |
+| S3 | Data catalogue under the CDO; entries include DI-LLM-01 (LLM assistant; Confidential; processor in the USA; suspended) and DI-FL-01 (FL consortium; intra-EU) | 100% systems covered |
+| S4 | RoPA records include RoPA-LLM-01, RoPA-PSI-01, RoPA-FL-01 and RoPA-CSV-01 (human-only customer service; carries the Art. 9 conclusion) | RoPA export within 24 hours of an HBDI request |
 | S5 | "Conduct & Privacy Risk" category of the CRO's register; records PRR-CS-INFER-01, PRR-LLM-01, PRR-PSI-01, PRR-CLOUD-01, PRR-FL-01 | Zero acceptances past expiry |
 | S6.1 / S6.2 | Vendors: core banking platform provider; Example Cloud Services Pvt Ltd (processor, India); Example AI Provider Inc. (processor, USA; not DPF-certified — illustrative assumption). EuroCredit Bureau (fictional) is an independent controller under a data-sharing agreement. Sub-processors need the bank's prior written authorisation; processor contracts require breach notification within 24 hours of the processor's awareness (illustrative term) | 100% of processor contracts with Art. 28(3) terms |
 | S6.3 | No corporate transaction was in progress at 26 October 2026; the sub-process is defined for future use | — |
@@ -2367,4 +2367,4 @@ This map is reviewed under the Policy Review Cycle (Document 29) and whenever Do
 
 | Release | Date | Summary |
 | :---- | :---- | :---- |
-| 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown created from the two internal ver.2 HTML files (Template and PanEuropean Example; the Example was a name-substituted copy of the Template and is now Part B as an instantiation with owners, specifics and worked traces); groupings renamed "process groups"; APQC PCF "Level 0" claim softened to "inspired by the PCF hierarchy"; full Level 0 / Level 1 / Level 2 model kept, with Level 1 chains and the C2, C3, C4 and S7 flows as Mermaid diagrams and all EPCs as tables with AND/OR gateways, interfaces and timers; every process re-allocated to the Document 5 role model and sub-rows (G2.1/G2.2, G6.1/G6.2a/G6.2b, G8.1/G8.2, S2.1/S2.2, S6.1/S6.2, S7.1–S7.5, S8.1) — DPO removed as owner, approver, chair or decider; "owner badge" replaced by the Accountable role; C2 corrected to G-L → G-DPIA → calculation → G-36 (evaluated for every DPIA; consultation of the competent SA whenever the test is met) → acceptance by a single decider; C4 corrected to transfer test first, then Art. 45 / 46 / 49 branches, failed G-TIA → no start or suspension under SCC Clause 14(f), SA information only on termination under Clause 16(c) by the exporter; S7 corrected to parallel containment and qualification, every breach recorded, separate Art. 33 and Art. 34 decisions, 72-hour timer, DORA branch with late classification, processor extension; C3 corrected to the Art. 12(6) information loop, Art. 16 rectification, Art. 19, Art. 12(3) extension and Art. 12(4) information, request log instead of RoPA; consent records in the consent system instead of the RoPA; sub-processes added: G4.1 regulator engagement, G4.2 authority access requests, G5.1 privacy notices, C2.1 AI Act / FRIA interface, C2.2 children's data, C2.3 LIA and joint-controller arrangements, S6.3 M&A; S2 anonymisation branch and S6 Art. 28 contract gate added; metrics reworked (statutory deadlines per case with denominators; no DPO-performance metrics; no "regulator clearance" metrics); BaFin no longer appears as a GDPR authority; vendor product names replaced by the Bank's privacy engineering platform (PEP, illustrative); Part B aligned with the example registry (CS consultation pending, launch planned 1 February 2027; LLM, CLOUD, PSI, FL facts and deciders); international adaptation added. |
+| 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown created from the two internal ver.2 HTML files (Template and PanEuropean Example; the Example was a name-substituted copy of the Template and is now Part B as an instantiation with owners, specifics and worked traces); groupings renamed "process groups"; APQC PCF "Level 0" claim softened to "inspired by the PCF hierarchy"; full Level 0 / Level 1 / Level 2 model kept, with Level 1 chains and the C2, C3, C4 and S7 flows as Mermaid diagrams and all EPCs as tables with AND/OR gateways, interfaces and timers; every process re-allocated to the Document 5 role model and sub-rows (G2.1/G2.2, G6.1/G6.2a/G6.2b, G8.1/G8.2, S2.1/S2.2, S6.1/S6.2, S7.1–S7.5, S8.1) — DPO removed as owner, approver, chair or decider; "owner badge" replaced by the Accountable role; C2 corrected to G-L → G-DPIA → calculation → G-36 (evaluated for every DPIA; consultation of the competent SA whenever the test is met) → acceptance by a single decider; C4 corrected to transfer test first, then Art. 45 / 46 / 49 branches, failed G-TIA → no start or suspension under SCC Clause 14(f), SA information only on termination under Clause 16(c) by the exporter; S7 corrected to parallel containment and qualification, every breach recorded, separate Art. 33 and Art. 34 decisions, 72-hour timer, DORA branch with late classification, processor extension; C3 corrected to the Art. 12(6) information loop, Art. 16 rectification, Art. 19, Art. 12(3) extension and Art. 12(4) information, request log instead of RoPA; consent records in the consent system instead of the RoPA; sub-processes added: G4.1 regulator engagement, G4.2 authority access requests, G5.1 privacy notices, C2.1 AI Act / FRIA interface, C2.2 children's data, C2.3 LIA and joint-controller arrangements, S6.3 M&A; S2 anonymisation branch and S6 Art. 28 contract gate added; metrics reworked (statutory deadlines per case with denominators; no DPO-performance metrics; no "regulator clearance" metrics); BaFin no longer appears as a GDPR authority; vendor product names replaced by the Bank's privacy engineering platform (PEP, illustrative); Part B aligned with the example registry (CS consultation pending, launch planned 1 February 2027; LLM, CLOUD, PSI, FL facts and deciders); international adaptation added. Integration pass: Document 5 rows for G4.2, G5.1, C2.2 and S6.3 now cited; Part B Processing Owner list aligned with Document 25, Section 10; RoPA and inventory identifiers (RoPA-FL-01, RoPA-CSV-01, DI-LLM-01, DI-FL-01) named; C5 card aligned with Document 13 (CMS operated by IT Management; Processing Owner per purpose) and S2 with the monthly disposal run of Document 11; Document 28 metric identifiers (Section 6.10) cited in every card. |

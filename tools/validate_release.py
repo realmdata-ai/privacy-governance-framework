@@ -172,7 +172,8 @@ def main():
         else:
             docs[nn] = p.read_text(encoding="utf-8")
     for s in SUPPORT:
-        if not (pgf / s).exists():
+        # in the published repository README.md and CHANGELOG.md live at the root, not in PGF/
+        if not (pgf / s).exists() and not (s in ("README.md", "CHANGELOG.md") and (root / s).exists()):
             R.add("ERROR", "completeness", s, "missing supporting file")
     extra = [p.name for p in pgf.glob("[0-3][0-9]_*.md") if p.name not in CANON.values()]
     for e in extra:
@@ -323,10 +324,18 @@ def main():
     ready = True
     if rr.exists():
         t = rr.read_text(encoding="utf-8")
-        open_p0 = re.findall(r"^\|[^|\n]*\bP0\b[^\n]*\|\s*open\s*\|", t, re.M | re.I)
+        # table rows: | ID | Priority | Finding | Documents | Status | Evidence |
+        open_p0 = []
+        for row in re.findall(r"^\|.*\|\s*$", t, re.M):
+            cells = [c.strip().lower() for c in row.strip().strip("|").split("|")]
+            if len(cells) >= 5 and cells[1] == "p0" and cells[4] in ("open", "partially resolved"):
+                open_p0.append(cells[0])
         if open_p0:
             ready = False
-            R.add("WARN", "readiness", "RELEASE_READINESS.md", f"{len(open_p0)} P0 items still open")
+            R.add("ERROR", "readiness", "RELEASE_READINESS.md", f"P0 items not resolved: {open_p0}")
+        if re.search(r"\*\*Overall verdict[^\n]*NOT READY", t):
+            ready = False
+            R.add("WARN", "readiness", "RELEASE_READINESS.md", "overall verdict in the readiness report is NOT READY")
     else:
         ready = False
 
