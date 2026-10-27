@@ -185,6 +185,9 @@ No clause-level mapping is made. Clause texts were not reviewed for this release
 
 ## 7. Sources checked (26 October 2026)
 
+For a maintained, dated catalogue of official sources with stable IDs, legal force and review dates, see **Curated privacy references** ([`../references/README.md`](../references/README.md)). The list below records only the sources checked for this crosswalk.
+
+
 - NIST Privacy Framework page and PF 1.0 text: https://www.nist.gov/privacy-framework ; https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01162020.pdf
 - NIST SP 800-226 final: https://csrc.nist.gov/pubs/sp/800/226/final
 - EDPB Guidelines 02/2026 on anonymisation (consultation): https://www.edpb.europa.eu/documents/guideline/guidelines-022026-on-anonymisation_en

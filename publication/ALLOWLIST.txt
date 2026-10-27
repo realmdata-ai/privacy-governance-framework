@@ -14,6 +14,13 @@ PGF/STANDARDS_CROSSWALK.md   -> PGF/STANDARDS_CROSSWALK.md
 PGF/SOURCE_MANIFEST.json     -> PGF/SOURCE_MANIFEST.json
 PGF/RELEASE_READINESS.md     -> PGF/RELEASE_READINESS.md
 
+# Curated primary-source catalogue (maintained separately; see references/MAINTENANCE.md)
+references/README.md
+references/CATALOGUE.md
+references/MAINTENANCE.md
+references/registry.json
+references/registry.schema.json
+
 # Citation / licence drafts (final LICENSE file only after rights confirmation; see publication/README.md)
 publication/CITATION.cff     -> CITATION.cff
 publication/LICENCE_PROPOSED.md -> LICENCE_PROPOSED.md

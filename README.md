@@ -21,6 +21,7 @@ The set comes with a 23-process governance model and is designed to help an orga
 - [`PGF/00_Framework_Overview_EN.md`](PGF/00_Framework_Overview_EN.md) — purpose, architecture, quick start, document register, limitations, how to cite.
 - [`PGF/GLOSSARY.md`](PGF/GLOSSARY.md) — roles, gates, data states, incident terms.
 - [`PGF/STANDARDS_CROSSWALK.md`](PGF/STANDARDS_CROSSWALK.md) — GDPR/EDPB, NIST PF 1.0, ENISA, Canada.
+- [Curated privacy references](references/README.md) — a dated catalogue of official laws, regulations and guidance with stable source IDs ([`references/CATALOGUE.md`](references/CATALOGUE.md), machine-readable [`references/registry.json`](references/registry.json)).
 
 ## The four levels
 
@@ -33,6 +34,7 @@ The set comes with a 23-process governance model and is designed to help an orga
 
 ## Repository contents
 
+- `references/` — curated catalogue of primary sources (laws, regulations, guidance), with its JSON registry and schema.
 - `PGF/` — the canonical English Markdown: Overview, 31 components, glossary, crosswalk, changelog, source manifest, release-readiness report.
 - `tools/validate_release.py` — completeness, metadata, links and cross-reference checks, plus rule-based checks for known incorrect claims.
 - `tools/export_publication.py` — builds the clean export from an allowlist.

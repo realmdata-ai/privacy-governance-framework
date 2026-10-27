@@ -61,12 +61,11 @@ def scan(items):
     problems = []
     for p, target in items:
         if p.suffix.lower() not in TEXT_EXT: continue
+        if target.startswith("tools/") or target == "publication/ALLOWLIST.txt":
+            continue  # these files define the deny rules themselves and necessarily contain the patterns
         t = p.read_text(encoding="utf-8", errors="replace")
         for pat, why in DENY_CONTENT:
             for m in re.finditer(pat, t):
-                if target.startswith("tools/") and why in ("internal workspace path", "internal coordination folder",
-                                                           "vendor product name", "internal red-team module"):
-                    break  # the tools themselves contain these patterns as deny rules
                 problems.append(f"{target}: {why}: '{m.group(0)}'"); break
     return problems
 
