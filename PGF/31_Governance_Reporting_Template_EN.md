@@ -390,7 +390,7 @@ Version 2.0 was adopted by the Management Board of PanEuropean Bank AG on 20 Oct
 
 * **Statutory events:** no missed statutory deadline in the quarter (CG-01(b) = 0). One personal data breach was notified to the HBDI within 72 hours of awareness (BR-2026-0117)
 * **Risk profile:** two High records — automated credit decisions (PRR-CS-INFER-01, PRR-CS-LAUNCH-01). Prior consultation with the HBDI submitted on 15 September 2026 and pending; the processing is **not in production**; the Chief Risk Officer's decision is pending; launch is planned for 1 February 2027, not before the consultation step and that decision
-* **Transfers:** the customer-service assistant's US transfer (TIA-LLM-01) passed its G-TIA on 22 June 2026; its monitoring review is open, because the US surveillance-law position after the lapse of FISA section 702 on 12 June 2026 still has to be verified against primary legal sources (General Counsel; outcome reported separately — see Addendum A.1)
+* **Transfers:** the customer-service assistant's US transfer (TIA-LLM-01) passed its G-TIA on 22 June 2026; its monitoring review is open, because the US surveillance-law position around the reported June 2026 sunset of FISA section 702 remains subject to verification against primary legal sources (General Counsel; outcome reported separately — see Addendum A.1)
 * **New High item:** the cumulative disclosure budget for the retail customer population stands at about 80% of its δ limit; a decision on the use of the remaining headroom is requested from the Management Board
 * **Programme:** mandatory training coverage reached 98.4%; overdue DPIAs fell from 6 to 2 (within tolerance, not yet at target)
 
