@@ -7,3 +7,6 @@ Thumbs.db
 *.pdf
 *.zip
 *.docx
+
+# internal working area — never published
+/work/
