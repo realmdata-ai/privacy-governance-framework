@@ -1,0 +1,329 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "case-records.schema.json",
+  "type": "object",
+  "required": [
+    "package_status",
+    "baseline_release",
+    "case_id",
+    "source_case",
+    "original_decision_date",
+    "ledger_snapshot_date",
+    "measurements_status",
+    "privacy_unit",
+    "adjacency",
+    "metrics",
+    "metric_weights",
+    "expected",
+    "ledger",
+    "hypothetical_change",
+    "evidence_ids",
+    "gates",
+    "companion_version",
+    "preview_date"
+  ],
+  "properties": {
+    "package_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baseline_release": {
+      "type": "string",
+      "minLength": 1
+    },
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_case": {
+      "type": "string",
+      "minLength": 1
+    },
+    "original_decision_date": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ledger_snapshot_date": {
+      "type": "string",
+      "minLength": 1
+    },
+    "measurements_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "privacy_unit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "adjacency": {
+      "type": "string",
+      "minLength": 1
+    },
+    "metrics": {
+      "type": "object",
+      "required": [
+        "accuracy",
+        "auc",
+        "dcr_p5",
+        "nndr_median"
+      ],
+      "properties": {
+        "accuracy": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "auc": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "dcr_p5": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "nndr_median": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "metric_weights": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    },
+    "expected": {
+      "type": "object",
+      "required": [
+        "indicator",
+        "s1_likelihood",
+        "severity_index",
+        "severity",
+        "track_a_residual",
+        "track_a_inherent",
+        "track_b_index",
+        "track_b_level"
+      ],
+      "properties": {
+        "indicator": {
+          "type": "number"
+        },
+        "s1_likelihood": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity_index": {
+          "type": "integer"
+        },
+        "severity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "track_a_residual": {
+          "type": "string",
+          "minLength": 1
+        },
+        "track_a_inherent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "track_b_index": {
+          "type": "integer"
+        },
+        "track_b_level": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "ledger": {
+      "type": "object",
+      "required": [
+        "epsilon_entries",
+        "delta_entries",
+        "epsilon_lifetime_cap",
+        "delta_lifetime_cap",
+        "annual_2026_epsilon_cap",
+        "expected_epsilon",
+        "expected_delta",
+        "expected_delta_utilisation_percent",
+        "new_charge_from_reconstruction"
+      ],
+      "properties": {
+        "epsilon_entries": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number"
+          }
+        },
+        "delta_entries": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "epsilon_lifetime_cap": {
+          "type": "string",
+          "minLength": 1
+        },
+        "delta_lifetime_cap": {
+          "type": "string",
+          "minLength": 1
+        },
+        "annual_2026_epsilon_cap": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_epsilon": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_delta": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_delta_utilisation_percent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "new_charge_from_reconstruction": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "hypothetical_change": {
+      "type": "object",
+      "required": [
+        "status",
+        "epsilon",
+        "delta",
+        "expected_total_epsilon",
+        "expected_total_delta",
+        "expected_delta_excess",
+        "budget_preflight",
+        "full_module",
+        "new_charge",
+        "also_violates_current_project_delta_configuration"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "epsilon": {
+          "type": "string",
+          "minLength": 1
+        },
+        "delta": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_total_epsilon": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_total_delta": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_delta_excess": {
+          "type": "string",
+          "minLength": 1
+        },
+        "budget_preflight": {
+          "type": "string",
+          "minLength": 1
+        },
+        "full_module": {
+          "type": "string",
+          "minLength": 1
+        },
+        "new_charge": {
+          "type": "string",
+          "minLength": 1
+        },
+        "also_violates_current_project_delta_configuration": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence_ids": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "threshold",
+          "comparison"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "upper": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lower": {
+            "type": "string",
+            "minLength": 1
+          },
+          "threshold": {
+            "type": "string",
+            "minLength": 1
+          },
+          "comparison": {
+            "type": "string",
+            "minLength": 1,
+            "enum": [
+              "<",
+              "<=",
+              ">",
+              ">="
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "companion_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "preview_date": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,32 @@
+{
+  "baseline_release": "PGF 1.0.0-rc.1",
+  "source_path": "PGF/08_Privacy_Risk_Appetite_Statement_EN.md",
+  "source_sha256": "a5bfae04fb0c3a86a1e593cca144d877f1187d982e8a40e633538bd12a15ce3c",
+  "source_part_section": "Part B, Section 4",
+  "matrix": {
+    "Minor": {
+      "Low": "Low",
+      "Medium": "Low",
+      "High": "Low",
+      "Near-certain": "Low"
+    },
+    "Moderate": {
+      "Low": "Low",
+      "Medium": "Low",
+      "High": "Medium",
+      "Near-certain": "Medium"
+    },
+    "Significant": {
+      "Low": "Medium",
+      "Medium": "Medium",
+      "High": "High",
+      "Near-certain": "High"
+    },
+    "Catastrophic": {
+      "Low": "High",
+      "Medium": "High",
+      "High": "Critical",
+      "Near-certain": "Critical"
+    }
+  }
+}

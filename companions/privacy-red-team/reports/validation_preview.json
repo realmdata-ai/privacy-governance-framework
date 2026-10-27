@@ -1,0 +1,191 @@
+{
+  "companion_version": "0.1.0-preview.1",
+  "companion_status": "preview",
+  "review_date": "2026-10-27",
+  "scope": "invented teaching examples only; no product/privacy guarantee",
+  "fixture_sha256": "676c29a8dc45730a46f0fe262470b00e505cde3a9bf0034c1c22e56768f16547",
+  "fixtures_checked": 13,
+  "observations": [
+    {
+      "fixture_id": "WC-01-LINK",
+      "attack_id": "RT-01",
+      "observer": "public observer",
+      "output_scope": "released age/zone rows only",
+      "evidence_status": "constructed_teaching_fixture",
+      "observations": {
+        "matching_rows": [
+          "r03"
+        ],
+        "criterion_result": "FAIL"
+      },
+      "expected_observation_check": "MATCH"
+    },
+    {
+      "fixture_id": "AIA-01",
+      "attack_id": "RT-02",
+      "observer": "recipient with group membership",
+      "output_scope": "group information in released table",
+      "evidence_status": "constructed_teaching_fixture",
+      "observations": {
+        "majority_accuracy": 0.5,
+        "assisted_accuracy": 1.0,
+        "gain": 0.5,
+        "criterion_result": "FAIL"
+      },
+      "expected_observation_check": "MATCH"
+    },
+    {
+      "fixture_id": "MIA-01",
+      "attack_id": "RT-03",
+      "observer": "black-box score observer",
+      "output_scope": "one fixed operating point; not a ROC curve",
+      "evidence_status": "constructed_teaching_fixture",
+      "observations": {
+        "tpr": 0.8,
+        "fpr": 0.02,
+        "ppv_at_declared_prior": 0.0384985563041386
+      },
+      "expected_observation_check": "MATCH"
+    },
+    {
+      "fixture_id": "MIA-POWER-01",
+      "attack_id": "RT-03",
+      "observer": "evaluator",
+      "output_scope": "false-positive count at a fixed threshold",
+      "evidence_status": "constructed_teaching_fixture",
+      "observations": {
+        "wilson_95_upper": 0.0038267584855551234,
+        "criterion_result": "FAIL",
+        "confidence_conclusion": "ceiling_not_established",
+        "pgf_module_mapping": "G-M1_FAIL"
+      },
+      "expected_observation_check": "MATCH"
+    },
+    {
+      "fixture_id": "SYN-SUBGROUP-01",
+      "attack_id": "RT-04",
+      "observer": "release recipient",
+      "output_scope": "exposure findings in a fully invented population",
+      "evidence_status": "constructed_teaching_fixture",
+      "observations": {
+        "aggregate_rate": 0.003,
+        "subgroup_rate": 0.3,
+        "criterion_result": "FAIL"
+      },
+      "expected_observation_check": "MATCH"
+    },
+    {
+      "fixture_id": "RECON-01",
+      "attack_id": "RT-05",
+      "observer": "statistical-output recipient",
+      "output_scope": "sum and individual exact count",
+      "evidence_status": "constructed_teaching_fixture",
+      "observations": {
+        "x2": 0,
+        "unique_solutions": 1,
+        "criterion_result": "FAIL"
+      },
+      "expected_observation_check": "MATCH"
+    },
+    {
+      "fixture_id": "DIFF-01",
+      "attack_id": "RT-06",
+      "observer": "recipient retaining two releases",
+      "output_scope": "two exact counts",
+      "evidence_status": "constructed_teaching_fixture",
+      "observations": {
+        "target_contribution": 1,
+        "criterion_result": "FAIL"
+      },
+      "expected_observation_check": "MATCH"
+    },
+    {
+      "fixture_id": "PSI-01",
+      "attack_id": "RT-07",
+      "observer": "input-choosing partner",
+      "output_scope": "cardinality output to the partner in deliberately leaky toy contract",
+      "evidence_status": "constructed_teaching_fixture",
+      "observations": {
+        "count0": 0,
+        "count1": 1,
+        "target_membership": true,
+        "criterion_result": "FAIL",
+        "revised_fixed_ack_equal": true
+      },
+      "expected_observation_check": "MATCH"
+    },
+    {
+      "fixture_id": "PSI-META-01",
+      "attack_id": "RT-08",
+      "observer": "party excluded from results",
+      "output_scope": "message length",
+      "evidence_status": "constructed_teaching_fixture",
+      "observations": {
+        "leaky_lengths": [
+          64,
+          72
+        ],
+        "revised_lengths": [
+          128,
+          128
+        ],
+        "criterion_result": "FAIL"
+      },
+      "expected_observation_check": "MATCH"
+    },
+    {
+      "fixture_id": "FL-META-01",
+      "attack_id": "RT-09",
+      "observer": "participant allowed to see transcript metadata",
+      "output_scope": "constant model scores and per-item transcript lengths",
+      "evidence_status": "constructed_teaching_fixture",
+      "observations": {
+        "metadata_label_accuracy": 1.0,
+        "model_score_auc": 0.5,
+        "criterion_result": "FAIL"
+      },
+      "expected_observation_check": "MATCH"
+    },
+    {
+      "fixture_id": "LEDGER-01",
+      "attack_id": "RT-10",
+      "observer": "recipient who can observe run outputs",
+      "output_scope": "completed and failed observable runs",
+      "evidence_status": "constructed_teaching_fixture",
+      "observations": {
+        "charged_epsilon": 2.0,
+        "criterion_result": "FAIL_IF_FAILED_RUN_OMITTED"
+      },
+      "expected_observation_check": "MATCH"
+    },
+    {
+      "fixture_id": "CONTROL-01",
+      "attack_id": "RT-11",
+      "observer": "assessment reviewer",
+      "output_scope": "result records",
+      "evidence_status": "constructed_teaching_fixture",
+      "observations": {
+        "statuses": [
+          "INCOMPLETE",
+          "INCOMPLETE",
+          "PASS"
+        ]
+      },
+      "expected_observation_check": "MATCH"
+    },
+    {
+      "fixture_id": "CHANGE-01",
+      "attack_id": "RT-12",
+      "observer": "assessment reviewer",
+      "output_scope": "semantic field list",
+      "evidence_status": "constructed_teaching_fixture",
+      "observations": {
+        "added_fields": [
+          "offence_attributing_flag"
+        ],
+        "reassessment_required": true
+      },
+      "expected_observation_check": "MATCH"
+    }
+  ]
+}

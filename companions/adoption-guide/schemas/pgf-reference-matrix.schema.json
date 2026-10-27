@@ -1,0 +1,252 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "pgf-reference-matrix.schema.json",
+  "type": "object",
+  "required": [
+    "baseline_release",
+    "source_path",
+    "source_sha256",
+    "source_part_section",
+    "matrix"
+  ],
+  "properties": {
+    "baseline_release": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_sha256": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "source_part_section": {
+      "type": "string",
+      "minLength": 1
+    },
+    "matrix": {
+      "type": "object",
+      "required": [
+        "Minor",
+        "Moderate",
+        "Significant",
+        "Catastrophic"
+      ],
+      "properties": {
+        "Minor": {
+          "type": "object",
+          "required": [
+            "Low",
+            "Medium",
+            "High",
+            "Near-certain"
+          ],
+          "properties": {
+            "Low": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            },
+            "Medium": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            },
+            "High": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            },
+            "Near-certain": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "Moderate": {
+          "type": "object",
+          "required": [
+            "Low",
+            "Medium",
+            "High",
+            "Near-certain"
+          ],
+          "properties": {
+            "Low": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            },
+            "Medium": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            },
+            "High": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            },
+            "Near-certain": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "Significant": {
+          "type": "object",
+          "required": [
+            "Low",
+            "Medium",
+            "High",
+            "Near-certain"
+          ],
+          "properties": {
+            "Low": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            },
+            "Medium": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            },
+            "High": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            },
+            "Near-certain": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "Catastrophic": {
+          "type": "object",
+          "required": [
+            "Low",
+            "Medium",
+            "High",
+            "Near-certain"
+          ],
+          "properties": {
+            "Low": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            },
+            "Medium": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            },
+            "High": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            },
+            "Near-certain": {
+              "type": "string",
+              "minLength": 1,
+              "enum": [
+                "Low",
+                "Medium",
+                "High",
+                "Critical"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

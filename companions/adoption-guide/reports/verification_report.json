@@ -1,0 +1,342 @@
+{
+  "package_version": "0.1.0-preview.1",
+  "status": "PASS",
+  "scope": "teaching arithmetic and documentation/link checks, not PET validation",
+  "checks": 48,
+  "failures": 0,
+  "external_pgf_status": "PASS",
+  "external_pgf_links_not_checked": [],
+  "limitations": [
+    "No attack, DP mechanism, accountant or statistical experiment is run.",
+    "Given intervals and legal/decision records remain illustrative.",
+    "Contract validator implements only keywords used by the supplied schemas."
+  ],
+  "results": [
+    {
+      "check": "input contract: CASE_RECORDS.json",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "input contract: PGF_CONTENT_BASELINE.json",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "input contract: PGF_REFERENCE_MATRIX.json",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "32 distinct baseline paths",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "weights sum to one",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "independently derived disclosure indicator",
+      "passed": true,
+      "scope": "companion",
+      "detail": {
+        "fraction": "451/840",
+        "decimal": 0.5369047619047619
+      }
+    },
+    {
+      "check": "indicator rounding",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "indicator routing band",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "severity component sum",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "severity band",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "source misuse residual sum",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "source misuse inherent sum",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "snapshot matrix lookup for S1 and S2",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "snapshot inherent S2 matrix lookup",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "separate organisational track",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "given interval gate: MIA accuracy",
+      "passed": true,
+      "scope": "companion",
+      "detail": {
+        "bound": "0.54",
+        "operator": "<",
+        "threshold": "0.60",
+        "input_status": "illustrative interval; not recomputed from raw observations"
+      }
+    },
+    {
+      "check": "given interval gate: MIA AUC",
+      "passed": true,
+      "scope": "companion",
+      "detail": {
+        "bound": "0.56",
+        "operator": "<",
+        "threshold": "0.60",
+        "input_status": "illustrative interval; not recomputed from raw observations"
+      }
+    },
+    {
+      "check": "given interval gate: TPR at FPR 0.1%",
+      "passed": true,
+      "scope": "companion",
+      "detail": {
+        "bound": "0.0037",
+        "operator": "<=",
+        "threshold": "0.01",
+        "input_status": "illustrative interval; not recomputed from raw observations"
+      }
+    },
+    {
+      "check": "given interval gate: DCR P5",
+      "passed": true,
+      "scope": "companion",
+      "detail": {
+        "bound": "0.20",
+        "operator": ">=",
+        "threshold": "0.15",
+        "input_status": "illustrative interval; not recomputed from raw observations"
+      }
+    },
+    {
+      "check": "given interval gate: NNDR median",
+      "passed": true,
+      "scope": "companion",
+      "detail": {
+        "bound": "0.80",
+        "operator": ">",
+        "threshold": "0.70",
+        "input_status": "illustrative interval; not recomputed from raw observations"
+      }
+    },
+    {
+      "check": "given interval gate: linkability advantage",
+      "passed": true,
+      "scope": "companion",
+      "detail": {
+        "bound": "0.025",
+        "operator": "<=",
+        "threshold": "0.05",
+        "input_status": "illustrative interval; not recomputed from raw observations"
+      }
+    },
+    {
+      "check": "given interval gate: attribute-inference advantage",
+      "passed": true,
+      "scope": "companion",
+      "detail": {
+        "bound": "0.035",
+        "operator": "<=",
+        "threshold": "0.05",
+        "input_status": "illustrative interval; not recomputed from raw observations"
+      }
+    },
+    {
+      "check": "lifetime epsilon sum",
+      "passed": true,
+      "scope": "companion",
+      "detail": "6.5"
+    },
+    {
+      "check": "lifetime delta sum",
+      "passed": true,
+      "scope": "companion",
+      "detail": "0.000008002"
+    },
+    {
+      "check": "lifetime caps",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "annual epsilon pacing",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "delta warning percentage",
+      "passed": true,
+      "scope": "companion",
+      "detail": "80.0200"
+    },
+    {
+      "check": "proposed epsilon sum",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "proposed delta sum",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "proposed delta excess",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "preflight fails delta while epsilon within both caps",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "proposal changes project delta",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "no new expenditure from reconstruction or unexecuted proposal",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "eight distinct evidence IDs",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "filled evidence record: ADP-01",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "filled evidence record: ADP-02",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "filled evidence record: ADP-03",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "filled evidence record: ADP-04",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "filled evidence record: ADP-05",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "filled evidence record: ADP-06",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "filled evidence record: ADP-07",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "filled evidence record: ADP-08",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "reference hash matches frozen baseline",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "local Markdown links inspected",
+      "passed": true,
+      "scope": "companion",
+      "detail": 49
+    },
+    {
+      "check": "required local Markdown link targets exist",
+      "passed": true,
+      "scope": "companion",
+      "detail": []
+    },
+    {
+      "check": "32 frozen PGF content hashes",
+      "passed": true,
+      "scope": "external_pgf",
+      "detail": []
+    },
+    {
+      "check": "reference matrix equals adjacent PGF source",
+      "passed": true,
+      "scope": "external_pgf",
+      "detail": null
+    },
+    {
+      "check": "adjacent PGF required",
+      "passed": true,
+      "scope": "external_pgf",
+      "detail": null
+    }
+  ]
+}

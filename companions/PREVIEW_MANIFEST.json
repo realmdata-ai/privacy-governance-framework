@@ -1,0 +1,198 @@
+{
+  "version": "0.1.0-preview.1",
+  "status": "preview",
+  "created": "2026-10-27T00:18:10-04:00",
+  "pgf_content_baseline": "02ff78357f3b24f607651f0bf9f01c6c279b587b",
+  "packages": [
+    "privacy-red-team",
+    "adoption-guide"
+  ],
+  "pending_package": "risk-model",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "82ed0bc2ce26f6bcfaa39410d7668362a60b5774857970228379d27b6cedef38",
+      "bytes": 33
+    },
+    {
+      "path": "adoption-guide/ADOPTION_CHECKLIST.md",
+      "sha256": "33aa56701bfa88bed6459b607928fbdd02891240b8f6beb0166fd183b22ed024",
+      "bytes": 4761
+    },
+    {
+      "path": "adoption-guide/ADOPTION_GUIDE_EN.md",
+      "sha256": "e6b498e4bfde6937829bd5745e36f103048cd0161f47151eb9ba0213b53536b3",
+      "bytes": 12341
+    },
+    {
+      "path": "adoption-guide/COMPLETE_WORKED_CASE_EN.md",
+      "sha256": "b2327eb1340203278060714c9c0a200b417b57c031b30aeb4bfc66f62e53ef4f",
+      "bytes": 10019
+    },
+    {
+      "path": "adoption-guide/evidence/00_INDEX.md",
+      "sha256": "d8632a3aa4600fea84e27953b0071097d1a70d5e0363dab5f09d9eb8ff047c4b",
+      "bytes": 2938
+    },
+    {
+      "path": "adoption-guide/evidence/01_PROJECT_PASSPORT.md",
+      "sha256": "a7f4c5c4c0aa6defe9febd03b860e9628428948c3dabac74c3523d91072fe504",
+      "bytes": 2310
+    },
+    {
+      "path": "adoption-guide/evidence/02_PROCESSING_RECORD.md",
+      "sha256": "22c23b986405d22273e4bd37cab2acf750501fb167f0eed2bf97f97bf18484ad",
+      "bytes": 2005
+    },
+    {
+      "path": "adoption-guide/evidence/03_TRIAGE_AND_LEGAL.md",
+      "sha256": "97a8a31ffa3ebf2c73d8789f283a99b1acfeea35a4931b6b54f1643fc7182513",
+      "bytes": 2177
+    },
+    {
+      "path": "adoption-guide/evidence/04_METRICS_AND_GATES.md",
+      "sha256": "b9c59cd89b345b86c15110fdafd7e32e4ebaaf75f00dca1fe7b4b794fca13642",
+      "bytes": 2325
+    },
+    {
+      "path": "adoption-guide/evidence/05_RISK_CALCULATION.md",
+      "sha256": "5e70394eb78325c1fbe9ff0849d604ccdd74c6aff9a813fa38571815e5fc4052",
+      "bytes": 1969
+    },
+    {
+      "path": "adoption-guide/evidence/06_DECISION_AND_CHRONOLOGY.md",
+      "sha256": "80cd0a86c5ebdd52421ac28ef6ef862f6fbd7e15c3cba431a0039c6bd4686101",
+      "bytes": 2872
+    },
+    {
+      "path": "adoption-guide/evidence/07_LEDGER_AND_CHANGE.md",
+      "sha256": "8f1967c735b74a2e2d48277f396d6492c31e6f214ac2628347f5e29aefe7f3ff",
+      "bytes": 2871
+    },
+    {
+      "path": "adoption-guide/evidence/08_MONITORING_AND_RETENTION.md",
+      "sha256": "259b7845d4036682d1fe14aa9428a7c43b8509a070b66a0724be74579466888d",
+      "bytes": 2944
+    },
+    {
+      "path": "adoption-guide/evidence/CASE_RECORDS.json",
+      "sha256": "8f2f0d05d5602c36eacb811336c848a8fb3730f6527b5fac956402bcb5404cae",
+      "bytes": 2908
+    },
+    {
+      "path": "adoption-guide/evidence/PGF_CONTENT_BASELINE.json",
+      "sha256": "e6d0fb3b18390598683ac792af387a722a10afd1fac364de55fd85e4ec3cf24c",
+      "bytes": 5364
+    },
+    {
+      "path": "adoption-guide/evidence/PGF_REFERENCE_MATRIX.json",
+      "sha256": "5c4d24233ca442cdffe1d94f4b830c456f03cf2095f056ba164a092b172ac7d9",
+      "bytes": 789
+    },
+    {
+      "path": "adoption-guide/MANIFEST.sha256",
+      "sha256": "96dfb758d029767f6eed26bfe9c6f4e62bdb7e5021f0a5149e62faa92a745f53",
+      "bytes": 2140
+    },
+    {
+      "path": "adoption-guide/README.md",
+      "sha256": "b53df27f68f82f1ab89e3fedb6a799e85dcb7f4e5456f3b6d06e5d33babb2bc2",
+      "bytes": 3826
+    },
+    {
+      "path": "adoption-guide/reports/verification_report.json",
+      "sha256": "9649e61d94fccd354e1db8a89e89cf1884f8c7b6e75ce2b47ac90833819c4af7",
+      "bytes": 8542
+    },
+    {
+      "path": "adoption-guide/schemas/case-records.schema.json",
+      "sha256": "41328c47aee2dfaf91c33c79e0c788d3184e8b85e38d2070902373b2dbe79229",
+      "bytes": 7513
+    },
+    {
+      "path": "adoption-guide/schemas/pgf-content-baseline.schema.json",
+      "sha256": "31e4c55c314e68715450372c1f4d7b34d7f7a6b74f6c349d6a55fe3de9e7ede2",
+      "bytes": 1115
+    },
+    {
+      "path": "adoption-guide/schemas/pgf-reference-matrix.schema.json",
+      "sha256": "48024e5fe10d0325c8e0c6481e1a8303aa163a6fadd93a9b4ac3759f0603cdc4",
+      "bytes": 6050
+    },
+    {
+      "path": "adoption-guide/SOURCES_AND_LIMITATIONS.md",
+      "sha256": "7baf12d95457a3cb3d5c01370a5e850d54e1f0fe9d8a4589d65a492dc108178e",
+      "bytes": 7015
+    },
+    {
+      "path": "adoption-guide/verify_examples.py",
+      "sha256": "e21df1161633d5cb3e952b3022f0e00f69296e9e94306a224fd2477ad516c295",
+      "bytes": 14244
+    },
+    {
+      "path": "privacy-red-team/cards/TEST_CARDS_EN.md",
+      "sha256": "a927382e87def6e585a3228e743150e59bd668cc1e6f5c0acde26212b529c539",
+      "bytes": 20837
+    },
+    {
+      "path": "privacy-red-team/COVERAGE_AND_LIMITATIONS.md",
+      "sha256": "4781681b65c1a895ca17dbd144d227bd7d420bd5a5e2ac53c50d05b4864146a8",
+      "bytes": 5098
+    },
+    {
+      "path": "privacy-red-team/fixtures/examples.json",
+      "sha256": "676c29a8dc45730a46f0fe262470b00e505cde3a9bf0034c1c22e56768f16547",
+      "bytes": 10192
+    },
+    {
+      "path": "privacy-red-team/MANIFEST.sha256",
+      "sha256": "239e068f624989bbce97369b5c5d198b8924576526ff645e708bab83b77f1795",
+      "bytes": 981
+    },
+    {
+      "path": "privacy-red-team/PLAYBOOK_EN.md",
+      "sha256": "580db38143cfc772e1194828efeadd7be744a8d6758db77a6a985c630a46d86d",
+      "bytes": 15927
+    },
+    {
+      "path": "privacy-red-team/README.md",
+      "sha256": "0886d08c7bbd029e9f7ea286dcfa7b9b7f5f0c361c07b0e1660d8b5232c5a7bb",
+      "bytes": 2863
+    },
+    {
+      "path": "privacy-red-team/REFERENCES.md",
+      "sha256": "41f484964b276d823c7882a3b4999c693a95ff57275f80e50fe4a66cd36d585b",
+      "bytes": 4918
+    },
+    {
+      "path": "privacy-red-team/reports/quality_checks_preview.json",
+      "sha256": "b9876210b1170b882e2ac99326a8c32f419de0cab8494234eb7c19b0591307ce",
+      "bytes": 727
+    },
+    {
+      "path": "privacy-red-team/reports/validation_preview.json",
+      "sha256": "178fc966488c186cdf842f06577b1829f300061ec80b476fb1c4495274610729",
+      "bytes": 6084
+    },
+    {
+      "path": "privacy-red-team/TEST_CARD_TEMPLATE.md",
+      "sha256": "d38b51cd7ee675ab05b6775180fe89ab1467b1b755e1b3c91e069481265fc203",
+      "bytes": 1778
+    },
+    {
+      "path": "privacy-red-team/verify_examples.py",
+      "sha256": "4c14dd219a32906580be0bf4b6ec520d9649369e5c2eeb9f498b80d74e341210",
+      "bytes": 7871
+    },
+    {
+      "path": "privacy-red-team/WORKED_CAMPAIGN_EN.md",
+      "sha256": "a8dfacc40871e61bc977b79ef05cdfc93300578291964cb638eba3ad87b2963d",
+      "bytes": 5969
+    },
+    {
+      "path": "README.md",
+      "sha256": "e06e66c11b488f9d4f4cf21757fa0deba05b7fe2fabbd60e4bd0ff6969346f3d",
+      "bytes": 2226
+    }
+  ]
+}
