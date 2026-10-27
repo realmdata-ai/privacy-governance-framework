@@ -91,7 +91,7 @@
    "source_path": "Privacy Governance Framework ver.2/Level2/12. Cross-Border-Data-Transfer-Policy_ENG.docx.md",
    "source_sha256": "6132bf8108b24179e042a0fcfd133fed981aebf93d9dfc6a19890d687c4e01b1",
    "output_path": "PGF/12_Cross_Border_Data_Transfer_Policy_EN.md",
-   "output_sha256": "3d4740a19165a67639cbdd2e7474a31ec37c277a7deee39a2a2ffacb510de025"
+   "output_sha256": "43a5bca731287fc3fe1b1b849a600a58a993e5e2b747011050fb541a6103f165"
   },
   {
    "document_id": "PGF-13",
@@ -133,56 +133,56 @@
    "source_path": "Privacy Governance Framework ver.2/Level2/18. Privacy-Risk-Assessment-Methodology_ENG.docx.md",
    "source_sha256": "b3b5fed18bf6da0ff1baf401f73036dd50b10ab0d543928dc89202547fc49991",
    "output_path": "PGF/18_Privacy_Risk_Assessment_Methodology_EN.md",
-   "output_sha256": "3fe9511f30dde23e2b2deeaf21ee293c9d100b3496103bf9ea839df836bf48ca"
+   "output_sha256": "188042a405ddd2d612bd7a07ed126a9ac883209299a2326c98b195781d63eda8"
   },
   {
    "document_id": "PGF-19",
    "source_path": "Privacy Governance Framework ver.2/Level2/19. DPIA-Methodology-and-Template_ENG.docx.md",
    "source_sha256": "d20a9144be300b1bf9f86b52b15c245fe0ac5bd03fa3163bee66f4b49fbc4ddd",
    "output_path": "PGF/19_DPIA_Methodology_and_Template_EN.md",
-   "output_sha256": "105a267d2d5e8f4b19bbac599c0af9ac514246ec0bab5dce4e37a6bd3106e3b8"
+   "output_sha256": "10cc3fd761375236582fbbeb91410ac0191cffbdd27bff9b1f4fc77e2c67340f"
   },
   {
    "document_id": "PGF-20",
    "source_path": "Privacy Governance Framework ver.2/Level2/20. Transfer-Impact-Assessment-Methodology_ENG.docx.md",
    "source_sha256": "7961cc029d3bb5adef2e8931bf90ab4cdc83728c0f90d75050424abb2bf66c07",
    "output_path": "PGF/20_Transfer_Impact_Assessment_Methodology_EN.md",
-   "output_sha256": "c180b3d12d7b08fdf86cbad6220f6326b53c31a833b36f29bc19db3cbfac905e"
+   "output_sha256": "f47a11514c1d0048d1f4124d912372b074f597389f165124e59bb61a99c253f6"
   },
   {
    "document_id": "PGF-21",
    "source_path": "Privacy Governance Framework ver.2/Level2/21. Record-of-Processing-Activities_ENG.docx.md",
    "source_sha256": "24fdaa8d3b0121d9c9479e944e2f3acce293c29051f07f80babe66b6ff3e5f5a",
    "output_path": "PGF/21_Record_of_Processing_Activities_EN.md",
-   "output_sha256": "2b7829168ff5416e0600f8e00483b5f2e10f36b3c5e18eacb35104b2e8f15eec"
+   "output_sha256": "ae3535a7767c66e3e8975a98bc385160a34d40be025d8d9fff1ca9252b166228"
   },
   {
    "document_id": "PGF-22",
    "source_path": "Privacy Governance Framework ver.2/Level2/22. Privacy-Risk-Register_ENG.docx.md",
    "source_sha256": "3d6cfc01549f91142bc4c656896b3fa56e99f4f70c65b5359ed027843fad418e",
    "output_path": "PGF/22_Privacy_Risk_Register_EN.md",
-   "output_sha256": "62d5465fc9179810a46336a3bb29ab40f93980a438a4eeab8a6ad9d2fa0d59c6"
+   "output_sha256": "c56e51f14c43fa21968acdb3d3d9dae6a5ac6553d51f1ce0cadaff2dff36ba6e"
   },
   {
    "document_id": "PGF-23",
    "source_path": "Privacy Governance Framework ver.2/Level2/23. Data-Inventory-and-Data-Flow-Maps_ENG.docx.md",
    "source_sha256": "e98bc3bbb5ef8af0d0cf3a005e14153b8a2da61c83dee759d7b90e12168f0863",
    "output_path": "PGF/23_Data_Inventory_and_Data_Flow_Maps_EN.md",
-   "output_sha256": "bddbdc834c38f2707d5f633f4a7365751c281138bbe565e0d53de125ee5a2ba4"
+   "output_sha256": "26dd4d6d57c0885772ec9aadb747769ec4561761709a43b07b583fb951947afc"
   },
   {
    "document_id": "PGF-24",
    "source_path": "Privacy Governance Framework ver.2/Level3/24. Process-Map-Template_ENG.html",
    "source_sha256": "a1529a6b18cffdebb5fdc33d181b398eaab04f0e456ab5d96a2928867ecba51a",
    "output_path": "PGF/24_Privacy_Governance_Process_Map_EN.md",
-   "output_sha256": "455e0c33d21b04f3c9ac4218e9094ea30d8a5db604008848e73b19d1dc45676f"
+   "output_sha256": "f7afd19abde4c4e2f73216f9d70ad42071b7d7a991ca42dc527f5fb3de89c427"
   },
   {
    "document_id": "PGF-24",
    "source_path": "Privacy Governance Framework ver.2/Level3/24. Process-Map-Example-PanEuropean_ENG.html",
    "source_sha256": "ac69df4ec90336b89c6f748d934f96b3873343fb5c2ffda4c21c571f66c2a52b",
    "output_path": "PGF/24_Privacy_Governance_Process_Map_EN.md",
-   "output_sha256": "455e0c33d21b04f3c9ac4218e9094ea30d8a5db604008848e73b19d1dc45676f"
+   "output_sha256": "f7afd19abde4c4e2f73216f9d70ad42071b7d7a991ca42dc527f5fb3de89c427"
   },
   {
    "document_id": "PGF-25",
@@ -231,7 +231,7 @@
    "source_path": "Privacy Governance Framework ver.2/Level4/31. Governance-Reporting-Template_ENG.docx.md",
    "source_sha256": "b43fa392b4a4306a9d8f4b8441babe81fd3a8a2c07f8f26f33f1e2cfd622e8a0",
    "output_path": "PGF/31_Governance_Reporting_Template_EN.md",
-   "output_sha256": "1c425efc7b503beff87a01fc97d0381044fc135329c8d90771bede2f07548bb2"
+   "output_sha256": "a43c0104fab1fb704c91a2ade72a8850bb3138573aff48304be58fe34ae2e561"
   }
  ]
 }

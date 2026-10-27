@@ -56,6 +56,7 @@ Neither status is external peer review or certification.
 | H13 | P1 | Normative basis; crosswalk | all | resolved | "Normative basis and references" section in every component; `STANDARDS_CROSSWALK.md`; curated `references/` catalogue 0.2.0 | confirmed |
 | INT-CA | P1 | Canada: applicability, PIPEDA/Québec, OPC programme mapping | 01, 07, 13–15, 19, 20, crosswalk | partially resolved | Applicability map (Doc 07); international adaptation boxes; OPC/OIPC mapping (Doc 02; crosswalk §4). Programme-level guidance only, by design | confirmed (scope) |
 | DPF | P1 | DPF registry evidence; Swiss and UK routes | 07, 12, 17, 20 | resolved | DPF List check record (Doc 12 §4.1); Swiss-U.S. DPF and UK Extension as separate routes | confirmed |
+| W4-04 | High | Art. 10 (criminal-offence data) severity modifier omitted in Doc 18 Part B and in the PSI case | 18, 19, 20, 21, 22, 23, 24, 12, 31 | resolved | Doc 18 Part B Factor B aligned with Part A (+2 for Art. 9 and Art. 10 data). DPIA-PSI-01 S1 severity 6 → 8 (Significant): residual High, inherent High; S2 unchanged (no offence data). The Medium acceptance of 25 March 2026 is superseded. Re-assessment of 26 October 2026: G-36 met on stated reasons (not inferred from the internal tier); HBDI consultation before any further session; Chief Risk Officer decision pending; sessions paused. Doc 31: the approved Q3 report is unchanged; the correction is recorded in Addendum A.1 | pending (reviewer recheck) |
 
 ## 2. Packaging findings
 
@@ -74,7 +75,7 @@ Neither status is external peer review or certification.
 | Validator — completeness, metadata, structure, forbidden strings, spelling, links and anchors, cross-references, claim rules, example tiers, disclosure, readiness | `python tools/validate_release.py` | see the latest run in the handoff message |
 | Source manifest | `python tools/export_publication.py --source-manifest` | 33 records (32 files; Doc 24 has two HTML sources) |
 | Export | `python tools/export_publication.py --out <dir>` | see the handoff message |
-| Integration of cross-document requests | internal integration log (not published) | 127 requests: applied 42, already satisfied 60, out of scope 22, deferred 2, not applied with reason 1 |
+| Integration of cross-document requests | internal integration log (not published) 127 requests: applied 43, already satisfied 60, out of scope 22, deferred 1, not applied with reason 1 (request 77, Art. 10 in Doc 18 Part B, applied under W4-04) |
 | Numerical examples | independent recalculation by the reviewer | Doc 18 (8 tables, 47 rows, 7 boundary cases), Docs 19/20/22 (8 scenarios); 0 arithmetic errors |
 
 ## 4. External publication gate (not a content gate)
@@ -90,8 +91,7 @@ Neither status is external peer review or certification.
 
 - The Doc 18 methodology has not been empirically validated. Thresholds, caps (ε/δ) and the minimum cell size are illustrative internal settings.
 - US law after the lapse of FISA s.702 (12 June 2026) has not been verified against primary sources. The worked LLM transfer is therefore on G-TIA HOLD.
-- Deferred to 1.0.1:
-  - Art. 10 data as a Factor B input in Doc 18 — adding it would require recalculating DPIA-PSI-01;
-  - the AI Act Art. 86 application date in Doc 07 — not stated until verified.
+- Deferred to 1.0.1: the AI Act Art. 86 application date in Doc 07 — not stated until verified.
+- Art. 10 data in the federated-learning case (DPIA-FL-01) has not been determined; its tiers are unchanged in this release.
 - Not stated because unsourced: some national DPIA-list contents; routing of DORA reports between the ECB and BaFin; the retention period for the Québec incident register; Swiss and CASL numeric deadlines.
 - No external peer review has been carried out.
