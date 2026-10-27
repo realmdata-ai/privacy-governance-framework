@@ -25,7 +25,7 @@ A finding is not resolved by a mass replacement of role labels.
 
 Neither status is external peer review or certification.
 
-**Overall verdict — content (Markdown release candidate):** READY FOR REVIEW. All 32 content files are complete, and `tools/validate_release.py` passes. No P0 is open. Final cross-document acceptance by the reviewer is pending.
+**Overall verdict — content (Markdown release candidate):** ACCEPTED BY THE INTERNAL REVIEWER FOR AUTHOR REVIEW (26 October 2026); content frozen. All 32 content files are complete, and `tools/validate_release.py` passes. No P0 is open. Any content change after the freeze needs a targeted recheck.
 
 **Overall verdict — external publication:** gated by the rights and consent items in Section 4, and by the reviewer's final acceptance.
 
@@ -57,7 +57,7 @@ Neither status is external peer review or certification.
 | INT-CA | P1 | Canada: applicability, PIPEDA/Québec, OPC programme mapping | 01, 07, 13–15, 19, 20, crosswalk | partially resolved | Applicability map (Doc 07); international adaptation boxes; OPC/OIPC mapping (Doc 02; crosswalk §4). Programme-level guidance only, by design | confirmed (scope) |
 | DPF | P1 | DPF registry evidence; Swiss and UK routes | 07, 12, 17, 20 | resolved | DPF List check record (Doc 12 §4.1); Swiss-U.S. DPF and UK Extension as separate routes | confirmed |
 | W4-04 | High | Art. 10 (criminal-offence data) severity modifier omitted in Doc 18 Part B and in the PSI case | 18, 19, 20, 21, 22, 23, 24, 12, 31 | resolved | Doc 18 Part B Factor B aligned with Part A (+2 for Art. 9 and Art. 10 data). DPIA-PSI-01 S1 severity 6 → 8 (Significant): residual High, inherent High; S2 unchanged (no offence data). The Medium acceptance of 25 March 2026 is superseded. Re-assessment of 26 October 2026: G-36 met on stated reasons (not inferred from the internal tier); HBDI consultation before any further session; Chief Risk Officer decision pending; sessions paused. Doc 31: the approved Q3 report is unchanged; the correction is recorded in Addendum A.1. TIA-PSI-01 informative figure: Restricted 3 + 2 + 2 + 1 = 8 (earlier 5, wrong data class and no modifier); RoPA-PSI-01 status "Paused" | accepted (recalculation and propagation) |
-| W4-05 | High | Art. 10 scope of the federated-learning case not determined | 19, 18, 17, 21, 22, 23, 24, 31 | resolved | Training inputs and labels specified (customer's own transaction attributes; victim-side label "confirmed unauthorised transaction"); offence-attributing labels, counterparty identifiers and case notes excluded, with a per-round label-schema check. G-L conclusion recorded 26 October 2026: Art. 10 not engaged on these inputs, with reasons; any extension of inputs, or guidance or case law treating victim status as Art. 10 data, re-opens G-L with the modifier (severity 9, Catastrophic; tier High). Inputs unchanged since training started, so DPIA-FL-01 stays Medium | pending (reviewer recheck) |
+| W4-05 | High | Art. 10 scope of the federated-learning case not determined | 19, 18, 17, 21, 22, 23, 24, 31 | resolved | Training inputs and labels specified (customer's own transaction attributes; victim-side label "confirmed unauthorised transaction"); offence-attributing labels, counterparty identifiers and case notes excluded, with a per-round label-schema check. G-L conclusion recorded 26 October 2026: Art. 10 not engaged on these inputs, with reasons; any extension of inputs, or guidance or case law treating victim status as Art. 10 data, re-opens G-L with the modifier (severity 9, Catastrophic; tier High). Inputs unchanged since training started, so DPIA-FL-01 stays Medium | accepted (for these stated illustrative conditions; the victim-side conclusion is not a general rule of EU law) |
 
 ## 2. Packaging findings
 
@@ -83,7 +83,7 @@ Neither status is external peer review or certification.
 
 | Gate | Status |
 |---|---|
-| H1 — consent of co-author Alexey Neyman (direction of changes, author order, platforms, licence, COI text; final approval of the exact release) | requested — not yet received |
+| H1 — consent of co-author Alexey Neyman (direction of changes, author order, platforms, licence, COI text; final approval of the exact release) | request sent 26 October 2026; reply pending |
 | H2 — copyright holder of the internal source set "ver.2" | open |
 | H3 — ORCID / affiliations | optional |
 | Overview PDF, final LICENSE, DOI insertion, tag v1.0.0 | after H1/H2 (`publication/RELEASE_RUNBOOK.md`) |
