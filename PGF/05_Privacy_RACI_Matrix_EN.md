@@ -2,11 +2,12 @@
 title: "Privacy RACI Matrix"
 document_id: PGF-05
 level: 1
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level1/5. Privacy_RACI_Matrix_Template and Example_ENG.docx.md; sha256 01d655e2a0cdb181409959ec70df714f4a3e347b6f9f2190a675d1be65db8249"
 ---
 # PGF-05 — Privacy RACI Matrix
@@ -14,7 +15,7 @@ source_provenance: "Derived from internal source set ver.2: Level1/5. Privacy_RA
 > **Legal uncertainty and business decision.** A disputed legal interpretation is recorded as a reasoned position with its assumptions, alternatives, consequences for the organisation, Legal/DPO advice and a review date. Uncertainty is not automatically a confirmed G-L failure. The designated Legal function records whether the proposed design has a supportable basis under the applicable rules; the authorised business role decides within those rules and its delegation. A confirmed missing prerequisite or prohibition remains a stop/redesign condition. The decision record presents benefits and consequences for individuals and the organisation together, without silently lowering the individual-harm score.
 
 
-*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -657,3 +658,4 @@ Version 4.0 of this document was adopted by the Management Board of PanEuropean 
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: role model re-baselined by decision type (EPPO, Processing Owner, Executive Management, Governing Body, Independent Internal Audit, Legal, CISO added; DPO limited to its statutory tasks and C\* on every DPIA); Approve/Decide column added; mandatory gates G-L, G-DPIA, G-36, G-TIA added as rows; residual-risk acceptance table aligned with EDITORIAL_RULES §4.3 (High → one named Executive Management decider, with G-36 evaluated for every DPIA and prior consultation whenever the Art. 36 test is met; Critical not acceptable); G6 split into DPO compliance monitoring and Internal Audit assurance, with the Audit Committee approving the internal-audit charter and plan; Art. 38(5) confidentiality safeguard for DPO rows; processor extension row for Art. 33(2); G9 designation by Executive Management (no self-appointment); G-TIA branched by mechanism (Art. 45 adequacy check / Art. 46 TIA plus supplementary measures / Art. 49 documented conditions); transfer cannot proceed after a failed G-TIA; GDPR breach notification separated from DORA reporting; Art. 22(3) human review assigned to the deciding business line; the generic oversight label of ver.2 replaced by named bodies; Processing Owner added to the role list; example dates shifted by −12 months; normative basis and international adaptation added. Integration pass: rows with a single "A" for the Document 24 sub-processes G4.1, G4.2, G5.1, C2.1, C2.2, C2.3 and S6.3; Part B Processing Owner list aligned with Document 25, Section 10; consent management system (CMS) named in C5; cross-reference to the master escalation matrix (Document 31). |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

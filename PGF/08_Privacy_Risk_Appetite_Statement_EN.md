@@ -2,11 +2,12 @@
 title: "Privacy Risk Appetite Statement"
 document_id: PGF-08
 level: 1
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level1/8. Privacy_Risk_Appetite_Statement_Template and Example_ENG.docx.md; sha256 eaa0995c90a731383863e0aa34aada81d9c0266ddb7f0252d586ca33ab821ca6"
 ---
 
@@ -15,7 +16,7 @@ source_provenance: "Derived from internal source set ver.2: Level1/8. Privacy_Ri
 > **Legal uncertainty and business decision.** A disputed legal interpretation is recorded as a reasoned position with its assumptions, alternatives, consequences for the organisation, Legal/DPO advice and a review date. Uncertainty is not automatically a confirmed G-L failure. The designated Legal function records whether the proposed design has a supportable basis under the applicable rules; the authorised business role decides within those rules and its delegation. A confirmed missing prerequisite or prohibition remains a stop/redesign condition. The decision record presents benefits and consequences for individuals and the organisation together, without silently lowering the individual-harm score.
 
 
-*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -475,3 +476,4 @@ Versions 1.0 (1 March 2026) and 2.0 (22 August 2026) were adopted by the Managem
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: G-L made a precondition of any appetite decision; acceptance authority aligned with the PGF decision model (DPO advises and never approves; High decided by one designated member of Executive Management with the G-36 evaluation; Critical not acceptable — the former joint acceptance channel removed); mapping of internal tiers to GDPR thresholds (Arts. 35, 36, 33–34) added, with DORA and Chapter V kept separate; likelihood redefined per Document 18 (threat-based for identified processing; PET module for releases) instead of re-identification exposure only; organisational consequences separated as track (b); consent removed as a severity factor; Part B calibration made severity-led (Catastrophic × Low = High; Significant × Low = Medium) and the tool-metric justification removed; Low tier requires DPO advice where a DPIA exists; Supervisory Board limited to oversight, information and reserved consent (§111(4) AktG), decisions taken by the Management Board or its delegates; optional cumulative disclosure budget per source population added as a lifetime ε/δ ledger limit (no calendar reset) with an optional operational cap; transfer row of the GDPR mapping branched by mechanism (Arts. 45, 46, 49); Part B re-baselined as version 3.0 (adopted 20 October 2026, effective on Supervisory Board consent 23 October 2026) with earlier versions kept as fictional history; Section 3 identified as one of exactly three Supervisory Board reserved consent matters; "bottom-up aggregation" replaced by top-down appetite with bottom-up monitoring; worked examples moved from footnotes into the body and aligned with Document 18; example dates shifted by −12 months; calqued governance terms replaced by the PGF controlled vocabulary; references added. Integration pass: no-self-concurrence rule (where the EPPO is itself the Processing Owner, another named role concurs at Medium; Part B: the CRO); Part B warning level of the disclosure budget and the Management Board's δ-headroom decision of 22 October 2026 recorded (limits unchanged) |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

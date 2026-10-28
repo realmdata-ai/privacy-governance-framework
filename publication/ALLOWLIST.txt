@@ -41,3 +41,14 @@ tools/check_rc2.py
 
 # Deterministic text line endings for hash reproducibility
 .gitattributes
+
+# Documentation licence and publication sources
+LICENSE
+LICENSES/CC-BY-4.0.txt
+publication/PGF_Framework_Overview_1.0.0_EN.md
+release/RELEASE_1.0.0.json
+release/ZENODO_METADATA.json
+
+# Publication validation and asset identities
+release/PUBLICATION_ASSETS.json
+release/PUBLICATION_VALIDATION.json

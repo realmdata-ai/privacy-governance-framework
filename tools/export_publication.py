@@ -77,7 +77,7 @@ def source_manifest():
         if not output.is_file():
             raise SystemExit("Missing output: " + record["output_path"])
         record["output_sha256"] = sha256(output)
-    manifest["release_version"] = "1.0.0-rc.2"
+    manifest["release_version"] = "1.0.0"
     path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
     print("Refreshed output hashes; original source provenance retained")
 

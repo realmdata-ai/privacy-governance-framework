@@ -2,17 +2,18 @@
 title: "Privacy by Design and by Default Policy"
 document_id: PGF-16
 level: 2
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level2/16. Privacy-by-Design-and-by-Default-Policy_ENG.docx.md; sha256 7c6affe86b891768771fd13d45f1fa242d476c487ec8e7c2b1755748ef5a1261"
 ---
 
 # PGF-16 — Privacy by Design and by Default Policy
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -350,3 +351,4 @@ Version 1.0 (1 March 2026) was adopted by the Management Board; the Group DPO wa
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: Art. 25(1) factors (state of the art, cost, nature, scope, context, purposes, risks) and the continuing "time of processing" duty added, with documented trade-offs; Art. 25(2) completed (extent of processing; accessibility limb); Art. 25(3) certification noted; PbD no longer reduced to a DPIA — the pre-launch gate restated as G-L plus G-DPIA triage per Document 18, Section 2.1, with a DPIA, DPO advice and G-36 where triage requires; EDPB Guidelines 4/2019 design and default elements per principle, a legacy-processing section and effectiveness indicators (with denominators and zero-case rules) added; illustrative engineering methods citing ENISA *Data Protection Engineering* (2022), NIST IR 8062 and ISO 31700-1:2023 (bibliographic, not certification); the "non-anonymised versus pseudonymised" error corrected (access to directly identifiable data); synthetic data treated as personal data until a controller conclusion, with the W2-02 rule on statements about source records; three-DPIA rule labelled as an organisational choice; AI Act provider/deployer role, Art. 10(5) bias-detection exception and Art. 4 AI literacy added; DWH classification corrected to at least the highest source class; open-data rules aligned with Documents 11 and 18 (G-L, PET module PASS, anonymity conclusion by the Processing Owner on Legal's assessment with DPO advice; no universal attribute ban; the special-category exclusion labelled as internal policy, G-M3); FOI marked as applicable only where an FOI regime applies; procurement criterion (Recital 78) added; DPO approvals and "non-delegable proportionality decisions" replaced by Processing Owner decisions with DPO advice; Part B aligned with the canonical cases (DPIA-CS-TRAIN-01 Medium; credit scoring planned with the HBDI consultation pending; the customer-service assistant of Example AI Provider Inc. in place of the internal-staff LLM use, with its transfer on hold and the DPIA-LLM-01 acceptance not in effect at the reference date; real-vendor terms removed); adoption moved to Executive Management; example dates shifted by −12 months; Normative basis added |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

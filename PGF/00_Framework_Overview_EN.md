@@ -1,17 +1,18 @@
 ---
 title: "Privacy Governance Framework (PGF) — Framework Overview"
 document_id: PGF-00
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Privacy_Management_Framework_Overview_ENG.docx.md; sha256 41324e92c018418d6fb8926dd8b9237e5915a743f4ef8175fc1d153246c0a93d"
 ---
 
 # PGF-00 — Privacy Governance Framework: Framework Overview
 
-*Privacy Governance Framework (PGF) · Release 1.0.0-rc.2 · Authors: Alexey Neyman and Val Khvatov · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Version 1.0.0 · Authors: Alexey Neyman and Val Khvatov · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** This is a release candidate. PGF is a set of templates and worked examples. It is not a law, a standard, a certification scheme or legal advice, and adopting it does not by itself make an organisation compliant with any law. The worked example concerns a fictional organisation, PanEuropean Bank AG. All of its names, figures, dates and records are illustrative.
 
@@ -442,7 +443,7 @@ These are conceptual mappings, not claims of conformity.
 
 ## 9. How to cite
 
-> Neyman, A., & Khvatov, V. (2026). *Privacy Governance Framework (PGF): A Four-Level Model for Enterprise Privacy Governance* (Version 1.0.0-rc.2). DOI pending.
+> Neyman, A., & Khvatov, V. (2026). *Privacy Governance Framework (PGF): Framework Overview and Component Guide* (Version 1.0.0). DOI pending.
 
 To cite a specific component: "PGF-18 Privacy Risk Assessment Methodology, in Neyman & Khvatov (2026)".
 
@@ -454,7 +455,7 @@ To cite a specific component: "PGF-18 Privacy Risk Assessment Methodology, in Ne
 
 ## 11. Licence
 
-**Proposed:** CC BY 4.0 for the text and templates; MIT for the build scripts. No licence is in effect until the rights holders confirm it.
+**CC BY 4.0** applies to the framework text and templates. Copyright (c) 2026 REALM INVEO. Authors: Alexey Neyman; Val Khvatov. External materials and trademarks retain their own terms. Build utilities are outside the documentation-licence grant. See the package licence notice.
 
 ## 12. References
 

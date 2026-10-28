@@ -2,17 +2,18 @@
 title: "Cross-Border Data Transfer Policy"
 document_id: PGF-12
 level: 2
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level2/12. Cross-Border-Data-Transfer-Policy_ENG.docx.md; sha256 6132bf8108b24179e042a0fcfd133fed981aebf93d9dfc6a19890d687c4e01b1"
 ---
 
 # PGF-12 — Cross-Border Data Transfer Policy
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -355,3 +356,4 @@ Version 1.0 (1 March 2026) was adopted by the Management Board; the Group DPO wa
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: transfer defined by the three cumulative criteria of EDPB Guidelines 05/2021 v2.0 §2.2 (not by geography alone; international organisations included; same-entity employee remote access is not a transfer; remote access by a separate provider or group entity is); data-state rules added, including the limits of C-413/23 P (importer's means part of the analysis; processor paths never declared outside Chapter V merely for lack of a key; unclear flows treated as transfers); the former three-condition exclusion test for PET schemes (numerical threshold, DPO determination, legal opinion) replaced by controller transfer-status conclusions by Legal with DPO advice; PETs, TEEs, homomorphic encryption, PSI and federated learning treated as possible supplementary measures, not exemptions; the statement that Art. 36 is "unrelated" to transfers removed (DPIA and Art. 36 may apply in parallel); mechanism branches Art. 45 / 46 / 49 with adequacy scope and eligibility checks, BCR approval through the consistency mechanism, Art. 46(2)(e)–(f) and 46(3) tools, and Art. 49 wording per EDPB Guidelines 2/2018 (exceptional, restrictive, conditions of each derogation); G-TIA failure means no start or suspension and cannot be accepted; SCC Clauses 14(f), 15 and 16 cited correctly, with the Clause 16(c) information duty assigned to the exporter (the DPO as contact point); Art. 48 added; one sub-processor rule (prior written authorisation, general authorisation with prior notice and objection window) aligned with Document 17; public-authority requests recorded in the TIA record instead of an undefined separate register; DPO changed from Accountable to mandatory adviser — Legal R/A for TIA and G-TIA, Processing Owner for tool, measures and decision to proceed; Part B rebuilt with fictional providers (Example Cloud Services Pvt Ltd; Example AI Provider Inc., not DPF-certified as an illustrative assumption; partner bank for anti-fraud matching), the PSI purpose corrected to anti-fraud matching with the one-sided design and its intersection-size leakage stated, the suspended mutual-output design recorded, the federated-learning consortium recorded as intra-EU (no transfer, EVP-2026-0041; gradient-reconstruction test "not applicable for observers in scope" by validated control), RoPA identifiers corrected and real-vendor references removed; DORA terminology corrected (critical or important functions; classification by ICT Risk Control); adoption moved to Executive Management; example dates shifted by −12 months; International adaptation (UK IDTA/Addendum, Switzerland, PIPEDA, Québec assessment before communication outside Québec) and references added. Review correction: PSI tier, G-36 outcome and decision status aligned with the re-assessment of the parallel DPIA on 26 October 2026 (Art. 10 severity modifier; High; G-36 met; sessions paused) |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

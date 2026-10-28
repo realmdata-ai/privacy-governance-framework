@@ -57,8 +57,8 @@ CANON = {
 SUPPORT = ["README.md", "CHANGELOG.md", "GLOSSARY.md", "STANDARDS_CROSSWALK.md",
            "SOURCE_MANIFEST.json", "RELEASE_READINESS.md"]
 REQ_KEYS = ["title", "document_id", "release_version", "status", "authors",
-            "regulatory_reference_date", "licence_proposed", "source_provenance"]
-RELEASE, REFDATE = "1.0.0-rc.2", "2026-10-26"
+            "regulatory_reference_date", "licence", "source_provenance"]
+RELEASE, REFDATE = "1.0.0", "2026-10-26"
 AUTHORS = ["Alexey Neyman", "Val Khvatov"]
 
 # (pattern, flags, message, severity, allowed_in)  allowed_in = set of doc ids where the hit is legitimate
@@ -194,7 +194,7 @@ def main():
         if meta.get("regulatory_reference_date") != REFDATE: R.add("ERROR", "metadata", name, "regulatory_reference_date mismatch")
         auth = re.findall(r'"([^"]+)"', meta.get("authors", ""))
         if auth != AUTHORS: R.add("ERROR", "metadata", name, f"authors must be {AUTHORS} in this order, got {auth}")
-        if meta.get("status") != "release-candidate": R.add("ERROR", "metadata", name, f"status is '{meta.get('status')}', expected release-candidate")
+        if meta.get("status") != "publication-ready": R.add("ERROR", "metadata", name, f"status is '{meta.get('status')}', expected publication-ready")
         if not re.search(r"sha256 [0-9a-f]{64}", meta.get("source_provenance", "")) and nn not in ("24",):
             R.add("WARN", "metadata", name, "source_provenance lacks sha256")
         if not re.search(rf"^# PGF-{nn} — \S", body, re.M):

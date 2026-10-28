@@ -2,17 +2,18 @@
 title: "Governance Reporting Template"
 document_id: PGF-31
 level: 4
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level4/31. Governance-Reporting-Template_ENG.docx.md; sha256 b43fa392b4a4306a9d8f4b8441babe81fd3a8a2c07f8f26f33f1e2cfd622e8a0"
 ---
 
 # PGF-31 — Governance Reporting Template
 
-*Privacy Governance Framework (PGF) · Level 4 — Control, Reporting and Improvement · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 4 — Control, Reporting and Improvement · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -511,3 +512,4 @@ Data cut-off 30 September 2026, 24:00 CET; post-period events included up to 21 
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: title block, Part A / Part B headings, references and history added; programme report (G8.1) owned and presented by the EPPO to Executive Management and the Governing Body's Risk Committee; DPO's "non-delegable personal presentation" to the board removed — the DPO's own report (G8.2, Art. 38(3)) kept separate and unfiltered, Management Board named as highest management level in Part B; Internal Audit opinion routed to the Audit Committee; calqued committee terminology removed; decision requests addressed to the competent decider, with Supervisory Board consent only for the three reserved matters; DPO never shown as accepting risk; risk profile extended (G-36 conclusion and Art. 36 consultation status for every High record, transfers on hold or suspended, expiring conditional acceptances, disclosure budget, track (b) separately); regulatory interactions and horizon section added; new metrics removed — every figure now carries a Document 28 identifier (board requests → M-G8-04; consent withdrawals → M-C5-05; incident counts → M-S7-08 to M-S7-10); one master escalation matrix (level × addressee × time limit) added in Section 6.4 and cited by Documents 27–30, resolving the conflicting Critical timings of Documents 29 and 30; retention of reports tied to corporate and supervisory record-keeping; data-quality statement added; normative basis added (GDPR, DORA Art. 5, NIS2 Art. 20, EBA/GL/2021/05, IIA GIAS, BCBS 239); Part B rebuilt on registry facts — PRR-CS-INFER/LAUNCH-01 High with the HBDI consultation pending (launch planned 1 February 2027, not in production), PRR-CS-TRAIN-01 Medium, PRR-LLM-01 with TIA-LLM-01 on hold, PRR-PSI-01 under the one-sided no-output design (owner Head of Fraud Prevention; re-assessed High on 26 October 2026 — Art. 10 severity modifier, G-36 met, Chief Risk Officer decision pending — and recorded in Addendum A.1, while the approved Q3 report keeps the former Medium); operational trivia removed from the decision list; Appendix A re-dated to Q3 2026 (presented 22–23 October 2026); UK spelling |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

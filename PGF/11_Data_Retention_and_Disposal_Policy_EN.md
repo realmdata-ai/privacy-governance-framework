@@ -2,17 +2,18 @@
 title: "Data Retention and Disposal Policy"
 document_id: PGF-11
 level: 2
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level2/11. Data-Retention-Disposal-Policy_ENG.docx.md; sha256 f47b66c7d59f75a7a7b8b2e2904fd359a579e28c8b43be9290b53edfce11e6ae"
 ---
 
 # PGF-11 — Data Retention and Disposal Policy
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -361,3 +362,4 @@ Version 1.0 (1 March 2026) was adopted by the Management Board; Data Governance 
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: matrix restructured as category + purpose/basis + trigger + jurisdiction + duration + exceptions + disposal method; blanket "all customer data 10 years" replaced by scoped rows — contract data for the relationship, then only accounting-relevant records for the statutory accounting retention period under applicable commercial and tax law (HGB/AO limited to accounting records; no unverified period asserted); AML split into the current German rule (GwG §8(4): 5 years from the end of the calendar year in which the relationship ended; branch-country law may differ) and a separate scheduled row for AMLR Art. 77 from 10 July 2027; "longest competing basis" rule replaced by scoped retention with a restricted (blocked) state covering statutory retention, Art. 18 restriction and legal hold; legal hold made scoped, periodically reviewed and released with a defined disposal deadline (the inverted off-cycle rule corrected); portfolio transfer reworded (acquirer as independent controller; contractual commitments); HR split into employees (per record type and country) and candidates (about 6 months, e.g. limitation period for discrimination claims); branch video shortened in line with national supervisory guidance (DSK, generic); PPI health data limited to arranging the insurance and claim limitation, never for credit; biometric row limited to processing the organisation controls; evidence packs and decision records given their own row (retention by the applicable rule, superseding not editing, deletion of personal-data components, minimal record after purge only where lawful); erasure and withdrawal cascade to derived personal data not concluded anonymous; anonymity conclusions taken by the Processing Owner on Legal's assessment with DPO advice (no DPO determination), supported by the Document 18 PET module and re-assessed periodically; synthetic data no longer "public/open" by default; open releases conditioned on G-L, the PET module and an anonymity conclusion (special-category exclusion labelled internal policy); AI Act Arts. 18/19 cited precisely (documentation and logs, not raw training data); prudential data-history needs recorded as separate rows; disposal standards and processor deletion confirmations added; ownership moved to the EPPO with adoption by Executive Management; Part B aligned with the Customer Privacy Notice (Document 1) and re-baselined as version 2.0 (20 October 2026); example dates shifted by −12 months; calqued "perimeter" removed; references and international adaptation added. Integration pass: archived RoPA records and archived catalogue privacy metadata covered by the evidence and decision-records row; remote-support access logs classed Confidential, as in Documents 20 and 23 |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

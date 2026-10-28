@@ -1,10 +1,8 @@
-# DRAFT citation metadata for PGF 1.0.0-rc.2.
-# Not final: no DOI, ORCID or affiliation is asserted until confirmed by the authors (see LICENCE_PROPOSED.md).
 cff-version: 1.2.0
 message: "If you use the Privacy Governance Framework, please cite it as below."
 type: report
-title: "Privacy Governance Framework (PGF): A Four-Level Model for Enterprise Privacy Governance"
-version: "1.0.0-rc.2"
+title: "Privacy Governance Framework (PGF): Framework Overview and Component Guide"
+version: "1.0.0"
 authors:
   - family-names: "Neyman"
     given-names: "Alexey"
@@ -15,7 +13,7 @@ abstract: >-
   in four levels (strategic documents; policies and standards; process model; control, reporting and
   improvement) with a 23-process governance model. It separates statutory legal-compliance gates from
   managerial risk decisions, keeps the Data Protection Officer independent, and uses the GDPR as its
-  baseline with adaptation guidance for Canada (PIPEDA and Québec). Release candidate; not legal advice.
+  baseline with adaptation guidance for Canada (PIPEDA and Québec). Documentation release; not legal advice.
 keywords:
   - privacy governance
   - data protection
@@ -27,8 +25,6 @@ keywords:
   - privacy by design
   - PIPEDA
   - NIST Privacy Framework
-# license: CC-BY-4.0   # proposed; enable only after rights-holder confirmation
-# doi:                  # add the real Zenodo DOI only after it exists
-# repository-code:      # add the exact GitHub release/tag URL when the repository exists
 
-# Author-conditioned content freeze: 2026-10-28. DOI and final rights record pending.
+date-released: "2026-10-28"
+license: CC-BY-4.0

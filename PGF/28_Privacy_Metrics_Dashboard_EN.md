@@ -2,17 +2,18 @@
 title: "Privacy Metrics Dashboard"
 document_id: PGF-28
 level: 4
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level4/28. Privacy-Metrics-Dashboard_ENG.docx.md; sha256 96d6552201103cad901600a6c2adcd1d10e9e6fd397f0b7afc477bbc9553d56b"
 ---
 
 # PGF-28 — Privacy Metrics Dashboard
 
-*Privacy Governance Framework (PGF) · Level 4 — Control, Reporting and Improvement · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 4 — Control, Reporting and Improvement · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -701,3 +702,4 @@ Version 3.0 was adopted by the Management Board of PanEuropean Bank AG on 20 Oct
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: title block, Part A / Part B headings, references and history added; role model applied (EPPO accountable for G7, Privacy Operations Lead responsible, DPO consulted with read access; DPO no longer approves the dashboard; Executive Management adopts Sections 5 and 6.6; Supervisory Board and the calqued committee term removed as approver and as raw-dashboard recipient); metric definition standard added (owner, source, numerator, denominator, zero-case rules Z1–Z3, cut-off rules K1–K3, types S/K/R/D); target, tolerance and zones defined once (green never beyond target); statutory metrics without tolerance bands — every missed statutory deadline listed and escalated even when the aggregate is green; "30-day statutory deadline" replaced by one month under Art. 12(3) with extension; averages replaced by median and P90; Little's-law error corrected ("a week's intake" → about two weeks; mean, not median, time in system); breach-notification timeliness split into on-time share over notifications due (incl. unsent), per-case listing of late or overdue notifications with reasons and legal assessment, and reasons-given share; paused DPIAs kept in the overdue count and shown separately with ageing; zone-to-level contradictions and the Section 5 escalation contradiction resolved; Critical residual risk "with a compensating plan" removed (Critical is not acceptable); "passed DPIA" replaced by gates and DPIA where required; approval-rate and marketing metrics withdrawn or made diagnostic; DPO metrics limited to timeliness, coverage and documentation, never used against the content of advice; "EDPB criteria" attributed to WP29 Opinion 05/2014 (WP216); identifiers given to every metric of every Document 24 process and sub-process (Section 6.10), including G4.1, G4.2, G5.1, C2.1–C2.3, S6.3, S7.1–S7.5, S8.1, prior consultations, track (b), disclosure budget, consent withdrawal, management-body and contractor training, AI literacy, DORA reports and data quality; references to Document 24 cards and to Document 9, Sections 3.2 and 8.5 corrected; regulators' access without prejudice to Art. 58(1)(a); HBDI given its full name; product branding replaced by the illustrative PEP; Part B dates shifted by −12 months, versions 2.0/3.0 of the internal draft merged, re-baseline version 3.0 adopted by the Management Board 20 October 2026 (effective 23 October 2026); UK spelling |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

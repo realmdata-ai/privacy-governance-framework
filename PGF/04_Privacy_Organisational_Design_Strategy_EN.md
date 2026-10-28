@@ -2,16 +2,17 @@
 title: "Privacy Organisational Design Strategy"
 document_id: PGF-04
 level: 1
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level1/4. Privacy_Organizational_Design_Strategy_Template_and_Example_ENG.docx.md; sha256 e21aacf1cb1db8339c45d30eb652390dc71841e1f72850882be23963bf58cf4c"
 ---
 # PGF-04 — Privacy Organisational Design Strategy
 
-*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -573,3 +574,4 @@ Version 4.0 of this document was adopted by the Management Board of PanEuropean 
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: EPPO introduced as programme owner (no separate new post required); DPO positioned outside the tiers with direct reporting to Executive Management and access to the Governing Body committee; the former top-tier label of ver.2 renamed "Oversight" and limited to oversight, assurance and reserved consent; Privacy Risk Committee placed at management level; Art. 37(6) service-contract DPO stated as lawful — insourcing recorded as a policy choice; non-outsourceable items restated as controller decisions (breach notification is a controller decision on DPO advice, separate from DORA reporting); deputy DPO arrangement exercising all DPO tasks; independent audit assigned to Internal Audit with Audit Committee approval of the audit charter and plan (IIA GIAS 2024, Standards 6.2 and 9.4), external auditors as supplement; DPO resources budget line (Art. 38(2)); vendor-neutral certification line; Part B: Group DPO moved from the CDO line to the Management Board, CDO case kept as a rejected variant, external vendor de-identified, DPO coverage gap removed, cross-reference to growth triggers corrected (Section 5), roadmap reference to a non-existent register roadmap removed; example dates shifted by −12 months; normative basis and international adaptation added. Integration pass: Part B Processing Owner list aligned with Document 25, Section 10 |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

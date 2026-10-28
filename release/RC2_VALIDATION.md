@@ -1,5 +1,8 @@
 # PGF rc.2 — targeted validation
 
+> Historical rc.2 record. Version 1.0.0 uses the same substantive method with completed documentation licensing: rights holder REALM INVEO and CC BY 4.0, confirmed 28 October 2026. Older pending-rights wording below describes the earlier freeze, not the current publication package.
+
+
 **28 October 2026.** Structural checker: **32/32, zero errors, zero warnings**. Targeted rc.2 suite: **174 passed, zero failed**. See [machine-readable results](RC2_VALIDATION.json).
 
 ## Scope

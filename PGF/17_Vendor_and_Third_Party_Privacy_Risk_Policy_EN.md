@@ -2,17 +2,18 @@
 title: "Vendor and Third Party Privacy Risk Policy"
 document_id: PGF-17
 level: 2
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level2/17. Vendor-Third-Party-Privacy-Risk-Policy_ENG.docx.md; sha256 74ea6cbf409e644830d54f2a9ff2e56ddc2eb73f4da08ce8f3485a16ebfb83d0"
 ---
 
 # PGF-17 — Vendor and Third-Party Privacy Risk Policy
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -389,3 +390,4 @@ Version 1.0 (1 March 2026) was adopted by the Management Board; the Group DPO wa
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: role classification per activity added (processor, sub-processor, joint controller, independent controller, organisation as processor; EDPB Guidelines 07/2020) — the "joint-processing controller counterparty" category split into joint and independent controllers; EuroCredit Bureau reclassified as an independent controller under a data-sharing agreement (not a joint controller, not an Art. 28 processor); Art. 28(3)(a)–(h) checklist reproduced in full, including transfers in the instructions, the infringing-instruction duty, assistance with Arts. 32–36 (DPIA and prior consultation included), deletion or return subject to Union or Member State storage duties, and information and audits; Art. 28(4), (7), (9), (10) and SCC Decision (EU) 2021/915 referenced; Art. 26 arrangement and data-sharing agreement contents added; processor-to-controller breach notification without undue delay with no 72-hour clock of the processor's own; one sub-processor rule consistent with Document 12 (prior written authorisation, general authorisation with 30 days' prior notice and an objection decided by the Processing Owner with DPO advice; SCC Module 3 and re-evaluated TIA for third-country sub-processors) replacing "Group DPO's prior consent"; DORA terminology corrected (ICT services supporting critical or important functions assessed by the entity; CTPP designated by the ESAs under Art. 31), register of information and Art. 30(2) terms for all ICT services including the LLM service, Art. 30(3) terms, Art. 28(4) pre-contract assessment, exit strategy and concentration risk; due-diligence status feeds Document 18 likelihood factor L3 and the Privacy Risk Register, not severity; retention, deletion, backups, legal hold and exit section added; the DPO's approval of assessments and "non-delegable" suspension/termination authority replaced by Processing Owner decisions with DPO advice; Part B rebuilt with fictional providers only (real-vendor certifications and terms removed; Example AI Provider Inc. limited to the customer-service assistant, not DPF-certified as an illustrative assumption; Example Cloud Services Pvt Ltd remote support with the restricted design), the partner-bank contract reflecting the one-sided PSI design without any output to the partner (list warranty, audit right and session rules as hygiene terms only), the LLM transfer shown as on hold at the reference date, the PPI insurer, PEP support provider, delivery service provider and federated-learning consortium added; section references corrected; adoption moved to Executive Management; example dates shifted by −12 months; Normative basis and International adaptation (UK, Switzerland, PIPEDA Principle 4.1.3, Québec service contracts and assessment before communication outside Québec) added |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

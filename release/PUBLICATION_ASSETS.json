@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "prepared": "2026-10-28",
+  "rights_holder": "REALM INVEO",
+  "documentation_license": "CC-BY-4.0",
+  "author_order": [
+    "Alexey Neyman",
+    "Val Khvatov"
+  ],
+  "pdf_pages": 32,
+  "doi": null,
+  "publication_performed": false,
+  "assets": [
+    {
+      "filename": "CHECKSUMS.sha256",
+      "bytes": 451,
+      "sha256": "00964025d6601ee131fc4d5896cf847dd9c8470038a05daf7229791a4fe31b79"
+    },
+    {
+      "filename": "LICENSE.txt",
+      "bytes": 19532,
+      "sha256": "0fa6d813a0d16a4d965f8befa7f68c2a636050060eb3636ff4e8fa7ecb358c88"
+    },
+    {
+      "filename": "PGF_1.0.0_Editable_Framework.zip",
+      "bytes": 785126,
+      "sha256": "65536f1d919fb56b597d58d512c34a37068110ed2a468a874eb4599578abb410"
+    },
+    {
+      "filename": "PGF_1.0.0_Validation_Summary.md",
+      "bytes": 1623,
+      "sha256": "489def6571c29c9d712804cde1ac6a7eb7274454fc73ea77bd95a7691c5dc729"
+    },
+    {
+      "filename": "PGF_Framework_Overview_1.0.0.pdf",
+      "bytes": 159247,
+      "sha256": "e4ae4607785e574050405cc8132408c0a61537fe4845d603f4362b036ece1771"
+    },
+    {
+      "filename": "README.txt",
+      "bytes": 1126,
+      "sha256": "fc4adbc21e8492fbcf8bc6ad45241572131011a22bc3e62a98a3279304c9d80a"
+    }
+  ]
+}

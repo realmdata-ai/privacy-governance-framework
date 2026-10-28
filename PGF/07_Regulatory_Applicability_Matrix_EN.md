@@ -2,16 +2,17 @@
 title: "Regulatory Applicability Matrix"
 document_id: PGF-07
 level: 1
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level1/7. Regulatory_Applicability_Matrix_Template_and_Example_ENG.docx.md; sha256 3792b39563fa6b000559b14fbcc01e0d0d633a1afbc0d1e1000f81c0d97e3b70"
 ---
 # PGF-07 — Regulatory Applicability Matrix
 
-*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -435,3 +436,4 @@ Version 3.0 of this document was adopted by the Management Board of PanEuropean 
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: territorial-scope principle rewritten (Art. 3(1) for the EU-established bank; Art. 3(2) only for non-EU organisations; CRD passporting wording corrected); one-stop-shop roles recorded (HBDI lead SA; CNIL, Garante, AEPD and Prezes UODO concerned SAs) and breach notification routed to the lead SA per EDPB Guidelines 9/2022; GDPR Procedural Regulation (EU) 2025/2518 added (applies 2 April 2027); DORA recorded as a bank-wide regime with the term "major ICT-related incident", classification under Delegated Regulation 2024/1772 and reporting under Delegated Regulation 2025/301 with points of reference; AI Act updated for the AI Omnibus (in force 27 July 2026; Annex III from 2 December 2027) with deployer duties, FRIA, Art. 86 and Art. 74(6), and SCHUFA condition and *Dun & Bradstreet* added; German employee-data position updated after C-34/21 (works-council co-determination, not consent); Spain biometrics kept generic; ePrivacy and national marketing rules, CCD2, AMLR/AMLD6, banking secrecy, credit-information rules, NIS2 (lex specialis note), Data Act, PSD2 and whistleblowing added; pending-changes block separated from law in force (Digital Omnibus, Bill C-36, draft EDPB guidance); template internationalised (diversified examples replacing 152-FZ, PIPL and an unspecified PDPL; new columns for breach threshold, recipient and clock, access deadline, representative and registration, localisation and privacy-officer mandate; Art. 8 age separated from contractual capacity; reference values for UK, Switzerland, PIPEDA and Québec); Canadian applicability map stated once (Section 3.1); "strictest requirement" reframed as a design choice for cumulative requirements; ISO/IEC 27701 pointer corrected (ISO/IEC 27557, 20889, 27559 added); RoPA "not yet developed" remark deleted; roles aligned with the RACI role model (EPPO owner; Executive Management adopts); fictional providers used; example dates shifted by −12 months. Integration pass: Art. 12(6) pause practice recorded (Part B: no pause relied on, internal rule); AI Act Art. 26(9) DPIA link added |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

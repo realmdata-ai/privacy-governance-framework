@@ -2,16 +2,17 @@
 title: "Privacy Governance Process Map"
 document_id: PGF-24
 level: 3
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level3/24. Process-Map-Template_ENG.html; sha256 a1529a6b18cffdebb5fdc33d181b398eaab04f0e456ab5d96a2928867ecba51a; and Level3/24. Process-Map-Example-PanEuropean_ENG.html; sha256 ac69df4ec90336b89c6f748d934f96b3873343fb5c2ffda4c21c571f66c2a52b"
 ---
 # PGF-24 — Privacy Governance Process Map
 
-*Privacy Governance Framework (PGF) · Level 3 — Process Model · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 3 — Process Model · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -2372,3 +2373,4 @@ This map is reviewed under the Policy Review Cycle (Document 29) and whenever Do
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown created from the two internal ver.2 HTML files (Template and PanEuropean Example; the Example was a name-substituted copy of the Template and is now Part B as an instantiation with owners, specifics and worked traces); groupings renamed "process groups"; APQC PCF "Level 0" claim softened to "inspired by the PCF hierarchy"; full Level 0 / Level 1 / Level 2 model kept, with Level 1 chains and the C2, C3, C4 and S7 flows as Mermaid diagrams and all EPCs as tables with AND/OR gateways, interfaces and timers; every process re-allocated to the Document 5 role model and sub-rows (G2.1/G2.2, G6.1/G6.2a/G6.2b, G8.1/G8.2, S2.1/S2.2, S6.1/S6.2, S7.1–S7.5, S8.1) — DPO removed as owner, approver, chair or decider; "owner badge" replaced by the Accountable role; C2 corrected to G-L → G-DPIA → calculation → G-36 (evaluated for every DPIA; consultation of the competent SA whenever the test is met) → acceptance by a single decider; C4 corrected to transfer test first, then Art. 45 / 46 / 49 branches, failed G-TIA → no start or suspension under SCC Clause 14(f), SA information only on termination under Clause 16(c) by the exporter; S7 corrected to parallel containment and qualification, every breach recorded, separate Art. 33 and Art. 34 decisions, 72-hour timer, DORA branch with late classification, processor extension; C3 corrected to the Art. 12(6) information loop, Art. 16 rectification, Art. 19, Art. 12(3) extension and Art. 12(4) information, request log instead of RoPA; consent records in the consent system instead of the RoPA; sub-processes added: G4.1 regulator engagement, G4.2 authority access requests, G5.1 privacy notices, C2.1 AI Act / FRIA interface, C2.2 children's data, C2.3 LIA and joint-controller arrangements, S6.3 M&A; S2 anonymisation branch and S6 Art. 28 contract gate added; metrics reworked (statutory deadlines per case with denominators; no DPO-performance metrics; no "regulator clearance" metrics); BaFin no longer appears as a GDPR authority; vendor product names replaced by the Bank's privacy engineering platform (PEP, illustrative); Part B aligned with the example registry (CS consultation pending, launch planned 1 February 2027; LLM, CLOUD, PSI, FL facts and deciders); international adaptation added. Integration pass: Document 5 rows for G4.2, G5.1, C2.2 and S6.3 now cited; Part B Processing Owner list aligned with Document 25, Section 10; RoPA and inventory identifiers (RoPA-FL-01, RoPA-CSV-01, DI-LLM-01, DI-FL-01) named; C5 card aligned with Document 13 (CMS operated by IT Management; Processing Owner per purpose) and S2 with the monthly disposal run of Document 11; Document 28 metric identifiers (Section 6.10) cited in every card. Review correction: PSI traces updated after the re-assessment of DPIA-PSI-01 on 26 October 2026 (High; G-36 met; CRO decision pending; sessions paused). |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

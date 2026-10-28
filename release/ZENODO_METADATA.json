@@ -1,0 +1,51 @@
+{
+  "upload_type": "publication",
+  "publication_type": "report",
+  "publication_date": "2026-10-28",
+  "title": "Privacy Governance Framework (PGF): Framework Overview and Component Guide",
+  "creators": [
+    {
+      "name": "Neyman, Alexey"
+    },
+    {
+      "name": "Khvatov, Val"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "REALM INVEO",
+      "type": "RightsHolder"
+    }
+  ],
+  "description": "<p>The Privacy Governance Framework (PGF) is an operational framework for enterprise privacy governance. It connects a four-level architecture, 31 template-and-worked-example components and 23 processes to accountable business decisions.</p><p>This version provides a 32-page master overview and a complete editable English Markdown supplement, including the risk methodology, DPIA/TIA procedures, policies, registers, process ownership, assurance and reporting, a glossary, a conceptual standards crosswalk and a curated primary-source catalogue.</p><p>The integrated risk indicator maps directly to a configured likelihood band and matrix result; individual observations and DPO dissent accompany the authorised business decision without automatic per-metric tier overrides. Legal requirements and adopted release conditions remain separately visible. Templates are tool-neutral; the fictional bank's worked implementation names PAMOLA and clearly labels its deployment and numerical evidence as illustrative.</p><p>The GDPR is the baseline, with Canadian adaptation guidance and selected UK/Swiss transfer interfaces. Mappings to NIST, ENISA and Canadian accountability guidance are conceptual, not certification claims. No external peer review, empirical calibration, product capability certification or compliance guarantee is asserted.</p><p>Authors: Alexey Neyman and Val Khvatov. Rights holder: REALM INVEO. Original framework documentation/templates are licensed under CC BY 4.0. Software utilities, advanced companions and private/raw legacy records are excluded from this deposit.</p>",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "version": "1.0.0",
+  "language": "eng",
+  "imprint_publisher": "REALM INVEO",
+  "keywords": [
+    "privacy governance",
+    "data protection",
+    "GDPR",
+    "privacy risk",
+    "DPIA",
+    "transfer impact assessment",
+    "privacy-enhancing technologies",
+    "accountability",
+    "PIPEDA",
+    "NIST Privacy Framework"
+  ],
+  "notes": "Version 1.0.0. Regulatory reference snapshot: 26 October 2026. Substantive method derived from the rc.2 freeze; publication/licensing metadata completed. Copyright (c) 2026 REALM INVEO. Worked examples are illustrative.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/realmdata-ai/privacy-governance-framework/tree/freeze-pgf-1.0.0-rc.2-2026-10-28",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/realmdata-ai/privacy-governance-framework/tree/release/pgf-1.0.0",
+      "relation": "isSupplementedBy",
+      "scheme": "url"
+    }
+  ]
+}

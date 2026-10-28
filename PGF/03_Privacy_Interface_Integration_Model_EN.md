@@ -2,16 +2,17 @@
 title: "Privacy Governance Interface and Integration Model"
 document_id: PGF-03
 level: 1
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level1/3. Privacy_Interface_Integration_Model_Template and Example_ENG.docx.md; sha256 f9761d9bb3aa19c35629c1d087b4109d81b79bc732a47785c184717f7eebdfe1"
 ---
 # PGF-03 — Privacy Governance Interface and Integration Model
 
-*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -579,3 +580,4 @@ Version 3.0 of this document was adopted by the Management Board of PanEuropean 
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: roles aligned with the Charter and the RACI role model (EPPO as owner; Executive Management adopts; Processing Owner decides within delegation; DPO advises, monitors, is the SA contact point and escalates); DPO vetoes, "final decisions", "mandatory approval" and authority to block removed and replaced by mandatory gates, holds and recorded advice; principle D2 rewritten as statutory and gate precedence; breach rows split into the GDPR track (controller decision on DPO advice to the competent/lead SA) and the DORA track (ICT risk function to the financial supervisor; Delegated Regulations 2024/1772 and 2025/301); new Sections 3.14 (ICT Risk and Operational Resilience, with NIS2 note) and 3.15 (Outsourcing and ICT Third-Party Risk, DORA Register of Information); Section 3.5 rebuilt as AI Governance and Model Risk with AI Act deployer duties and the FRIA (Annex III 5(b); application from 2 December 2027 under the AI Omnibus); "no duplicate registers" rule with statutory-records exception; Privacy Risk Committee recorded as management level; Governing Body committees as oversight; single final arbiter (Executive Management); internal-audit governance (Audit Committee approves charter and plan); customer-facing explanation owned by the Processing Owner; Art. 48 added; Three Lines mapping added; cross-references corrected (Section 3.16 onward; Privacy Risk Appetite Statement, Document 8); Part B example bank given a Model Risk and AI Governance function; Group DPO no longer reports to the CDO; fictional providers and PEP used; example dates shifted by −12 months; normative basis and international adaptation added. Integration pass: Part B DORA Register of Information row lists all five ICT arrangements with ICT Risk Control's illustrative classification (Document 17); CMS named for consent records; G4.2 cross-reference; privacy risk records mapped to the ERM record, operational-risk event type and ICT risk (Document 22) |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

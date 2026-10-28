@@ -2,16 +2,17 @@
 title: "Privacy Role Competency Framework"
 document_id: PGF-06
 level: 1
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level1/6. Privacy_Competency_Template and Example_ENG.docx.md; sha256 e8f8e251cd8061bee707c8afa4269d6a149a8d0afb5c6968beca577903b0885e"
 ---
 # PGF-06 — Privacy Role Competency Framework
 
-*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -504,3 +505,4 @@ Version 4.0 of this document was adopted by the Management Board of PanEuropean 
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: DPO profile restricted to statutory tasks (no "Accountable" decision powers, no BaFin notification, no DPIA approval); qualifications made vendor-neutral ("recognised privacy certification or equivalent demonstrable expertise"; IAPP credentials as examples only); mandatory vendor-issued platform certificate removed and replaced by an internal proficiency assessment; EPPO profile (Section 4.7) and AI literacy requirement (Section 4.8, AI Act Art. 4 as applicable) added; national-law and language competence added for country Privacy Officers; Processing Owner profile aligned with the RACI Matrix acceptance tiers (EPPO concurrence at Medium; High decided by one named Executive Management decider after G-36; Critical not acceptable); DPO certification upkeep funded by the organisation and no suspension for a lapse (Art. 38(2)–(3)); content of DPO advice excluded from performance and disciplinary assessment, Part B aligned with Part A; RACI cross-references corrected (consent → Section 5.5; PET application → Section 5.2); generic oversight label replaced by named bodies; Canadian Privacy Officer ≠ EU DPO note; example dates shifted by −12 months; normative basis and international adaptation added. Integration pass: Part B Processing Owner list aligned with Document 25, Section 10 |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

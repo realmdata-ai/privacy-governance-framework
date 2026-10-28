@@ -7,7 +7,7 @@ import math
 import re
 import sys
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=Path(sys.argv[sys.argv.index("--root")+1]).resolve() if "--root" in sys.argv else Path(__file__).resolve().parents[1]
 checks=[]
 def check(name,condition,detail=''):
     checks.append({'check':name,'passed':bool(condition),'detail':detail})

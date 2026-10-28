@@ -2,17 +2,18 @@
 title: "Data Classification Policy"
 document_id: PGF-10
 level: 2
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level2/10. Data-Classification-Policy_ENG.docx.md; sha256 d470be3aee8ef20c190bce397b2f16d3d129faa3140cbc5c40bbb8fbf7e1d207"
 ---
 
 # PGF-10 — Data Classification Policy
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -490,3 +491,4 @@ Version 1.0 (1 March 2026) and version 1.1 (1 October 2026) were adopted by the 
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: criminal-offence data (Art. 10) separated from special categories as its own category with the same controls and its own legal test; inferred special-category data added (C-184/20, C-252/21) with the bank-transaction example; data states added (personal, pseudonymised, anonymous information, synthetic, encrypted) with pseudonymised data kept personal (Art. 4(5), EDPB Guidelines 01/2025, C-413/23 P); declassification only through the controller's documented anonymity conclusion (Processing Owner on Legal's assessment with DPO advice, Document 18 PET module, periodic re-assessment) — synthetic data no longer declassified to "non-personal"; operating-system biometric authentication distinguished from biometric processing by the organisation's own software; AML/sanctions screening reworded (Art. 10 content under AML-law authorisation; sanctions hits and politically-exposed-person status not Art. 10 data as such) and the credit bureau removed from the screening example; AML alerts handled by Compliance, not the DPO; mandatory DPIA labelled internal policy; mandatory PET rule given a documented exception route; DPO changed from Accountable/approver to advisor (S1 accountable: Head of Data Governance); escalation table aligned with Document 8 (single decider, G-36, Critical not acceptable); Art. 8 consent age separated from contractual capacity; adoption moved to Executive Management; ε and k-anonymity no longer combined as one parameter set; example evidence-pack identifiers changed to EVP-YYYY-NNNN; example dates shifted by −12 months; calqued terms and inconsistent titles corrected; references and international adaptation added. Integration pass: Processing Owner for AML screening named (Head of Compliance, Document 25) |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

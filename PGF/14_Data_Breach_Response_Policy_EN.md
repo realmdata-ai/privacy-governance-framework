@@ -2,16 +2,17 @@
 title: "Data Breach Response Policy"
 document_id: PGF-14
 level: 2
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level2/14. Data-Breach-Response-Policy_ENG.docx.md; sha256 e925faf43209b77dd3626df9cc9b1c919249c72d1117fff6cf0b6acb901b8c4c"
 ---
 # PGF-14 — Data Breach Response Policy
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -397,3 +398,4 @@ The PIPEDA record and the Québec register are independent statutory records and
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: harm-based incident definition replaced by the sequence security event → personal data breach (Art. 4(12), no harm threshold) → breach record for every breach (Art. 33(5)) → risk assessment → separate SA (Art. 33) and data-subject (Art. 34) decisions; likelihood restored in the risk assessment (EDPB Guidelines 9/2022; ENISA 2013 as calibration reference); consent removed as a severity factor; Art. 33(1) statutory test, awareness, reasons for delay, phased notification (Art. 33(4)), Art. 33(3) content incl. DPO contact, Art. 34(2)–(4) content and exceptions added; notification decision moved from the DPO to the controller's designated Executive Management member on mandatory DPO advice (DPO never "prevails"; recorded reasons and escalation); CISO owns containment and may not decide or block notification; anonymity conclusions attributed to the Processing Owner on Legal's assessment (Document 18 PET module as evidence); lead SA / concerned SA wording corrected (one-stop-shop, local case Art. 56(2)); processor → controller path and processor-extension (S7.5) added; DORA separated as its own track (major ICT-related incident; Delegated Regulations 2024/1772 and 2025/301 with points of reference and late classification; client information Art. 19(3)); NIS2 relationship stated; undefined oversight label replaced by Executive Management and the Governing Body committee in escalation; IMS no longer cross-refers to a non-existent Document 11 register; evidence preservation, ransom and retention rules added; EuroCredit Bureau corrected to independent controller; fictional providers used; Canadian (PIPEDA, Québec), UK and Swiss variants added; owner EPPO, adopted by Executive Management; example dates shifted by −12 months, Examples 1 and 3 recast as tabletop scenarios consistent with Document 18, Example 3.1. Integration pass: criminal-offence and inferred special-category data named among severity inputs; public-authority access at importers linked to the TIA record; Part B processor list aligned with Document 17; cross-reference to the master escalation matrix (Document 31) |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

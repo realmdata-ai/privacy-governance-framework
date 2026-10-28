@@ -2,17 +2,18 @@
 title: "Privacy Automation and Tooling Strategy"
 document_id: PGF-09
 level: 1
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level1/9. Privacy_Automation_Tooling_Strategy_Template and Example_ENG.docx.md; sha256 1c3571a8380110da7eafe23b00a0d83261f19b7f5605110e18c096a5d12eb852"
 ---
 
 # PGF-09 — Privacy Automation and Tooling Strategy
 
-*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -504,3 +505,4 @@ Version 1.0 (1 March 2026) was adopted by the Management Board; the Group DPO wa
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: product names, provider attributions and capability promises removed — Part B uses the fictional "Bank's privacy engineering platform (PEP, illustrative)" with capabilities stated only as validation-record statuses and documented limitations; document confirmed as the single connection point to tooling, with a strengthened neutrality test covering worked-example decisions and credentials, and a note that a separately published implementation profile is never a PGF dependency; principles added on validated capabilities only, human decision (no replacement of G-L, Art. 35(7), G-36, G-TIA or anonymity conclusions) and lawful processing for PET application; "threshold monitoring" replaced by monitoring of the lifetime privacy-loss ledger, acceptance expiries and anonymity re-assessments (thresholds set by Document 18); selection criteria extended — reproducibility for randomised mechanisms and seed protection, evidence-pack integrity (sealing, superseding not editing, minimisation, retention by the applicable rule including deletion, minimal record after purge only where lawful), security, exit and continuity, DORA ICT third-party requirements (Arts. 28–30, register of information, exit strategy; critical or important function terminology), AI components, testability; NIST SP 800-226 checklist for DP claims; synthetic data stated as not safe by default, with empirical attack testing per Document 18; k-anonymity and DP distinguished; pseudonymisation not anonymisation (C-413/23 P, EDPB Guidelines 01/2025); Section 8 rebuilt around a validation record, a documented repeatable conformance test suite with negative cases, independent validation and re-certification triggers; "required certification" replaced by defined triggers; ownership moved to the EPPO and adoption to Executive Management; Part B re-baselined as version 2.0 (20 October 2026) with targets instead of operating history; calqued terms ("perimeter", "closes the need") and the "EDPB criteria" attribution corrected; example dates shifted by −12 months; references added. Integration pass: "Consent Manager" renamed the consent management system (CMS), as in Document 13 |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

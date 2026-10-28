@@ -1,23 +1,19 @@
-# PGF 1.0.0-rc.2 — content freeze and publication gates
+# PGF 1.0.0 - publication package readiness
 
-**Content status:** author-conditioned rc.2 candidate, subject to the targeted checks recorded in [RC2_VALIDATION](../release/RC2_VALIDATION.md). The previous rc.1 remains in Git history. Structural validation is not a legal or product certification.
+## Closed rights and content items
 
-## Author permission
+- Written author publication permission received; the rc.2 condition on a simple business risk calculation is implemented.
+- Rights holder confirmed by the user: **REALM INVEO**.
+- Documentation licence issued: **CC BY 4.0**, with full legal code in the package.
+- Authors: **Alexey Neyman; Val Khvatov**, in that order.
+- The 32-component content is derived from the frozen rc.2 method; no new calculation or risk-tier change is made for PDF production.
 
-Written permission was received on 28 October 2026, conditional on keeping the business risk calculation simple (email point 4.3). [The approval summary](../AUTHOR_APPROVAL.md) records the scope without publishing private correspondence. The missing-author-GO item is closed. CC BY 4.0 for framework prose/templates is author-approved.
+## Validation scope
 
-## Condition implemented
+The structural check and the 174 targeted arithmetic/integration checks are repeated for the publication copy and editable supplement. They are not empirical calibration, product certification, a legal opinion or independent external peer review. Product deployments, numerical cases and stated confidence intervals remain illustrative unless actual evidence is supplied. Regulatory reference date: 26 October 2026.
 
-One integrated indicator → one likelihood band → the Document 8 matrix. Per-metric deviations and DPO dissent accompany the business decision; they do not automatically replace its tier. Missing selected inputs are incomplete, not a fabricated score. Legal prerequisites and adopted release constraints remain separate. PAMOLA is the named Part B implementation; Part A stays tool-neutral.
+## Publication steps
 
-The first synthetic example changes from a forced High to its calculated Medium (I = 0.656); redesign remains the recorded business response. Examples 2.2 and 3.2 map directly to High, without the former forced Near-certain likelihood. PSI residual High and FL residual Medium are unchanged. Removing the threat-control minimum-likelihood override also removes the rc.1 ambiguity concerning the FL S2 inherent value; its sum 6 maps to Medium.
+Prepare and visually check the master PDF, verify the final payload and metadata, then obtain the user's final operational instruction to publish/open the repository. DOI is assigned or reserved in Zenodo; no DOI is invented. No additional author or rights-holder approval is requested merely because those already-confirmed items were previously pending.
 
-## Limits and remaining publication work
-
-- The exact legal owner of the original source set and any additional permissions are not invented from the author's reply. Final licence issuance and script licensing require that record.
-- Complete the final publication PDF, visual review, deposit metadata and DOI registration. No DOI is asserted here.
-- Existing companions are rc.1 previews; their code/tests have not been migrated to validate rc.2. They do not add rc.2 requirements.
-- All product deployment, measurement and capability examples are illustrative unless actual evidence is supplied. Numeric calibration is not empirically validated; the ordinal index is not a probability.
-- The regulatory reference date remains 26 October 2026. This content change does not assert a new comprehensive legal review.
-
-No public visibility change, Zenodo deposit or ResearchGate upload is performed by the content freeze. Use the frozen commit and tag, not a moving branch name, for exact identification.
+Third-party laws/standards are referenced under their own terms, not relicensed. The Zenodo supplement excludes raw legacy files, private correspondence, internal coordination records, unreviewed companions and software utilities.

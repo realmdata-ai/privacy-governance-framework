@@ -2,17 +2,18 @@
 title: "Privacy Risk Register"
 document_id: PGF-22
 level: 2
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level2/22. Privacy-Risk-Register_ENG.docx.md; sha256 3d6cfc01549f91142bc4c656896b3fa56e99f4f70c65b5359ed027843fad418e"
 ---
 
 # PGF-22 — Privacy Risk Register
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -379,3 +380,4 @@ All conditional acceptances above that were decided before 23 October 2026 (the 
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: record extended with inherent, residual and target risk, treatment option (ISO 31000 concepts, bibliographic only), track (b) level reported separately, risk owner as the first-line Processing Owner, single decider, conditional acceptance with expiry, DPO advice and response, G-36 status (evaluated / met / consultation dates / supervisory-authority response), G-TIA status, DPIA/TIA/evidence-pack links and vendor-assessment source (Document 17); status taxonomy revised ("Open — decision pending", "In treatment", "Accepted — conditional (expiry)", "Accepted", "Not accepted — stopped or redesign", "Suspended", "Closed"); G-L failures and failed G-TIA outcomes excluded from acceptance; risk sources widened (vendor assessments, complaints and rights trends, supervisory-authority inquiries, regulatory change); ERM linkage aligned with ISO 31000 concepts, operational-risk mapping and no netting of track (a); calqued board terminology and DPO approval roles removed (DPO consulted; decisions per Document 8; Supervisory Board Risk Committee informed); Part B register recomputed from Documents 18–20: PRR-CS-TRAIN-01 Medium conditionally accepted; PRR-CS-INFER-01 and PRR-CS-LAUNCH-01 High pending the HBDI prior consultation and the Chief Risk Officer's decision; PRR-LLM-01 (replaces the two former records for the real-vendor case), PRR-PSI-01 (owner Head of Fraud Prevention, anti-fraud; review correction of 26 October 2026: re-assessed High with the Art. 10 severity modifier, G-36 met, Chief Risk Officer decision pending, sessions paused), PRR-CLOUD-01 (owner CIO) and PRR-FL-01 added or recomputed; two fully expanded records; cut-off for the earlier authority rules set at 23 October 2026 (Document 8, version 3.0, effective date); PSI residual leakage and LLM pending US-law verification shown; evidence packs in EVP-YYYY-NNNN format; example dates shifted by −12 months and fictional history re-baselined (version 2.0 of 20 October 2026); calqued terms replaced; references added |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

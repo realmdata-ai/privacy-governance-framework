@@ -2,11 +2,12 @@
 title: "Privacy Risk Assessment Methodology"
 document_id: PGF-18
 level: 2
-release_version: 1.0.0-rc.2
-status: release-candidate
+release_version: 1.0.0
+status: publication-ready
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
+licence: "CC BY 4.0"
+rights_holder: "REALM INVEO"
 source_provenance: "Derived from internal source set ver.2: Level2/18. Privacy-Risk-Assessment-Methodology_ENG.docx.md; sha256 b3b5fed18bf6da0ff1baf401f73036dd50b10ab0d543928dc89202547fc49991"
 ---
 
@@ -15,7 +16,7 @@ source_provenance: "Derived from internal source set ver.2: Level2/18. Privacy-R
 > **Legal uncertainty and business decision.** A disputed legal interpretation is recorded as a reasoned position with its assumptions, alternatives, consequences for the organisation, Legal/DPO advice and a review date. Uncertainty is not automatically a confirmed G-L failure. The designated Legal function records whether the proposed design has a supportable basis under the applicable rules; the authorised business role decides within those rules and its delegation. A confirmed missing prerequisite or prohibition remains a stop/redesign condition. The decision record presents benefits and consequences for individuals and the organisation together, without silently lowering the individual-harm score.
 
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Version 1.0.0 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -1866,3 +1867,4 @@ The GDPR is the baseline of this methodology. The rights-and-freedoms scenarios,
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: two-track model (rights and freedoms vs organisational consequences, never offset) with seven harm types; threat-based likelihood for identified processing replaces fixed "Near-certain" for archetype 4; PET Assessment Module with per-metric results, failure gates, baseline-aware normalisation and a disclosure indicator that is not called a probability; ZCAP remapped to inference; undefined in-house metric removed; DP statement requirements (privacy unit, adjacency, accountant, composition, output access); narrow use of the e^ε/(1+e^ε) bound; neutral description of δ; repeated-release rules with a lifetime ε/δ ledger (no calendar reset) and an optional operational cap; G-M2 defined by project-specific attack sets with baselines and uncertainty rules, and a labelled internal routing rule for reproduced failures; normalisation domains and orientation, non-negative weights and an INCOMPLETE outcome for missing results; contiguous severity intervals for weighted indices; G-M3 distinguishing the Art. 9 legal test from internal policy; aggregate/SDC checks; pseudonymisation separated from anonymisation; Recital 26, C-413/23 P and EDPB Guidelines 02/2026 (draft) cited; G-L, G-DPIA and G-36 added to the decision sequence and G-TIA branched by transfer mechanism; DPO role limited to advice; consent and controls removed from severity; all worked examples recomputed (Example 3.3 rewritten as a G-L blocked case; Examples 2.1-R, 4.2-R and 4.3 added); product names and unsupported capability claims removed; example dates shifted by −12 months; references added. Integration pass: status of Example 4.2-R stated (assessed and conditionally accepted; advertising-partner placement not in operation at 26 October 2026). Review correction: Part B Factor B special-category modifier aligned with Part A (Art. 9 and Art. 10 data); no worked example of this document processes Art. 10 data, so no example changes (the re-assessment of the anti-fraud matching is in Document 19) |
 | 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
+| 1.0.0 | 2026-10-28 | First publication package; substantive method unchanged from the rc.2 freeze; rights holder REALM INVEO confirmed and documentation licence CC BY 4.0 issued. |

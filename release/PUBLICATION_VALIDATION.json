@@ -1,0 +1,883 @@
+{
+  "scope": "rc.2 structural integration and selected worked-example arithmetic; not empirical, legal or product validation",
+  "passed": 174,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "band 0",
+      "passed": true,
+      "detail": "Low"
+    },
+    {
+      "check": "band 0.499999",
+      "passed": true,
+      "detail": "Low"
+    },
+    {
+      "check": "band 0.5",
+      "passed": true,
+      "detail": "Medium"
+    },
+    {
+      "check": "band 1",
+      "passed": true,
+      "detail": "Medium"
+    },
+    {
+      "check": "band 1.000001",
+      "passed": true,
+      "detail": "High"
+    },
+    {
+      "check": "band 2",
+      "passed": true,
+      "detail": "High"
+    },
+    {
+      "check": "band 2.000001",
+      "passed": true,
+      "detail": "Near-certain"
+    },
+    {
+      "check": "band None",
+      "passed": true,
+      "detail": "INCOMPLETE"
+    },
+    {
+      "check": "band nan",
+      "passed": true,
+      "detail": "INCOMPLETE"
+    },
+    {
+      "check": "band -1",
+      "passed": true,
+      "detail": "INCOMPLETE"
+    },
+    {
+      "check": "published calibration 0 ≤ I < 0.5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "published calibration 0.5 ≤ I ≤ 1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "published calibration 1.0 < I ≤ 2.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "published calibration I > 2.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "example 2.1 reported indicator exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "example 2.1 weighted arithmetic",
+      "passed": true,
+      "detail": "raw recomputation 0.65570175; published 0.656; weighted rows 4"
+    },
+    {
+      "check": "example 2.1 weights sum",
+      "passed": true,
+      "detail": "1.0"
+    },
+    {
+      "check": "example 2.1 direct band recorded",
+      "passed": true,
+      "detail": "Medium"
+    },
+    {
+      "check": "example 2.1-R reported indicator exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "example 2.1-R weighted arithmetic",
+      "passed": true,
+      "detail": "raw recomputation 0.53690476; published 0.537; weighted rows 4"
+    },
+    {
+      "check": "example 2.1-R weights sum",
+      "passed": true,
+      "detail": "1.0"
+    },
+    {
+      "check": "example 2.1-R direct band recorded",
+      "passed": true,
+      "detail": "Medium"
+    },
+    {
+      "check": "example 2.2 reported indicator exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "example 2.2 weighted arithmetic",
+      "passed": true,
+      "detail": "raw recomputation 1.44090909; published 1.441; weighted rows 4"
+    },
+    {
+      "check": "example 2.2 weights sum",
+      "passed": true,
+      "detail": "1.0"
+    },
+    {
+      "check": "example 2.2 direct band recorded",
+      "passed": true,
+      "detail": "High"
+    },
+    {
+      "check": "example 3.1 reported indicator exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "example 3.1 weighted arithmetic",
+      "passed": true,
+      "detail": "raw recomputation 0.36336000; published 0.363; weighted rows 7"
+    },
+    {
+      "check": "example 3.1 weights sum",
+      "passed": true,
+      "detail": "1.0001"
+    },
+    {
+      "check": "example 3.1 direct band recorded",
+      "passed": true,
+      "detail": "Low"
+    },
+    {
+      "check": "example 3.2 reported indicator exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "example 3.2 weighted arithmetic",
+      "passed": true,
+      "detail": "raw recomputation 1.20345333; published 1.203; weighted rows 7"
+    },
+    {
+      "check": "example 3.2 weights sum",
+      "passed": true,
+      "detail": "1.0001"
+    },
+    {
+      "check": "example 3.2 direct band recorded",
+      "passed": true,
+      "detail": "High"
+    },
+    {
+      "check": "example 3.3 reported indicator exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "example 3.3 weighted arithmetic",
+      "passed": true,
+      "detail": "raw recomputation 0.10001000; published 0.1; weighted rows 7"
+    },
+    {
+      "check": "example 3.3 weights sum",
+      "passed": true,
+      "detail": "1.0001"
+    },
+    {
+      "check": "threshold-deviation counterexample remains Low",
+      "passed": true,
+      "detail": "I=0.08; deviating metric normalised to 8"
+    },
+    {
+      "check": "no new nonlinear calibration",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DPO dissent recorded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "missing selected input explicit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "legal block retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "business record includes both tracks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Doc 19 first generator tied out",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PSI residual High preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FL residual Medium preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "00_Framework_Overview_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "00_Framework_Overview_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01_Privacy_Policy_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01_Privacy_Policy_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01_Privacy_Policy_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02_Privacy_Governance_Charter_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02_Privacy_Governance_Charter_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02_Privacy_Governance_Charter_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03_Privacy_Interface_Integration_Model_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03_Privacy_Interface_Integration_Model_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03_Privacy_Interface_Integration_Model_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "04_Privacy_Organisational_Design_Strategy_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "04_Privacy_Organisational_Design_Strategy_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "04_Privacy_Organisational_Design_Strategy_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "05_Privacy_RACI_Matrix_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "05_Privacy_RACI_Matrix_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "05_Privacy_RACI_Matrix_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "06_Privacy_Role_Competency_Framework_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "06_Privacy_Role_Competency_Framework_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "06_Privacy_Role_Competency_Framework_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "07_Regulatory_Applicability_Matrix_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "07_Regulatory_Applicability_Matrix_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "07_Regulatory_Applicability_Matrix_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "08_Privacy_Risk_Appetite_Statement_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "08_Privacy_Risk_Appetite_Statement_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "08_Privacy_Risk_Appetite_Statement_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "09_Privacy_Automation_and_Tooling_Strategy_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "09_Privacy_Automation_and_Tooling_Strategy_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "09_Privacy_Automation_and_Tooling_Strategy_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "10_Data_Classification_Policy_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "10_Data_Classification_Policy_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "10_Data_Classification_Policy_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "11_Data_Retention_and_Disposal_Policy_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "11_Data_Retention_and_Disposal_Policy_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "11_Data_Retention_and_Disposal_Policy_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12_Cross_Border_Data_Transfer_Policy_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12_Cross_Border_Data_Transfer_Policy_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12_Cross_Border_Data_Transfer_Policy_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "13_Consent_Management_Policy_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "13_Consent_Management_Policy_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "13_Consent_Management_Policy_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "14_Data_Breach_Response_Policy_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "14_Data_Breach_Response_Policy_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "14_Data_Breach_Response_Policy_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "15_Data_Subject_Rights_Policy_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "15_Data_Subject_Rights_Policy_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "15_Data_Subject_Rights_Policy_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "16_Privacy_by_Design_and_by_Default_Policy_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "16_Privacy_by_Design_and_by_Default_Policy_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "16_Privacy_by_Design_and_by_Default_Policy_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "17_Vendor_and_Third_Party_Privacy_Risk_Policy_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "17_Vendor_and_Third_Party_Privacy_Risk_Policy_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "17_Vendor_and_Third_Party_Privacy_Risk_Policy_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18_Privacy_Risk_Assessment_Methodology_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18_Privacy_Risk_Assessment_Methodology_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18_Privacy_Risk_Assessment_Methodology_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "19_DPIA_Methodology_and_Template_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "19_DPIA_Methodology_and_Template_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "19_DPIA_Methodology_and_Template_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "20_Transfer_Impact_Assessment_Methodology_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "20_Transfer_Impact_Assessment_Methodology_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "20_Transfer_Impact_Assessment_Methodology_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "21_Record_of_Processing_Activities_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "21_Record_of_Processing_Activities_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "21_Record_of_Processing_Activities_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "22_Privacy_Risk_Register_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "22_Privacy_Risk_Register_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "22_Privacy_Risk_Register_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "23_Data_Inventory_and_Data_Flow_Maps_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "23_Data_Inventory_and_Data_Flow_Maps_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "23_Data_Inventory_and_Data_Flow_Maps_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "24_Privacy_Governance_Process_Map_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "24_Privacy_Governance_Process_Map_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "24_Privacy_Governance_Process_Map_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "25_Process_Owner_Register_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "25_Process_Owner_Register_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "25_Process_Owner_Register_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "26_Operational_Role_and_Staffing_Model_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "26_Operational_Role_and_Staffing_Model_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "26_Operational_Role_and_Staffing_Model_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "27_Privacy_Audit_and_Monitoring_Programme_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "27_Privacy_Audit_and_Monitoring_Programme_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "27_Privacy_Audit_and_Monitoring_Programme_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "28_Privacy_Metrics_Dashboard_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "28_Privacy_Metrics_Dashboard_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "28_Privacy_Metrics_Dashboard_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "29_Policy_Review_Cycle_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "29_Policy_Review_Cycle_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "29_Policy_Review_Cycle_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "30_Privacy_Awareness_and_Training_Programme_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "30_Privacy_Awareness_and_Training_Programme_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "30_Privacy_Awareness_and_Training_Programme_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "31_Governance_Reporting_Template_EN.md no retired algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "31_Governance_Reporting_Template_EN.md tool-neutral template",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "31_Governance_Reporting_Template_EN.md no malformed table row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-00 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-01 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-02 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-03 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-04 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-05 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-06 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-07 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-08 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-09 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-10 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-11 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-12 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-13 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-14 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-15 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-16 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-17 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-18 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-19 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-20 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-21 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-22 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-23 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-24 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-24 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-25 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-26 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-27 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-28 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-29 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-30 manifest hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PGF-31 manifest hash",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "tested_release_version": "1.0.0",
+  "substantive_method": "unchanged from rc.2",
+  "pdf_pages": 32,
+  "pdf_visual_review": "32 rendered pages reviewed; latest render pixel-identical to reviewed edition",
+  "rights_holder": "REALM INVEO",
+  "documentation_license": "CC-BY-4.0"
+}
