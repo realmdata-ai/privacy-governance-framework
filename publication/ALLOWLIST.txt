@@ -38,3 +38,6 @@ FREEZE.json
 release/RC2_VALIDATION.md
 release/RC2_VALIDATION.json
 tools/check_rc2.py
+
+# Deterministic text line endings for hash reproducibility
+.gitattributes

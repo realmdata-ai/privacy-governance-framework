@@ -23,7 +23,7 @@ The configured integrated score maps directly to a risk band and matrix result. 
 
 `python tools/validate_release.py --quiet` checks structure and cross-references. `python tools/check_rc2.py` checks the rc.2 decision semantics, example arithmetic and integration. These checks do not prove legal compliance, anonymity, product capabilities or empirical calibration.
 
-The separately versioned [companion previews](companions/README.md) remain tied to rc.1 and are not rc.2 conformance evidence.
+The separately versioned [companion previews](https://github.com/realmdata-ai/privacy-governance-framework/tree/823303d892ec0cb4e08e6860ca135ef5f15648da/companions) remain tied to rc.1 and are not rc.2 conformance evidence.
 
 ## Licence and citation
 
