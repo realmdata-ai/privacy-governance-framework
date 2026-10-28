@@ -2,18 +2,18 @@
 title: "Privacy Governance Process Map"
 document_id: PGF-24
 level: 3
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level3/24. Process-Map-Template_ENG.html; sha256 a1529a6b18cffdebb5fdc33d181b398eaab04f0e456ab5d96a2928867ecba51a; and Level3/24. Process-Map-Example-PanEuropean_ENG.html; sha256 ac69df4ec90336b89c6f748d934f96b3873343fb5c2ffda4c21c571f66c2a52b"
 ---
 # PGF-24 — Privacy Governance Process Map
 
-*Privacy Governance Framework (PGF) · Level 3 — Process Model · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 3 — Process Model · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # About This Document
 
@@ -1034,9 +1034,9 @@ flowchart TD
     I1 --> F5
     X3 -->|"Yes"| F5["Apply PET where planned<br/>Privacy Engineers R · POL A"]
     F5 --> F6["Calculate residual risk per scenario (Document 18)<br/>POL A · DPO C* · Legal, CISO C"]
-    F6 --> X4{"PET module failed for a release?"}
-    X4 -->|"Yes: not available for acceptance"| E1
-    X4 -->|"No"| X5{"DPIA performed?"}
+    F6 --> X4{"Selected inputs complete and valid?"}
+    X4 -->|"No: complete evidence / correct inputs"| E1
+    X4 -->|"Yes: record observations; keep computed tier"| X5{"DPIA performed?"}
     X5 -->|"No"| F9
     X5 -->|"Yes"| F7["DPO advice on the DPIA (step 4.6)"]
     F7 --> F8["G-36 test (step 4.7)<br/>Legal A · DPO C*"]
@@ -1072,9 +1072,9 @@ flowchart TD
 | 14 | I | No: interface to C1; the request waits and resumes at step 15 on the C1 return event "project registered" | — |
 | 15 | F | Apply privacy-enhancing techniques where planned | Privacy Engineer(s) (R); Privacy Operations Lead (A); CISO, IT (C) |
 | 16 | F | Calculate residual risk per harm scenario (Document 18; DPIA step 4.4) and record measures (step 4.5); record track (b) separately | Privacy Officer(s), Privacy Engineer(s) (R); Privacy Operations Lead (A); DPO (C\*); Legal, CISO (C) |
-| 17 | X | PET Assessment Module failed for a release? | — |
-| 18 | E | Yes: release not available for acceptance → redesign (step 2) | — |
-| 19 | E | No: residual tier per scenario and track (a) tier available | — |
+| 17 | X | Selected calculation inputs complete and valid? | — |
+| 18 | E | No: complete evidence or correct the configuration; no fabricated risk tier | — |
+| 19 | E | Yes: integrated tier and individual observations available; record DPO advice and the business response | — |
 | 20 | F | DPO advice on the DPIA (step 4.6) — on every DPIA, whatever the tier; views of data subjects where appropriate (Art. 35(9)) | DPO (R/A) |
 | 21 | F | G-36 test (step 4.7): would high risk remain in the absence of further mitigating measures? Record the legal conclusion with reasons | Legal (A); DPO (C\*) |
 | 22 | X | Art. 36(1) test met (or a labelled internal policy routes the case to consultation)? | — |
@@ -2139,6 +2139,9 @@ This document was adopted by ***[Executive Management]*** on ***[date]***. Docum
 
 # Part B — Worked Example: PanEuropean Bank AG
 
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
+
 **PanEuropean Bank AG — Privacy Governance Process Map**
 
 *Effective date: 20 October 2026 · Version: 2.0 · Document owner: Chief Privacy Officer · Adopted by: Management Board*
@@ -2285,13 +2288,13 @@ The Part A cards apply with the following PanEuropean specifics. Metric targets 
 
 | Case | G-L | G-DPIA | Calculation (Document 18) | G-36 | Decision (single decider) | Status at 26 October 2026 |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| CS — model training on synthetic data (DPIA-CS-TRAIN-01) | Passed | DPIA required | Project 2, Example 2.1-R: PET module PASS (indicator 0.537) → likelihood Medium × severity Significant → **Medium** (the first generator, Example 2.1, failed the module and was not used) | Evaluated; test not met (reasons recorded) | Head of Credit Decisions, 25 March 2026, with Group DPO advice; conditional, expiry 25 March 2027 or next calibration; CPO concurrence applies on re-assessment under Document 8 v3.0 | Accepted (conditional); EVP-2026-0012 |
+| CS — model training on synthetic data (DPIA-CS-TRAIN-01) | Passed | DPIA required | Project 2, Example 2.1-R: PET assessment complete (indicator 0.537) → likelihood Medium × severity Significant → **Medium** (the first generator, Example 2.1, was held for redesign and was not used) | Evaluated; test not met (reasons recorded) | Head of Credit Decisions, 25 March 2026, with Group DPO advice; conditional, expiry 25 March 2027 or next calibration; CPO concurrence applies on re-assessment under Document 8 v3.0 | Accepted (conditional); EVP-2026-0012 |
 | CS — production scoring (DPIA-CS-INFER-01, DPIA-CS-LAUNCH-01) | Passed 31 August 2026 (Art. 6(1)(b); Art. 22(2)(a) necessity record of 28 August 2026: automated decisions only for clear approvals and refusals; borderline scores decided by a credit officer) | DPIA required (Art. 35(3)(a)); C2.1: high-risk AI, Annex III point 5(b) | Project 4, Example 4.3: residual **High** (inherent Critical); LAUNCH-01 inherits High from INFER-01 | **Met** — General Counsel, 10 September 2026, Group DPO advice 9 September 2026; Management Board decision to consult; submitted to the HBDI 15 September 2026; HBDI information request 6 October 2026, answered 13 October 2026; written advice awaited | CRO decision **pending**, to follow the consultation step; Supervisory Board Risk Committee informed 23 October 2026 | Consultation **pending**; production launch **planned** for 1 February 2027; automated decisions not in production; EVP-2026-0047, EVP-2026-0048 |
 | LLM — customer-service assistant (DPIA-LLM-01 v2.0, 18 June 2026) | Passed (special-category content excluded by a fail-closed detector; no Art. 9(2) condition for the AI path) | DPIA required | Track (a) **Medium** (inherent High); track (b) Moderate | Evaluated; not met | Historical: Head of Customer Service, 25 June 2026; Group DPO advice partly followed (quality-assurance sample 3% instead of the advised 5%; reasons recorded); expiry 25 June 2027 | Current (26 October 2026): **not in effect** — AI path suspended because TIA-LLM-01 is on G-TIA hold; customer service human-only in the EU channel; EVP-2026-0029; C4 trace below |
 | PSI — partner-bank anti-fraud matching (DPIA-PSI-01) | Passed (Art. 10: authorisation by applicable national law permitting fraud-prevention processing by credit institutions, with safeguards, recorded by Legal & Compliance) | DPIA required | Track (a) **High** (inherent High) — re-assessed 26 October 2026 with the Art. 10 severity modifier (S1 severity 6 → 8, Significant; High × Significant); the former Medium of 25 March 2026 is superseded | Re-evaluated 26 October 2026 — **met** (General Counsel, Group DPO advice of 26 October 2026); historical: not met (24 March 2026) | CRO decision **pending**, after the prior-consultation step; historical: Head of Fraud Prevention, 25 March 2026 (superseded) | Sessions **paused** since 26 October 2026; HBDI consultation to precede any further session (submission planned); EVP-2026-0018; C4 trace below |
-| FL — anti-fraud consortium (DPIA-FL-01) | Passed (Art. 10 not engaged on the specified inputs — boundary recorded 26 October 2026); C2.3: Art. 26 arrangement | DPIA required | S1 PET module PASS (ε 2.6 at δ 1×10⁻⁹ over all rounds; secure aggregation validated; membership-inference AUC 0.53; gradient reconstruction "not applicable for observers in scope" by validated control) → Low × Significant = Medium; S2 Medium; track (a) **Medium** | Evaluated; not met | Head of Fraud Prevention, 15 May 2026; expiry 15 May 2027 | Accepted; EVP-2026-0041 |
+| FL — anti-fraud consortium (DPIA-FL-01) | Passed (Art. 10 not engaged on the specified inputs — boundary recorded 26 October 2026); C2.3: Art. 26 arrangement | DPIA required | S1 PET assessment complete (ε 2.6 at δ 1×10⁻⁹ over all rounds; secure aggregation validated; membership-inference AUC 0.53; gradient reconstruction "not applicable for observers in scope" by validated control) → Low × Significant = Medium; S2 Medium; track (a) **Medium** | Evaluated; not met | Head of Fraud Prevention, 15 May 2026; expiry 15 May 2027 | Accepted; EVP-2026-0041 |
 | CLOUD — remote technical support | Passed (C4 required) | No DPIA (triage: one criterion) | **Medium**; no G-36 (no DPIA) | — | CIO, 20 March 2026; expiry 20 March 2027 | Accepted; EVP-2026-0008 |
-| OPEN — open statistics release | Example 3.1: passed; Example 3.3: **G-L failed** (identifiable health status, no Art. 9(2) condition) | — | Example 3.1: PET module PASS, Low × Significant = **Medium**; anonymity conclusion by the Processing Owner on Legal & Compliance's assessment, Group DPO advice. Example 3.3: no tier (blocked) | — | Example 3.1: Processing Owner with CPO concurrence (from Document 8 v3.0) | Example 3.1 released; Example 3.3 blocked |
+| OPEN — open statistics release | Example 3.1: passed; Example 3.3: **G-L failed** (identifiable health status, no Art. 9(2) condition) | — | Example 3.1: PET assessment complete, Low × Significant = **Medium**; anonymity conclusion by the Processing Owner on Legal & Compliance's assessment, Group DPO advice. Example 3.3: no tier (blocked) | — | Example 3.1: Processing Owner with CPO concurrence (from Document 8 v3.0) | Example 3.1 released; Example 3.3 blocked |
 
 Decisions taken before 20 October 2026 were taken without CPO concurrence because the CPO post did not exist; CPO concurrence for Medium applies from Document 8 v3.0 (effective 23 October 2026), including on re-assessment at expiry.
 
@@ -2368,3 +2371,4 @@ This map is reviewed under the Policy Review Cycle (Document 29) and whenever Do
 | Release | Date | Summary |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown created from the two internal ver.2 HTML files (Template and PanEuropean Example; the Example was a name-substituted copy of the Template and is now Part B as an instantiation with owners, specifics and worked traces); groupings renamed "process groups"; APQC PCF "Level 0" claim softened to "inspired by the PCF hierarchy"; full Level 0 / Level 1 / Level 2 model kept, with Level 1 chains and the C2, C3, C4 and S7 flows as Mermaid diagrams and all EPCs as tables with AND/OR gateways, interfaces and timers; every process re-allocated to the Document 5 role model and sub-rows (G2.1/G2.2, G6.1/G6.2a/G6.2b, G8.1/G8.2, S2.1/S2.2, S6.1/S6.2, S7.1–S7.5, S8.1) — DPO removed as owner, approver, chair or decider; "owner badge" replaced by the Accountable role; C2 corrected to G-L → G-DPIA → calculation → G-36 (evaluated for every DPIA; consultation of the competent SA whenever the test is met) → acceptance by a single decider; C4 corrected to transfer test first, then Art. 45 / 46 / 49 branches, failed G-TIA → no start or suspension under SCC Clause 14(f), SA information only on termination under Clause 16(c) by the exporter; S7 corrected to parallel containment and qualification, every breach recorded, separate Art. 33 and Art. 34 decisions, 72-hour timer, DORA branch with late classification, processor extension; C3 corrected to the Art. 12(6) information loop, Art. 16 rectification, Art. 19, Art. 12(3) extension and Art. 12(4) information, request log instead of RoPA; consent records in the consent system instead of the RoPA; sub-processes added: G4.1 regulator engagement, G4.2 authority access requests, G5.1 privacy notices, C2.1 AI Act / FRIA interface, C2.2 children's data, C2.3 LIA and joint-controller arrangements, S6.3 M&A; S2 anonymisation branch and S6 Art. 28 contract gate added; metrics reworked (statutory deadlines per case with denominators; no DPO-performance metrics; no "regulator clearance" metrics); BaFin no longer appears as a GDPR authority; vendor product names replaced by the Bank's privacy engineering platform (PEP, illustrative); Part B aligned with the example registry (CS consultation pending, launch planned 1 February 2027; LLM, CLOUD, PSI, FL facts and deciders); international adaptation added. Integration pass: Document 5 rows for G4.2, G5.1, C2.2 and S6.3 now cited; Part B Processing Owner list aligned with Document 25, Section 10; RoPA and inventory identifiers (RoPA-FL-01, RoPA-CSV-01, DI-LLM-01, DI-FL-01) named; C5 card aligned with Document 13 (CMS operated by IT Management; Processing Owner per purpose) and S2 with the monthly disposal run of Document 11; Document 28 metric identifiers (Section 6.10) cited in every card. Review correction: PSI traces updated after the re-assessment of DPIA-PSI-01 on 26 October 2026 (High; G-36 met; CRO decision pending; sessions paused). |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

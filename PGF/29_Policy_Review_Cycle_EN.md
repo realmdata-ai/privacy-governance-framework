@@ -2,19 +2,19 @@
 title: "Policy Review Cycle"
 document_id: PGF-29
 level: 4
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level4/29. Policy-Review-Cycle_ENG.docx.md; sha256 a0e69f0a0106328e0928975418fff472e6e6af794232f6e2cb227dee9afc1714"
 ---
 
 # PGF-29 — Policy Review Cycle
 
-*Privacy Governance Framework (PGF) · Level 4 — Control, Reporting and Improvement · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 4 — Control, Reporting and Improvement · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # **About This Document**
 
@@ -190,6 +190,9 @@ This document was adopted by ***[Executive Management]*** on ***[date]***. Docum
 > **Guidance.** Because this document sets the delegation rules for all other documents, it is adopted by the body that delegates — Executive Management — and not by the EPPO or the DPO.
 # **Part B — Worked Example (fictional)**
 
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
+
 ***PanEuropean Bank AG — Policy Review Cycle***
 
 Effective date: 23 October 2026 · Version: 2.0 · Document owner: Chief Privacy Officer (EPPO) · Responsible: Privacy Operations Lead · Adopted by: Management Board (20 October 2026)
@@ -342,3 +345,4 @@ Version 2.0 was adopted by the Management Board of PanEuropean Bank AG on 20 Oct
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: title block, Part A / Part B headings, references and history added; owner changed to the EPPO; approval by Executive Management or its delegate (Management Board in Part B), with Governing Body consent only for reserved matters (in Part B exactly three); the DPO advises (mandatory advice) and no longer approves non-material changes or decides materiality — disagreements decided by Executive Management, DPO escalation preserved; Supervisory Board approval of operational documents and its delegation to the DPO removed; documents defining the DPO's mandate adopted by Executive Management after consulting the DPO; ad hoc triggers extended (supervisory findings, CJEU judgments, adopted guidance, DORA Art. 6(5) triggers, pending changes of Document 7 — Digital Omnibus, Bill C-36, AI Act dates after the AI Omnibus — treated as impact-assessment triggers, not as law); exception register added; document-control basics added (adoption, effective and publication dates, withdrawal, staff communication); translation-provenance reference removed — the English version is authoritative and translation discrepancies are corrected visibly; "age of consent" replaced by the Art. 8(1) age of digital consent; process code corrected to G5 and the Document 24 reference to Part A, Section 4.6; document titles aligned; risk-tiered cadence allowed with guidance; escalation addressees and deadlines per the master escalation matrix (Document 31, Section 6.4); Part B dates shifted by −12 months, the "draft AI Act delay" example replaced by the AI Omnibus in force since 27 July 2026, Charter version history aligned with Document 2; re-baseline version 2.0 adopted by the Management Board on 20 October 2026; UK spelling |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

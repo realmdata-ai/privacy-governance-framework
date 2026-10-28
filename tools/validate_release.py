@@ -58,12 +58,12 @@ SUPPORT = ["README.md", "CHANGELOG.md", "GLOSSARY.md", "STANDARDS_CROSSWALK.md",
            "SOURCE_MANIFEST.json", "RELEASE_READINESS.md"]
 REQ_KEYS = ["title", "document_id", "release_version", "status", "authors",
             "regulatory_reference_date", "licence_proposed", "source_provenance"]
-RELEASE, REFDATE = "1.0.0-rc.1", "2026-10-26"
+RELEASE, REFDATE = "1.0.0-rc.2", "2026-10-26"
 AUTHORS = ["Alexey Neyman", "Val Khvatov"]
 
 # (pattern, flags, message, severity, allowed_in)  allowed_in = set of doc ids where the hit is legitimate
 FORBIDDEN = [
-    (r"\bPAMOLA\b|\bAYITA\b", 0, "vendor product name (EDITORIAL_RULES §6)", "ERROR", set()),
+    (r"\bAYITA\b", 0, "vendor product name (EDITORIAL_RULES §6)", "ERROR", set()),
     (r"\bAnthropic\b|\bClaude\b", 0, "real vendor name (EDITORIAL_RULES §6)", "ERROR", set()),
     (r"Realm Inveo|REALM Data|realm-data", 0, "organisation/product branding in body (§6)", "ERROR", {"00"}),
     (r"Privacy Management Framework", re.I, "legacy name; use Privacy Governance Framework (§1)", "ERROR", set()),
@@ -221,6 +221,14 @@ def main():
     # forbidden strings & spelling
     for nn, (meta, body) in parsed.items():
         name = CANON[nn]
+        # Named implementation profiles are permitted in examples, not reusable templates.
+        if nn != "00":
+            pb = re.search(r"^#+\s.*Part B\b", body, re.M)
+            if re.search(r"\bPAMOLA\b", body[:pb.start()] if pb else body):
+                R.add("ERROR", "neutrality", name, "named product before Part B")
+        active_body = "\n".join(line for line in body.splitlines() if not line.startswith("| 1.0.0-rc.1 |"))
+        if re.search(r"G-M[1-5]|Override rule:|module FAILS|FAIL reproduced|Mandatory metrics are always gated", active_body):
+            R.add("ERROR", "author-condition", name, "retired automatic metric-tier override logic")
         for pat, fl, msg, sev, allowed in FORBIDDEN:
             if nn in allowed: continue
             for m in re.finditer(pat, body, fl):

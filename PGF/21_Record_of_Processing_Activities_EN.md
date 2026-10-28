@@ -2,19 +2,19 @@
 title: "Record of Processing Activities"
 document_id: PGF-21
 level: 2
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level2/21. Record-of-Processing-Activities_ENG.docx.md; sha256 24fdaa8d3b0121d9c9479e944e2f3acce293c29051f07f80babe66b6ff3e5f5a"
 ---
 
 # PGF-21 — Record of Processing Activities
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # **About This Document**
 
@@ -204,6 +204,9 @@ This document is reviewed under the Policy Review Cycle (Document 29) and whenev
 This document is adopted by ***[Executive Management]*** on ***[date]***. Document owner: ***[EPPO]***.
 
 # **Part B — Worked Example (fictional): PanEuropean Bank AG**
+
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
 
 **PanEuropean Bank AG — Record of Processing Activities (RoPA)**
 
@@ -418,3 +421,4 @@ This record carries the Art. 9 legal conclusion for the human-only customer-serv
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: title block and structure per the editorial rules; Art. 30(1) fields mapped one by one, including the Art. 27 representative, recipients in third countries and international organisations, and the documentation of suitable safeguards for Art. 49(1) second-subparagraph transfers; Art. 30(2) processor record added as a variant section (representative, DPO, sub-processors, breach notification to the controller); Art. 30(3) written/electronic form; Art. 30(5) wording corrected ("likely to result in a risk") and pending omnibus changes recorded as proposals only; supplementary fields (Processing Owner, lawful basis and conditions, AI Act role, transparency, G-DPIA outcome, residual-risk decision by reference, status) added; recording no longer depends on DPO approval, and the DPO is informed and monitors; Processing Owners notify changes and attest annually; consistency check with the Data Inventory; review decoupled from tool re-certification; archived records retained as accountability records; demarcation with the Data Inventory (Document 23 authoritative on location, access and flows; the RoPA the single list of transfers at process level); Part B rebuilt: credit-scoring records aligned with the DPIAs (DPIA-CS-TRAIN-01 Medium, decided by the Head of Credit Decisions; DPIA-CS-INFER-01 and DPIA-CS-LAUNCH-01 High, HBDI consultation pending, launch planned, not in production; clear cases automated and borderline cases decided by a credit officer); EuroCredit Bureau recorded as an independent controller, not a joint controller; the former real-vendor LLM record replaced by RoPA-LLM-01 (Example AI Provider Inc.; G-TIA hold; AI path suspended; human-only operation) and a human-only customer-service record carrying the Art. 9 conclusion; PSI purpose corrected to anti-fraud matching with no output to the partner; federated-learning record added (Art. 26; no transfer; EVP-2026-0041); "no DPIA required" for AML screening and video surveillance replaced by the G-DPIA triage outcome; HR record with BDSG §26 and Art. 9(2)(b); consent-based records aligned with Document 13; card payments with the Art. 49 derogation route; processor record for group payment services; hosting of the remote-support case corrected (EEA hosting, remote access from India); evidence packs in EVP-YYYY-NNNN format; product and vendor names removed; adoption moved to the Management Board; example dates shifted by −12 months; normative basis and international adaptation added. Review correction: RoPA-PSI-01 states the Art. 10 basis and the status after the re-assessment of 26 October 2026 (High; sessions paused) |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

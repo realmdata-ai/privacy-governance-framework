@@ -1,11 +1,10 @@
-# DRAFT citation metadata for PGF 1.0.0-rc.1.
-# Not final: no DOI, ORCID or affiliation is asserted until confirmed by the authors (see publication/RIGHTS_CHECKLIST.md).
+# DRAFT citation metadata for PGF 1.0.0-rc.2.
+# Not final: no DOI, ORCID or affiliation is asserted until confirmed by the authors (see LICENCE_PROPOSED.md).
 cff-version: 1.2.0
 message: "If you use the Privacy Governance Framework, please cite it as below."
 type: report
 title: "Privacy Governance Framework (PGF): A Four-Level Model for Enterprise Privacy Governance"
-version: "1.0.0-rc.1"
-date-released: "2026-10-26"
+version: "1.0.0-rc.2"
 authors:
   - family-names: "Neyman"
     given-names: "Alexey"
@@ -31,3 +30,5 @@ keywords:
 # license: CC-BY-4.0   # proposed; enable only after rights-holder confirmation
 # doi:                  # add the real Zenodo DOI only after it exists
 # repository-code:      # add the exact GitHub release/tag URL when the repository exists
+
+# Author-conditioned content freeze: 2026-10-28. DOI and final rights record pending.

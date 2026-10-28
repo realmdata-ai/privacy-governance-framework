@@ -2,19 +2,19 @@
 title: "Process Owner Register"
 document_id: PGF-25
 level: 3
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level3/25. Process-Owner-Register_ENG.docx.md; sha256 3305c5e7eeaadc1a3b9cffdd4a45d04bf0ede07b3573f01b9c2c22a6d9cf3217"
 ---
 
 # PGF-25 — Process Owner Register
 
-*Privacy Governance Framework (PGF) · Level 3 — Process Model · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 3 — Process Model · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # **About This Document**
 
@@ -230,6 +230,9 @@ This document is adopted by ***[Executive Management]*** on ***[date]***. Docume
 
 # **Part B — Worked Example (fictional): PanEuropean Bank AG**
 
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
+
 **PanEuropean Bank AG — Process Owner Register**
 
 *Effective date: 20 October 2026 · Version: 3.0 · Document owner: Chief Privacy Officer · Adopted by: Management Board · Generated from: RACI Matrix version 4.0 (20 October 2026) and Privacy Governance Process Map version 2.0 (20 October 2026)*
@@ -416,3 +419,4 @@ Version 3.0 of this document was adopted by the Management Board of PanEuropean 
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: title block and structure per the editorial rules (real Part A and Part B headings); register regenerated as an exact projection of the RACI Matrix (Document 5) for every process and sub-process of the process map (Document 24), with Document 24 names and codes — sub-rows G2.1/G2.2, G6.1/G6.2a/G6.2b, G8.1/G8.2, S2.1/S2.2, S6.1/S6.2, S7.1–S7.5, S8.1 and sub-processes G4.1, G4.2, G5.1, C2.1, C2.2, C2.3, S6.3 added, plus the statutory activities; columns R, A, D, C\* and escalation, with source versions recorded; single "A" per row and no separate "owner badge"; C2 and C4 shown activity by activity; DPO "A" only for its own statutory tasks (G4.1(b), G6.1, G8.2, C3 complaints, S8.1) — never for residual-risk, transfer or launch decisions; EPPO "A" for programme rows; Internal Audit "A" for assurance, with the Audit Committee approving the audit charter and plan; the former "prior consultation with BaFin" for transfers removed (a failed G-TIA means no transfer; BaFin is never the GDPR authority — DORA reporting is a separate track); "Supervision" replaced by named bodies; G9 designation by Executive Management on the EPPO's proposal, constitutive (no self-appointment, no automatic mandate); mandate-holder register extended to every processing area in the RoPA, including the Head of Insurance Distribution (PPI) and the Head of Compliance (AML screening); Art. 38(5) confidentiality safeguard; DPO contact for escalation; product names removed; adoption moved to Executive Management; example dates shifted by −12 months and the fictional history re-baselined; normative basis and international adaptation added |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

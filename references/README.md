@@ -2,7 +2,7 @@
 
 A maintained entry point to laws, court decisions, regulator guidance and engineering standards relevant to the **Privacy Governance Framework (PGF)**.
 
-**Catalogue version:** 0.1.0 · **Snapshot:** 26 October 2026 · **Language:** English  
+**Catalogue version:** 0.2.0 · **Snapshot:** 26 October 2026 · **Language:** English
 **Repository:** [realmdata-ai/privacy-governance-framework](https://github.com/realmdata-ai/privacy-governance-framework)
 
 - [Browse the curated catalogue](CATALOGUE.md).

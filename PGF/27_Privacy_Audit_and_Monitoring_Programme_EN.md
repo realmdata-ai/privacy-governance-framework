@@ -2,19 +2,19 @@
 title: "Privacy Audit and Monitoring Programme"
 document_id: PGF-27
 level: 4
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level4/27. Privacy-Audit-Monitoring-Programme_ENG.docx.md; sha256 f0a80f0187e2e575a194ee29be4c304158d944998b08bd9f46ab4f60f2e8f0e7"
 ---
 
 # PGF-27 — Privacy Audit and Monitoring Programme
 
-*Privacy Governance Framework (PGF) · Level 4 — Control, Reporting and Improvement · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 4 — Control, Reporting and Improvement · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # **About This Document**
 
@@ -80,7 +80,7 @@ Unlike the Policy Review Cycle (Document 29), which asks whether the model is st
   * ***[legitimate-interest assessments and Art. 26 joint-controller arrangements (C2.3)]***
   * ***[proof of consent in the consent system (Document 13)]***
   * ***[the G-L record and the G-36 conclusion for every DPIA, the DPO's advice and the decider's reasons where it was not followed (Documents 18, 19)]***
-  * ***[PET-module records: individual results for each mandatory metric and failure gate (Document 18); the cumulative disclosure-budget ledger (Document 8)]***
+  * ***[PET-module records: individual results for each mandatory metric and review observation (Document 18); the cumulative disclosure-budget ledger (Document 8)]***
   * ***[transfer records: mechanism, TIA and G-TIA status, suspensions and holds (Documents 12, 20)]***
   * ***[the validation record of the automation tooling (Document 9, Section 8.1)]***
 * Does not absorb other assurance loops (financial audit, information-security audit, AML/CFT compliance) but is coordinated with them through Internal Audit's plan
@@ -232,6 +232,9 @@ This document is reviewed at least ***[annually]*** under the Policy Review Cycl
 This document was adopted by ***[Executive Management]*** on ***[date]***; the internal-audit elements were approved by the ***[Audit Committee]*** on ***[date]***. Document owner: ***[EPPO]***.
 # **Part B — Worked Example (fictional)**
 
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
+
 ***PanEuropean Bank AG — Privacy Audit and Monitoring Programme***
 
 Effective date: 23 October 2026 · Version: 2.0 · Document owner: Chief Privacy Officer (programme-side provisions) · Monitoring plan (Section 6.1): Group DPO · Internal-audit elements (Section 6.2): Chief Audit Executive, approved by the Audit Committee of the Supervisory Board · Adopted by: Management Board (20 October 2026)
@@ -269,7 +272,7 @@ The first Group Internal Audit privacy engagement is scheduled for Q4 2026, afte
 * Independence: Group Internal Audit reports functionally to the Audit Committee; Nordbrücke is engaged and directed by the Chief Audit Executive; the Group DPO monitors without instructions on how to perform its tasks and does not issue the independent opinion
 * Risk orientation: credit scoring (automated credit decisions, PRR-CS-INFER-01 and PRR-CS-LAUNCH-01 at High), the customer-service assistant and its US transfer (TIA-LLM-01), the PSI anti-fraud matching (TIA-PSI-01), the federated-learning consortium and breach handling are covered every year; the administrative tasks of the Data Protection Coordinators are covered by a reduced programme
 * Evidence basis: findings rely on PEP evidence packs, RoPA entries for the five countries, the Privacy Risk Register (the "Conduct & Privacy Risk" extension of the enterprise risk register) and the breach and rights-request records
-* Methodological adequacy: for example, whether the synthetic-data release for DPIA-CS-TRAIN-01 recorded each PET-module metric and failure gate individually, including the singling-out, linkability and inference criteria of WP29 Opinion 05/2014 (WP216), and whether the first generator run (which failed the module) remains charged to the disclosure-budget ledger
+* Methodological adequacy: for example, whether the synthetic-data release for DPIA-CS-TRAIN-01 recorded each PET-module metric and review observation individually, including the singling-out, linkability and inference criteria of WP29 Opinion 05/2014 (WP216), and whether the first generator run (which was held for redesign after review) remains charged to the disclosure-budget ledger
 * Adversarial re-validation (optional technique): the Group DPO's 2027 monitoring plan includes an adversarial re-validation of the open statistics release of Document 18, Example 3.1, by Privacy Engineers not involved in producing it, under a documented test plan (planned, Q1 2027)
 * Remediation, not fault-finding: findings feed correction, policy review (Document 29), training (Document 30) or PEP changes (Document 9)
 * Compliance issues are recorded in the issues log, never as accepted risks
@@ -402,3 +405,4 @@ Version 2.0 was adopted by the Management Board of PanEuropean Bank AG on 20 Oct
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: title block, Part A / Part B headings, references and history added; three loops separated — continuous monitoring, DPO compliance monitoring and DPO-organised audits under Art. 39(1)(b) (DPO responsible and accountable for its own monitoring), and independent assurance by Internal Audit (Chief Audit Executive accountable for the opinion, reporting to the Audit Committee); DPO no longer "Accountable for the audit process and the final conclusion" and no longer co-plans the external audit or oversees its contract; internal-audit charter, plan and significant changes drafted by the Chief Audit Executive and approved by the Audit Committee (IIA GIAS 2024, Standards 6.2 and 9.4 — governance basis, not GDPR); DPO independence tested by Internal Audit only; calqued committee terminology and the Supervisory Board as recipient of operational conclusions removed (Audit Committee, Management Board); escalation timing fixed — a higher level has a shorter time limit, addressees and deadlines per the master escalation matrix (Document 31, Section 6.4); severity examples recalibrated (statutory misses at least High); audit universe extended (breach record, rights-request log, authority access log, LIA and Art. 26 records, consent proof, G-36 conclusions, PET-module records, disclosure ledger, tooling validation record, processor audit rights under Art. 28(3)(h), DORA Art. 30(3)); issues log for G-L failures and missed statutory deadlines (never risk acceptance); adversarial re-validation of released PET artefacts added as an optional technique; "EDPB criteria" attributed to WP29 Opinion 05/2014 (WP216); independence safeguards extended (no advisory work in scope, partner rotation); retention of audit records tied to audit and supervisory record-keeping; normative basis added (GDPR Arts. 5(2), 24, 32(1)(d), 39(1)(b); ISO 19011; ISO/IEC 27701:2025; IIA GIAS; DORA Art. 6(6)); document titles and process names aligned; Part B dates shifted by −12 months and re-baseline version 2.0 adopted by the Management Board on 20 October 2026; UK spelling |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

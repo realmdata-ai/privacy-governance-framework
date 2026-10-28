@@ -1,5 +1,8 @@
 # PGF Companion Resources
 
+> **Applicability — 28 October 2026.** This preview describes the frozen rc.1 methodology, including its earlier metric-gate logic. It has not been migrated or validated against rc.2. Use it as separately versioned research material; it does not add requirements to the rc.2 framework.
+
+
 **Preview 0.1.0-preview.1 · 27 October 2026**
 
 These separately versioned resources support reading, implementing and testing the Privacy Governance Framework. They target the accepted English PGF 1.0.0-rc.1 and do not change its frozen content. Preview means ready for review and feedback; the scope and limitations of each resource remain explicit.

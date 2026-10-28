@@ -1,17 +1,17 @@
 ---
 title: "Privacy Governance Framework (PGF) — Framework Overview"
 document_id: PGF-00
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Privacy_Management_Framework_Overview_ENG.docx.md; sha256 41324e92c018418d6fb8926dd8b9237e5915a743f4ef8175fc1d153246c0a93d"
 ---
 
 # PGF-00 — Privacy Governance Framework: Framework Overview
 
-*Privacy Governance Framework (PGF) · Release 1.0.0-rc.1 · Authors: Alexey Neyman and Val Khvatov · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Release 1.0.0-rc.2 · Authors: Alexey Neyman and Val Khvatov · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** This is a release candidate. PGF is a set of templates and worked examples. It is not a law, a standard, a certification scheme or legal advice, and adopting it does not by itself make an organisation compliant with any law. The worked example concerns a fictional organisation, PanEuropean Bank AG. All of its names, figures, dates and records are illustrative.
 
@@ -317,7 +317,7 @@ For each document: its **purpose**, its key **contents**, and its **relationship
 - **Contents:**
   - risk to individuals' rights and freedoms, with broad harm types and a likelihood based on threats, controls and exposure;
   - organisational consequences on a separate track;
-  - a specialised PET assessment module, with failure gates, for de-identified, synthetic and aggregate releases;
+  - a specialised PET assessment module, with integrated scoring and documented observations, for de-identified, synthetic and aggregate releases;
   - composition across repeated releases;
   - versioned risk calculation projects;
   - evidence packs.
@@ -442,14 +442,14 @@ These are conceptual mappings, not claims of conformity.
 
 ## 9. How to cite
 
-> Neyman, A., & Khvatov, V. (2026). *Privacy Governance Framework (PGF): A Four-Level Model for Enterprise Privacy Governance* (Version 1.0.0-rc.1). DOI pending.
+> Neyman, A., & Khvatov, V. (2026). *Privacy Governance Framework (PGF): A Four-Level Model for Enterprise Privacy Governance* (Version 1.0.0-rc.2). DOI pending.
 
 To cite a specific component: "PGF-18 Privacy Risk Assessment Methodology, in Neyman & Khvatov (2026)".
 
 ## 10. Competing interests and provenance
 
 - **Provenance.** The internal source set from which this release is derived ("ver.2") was prepared in the context of **Realm Inveo Inc.**, which develops privacy-engineering software. Earlier internal drafts used that software as the illustrative implementation in the worked examples.
-- **Removal of product references.** In this release, all product references, product capability statements and named real third-party providers have been removed from the templates and worked examples. Tooling is addressed only through the tool-neutral criteria of Document 09, and no product is required to adopt PGF.
+- **Named implementation example.** Templates and governance remain tool-neutral. Part B identifies PAMOLA as the Bank's implementation profile, including separately integrated systems. The deployment and results are illustrative, not a product benchmark or capability certification. No product is required to adopt PGF.
 - **Affiliations.** Author affiliations are not stated in this release candidate.
 
 ## 11. Licence

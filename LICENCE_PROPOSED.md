@@ -1,17 +1,7 @@
-# Proposed licensing — not yet in effect
+# Author-approved licensing and remaining rights record
 
-**Status:** proposal for the first public release (PGF 1.0.0). **No licence is granted by this file.** A licence takes effect only once the rights holders have confirmed it and a final `LICENSE` file is added to the release.
+**28 October 2026:** Alexey Neyman gave written publication permission on the proposed terms, including **CC BY 4.0 for framework prose and templates**. Val Khvatov instructed implementation. The earlier missing-author-consent item is closed.
 
-| Material | Proposed licence | Rationale |
-|---|---|---|
-| Framework prose, templates and worked examples (`PGF/*.md`, glossary, crosswalk) | **Creative Commons Attribution 4.0 International (CC BY 4.0)** | Adopters can adapt and reuse the templates internally and commercially, provided they give attribution. NoDerivatives licences would defeat the purpose of editable templates. |
-| The authors' own build and check scripts (`tools/*.py`) | **MIT** | Permissive licence for small utilities. |
-| Names and logos of organisations and products | Not licensed | No trademark rights are granted. |
-| Third-party material (quoted legislation, guidance, standards) | Not relicensed | Remains under its own terms. Quotations are used only to the extent permitted by law. |
+The final rights-holder attribution for the original source set is not explicitly stated in that reply. No employer assignment, copyright holder or third-party permission is invented. This file records approval of the licensing choice; final licence issuance remains pending that rights record. MIT for scripts was not expressly approved in the latest recap and is not granted here.
 
-**Before the release, confirm:**
-- who the copyright holder of the internal source set ("ver.2") is;
-- that both authors (Alexey Neyman and Val Khvatov) consent to the licence;
-- that no third-party or legacy material requires exclusion.
-
-See `publication/RIGHTS_CHECKLIST.md` (internal).
+The proposed text licence is [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/); its [legal code](https://creativecommons.org/licenses/by/4.0/legalcode.en) governs if and when issued by the rights holder. Names/logos and third-party source material are not relicensed.

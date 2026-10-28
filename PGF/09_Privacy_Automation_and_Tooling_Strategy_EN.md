@@ -2,19 +2,19 @@
 title: "Privacy Automation and Tooling Strategy"
 document_id: PGF-09
 level: 1
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level1/9. Privacy_Automation_Tooling_Strategy_Template and Example_ENG.docx.md; sha256 1c3571a8380110da7eafe23b00a0d83261f19b7f5605110e18c096a5d12eb852"
 ---
 
 # PGF-09 — Privacy Automation and Tooling Strategy
 
-*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # **About This Document**
 
@@ -26,7 +26,7 @@ source_provenance: "Derived from internal source set ver.2: Level1/9. Privacy_Au
 
 # **How to Use This Document**
 
-Part A is a template. Text in ***[square brackets, bold italic]*** is a placeholder. Blocks marked **Guidance** are removed from the adopted version. Part B shows the template completed for the fictional PanEuropean Bank AG and its fictional internal platform, "the Bank's privacy engineering platform (PEP, illustrative)".
+Part A is a template. Text in ***[square brackets, bold italic]*** is a placeholder. Blocks marked **Guidance** are removed from the adopted version. Part B shows the template completed for the fictional PanEuropean Bank AG and an illustrative deployment of the privacy engineering platform role. The named implementation is introduced in Part B.
 
 > **Guidance.** Mandatory automation and tool neutrality do not conflict. This document fixes **what** must be automated and **what evidence** tooling must produce; it never fixes **which** product does it. Any statement that a particular tool "meets" this document must be backed by the validation record of Section 8, not by a vendor statement, a specification or a certificate.
 
@@ -118,7 +118,7 @@ This document does not govern:
 
 * ***[Lawful-processing principle — applying a privacy-enhancing technique (PET), training a synthetic-data generator or running a calculation on personal data is itself processing. It needs a lawful basis (Art. 6) and, where the purpose differs from the original one, a compatibility assessment (Art. 6(4)); DPIA triage applies. G-L runs before the tooling processes the data.]***
 
-* ***[Documented-limitation principle — where the tooling lacks a validated implementation of a metric or test required by Document 18, the gap in the tool may be closed only by an external or manual calculation or test that is itself validated and actually produces the required result, with its uncertainty and evidence, so that every gate of Document 18 can be applied to it. A qualitative expert opinion cannot replace a missing mandatory result: it may inform the decision-maker, but it cannot support a PASS, an anonymity conclusion or a release, and the module outcome remains INCOMPLETE (Document 18, G-M5) and the release blocked until the required result exists. The limitation is recorded in the validation record and the evidence pack, and the decision-maker is told what is not covered. A recalculation made after the tooling is restored does not retrospectively legalise a release or decision that lacked mandatory evidence when it was made. The mandate for automation as the target state remains.]***
+* ***[Documented-limitation principle — record absent or unvalidated tooling capabilities. A selected weighted input must actually exist before a complete score is reported; never replace it with an expert opinion or zero. A missing diagnostic test is a limitation for DPO advice and the business decision, not a successful result. Actual DP and anonymity claims need their supporting evidence. No observation automatically substitutes a different business-risk tier.]***
 
 * ***[Separation of governance and technical implementation — this document fixes what the tooling must provide and how that is evidenced; how a specific tool implements it is fixed in the Technology Implementation Package (Section 6).]***
 
@@ -134,7 +134,7 @@ This document does not govern:
 
 | Class of Decisions | Why Automation Is Mandatory | Related PGF Document |
 | :---- | :---- | :---- |
-| ***[Privacy risk calculation]*** | ***[Applying the scenario-based likelihood model, the severity factors and the residual-risk mapping by hand, case by case, does not scale and creates a risk of inconsistent results between analysts and between countries. For de-identified, synthetic, aggregate or federated artefacts, the PET Assessment Module requires repeatable metric computation, confidence intervals and failure gates that cannot be reliably reproduced manually.]*** | ***[Document 18, Sections 3 and 4; Document 8, Section 4]*** |
+| ***[Privacy risk calculation]*** | ***[Applying the scenario-based likelihood model, the severity factors and the residual-risk mapping by hand, case by case, does not scale and creates a risk of inconsistent results between analysts and between countries. For de-identified, synthetic, aggregate or federated artefacts, the PET Assessment Module requires repeatable metric computation, confidence intervals and review observations that cannot be reliably reproduced manually.]*** | ***[Document 18, Sections 3 and 4; Document 8, Section 4]*** |
 | ***[Evidence-pack compilation]*** | ***[Manual assembly of the evidence for each decision is prone to omission and to undetected alteration; integrity requirements (Section 4.1) need technical support.]*** | ***[Document 18, Section 4.5; Document 5, Section 5.2]*** |
 | ***[Monitoring of limits, expiries and re-assessment triggers]*** | ***[The cumulative privacy-loss ledger and any operational cap (Document 8, Section 3; Document 18, Section 3.3.6), the expiry of conditional acceptances (Document 8, Section 5) and the periodic re-assessment of anonymity conclusions (Document 18, Section 3.3.0) must be tracked continuously across many projects; manual tracking misses overruns and lapsed conditions.]*** | ***[Document 8, Sections 3 and 5; Document 18, Sections 3.3.0 and 3.3.6]*** |
 | ***[Application of PET transformations]*** | ***[Manual application of pseudonymisation, de-identification or synthesis is prone to configuration error and cannot be reproduced for audit.]*** | ***[Document 18, Section 3.3; Document 5, Section 5.2]*** |
@@ -157,7 +157,7 @@ For C5, C3 and C4, automation is a target state, not a mandate. The organisation
 
 | Criterion | Requirement |
 | :---- | :---- |
-| ***[Coverage of the methodology]*** | ***[The tooling implements the calculations Document 18 requires for the archetypes in use, including the PET Assessment Module's per-metric results, failure gates (G-M1 to G-M5), confidence intervals and the lifetime privacy-loss ledger. Any element not implemented is recorded as a limitation (Section 8.1).]*** |
+| ***[Coverage of the methodology]*** | ***[The tooling implements the calculations Document 18 requires for the archetypes in use, including the PET Assessment Module's per-metric results, integrated scoring and review observations, confidence intervals and the lifetime privacy-loss ledger. Any element not implemented is recorded as a limitation (Section 8.1).]*** |
 | ***[Reproducibility]*** | ***[Every result can be traced to the tooling version, configuration, input data version and run parameters, and can be re-run with the same configuration. For randomised mechanisms (for example noise addition or synthetic-data generation), reproducibility means re-running from the recorded configuration with results within a stated statistical tolerance. Where random seeds are retained, they are protected at least as strictly as the source data, because a seed can allow the added noise to be reconstructed.]*** |
 | ***[Evidence-pack integrity]*** | ***[The tooling produces evidence packs that meet Section 4.1, in a format readable without the tooling.]*** |
 | ***[Security]*** | ***[Encryption, access control by role and need to know, logging of access and configuration changes, segregation of the tooling environment from production identifiers and from general analytics environments, and protection of generator parameters and intermediate outputs.]*** |
@@ -209,11 +209,11 @@ Any statement — by a provider, in a specification or in an evidence pack — t
 | ***[Implementation audit]*** | ***[How the implementation was verified — library and version, code review, tests; known hazards (floating-point effects, sampling assumptions, side channels, bugs) and how they are addressed]*** |
 | ***[Limits of empirical tests]*** | ***[Empirical attacks give lower bounds on leakage for the attacks tried; they neither prove nor disprove the formal guarantee]*** |
 
-A claim missing any element is recorded as "not verified" in the validation record and makes the PET Assessment Module INCOMPLETE or FAILED where the claim is relied on (Document 18, gate G-M4 or G-M5).
+A claim missing necessary evidence is recorded as "not verified". Do not assert that guarantee; record the issue for DPO advice and the business decision. It does not itself replace the integrated tier. A missing selected weighted input makes the calculation incomplete.
 
 ***4.4 Synthetic Data and Other PET Claims***
 
-* ***[Synthetic data are not safe by default. A synthetic dataset is a derived artefact that can disclose information about people in the source data; generators can memorise records, and published audits have found implementations whose empirical leakage exceeded the claimed guarantee. Before any synthetic dataset crosses a boundary of access, the tooling runs the empirical attack tests of Document 18, Section 3.3.2 (membership inference, closeness to training records, linkability and attribute inference against a control set), and the failure gates apply. Untested attack classes (for example model inversion on the generator's parameters) are recorded as limitations, with the compensating access restrictions.]***
+* ***[Synthetic data are not safe by default. A synthetic dataset is a derived artefact that can disclose information about people in the source data; generators can memorise records, and published audits have found implementations whose empirical leakage exceeded the claimed guarantee. Before any synthetic dataset crosses a boundary of access, the tooling runs the empirical attack tests of Document 18, Section 3.3.2 (membership inference, closeness to training records, linkability and attribute inference against a control set), and the review observations apply. Untested attack classes (for example model inversion on the generator's parameters) are recorded as limitations, with the compensating access restrictions.]***
 * ***[Generation is a method, not a legal status. Whether a synthetic dataset is anonymous information is a controller conclusion under Recital 26 (Document 18, Section 3.3.0); until it is made, the dataset is treated as personal data (Documents 10 and 11).]***
 * ***[Pseudonymisation is not anonymisation. Pseudonymised data remain personal data for whoever can attribute them with means reasonably likely to be used (Art. 4(5); EDPB Guidelines 01/2025). A recipient's realistic means are part of the contextual analysis (CJEU C-413/23 P *EDPS v SRB*), but that judgment does not decide generally that data stop being personal, or that Chapter V stops applying, whenever a recipient lacks the key; the controller's perspective, any processor's role and the full flow are assessed separately (Documents 12 and 20).]***
 * ***[Different guarantees are not mixed. k-anonymity, l-diversity and t-closeness are properties of released records and do not protect against all inference attacks (Article 29 Working Party Opinion 05/2014, WP216); differential privacy is a property of a randomised mechanism. A tool configuration that states both describes them separately and states which one a decision relies on.]***
@@ -289,7 +289,7 @@ When the tooling changes or its version is materially updated, dependent documen
 ***[Re-certification is based on a documented, versioned and repeatable conformance test suite, owned by the Privacy Operations Lead and executed by Privacy Engineer(s). It covers at least:]***
 
 * ***[positive cases with known expected results for each metric, gate and mapping used (Document 18, Sections 3.2–3.4 and 4.4), including boundary values at exclusive thresholds and interval-based gate decisions;]***
-* ***[negative cases: a G-L failure cannot be overridden by any score or signature; a missing or invalid metric yields INCOMPLETE, never a pass; a failed run whose output was observable is charged to the privacy-loss ledger; concurrent runs cannot jointly exceed the ledger or a cap; a release that would exceed the lifetime ledger fails; an evidence pack cannot be edited after sealing; a superseding version references its predecessor;]***
+* ***[negative cases: a G-L failure cannot be overridden by any score or signature; a missing or invalid selected weighted metric yields INCOMPLETE, never a fabricated score; a failed run whose output was observable is charged to the privacy-loss ledger; concurrent runs cannot jointly exceed the ledger or a cap; a proposed release exceeding an adopted budget records a separate policy hold without changing its calculated tier; an evidence pack cannot be edited after sealing; a superseding version references its predecessor;]***
 * ***[reproducibility: re-runs from recorded configurations give results within the stated tolerance;]***
 * ***[export: evidence packs, ledgers and configurations can be exported and read without the tooling (exit plan).]***
 
@@ -313,6 +313,9 @@ This document was adopted by ***[Executive Management]*** on ***[date]***. Docum
 
 # **Part B — Worked Example: PanEuropean Bank AG**
 
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
+
 **PanEuropean Bank AG — Privacy Automation and Tooling Strategy**
 
 Effective date: 20 October 2026   ·   Version: 2.0   ·   Document owner: Chief Privacy Officer (EPPO)   ·   Adopted by: Management Board, 20 October 2026
@@ -332,7 +335,7 @@ Effective date: 20 October 2026   ·   Version: 2.0   ·   Document owner: Chief
 
 | Term | Definition / Reference |
 | :---- | :---- |
-| PEP | The Bank's privacy engineering platform (PEP, illustrative) — a fictional internal platform on which PanEuropean runs the calculations of Document 18, applies PET techniques and compiles evidence packs. Technical support for PEP is provided by an external provider that is not named in this example. PEP is used only as far as its capabilities are recorded as tested and deployed in the validation record (Section 8.1); no PanEuropean rule, decision or delegation depends on PEP. |
+| PEP | PAMOLA implementation profile for the fictional Bank, including separately integrated systems. Workflows, deployment and numerical records are illustrative. Implementation, testing and deployment claims require actual versioned evidence. The method does not require this product. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). |
 
 ## **1. Purpose of This Document**
 
@@ -364,7 +367,7 @@ This document establishes which privacy calculations and processes at PanEuropea
 
 | Class of Decisions | Why Automation Is Mandatory at PanEuropean | Validation Status in PEP (Section 8.1) |
 | :---- | :---- | :---- |
-| Privacy risk calculation | Several hundred calculations a year across five countries — DPIAs, releases and transformation requests (C2) — cannot be performed consistently by hand; the PET Assessment Module requires repeatable metric computation, confidence intervals and gates | Tested and deployed (conformance test suite run of 2 October 2026, evidence pack EVP-2026-0052): threat-based likelihood (Document 18, Section 3.2), severity factors (Section 3.4) and the residual-tier mapping for Projects 1–4; PET Assessment Module for structured record-level, synthetic and aggregate releases (Sections 3.3.1, 3.3.2, 3.3.4), including the failure gates and the lifetime ledger. **Not covered:** unstructured data and large language models (Document 18, Section 2); model inversion on generator parameters; gradient-reconstruction tests — recorded limitations |
+| Privacy risk calculation | Several hundred calculations a year across five countries — DPIAs, releases and transformation requests (C2) — cannot be performed consistently by hand; the PET Assessment Module requires repeatable metric computation, uncertainty and integrated calculations | Tested and deployed (conformance test suite run of 2 October 2026, evidence pack EVP-2026-0052): threat-based likelihood (Document 18, Section 3.2), severity factors (Section 3.4) and the residual-tier mapping for Projects 1–4; PET Assessment Module for structured record-level, synthetic and aggregate releases (Sections 3.3.1, 3.3.2, 3.3.4), including the review observations and the lifetime ledger. **Not covered:** unstructured data and large language models (Document 18, Section 2); model inversion on generator parameters; gradient-reconstruction tests — recorded limitations |
 | Evidence-pack compilation | Every decision requires a complete, sealed record; manual assembly risks gaps and undetected changes | Tested and deployed: sealed manifest with component hashes; superseding versions; separately sealed personal-data component; export in a documented, tool-independent format. **Planned:** signing of manifests with a managed key (target: next major PEP version) |
 | Monitoring of limits, expiries and re-assessment triggers | The lifetime privacy-loss ledger for the retail customer population (Document 8, Section 3: ε ≤ 10.0 and δ ≤ 1×10⁻⁵, operational cap ε ≤ 7.0 per calendar year), the expiry of conditional acceptances and the annual re-assessment of anonymity conclusions must be tracked across all projects | Tested and deployed: ledger with ε and δ per run, including failed and observed runs; warning to the Privacy Operations Lead and the Chief Privacy Officer when a planned run would exceed the remaining headroom or the annual cap; reminders for acceptance expiries and anonymity re-assessments; the Group DPO receives the same information for advice. Metric thresholds are set in Document 18, not in Document 8 |
 | Application of PET transformations | Manual pseudonymisation or synthesis is error-prone and not reproducible for audit by Internal Audit or the HBDI | Tested and deployed: pseudonymisation of customer identifiers (keyed hashing, keys held outside PEP); synthetic-data generation with a differentially private generator (DP statement of Document 18, Section 3.3.5); configuration recorded in the evidence pack. Parameters are in the PET Standard (Section 6) |
@@ -500,3 +503,4 @@ Version 1.0 (1 March 2026) was adopted by the Management Board; the Group DPO wa
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: product names, provider attributions and capability promises removed — Part B uses the fictional "Bank's privacy engineering platform (PEP, illustrative)" with capabilities stated only as validation-record statuses and documented limitations; document confirmed as the single connection point to tooling, with a strengthened neutrality test covering worked-example decisions and credentials, and a note that a separately published implementation profile is never a PGF dependency; principles added on validated capabilities only, human decision (no replacement of G-L, Art. 35(7), G-36, G-TIA or anonymity conclusions) and lawful processing for PET application; "threshold monitoring" replaced by monitoring of the lifetime privacy-loss ledger, acceptance expiries and anonymity re-assessments (thresholds set by Document 18); selection criteria extended — reproducibility for randomised mechanisms and seed protection, evidence-pack integrity (sealing, superseding not editing, minimisation, retention by the applicable rule including deletion, minimal record after purge only where lawful), security, exit and continuity, DORA ICT third-party requirements (Arts. 28–30, register of information, exit strategy; critical or important function terminology), AI components, testability; NIST SP 800-226 checklist for DP claims; synthetic data stated as not safe by default, with empirical attack testing per Document 18; k-anonymity and DP distinguished; pseudonymisation not anonymisation (C-413/23 P, EDPB Guidelines 01/2025); Section 8 rebuilt around a validation record, a documented repeatable conformance test suite with negative cases, independent validation and re-certification triggers; "required certification" replaced by defined triggers; ownership moved to the EPPO and adoption to Executive Management; Part B re-baselined as version 2.0 (20 October 2026) with targets instead of operating history; calqued terms ("perimeter", "closes the need") and the "EDPB criteria" attribution corrected; example dates shifted by −12 months; references added. Integration pass: "Consent Manager" renamed the consent management system (CMS), as in Document 13 |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

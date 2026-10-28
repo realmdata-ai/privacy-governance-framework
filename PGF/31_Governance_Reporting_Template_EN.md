@@ -2,19 +2,19 @@
 title: "Governance Reporting Template"
 document_id: PGF-31
 level: 4
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level4/31. Governance-Reporting-Template_ENG.docx.md; sha256 b43fa392b4a4306a9d8f4b8441babe81fd3a8a2c07f8f26f33f1e2cfd622e8a0"
 ---
 
 # PGF-31 — Governance Reporting Template
 
-*Privacy Governance Framework (PGF) · Level 4 — Control, Reporting and Improvement · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 4 — Control, Reporting and Improvement · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # **About This Document**
 
@@ -251,6 +251,9 @@ This document was adopted by ***[Executive Management]*** on ***[date]***. Docum
 > **Guidance.** The programme report is the EPPO's management report. Executive Management adopts its structure because it is the primary recipient and decider; the Governing Body committee sets its own information requirements under its rules. The DPO does not own or present this report: doing so would merge the DPO's independent reporting with the reporting of the programme the DPO monitors.
 # **Part B — Worked Example (fictional)**
 
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
+
 ***PanEuropean Bank AG — Governance Reporting Template***
 
 Effective date: 23 October 2026 · Version: 2.0 · Document owner: Chief Privacy Officer (EPPO) · Responsible: Privacy Operations Lead · Adopted by: Management Board (20 October 2026), with the information requirements of the Supervisory Board's Risk Committee agreed with its chair
@@ -427,7 +430,7 @@ Version 2.0 was adopted by the Management Board of PanEuropean Bank AG on 20 Oct
 
 * **Conditional acceptances expiring (M-S5-05):** none in Q4 2026. For information, three expire in Q1 2027 — PRR-CLOUD-01 (20 March 2027), PRR-CS-TRAIN-01 (25 March 2027 or next calibration; re-assessment with the Chief Privacy Officer's concurrence under Document 8, version 3.0) and PRR-PSI-01 (25 March 2027)
 * **Transfers (M-C4-06, M-C4-03):** no transfer on hold or suspended in Q3 (the PSI suspension of 12 February – 31 March 2026 is closed); one open monitoring review (TIA-LLM-01) at the report date — see Addendum A.1 for its outcome
-* **Cumulative disclosure budget (M-G2-05):** retail customer population, lifetime limit ε ≤ 10.0 and δ ≤ 1×10⁻⁵. Ledger: ε 6.5 (65%); δ ≈ 8.0×10⁻⁶ (80%) — the δ warning level of Document 28 is reached (High item; Chief Privacy Officer informed under Section 6.4). The δ figure is driven by the first credit-scoring generator run (δ 8×10⁻⁶), which failed the PET module but remains in the ledger
+* **Cumulative disclosure budget (M-G2-05):** retail customer population, lifetime limit ε ≤ 10.0 and δ ≤ 1×10⁻⁵. Ledger: ε 6.5 (65%); δ ≈ 8.0×10⁻⁶ (80%) — the δ warning level of Document 28 is reached (High item; Chief Privacy Officer informed under Section 6.4). The δ figure is driven by the first credit-scoring generator run (δ 8×10⁻⁶), which was held for redesign but remains in the ledger
 * **Track (b), separately:** PRR-LLM-01 Moderate; PRR-PSI-01 Moderate; other records as in Document 22. Track (b) is not netted against track (a)
 
 ***Regulatory Interactions and Horizon***
@@ -507,3 +510,4 @@ Data cut-off 30 September 2026, 24:00 CET; post-period events included up to 21 
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: title block, Part A / Part B headings, references and history added; programme report (G8.1) owned and presented by the EPPO to Executive Management and the Governing Body's Risk Committee; DPO's "non-delegable personal presentation" to the board removed — the DPO's own report (G8.2, Art. 38(3)) kept separate and unfiltered, Management Board named as highest management level in Part B; Internal Audit opinion routed to the Audit Committee; calqued committee terminology removed; decision requests addressed to the competent decider, with Supervisory Board consent only for the three reserved matters; DPO never shown as accepting risk; risk profile extended (G-36 conclusion and Art. 36 consultation status for every High record, transfers on hold or suspended, expiring conditional acceptances, disclosure budget, track (b) separately); regulatory interactions and horizon section added; new metrics removed — every figure now carries a Document 28 identifier (board requests → M-G8-04; consent withdrawals → M-C5-05; incident counts → M-S7-08 to M-S7-10); one master escalation matrix (level × addressee × time limit) added in Section 6.4 and cited by Documents 27–30, resolving the conflicting Critical timings of Documents 29 and 30; retention of reports tied to corporate and supervisory record-keeping; data-quality statement added; normative basis added (GDPR, DORA Art. 5, NIS2 Art. 20, EBA/GL/2021/05, IIA GIAS, BCBS 239); Part B rebuilt on registry facts — PRR-CS-INFER/LAUNCH-01 High with the HBDI consultation pending (launch planned 1 February 2027, not in production), PRR-CS-TRAIN-01 Medium, PRR-LLM-01 with TIA-LLM-01 on hold, PRR-PSI-01 under the one-sided no-output design (owner Head of Fraud Prevention; re-assessed High on 26 October 2026 — Art. 10 severity modifier, G-36 met, Chief Risk Officer decision pending — and recorded in Addendum A.1, while the approved Q3 report keeps the former Medium); operational trivia removed from the decision list; Appendix A re-dated to Q3 2026 (presented 22–23 October 2026); UK spelling |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

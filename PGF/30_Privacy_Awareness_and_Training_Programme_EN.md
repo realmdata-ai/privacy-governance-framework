@@ -2,19 +2,19 @@
 title: "Privacy Awareness and Training Programme"
 document_id: PGF-30
 level: 4
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level4/30. Training-And-Awareness-Program_ENG.docx; sha256 5ab7ecb5513b53dde098a91f9033cb5789efc08399a67fcd1dee660119fed788"
 ---
 
 # PGF-30 — Privacy Awareness and Training Programme
 
-*Privacy Governance Framework (PGF) · Level 4 — Control, Reporting and Improvement · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 4 — Control, Reporting and Improvement · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # **About This Document**
 
@@ -241,6 +241,9 @@ This document was adopted by ***[Executive Management]*** on ***[date]***. Docum
 > **Guidance.** The programme is part of running the privacy programme, for which the EPPO is accountable (Document 5, row S8). The DPO advises on it and monitors it; approving it would place the DPO in the position of monitoring its own decisions.
 # **Part B — Worked Example (fictional)**
 
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
+
 ***PanEuropean Bank AG — Privacy Awareness and Training Programme***
 
 Effective date: 23 October 2026 · Version: 2.0 · Document owner: Privacy Operations Lead · Accountable: Chief Privacy Officer (EPPO) · Adopted by: Management Board (20 October 2026); module content approved by the Chief Privacy Officer under delegation
@@ -351,7 +354,7 @@ PanEuropean publishes an annual "Privacy and Trust Report" in the second quarter
 | Chief Privacy Officer | Annual regulatory briefing; continuing professional education | Document 6, Section 6 |
 | Group DPO and Deputy Group DPO | Continuing professional education and certification renewal funded from the Group DPO office budget; internal module on Documents 18 and 19 offered | The Group DPO decides its plan; no suspension for a lapse |
 | Privacy Operations Lead | Continuing professional education; methodology and PEP updates | — |
-| Five Privacy Officers | Internal assessment of working proficiency in the DPIA methodology for scoring models and national-law updates | Updated on a material change of Documents 18 or 19, for example the PET-module failure gates and the WP29 Opinion 05/2014 (WP216) criteria |
+| Five Privacy Officers | Internal assessment of working proficiency in the DPIA methodology for scoring models and national-law updates | Updated on a material change of Documents 18 or 19, for example the PET-module review observations and the WP29 Opinion 05/2014 (WP216) criteria |
 | Privacy Engineers | Internal assessment of working proficiency in the current PEP version and its documented limitations | Updated with each PEP release (S9) |
 | Data Protection Coordinators | Baseline plus the coordinator module on recognising and escalating situations | The coordinator does not decide on residual risk (Document 6, Section 5) |
 | Privacy champions | Basic privacy-by-design training (Document 16) | On nomination |
@@ -441,3 +444,4 @@ Version 2.0 was adopted by the Management Board of PanEuropean Bank AG on 20 Oct
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: canonical text created from the DOCX-converted seed — HTML title table and image removed, standard title block, Part A / Part B headings, references and history added; one title "Privacy Awareness and Training Programme" throughout; owner Privacy Operations Lead, accountable EPPO, adopted by Executive Management (DPO no longer approves); management-body training added (DORA Art. 5(4) and 13(6) for financial entities; NIS2 Art. 20(2) note), Processing Owners no longer excluded (briefing on designation and material change, annual refresher), contractors and temporary staff with access to personal data included, processors' staff via contract; AI-literacy module (AI Act Art. 4) and targeted modules (request handlers, contact-centre agents, privacy champions, developers, marketing, HR) added; DPO expertise funded by the organisation (Art. 38(2)) and no suspension of the DPO for a lapse (Art. 38(3)) — other roles may have a dependent delegated authorisation paused (Document 6); vendor-neutral certifications; needs analysis and effectiveness evaluation (NIST SP 800-50 Rev. 1) added; employee-data processing and co-determination noted; individual lapses never Critical, addressees and deadlines per the master escalation matrix (Document 31, Section 6.4); "Privacy Pulse" frequency made consistently monthly; the board-reporting channel removed as a staff channel; the public report no longer counted as a marketing metric; translation-provenance reference removed — English is the authoritative language; "EDPB criteria" attributed to WP29 Opinion 05/2014 (WP216); "CIPP·E" typography and US spellings corrected; Part B dates shifted by −12 months and re-baseline version 2.0 adopted by the Management Board on 20 October 2026; UK spelling |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

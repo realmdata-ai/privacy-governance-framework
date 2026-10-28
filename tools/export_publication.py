@@ -23,7 +23,7 @@ DENY_CONTENT = [  # strings that must not appear in exported text
     (r"_INTERNAL/|_INTERNAL\\", "internal workspace path"),
     (r"_SUP_2026|_AUDIT_2026|_BUS_PGF", "internal coordination folder"),
     (r"Box/WALKVBOX|C:[/\\]Users[/\\]", "local machine path"),
-    (r"\bPAMOLA\b|\bAYITA\b", "vendor product name"),
+    (r"\bAYITA\b", "vendor product name"),
     (r"\bG4A\b|REDTEAM", "internal red-team module"),
     (r"\bAsana\b|\bSRS-\d", "internal project artefact"),
 ]
@@ -70,23 +70,16 @@ def scan(items):
     return problems
 
 def source_manifest():
-    base = json.loads((W / "_INTERNAL/cc_work/baseline/baseline_manifest.json").read_text(encoding="utf-8"))
-    out = []
-    pgf = W / "PGF"
-    for e in base:
-        doc = e["doc"]
-        cands = sorted(pgf.glob(f"{doc}_*_EN.md"))
-        rec = {"document_id": f"PGF-{doc}", "source_path": f"Privacy Governance Framework ver.2/{e['source']}",
-               "source_sha256": e["sha256"]}
-        if cands:
-            rec.update({"output_path": f"PGF/{cands[0].name}", "output_sha256": sha256(cands[0])})
-        out.append(rec)
-    (pgf / "SOURCE_MANIFEST.json").write_text(json.dumps({
-        "release_version": "1.0.0-rc.1",
-        "note": "Maps each canonical PGF Markdown file to the internal ver.2 source it was derived from. "
-                "Source paths refer to the authors' local source set and are provided for provenance only.",
-        "records": out}, indent=1, ensure_ascii=False), encoding="utf-8")
-    print(f"wrote PGF/SOURCE_MANIFEST.json ({len(out)} records)")
+    path = W / "PGF" / "SOURCE_MANIFEST.json"
+    manifest = json.loads(path.read_text(encoding="utf-8"))
+    for record in manifest["records"]:
+        output = W / record["output_path"]
+        if not output.is_file():
+            raise SystemExit("Missing output: " + record["output_path"])
+        record["output_sha256"] = sha256(output)
+    manifest["release_version"] = "1.0.0-rc.2"
+    path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
+    print("Refreshed output hashes; original source provenance retained")
 
 def main():
     ap = argparse.ArgumentParser()

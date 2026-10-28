@@ -2,17 +2,20 @@
 title: "Privacy Risk Appetite Statement"
 document_id: PGF-08
 level: 1
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level1/8. Privacy_Risk_Appetite_Statement_Template and Example_ENG.docx.md; sha256 eaa0995c90a731383863e0aa34aada81d9c0266ddb7f0252d586ca33ab821ca6"
 ---
 
 # PGF-08 — Privacy Risk Appetite Statement
 
-*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+> **Legal uncertainty and business decision.** A disputed legal interpretation is recorded as a reasoned position with its assumptions, alternatives, consequences for the organisation, Legal/DPO advice and a review date. Uncertainty is not automatically a confirmed G-L failure. The designated Legal function records whether the proposed design has a supportable basis under the applicable rules; the authorised business role decides within those rules and its delegation. A confirmed missing prerequisite or prohibition remains a stop/redesign condition. The decision record presents benefits and consequences for individuals and the organisation together, without silently lowering the individual-harm score.
+
+
+*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -134,14 +137,14 @@ This statement is reviewed with the frequency established in Section 7 and may n
 
 ***Likelihood Scale***
 
-Likelihood is assessed per harm scenario by Document 18. For processing of identified or identifiable data (including pseudonymised data), it reflects threat sources, exposure, the effectiveness of controls and event history (Document 18, Section 3.2). For a de-identified, synthetic, aggregate or federated release, the likelihood of the disclosure scenario is taken from the PET Assessment Module (Document 18, Section 3.3), whose disclosure indicator is not a probability and whose failure gates prevail over any average. This document does not set the numerical thresholds.
+Likelihood is assessed per harm scenario by Document 18. For processing of identified or identifiable data (including pseudonymised data), it reflects threat sources, exposure, the effectiveness of controls and event history (Document 18, Section 3.2). For a de-identified, synthetic, aggregate or federated release, the likelihood of the disclosure scenario is taken from the PET Assessment Module (Document 18, Section 3.3), whose disclosure indicator is not a probability and whose individual deviations are recorded for DPO advice and the business decision without overriding the integrated tier. This document does not set the numerical thresholds.
 
 | Tier | Conceptual Description |
 | :---- | :---- |
-| ***[Low]*** | ***[Identified processing: limited exposure, no capable threat source, measures implemented and tested. Release: the PET Assessment Module passes all gates with a low disclosure indicator]*** |
-| ***[Medium]*** | ***[Identified processing: routine or systematic exposure or a known error mode, mitigated by tested measures. Release: the module passes all gates, but some metrics are close to their thresholds]*** |
-| ***[High]*** | ***[Identified processing: a capable threat source or known weaknesses in the measures. Release: the module fails a gate (the release is not made in its current form)]*** |
-| ***[Near-certain]*** | ***[Identified processing: systematic exposure to a capable source with absent or ineffective measures, or repeated events. Release: an attack has been reproduced against the artefact]*** |
+| ***[Low]*** | ***[Identified processing: limited exposure, no capable threat source, measures implemented and tested. Release: the integrated indicator is in the configured Low band; observations remain visible]*** |
+| ***[Medium]*** | ***[Identified processing: routine or systematic exposure or a known error mode, mitigated by tested measures. Release: the integrated indicator is in the configured Medium band; observations remain visible]*** |
+| ***[High]*** | ***[Identified processing: capable threat sources or known weaknesses. PET release: the integrated indicator falls in the configured High band. Individual deviations are recorded without replacing that band.]*** |
+| ***[Near-certain]*** | ***[Identified processing: systematic exposure to a capable source with absent or ineffective measures, or repeated events. Release: the integrated indicator is in the configured Near-certain band; the label is ordinal, not a measured frequency]*** |
 
 ***Severity Scale (track (a) — harm to individuals)***
 
@@ -201,6 +204,8 @@ The GDPR thresholds are legal tests. The internal tiers are indicators that feed
 
 ## **5. Acceptance Authority, Escalation and Mandatory DPO Advice**
 
+**Single business decision record.** Record the business objective and benefits, the calculated individual-risk tier, organisational consequences (financial, regulatory, reputational and operational), alternatives and measures, DPO/Legal advice including dissent, the decider's response, release conditions and review date. These are one decision record, not a second automatic scoring algorithm. A dissenting opinion is retained even when the authorised decider takes another supportable course.
+
 > **Guidance.** This section is the source referenced by the RACI Matrix (Document 5, Section 7). Reproduce tiers and rules verbatim there. The table shows the delegation rule; each actual decision record names exactly one effective decider selected under the delegation in force.
 
 | Residual Tier (track (a), after G-L passed) | Who May Accept | Additional Mandatory Step | Decision Timeframe |
@@ -232,7 +237,7 @@ Regardless of the residual tier, the following conditions require the DPO's advi
 
 | Trigger | Triggering Condition | Required Step | Note |
 | :---- | :---- | :---- | :---- |
-| ***[PET-module failure]*** | ***[A mandatory metric fails, a known feasible attack succeeds, a prohibited attribute is present, or the cumulative disclosure budget would be exceeded (Document 18, Section 3.3.0)]*** | ***[The release is not made in its current form; the EPPO is informed; DPO advice on the redesign]*** | ***[No lenient mode applies to mandatory metrics; diagnostic metrics may be logged for audit (Document 27)]*** |
+| ***[PET assessment observations]*** | Material metric deviations, attack findings, DP/configuration differences or limitations | Keep the integrated tier; record DPO advice and the business decider's response. Legal requirements, adopted budget caps and release conditions remain separate. | Diagnostic observations do not automatically create a High or Critical tier. |
 | ***[Automated decisions or high-risk AI]*** | ***[Processing involves a decision under Art. 22, or a high-risk AI system under applicable regulation]*** | ***[DPO advice regardless of the tier; Legal confirms Art. 22 permissibility and safeguards in G-L]*** | ***[AI Act obligations follow their own application dates and are recorded in the DPIA (Document 19)]*** |
 | ***[Non-standard weighting]*** | ***[A severity weight outside the corridor set by Document 18]*** | ***[EPPO approval and DPO advice]*** | ***[Within the corridor, a written justification in the project passport suffices]*** |
 | ***[Special categories]*** | ***[Special-category (Art. 9) or criminal-offence (Art. 10) data are processed]*** | ***[DPO advice regardless of the tier; Legal confirms the Art. 9(2)/Art. 10 condition in G-L]*** | ***[Applies even where the tier is Low]*** |
@@ -343,7 +348,7 @@ PanEuropean's Privacy Risk Assessment Methodology (Document 18) calculates likel
 | Tier | Conceptual Description and PanEuropean Example |
 | :---- | :---- |
 | Low | Limited exposure, no capable threat source, tested measures; or a release that passes all PET-module gates with a low disclosure indicator. Example: aggregate portfolio statistics passing all disclosure-control gates (Document 18, Example 3.1) |
-| Medium | Routine or systematic exposure or a known error mode, mitigated by tested measures; or a release that passes all gates with some metrics close to their thresholds. Example: automated credit decisions with tested bias monitoring and human review (Document 18, Example 4.3) |
+| Medium | Routine or systematic exposure or a known error mode, mitigated by tested measures; or a release whose integrated indicator maps to Medium, with individual observations retained. Example: automated credit decisions with tested bias monitoring and human review (Document 18, Example 4.3) |
 | High | A capable threat source or known weaknesses in the measures; or a release that fails a gate. Example: customer segments shared with an advertising partner whose due diligence has open non-conformities (Document 18, Example 4.2-R) |
 | Near-certain | Systematic exposure to a capable source with absent or ineffective measures; or an attack reproduced against a release. Example: a synthetic dataset whose membership attack was reproduced in every test run (Document 18, Example 2.2) |
 
@@ -414,7 +419,7 @@ This table is the source for the escalation rules of PanEuropean's RACI Matrix (
 
 | Trigger | Triggering Condition | Required Step | Note |
 | :---- | :---- | :---- | :---- |
-| **PET-module failure** | A mandatory metric fails, an attack succeeds, a prohibited attribute is present, or the cumulative disclosure budget would be exceeded (Document 18) | The release is not made in its current form; the Chief Privacy Officer is informed; Group DPO advice on the redesign | Examples: Document 18, Examples 2.1, 2.2, 3.2, 3.3 |
+| **PET assessment observations** | Material metric deviations, attack findings, DP/configuration differences or limitations | Keep the integrated tier; record DPO advice and the business decider's response. Legal requirements, adopted budget caps and release conditions remain separate. | Diagnostic observations do not automatically create a High or Critical tier. |
 | **Automated decisions or high-risk AI** | Credit decisions under Art. 22; the credit-scoring model as a high-risk AI system (AI Act, Annex III point 5(b); high-risk obligations apply from 2 December 2027) | Group DPO advice regardless of the tier; Legal & Compliance confirms Art. 22(2)(a) and the Art. 22(3) safeguards in G-L | Example: Document 18, Example 4.3 |
 | **Non-standard weighting** | A severity weight outside the 0.5–2.0 corridor of Document 18 | Chief Privacy Officer approval and Group DPO advice | No current PanEuropean project uses a non-standard weight |
 | **Special categories** | Health data (PPI), biometric data or other Art. 9/10 data | Group DPO advice regardless of the tier; Art. 9(2) condition confirmed in G-L | Applies even where the tier is Low |
@@ -469,3 +474,4 @@ Versions 1.0 (1 March 2026) and 2.0 (22 August 2026) were adopted by the Managem
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: G-L made a precondition of any appetite decision; acceptance authority aligned with the PGF decision model (DPO advises and never approves; High decided by one designated member of Executive Management with the G-36 evaluation; Critical not acceptable — the former joint acceptance channel removed); mapping of internal tiers to GDPR thresholds (Arts. 35, 36, 33–34) added, with DORA and Chapter V kept separate; likelihood redefined per Document 18 (threat-based for identified processing; PET module for releases) instead of re-identification exposure only; organisational consequences separated as track (b); consent removed as a severity factor; Part B calibration made severity-led (Catastrophic × Low = High; Significant × Low = Medium) and the tool-metric justification removed; Low tier requires DPO advice where a DPIA exists; Supervisory Board limited to oversight, information and reserved consent (§111(4) AktG), decisions taken by the Management Board or its delegates; optional cumulative disclosure budget per source population added as a lifetime ε/δ ledger limit (no calendar reset) with an optional operational cap; transfer row of the GDPR mapping branched by mechanism (Arts. 45, 46, 49); Part B re-baselined as version 3.0 (adopted 20 October 2026, effective on Supervisory Board consent 23 October 2026) with earlier versions kept as fictional history; Section 3 identified as one of exactly three Supervisory Board reserved consent matters; "bottom-up aggregation" replaced by top-down appetite with bottom-up monitoring; worked examples moved from footnotes into the body and aligned with Document 18; example dates shifted by −12 months; calqued governance terms replaced by the PGF controlled vocabulary; references added. Integration pass: no-self-concurrence rule (where the EPPO is itself the Processing Owner, another named role concurs at Medium; Part B: the CRO); Part B warning level of the disclosure budget and the Management Board's δ-headroom decision of 22 October 2026 recorded (limits unchanged) |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

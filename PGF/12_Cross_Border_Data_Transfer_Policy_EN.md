@@ -2,17 +2,17 @@
 title: "Cross-Border Data Transfer Policy"
 document_id: PGF-12
 level: 2
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level2/12. Cross-Border-Data-Transfer-Policy_ENG.docx.md; sha256 6132bf8108b24179e042a0fcfd133fed981aebf93d9dfc6a19890d687c4e01b1"
 ---
 
 # PGF-12 — Cross-Border Data Transfer Policy
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
 > **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
@@ -252,7 +252,7 @@ EuroCredit Bureau and all other recipients in the EEA are outside this document;
 
 ***Case 1 — Federated Learning for the Anti-Fraud Consortium***
 
-PanEuropean trains an anti-fraud model jointly with other EU banks without centralising transaction data. The federated architecture does not change the legal status of the data or of the model updates, and it would not exempt a flow from Chapter V. The consortium involves no third-country importer, so Chapter V is not engaged; if a member, coordinator or hosting provider outside the EEA joined, the flow would be re-assessed under Section 2 and, if it is a transfer, an Art. 46 tool and a TIA would be required, with differential privacy and secure aggregation assessed as supplementary measures. The PET Assessment Module result for DPIA-FL-01 (Document 18, Section 3.3.3) is evidence for the DPIA, not for the transfer status: the DP configuration gates (ε 2.6 at δ 1×10⁻⁹ across all rounds, per customer; gate ε ≤ 3.0), validated secure aggregation and the membership-inference test on the final model are the mandatory set; the gradient-reconstruction test is classified "not applicable for observers in scope" because validated secure aggregation and access restrictions exclude that threat by control — it is not a passed test, and if the secure-aggregation validation lapsed, the test would become mandatory and the module INCOMPLETE until it is run. DPIA-FL-01: track (a) Medium (Document 19).
+PanEuropean trains an anti-fraud model jointly with other EU banks without centralising customer data. The consortium has no third-country importer; a new non-EEA member, coordinator or host triggers a fresh transfer assessment. The PET evidence for DPIA-FL-01 comprises the actual customer-level DP statement (ε 2.6 at δ 1×10⁻⁹ across all rounds), secure-aggregation evidence and the final-model MIA result. Gradient reconstruction is not a passed test; its stated scope exclusion depends on validated controls. Changed observers or controls trigger evidence review, DPO advice and a new decision, not an automatic substitute risk category. DPIA-FL-01 residual track (a) remains Medium (Document 19).
 
 ***Case 2 — Private Set Intersection for Anti-Fraud Matching***
 
@@ -354,3 +354,4 @@ Version 1.0 (1 March 2026) was adopted by the Management Board; the Group DPO wa
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: transfer defined by the three cumulative criteria of EDPB Guidelines 05/2021 v2.0 §2.2 (not by geography alone; international organisations included; same-entity employee remote access is not a transfer; remote access by a separate provider or group entity is); data-state rules added, including the limits of C-413/23 P (importer's means part of the analysis; processor paths never declared outside Chapter V merely for lack of a key; unclear flows treated as transfers); the former three-condition exclusion test for PET schemes (numerical threshold, DPO determination, legal opinion) replaced by controller transfer-status conclusions by Legal with DPO advice; PETs, TEEs, homomorphic encryption, PSI and federated learning treated as possible supplementary measures, not exemptions; the statement that Art. 36 is "unrelated" to transfers removed (DPIA and Art. 36 may apply in parallel); mechanism branches Art. 45 / 46 / 49 with adequacy scope and eligibility checks, BCR approval through the consistency mechanism, Art. 46(2)(e)–(f) and 46(3) tools, and Art. 49 wording per EDPB Guidelines 2/2018 (exceptional, restrictive, conditions of each derogation); G-TIA failure means no start or suspension and cannot be accepted; SCC Clauses 14(f), 15 and 16 cited correctly, with the Clause 16(c) information duty assigned to the exporter (the DPO as contact point); Art. 48 added; one sub-processor rule (prior written authorisation, general authorisation with prior notice and objection window) aligned with Document 17; public-authority requests recorded in the TIA record instead of an undefined separate register; DPO changed from Accountable to mandatory adviser — Legal R/A for TIA and G-TIA, Processing Owner for tool, measures and decision to proceed; Part B rebuilt with fictional providers (Example Cloud Services Pvt Ltd; Example AI Provider Inc., not DPF-certified as an illustrative assumption; partner bank for anti-fraud matching), the PSI purpose corrected to anti-fraud matching with the one-sided design and its intersection-size leakage stated, the suspended mutual-output design recorded, the federated-learning consortium recorded as intra-EU (no transfer, EVP-2026-0041; gradient-reconstruction test "not applicable for observers in scope" by validated control), RoPA identifiers corrected and real-vendor references removed; DORA terminology corrected (critical or important functions; classification by ICT Risk Control); adoption moved to Executive Management; example dates shifted by −12 months; International adaptation (UK IDTA/Addendum, Switzerland, PIPEDA, Québec assessment before communication outside Québec) and references added. Review correction: PSI tier, G-36 outcome and decision status aligned with the re-assessment of the parallel DPIA on 26 October 2026 (Art. 10 severity modifier; High; G-36 met; sessions paused) |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

@@ -2,19 +2,19 @@
 title: "Consent Management Policy"
 document_id: PGF-13
 level: 2
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level2/13. Consent-Management-Policy_ENG.docx.md; sha256 8578626496cbd04d987d77a00416a85fa8a102ebfd9ad4cda8a3ccea8cf3eb57"
 ---
 
 # PGF-13 — Consent Management Policy
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # **About This Document**
 
@@ -189,6 +189,9 @@ This document was adopted by ***[Executive Management]*** on ***[date]***. Docum
 
 # **Part B — Worked Example: PanEuropean Bank AG**
 
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
+
 **PanEuropean Bank AG — Consent Management Policy**
 
 *Effective date: 20 October 2026  ·  Version: 2.0  ·  Document owner: Chief Privacy Officer (EPPO)  ·  Adopted by: Management Board, 20 October 2026*
@@ -338,3 +341,4 @@ Version 1.0 (1 March 2026) was adopted by the Management Board; the Group DPO wa
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: one list of consent-based processing aligned with Document 1 and Document 10 (e-mail and push marketing; the personalised-offers pilot of Document 18, Example 4.1; PPI health data on explicit consent under Art. 9(2)(a) with Art. 6(1)(b); the app's biometric log-in on explicit consent, distinguished from device-native log-in) — the "marketing only" contradiction removed; consent removed as a severity factor (it is checked in G-L only); the legitimate-interests balancing test called an LIA, not a DPIA; informed-consent elements completed per EDPB Guidelines 05/2020 (type of data, Art. 22(2)(c), Art. 49(1)(a) risks); freely given and PPI optionality (Art. 7(4)) added; explicit consent described with EDPB terms (express statement, two-stage verification), with the tick-box exclusion labelled as internal policy and the "double opt-in = e-signature" conflation removed; Art. 8 ages tied to Document 7, Art. 8(2) reasonable efforts added and the "retroactive invalidation from discovery" contradiction resolved (consent treated as never valid); soft opt-in described as the ePrivacy Art. 13(2) exception checked per jurisdiction, with Part B no longer relying on it; ePrivacy/cookie pointer with EDPB Guidelines 2/2023; deceptive-design rule (EDPB Guidelines 03/2022); withdrawal "act first, then inform" for PPI; propagation of withdrawals to processors, recipients and derived data (Art. 17(1)(b); Document 11 erasure cascade and restricted state); renewal labelled as a policy choice and marketing to former customers ended at account closure; proof-of-consent retention aligned with Document 11 (at most three years); BaFin removed as an authority for consent proof; DPO changed from approver to adviser, with Processing Owners deciding on consent design and CMS configuration and the Privacy Operations Lead accountable for proof; financially vulnerable customers addressed; adoption moved to Executive Management; example dates shifted by −12 months; Normative basis and International adaptation (UK PECR/DUAA, Switzerland, PIPEDA meaningful consent and OPC guidelines, Québec express consent for sensitive information and under-14 rule, CASL) added |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

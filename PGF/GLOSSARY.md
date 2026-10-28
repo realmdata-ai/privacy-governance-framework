@@ -1,7 +1,7 @@
 ---
 title: "PGF Glossary"
 document_id: PGF-GLOSSARY
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
@@ -71,7 +71,7 @@ This glossary is the authoritative list of terms used across the Privacy Governa
 
 | Term | Definition |
 |---|---|
-| **PET assessment module** | The specialised part of Document 18 for de-identified, synthetic and aggregate releases. Individual metric results are retained, and failure gates apply. |
+| **PET assessment module** | The specialised part of Document 18 for de-identified, synthetic and aggregate releases. Individual metric results are retained, and documented observations apply. |
 | **Differential privacy (DP)** | A formal property of a randomised mechanism, parameterised by ε (and, for approximate DP, δ). Statements must specify the privacy unit, the adjacency relation, the mechanism and accountant, and composition across releases. |
 | **WP29 anonymisation criteria** | Singling out, linkability and inference (Article 29 Working Party, Opinion 05/2014, WP216). |
 | **Risk Calculation Project** | A versioned, documented configuration of the Document 18 calculation for a class of processing. |

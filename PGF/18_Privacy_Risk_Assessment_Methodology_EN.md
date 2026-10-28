@@ -2,19 +2,22 @@
 title: "Privacy Risk Assessment Methodology"
 document_id: PGF-18
 level: 2
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level2/18. Privacy-Risk-Assessment-Methodology_ENG.docx.md; sha256 b3b5fed18bf6da0ff1baf401f73036dd50b10ab0d543928dc89202547fc49991"
 ---
 
 # PGF-18 — Privacy Risk Assessment Methodology
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+> **Legal uncertainty and business decision.** A disputed legal interpretation is recorded as a reasoned position with its assumptions, alternatives, consequences for the organisation, Legal/DPO advice and a review date. Uncertainty is not automatically a confirmed G-L failure. The designated Legal function records whether the proposed design has a supportable basis under the applicable rules; the authorised business role decides within those rules and its delegation. A confirmed missing prerequisite or prohibition remains a stop/redesign condition. The decision record presents benefits and consequences for individuals and the organisation together, without silently lowering the individual-harm score.
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # **About This Document**
 
@@ -31,6 +34,8 @@ The method does **not** replace the legal assessment of a transfer under the mec
 **Relationships.** Document 8 (Privacy Risk Appetite Statement) owns the tier scales, the residual-risk matrix and the acceptance authority. Document 19 (DPIA Methodology and Template) and Document 20 (Transfer Impact Assessment Methodology) apply this calculation core. Documents 11, 12, 16 and 17 use the PET Assessment Module as evidence for their own decisions. Results are recorded in the Privacy Risk Register (Document 22) and the RoPA (Document 21). The full list is in Section 6.
 
 # **How to Use This Document**
+
+**Business reading route:** project passport (4.1) → configured calculation (4.2–4.3) → Document 8 matrix (4.4) → DPO advice and one business decision record (4.5; Documents 8 and 19). Section 3 is the technical reference catalogue. Begin with Part B Example 2.1 and its reconfigured counterpart 2.1-R; individual observations accompany the result without imposing another tier.
 
 Part A is a template for drafting the methodology. Text in ***[square brackets, bold italic]*** is a fillable or illustrative placeholder. Blocks marked **Guidance** explain what should go into a section and are removed from the organisation's adopted version.
 
@@ -57,7 +62,7 @@ Glossary of Terms
 3.1 Architecture of the Methodology
 3.2 Likelihood — Threat-Based Model and Base-Dataset Diagnostics
 3.3 PET Assessment Module
-3.3.0 Module Rules (Legal Status, Failure Gates, Normalisation, Uncertainty)
+3.3.0 Module Rules (Legal Status, Integrated Calculation and Review)
 3.3.1 De-identification of Records ("Anonymisation Techniques")
 3.3.2 Data Synthesis
 3.3.3 Federated Learning / Joint Computation Without Data Centralisation
@@ -131,7 +136,7 @@ Project 4 — Examples 4.1, 4.2 (and 4.2-R), 4.3
 
 | Term | Definition / Reference |
 | :---- | :---- |
-| Risk Calculation Project | A versioned, case-specific configuration of the methodology: archetype, harm scenarios, likelihood factors, PET-module metrics and thresholds, severity scores, weights and failure gates. Structure — Section 4. |
+| Risk Calculation Project | A versioned, case-specific configuration of the methodology: archetype, harm scenarios, likelihood factors, PET-module metrics and thresholds, severity scores, weights and assessment observations. Structure — Section 4. |
 | Harm scenario | A combination of a threat source, a problematic data action or event, and the harm type that would result for individuals (Factor A). Every Risk Calculation Project assesses at least one scenario per relevant harm type. |
 | Track (a) — rights and freedoms | The assessment of likelihood and severity of harm to individuals. It informs DPIA conclusions, the G-36 prior-consultation test (as an indicator; the legal conclusion is separate) and risk acceptance (Document 8). |
 | Track (b) — organisational consequences | Regulatory, financial, reputational and operational consequences for the organisation (Factor F). Recorded separately; never offsets track (a). |
@@ -141,8 +146,8 @@ Project 4 — Examples 4.1, 4.2 (and 4.2-R), 4.3
 | Data Synthesis | The generation of an artificial dataset from a model trained on source data. Synthesis is a generation method, not a legal status: synthetic data can disclose information about the people in the source data. Structure — Section 3.3.2. |
 | Federated Learning | Training of a model on data distributed across participants, where only derived artefacts (for example, parameter updates) leave each participant. A processing architecture; it does not by itself change the legal status of the data or of the artefacts. Structure — Section 3.3.3. |
 | SMPC | Secure Multi-Party Computation — participants compute a function over combined inputs while exchanging only encrypted or secret-shared fragments. A processing architecture, addressed in Section 3.3.3. |
-| PET Assessment Module | The specialised assessment applied to de-identified, synthetic, aggregate and federated artefacts: individual metric results, failure gates and a disclosure indicator. Section 3.3. |
-| Failure gate | A condition that fails the PET Assessment Module (or makes it INCOMPLETE) regardless of any average: a mandatory metric outside its threshold, an unmitigated feasible disclosure path defined by the project, a prohibited attribute, a DP ledger overrun, or a missing or invalid result. Section 3.3.0. |
+| PET Assessment Module | The specialised assessment applied to de-identified, synthetic, aggregate and federated artefacts: individual metric results, assessment observations and a disclosure indicator. Section 3.3. |
+| Assessment observation | A documented metric deviation, disclosure finding, DP/configuration issue or evidence limitation. It informs DPO advice and the business decision; it does not automatically override the integrated tier. Section 3.3.0. |
 | Disclosure indicator | The weighted average of normalised metric results within the PET Assessment Module. An uncalibrated ordinal summary; it is **not** a probability. Section 3.3.0. |
 | Privacy unit | In differential privacy, the entity whose contribution the guarantee protects (for example, one record, or all records of one customer). Section 3.3.5. |
 
@@ -196,7 +201,7 @@ G-L and DPIA duties apply under every mechanism. PETs, trusted execution environ
 
 * ***[Likelihood. For processing of identified or identifiable data — including pseudonymised data — the likelihood of each scenario comes from threat sources, exposure, control effectiveness and event history (Section 3.2), in the spirit of NISTIR 8062 and the CNIL PIA method. Re-identification metrics are not used as the likelihood of harm from identified processing.]***
 
-* ***[PET Assessment Module. For a de-identified, synthetic, aggregate or federated artefact, the likelihood of the disclosure scenario (singling out, linkability, inference, membership disclosure, reconstruction) is assessed through the PET Assessment Module (Section 3.3), which keeps individual metric results and applies failure gates. Other scenarios concerning the same processing (for example, insider misuse of the source data) still use Section 3.2.]***
+* ***[PET Assessment Module. For a de-identified, synthetic, aggregate or federated artefact, the likelihood of the disclosure scenario (singling out, linkability, inference, membership disclosure, reconstruction) is assessed through the PET Assessment Module (Section 3.3), which keeps individual metric results and records assessment observations. Other scenarios concerning the same processing (for example, insider misuse of the source data) still use Section 3.2.]***
 
 * ***[Severity. Severity (Section 3.4) is determined by the nature, scope and context of the harm scenario; it does not depend on the PET technology applied. Controls and PETs act on likelihood, not on severity, unless a measure demonstrably limits the consequences themselves (documented in the scenario).]***
 
@@ -236,7 +241,7 @@ G-L and DPIA duties apply under every mechanism. PETs, trusted execution environ
 
 ***[The likelihood index is always an integer (a sum of integer factor scores); no weights apply to it.]***
 
-* ***[Override rule: where a control is absent or ineffective (L3 = 3) against a capable or systematic threat source (L2 ≥ 2), the likelihood level is at least High, whatever the index.]***
+* ***[Map the threat-based sum to its band once. A weak-control or capable-source observation is recorded for DPO advice and the business decision; it does not impose a separate minimum likelihood above the calculated band.]***
 
 * ***[Inherent and residual likelihood: the project records the inherent likelihood (L3 assessed as 3, i.e. without measures) and the residual likelihood (L3 as evidenced). The inherent value informs DPIA triage and the choice of measures; the residual value is used for the residual tier.]***
 
@@ -250,69 +255,49 @@ G-L and DPIA duties apply under every mechanism. PETs, trusted execution environ
 
 > **Guidance.** The PET Assessment Module is a specialised module, not a universal DPIA or TIA formula. It applies whenever a de-identified, synthetic, aggregate or federated artefact crosses a boundary of access (sharing, publication, transfer, use by a wider group) and whenever the controller wishes to support a conclusion that information is anonymous. It provides evidence for the likelihood of the disclosure scenario only.
 
-### **3.3.0 Module Rules (Legal Status, Failure Gates, Normalisation, Uncertainty)**
+### **3.3.0 Module Rules (Legal Status, Integrated Calculation and Review)**
 
 **Legal status.** ***[Results of this module are evidence, not a legal safe harbour. Meeting any threshold for ε, δ, k, l, t, uniqueness, attack success or any other metric — or a favourable DPO opinion — does not by itself establish that information is anonymous or that processing is lawful. Whether information is anonymous is a contextual legal conclusion under GDPR Recital 26, made by the controller: it considers all the means reasonably likely to be used, by the controller or by any other person, to identify a person directly or indirectly, taking into account the costs and time required, the available technology and its development. Identifiability is assessed relative to the recipient and its realistic means (CJEU C-582/14 *Breyer*; CJEU C-413/23 P *EDPS v SRB*); for an open publication, the recipient is anyone. Pseudonymised data remain personal data for whoever can attribute them (Art. 4(5); EDPB Guidelines 01/2025 on pseudonymisation). The EDPB Guidelines 02/2026 on anonymisation were published as a public-consultation draft (8 July 2026); they are not final and are used as orientation only. The three criteria of singling out, linkability and inference are those of Article 29 Working Party Opinion 05/2014 on Anonymisation Techniques (WP216).]***
 
 **Periodic re-assessment.** ***[A conclusion that a released artefact is anonymous is re-assessed at least [annually] and whenever new auxiliary data, a new published attack, a new release from the same source population (Section 3.3.6) or a change of recipient becomes known. For open releases that cannot be withdrawn, the re-assessment also considers whether further releases must be stopped.]***
 
-**Per-metric results.** ***[Every metric selected for the project is reported individually, with its threshold, its normalised value and whether it passed. A composite never replaces the individual results.]***
+**One calculation, one mapped level.** ***[For valid, complete inputs, compute the configured weighted disclosure indicator, map it once to the project's likelihood band, and use Document 8's matrix with severity. A single metric exceeding its threshold does not automatically replace the calculated likelihood with High or Near-certain and does not select a different calculation project. The project configuration is versioned before use; do not retune it to obtain a desired case result.]***
 
-**Failure gates.** ***[The module FAILS, regardless of the disclosure indicator, if any of the following applies:]***
+**Individual results and professional review.** ***[Retain each selected metric, its threshold, uncertainty and observed deviation alongside the integrated result. Record material attack findings, configuration/DP-claim differences and limitations in the evidence pack. The DPO may give a dissenting opinion; the authorised business decider records the response and may impose conditions, refuse or request redesign while retaining the computed tier. A technical observation is not an automatic tier override. Legal requirements, an adopted disclosure-budget cap and release conditions are assessed separately; they may prevent release without rewriting its risk score.]***
 
-* ***[G-M1 — a mandatory metric is outside its threshold, applying the uncertainty rule below;]***
-* ***[G-M2 — an unmitigated feasible disclosure path. For each attack in the project's attack set, the project passport states its scope (records, population and auxiliary data assumed), the baseline against which success is measured (for example chance level, or success on a control set of records that were not in the source data), the unacceptable-success level and the uncertainty rule. G-M2 fails where an attack's success exceeds its unacceptable level after the uncertainty rule is applied, or where a qualitative path that the project defines as unacceptable regardless of rate is found (for example, an exact copy of a source record in a synthetic release, or a published cell that attributes a sensitive value to an identifiable person). Success at or near the baseline, or below the unacceptable level once uncertainty is taken into account, does not fail G-M2; it is reported as observed success. Where an attack is also a weighted metric, its unacceptable level is the metric threshold (G-M1 and G-M2 then coincide). Attacks documented in the literature for the technique and parameters used are included in the attack set or their exclusion is justified;]***
-* ***[G-M3 — the artefact contains an attribute that the project prohibits for the intended recipient. Two different grounds are distinguished: (a) the release would disclose identifiable special-category data without an applicable Art. 9(2) condition — this is also a G-L failure; (b) the organisation's internal policy excludes an attribute from a type of release (for example, no health-related attribute in open releases) — labelled as internal policy, stricter than the legal test. An attribute contained in information that is effectively anonymous under Recital 26 is not, as such, special-category personal data; whether the release is anonymous is the question that the module and the legal assessment answer;]***
-* ***[G-M4 — for differential privacy: the DP statement of Section 3.3.5 is incomplete, or the lifetime cumulative ledger or an operational cap for the source population (Section 3.3.6) would be exceeded;]***
-* ***[G-M5 — a mandatory metric or test is missing, invalid (outside its allowed domain or computed on a configuration that fails the domain rules below) or not assessed. A missing or invalid result never defaults to a passing value: the module outcome is INCOMPLETE, which blocks release in the same way as FAIL.]***
-
-***[A failed or incomplete module means that the artefact may not be released, shared or treated as anonymous in its current form. For a FAIL, the as-proposed likelihood of the disclosure scenario is recorded as High. Conservative internal routing rule: where a G-M1 or G-M2 failure has been reproduced — it persists in every repetition and the whole confidence interval lies beyond the threshold — the as-proposed likelihood is recorded as Near-certain. This is an internal routing convention for evidence and incident classification; it does not mean that disclosure is near-certain for every person. The observed success (for example accuracy, true-positive rate at a low false-positive rate, share of records reconstructed) is always reported next to it. These values are not available for acceptance.]***
+**Missing inputs.** ***[If a selected weighted input or its configuration is missing, invalid or mathematically undefined, label the calculation INCOMPLETE. Do not substitute zero, redistribute weights silently or invent a Low/High tier. A missing diagnostic test is a stated limitation, not a successful test. A DP guarantee or anonymity conclusion cannot be claimed without the evidence needed for that claim.]***
 
 **Normalisation.** ***[Each weighted metric is normalised so that 0 corresponds to the no-disclosure baseline and 1 to the project threshold. Allowed domains and orientation:]***
 
 | Metric type | Allowed domain and configuration | Normalised value |
 | :---- | :---- | :---- |
 | ***[Rate with a zero baseline (singling-out rate, linkage success, share of records reconstructed) — lower is safer]*** | ***[Value in [0, 1]; threshold in (0, 1]]*** | ***[value / threshold]*** |
-| ***[Signed advantage with a zero baseline (inference advantage, CAP advantage, information gain expressed as an advantage) — lower is safer]*** | ***[Value in [−1, 1]; threshold in (0, 1]. A negative advantage (attack worse than its baseline) is recorded as observed; the gate and the indicator use the effective value max(0, value)]*** | ***[max(0, value) / threshold]*** |
-| ***[Accuracy of a balanced membership test (baseline 0.5)]*** | ***[Accuracy in [0, 1]; threshold in (0.5, 1]. Orientation-invariant: an attack performing below chance can be inverted, so the gate and the indicator both use the effective accuracy 0.5 + \|accuracy − 0.5\|]*** | ***[advantage = 2 × \|accuracy − 0.5\|; normalised = \|accuracy − 0.5\| / (threshold − 0.5)]*** |
-| ***[AUC-ROC (baseline 0.5)]*** | ***[AUC in [0, 1]; threshold in (0.5, 1]; the gate and the indicator both use the effective AUC 0.5 + \|AUC − 0.5\|]*** | ***[\|AUC − 0.5\| / (threshold − 0.5)]*** |
+| ***[Signed advantage with a zero baseline (inference advantage, CAP advantage, information gain expressed as an advantage) — lower is safer]*** | ***[Value in [−1, 1]; threshold in (0, 1]. A negative advantage (attack worse than its baseline) is recorded as observed; the comparison and the indicator use the effective value max(0, value)]*** | ***[max(0, value) / threshold]*** |
+| ***[Accuracy of a balanced membership test (baseline 0.5)]*** | ***[Accuracy in [0, 1]; threshold in (0.5, 1]. Orientation-invariant: an attack performing below chance can be inverted, so the comparison and the indicator both use the effective accuracy 0.5 + \|accuracy − 0.5\|]*** | ***[advantage = 2 × \|accuracy − 0.5\|; normalised = \|accuracy − 0.5\| / (threshold − 0.5)]*** |
+| ***[AUC-ROC (baseline 0.5)]*** | ***[AUC in [0, 1]; threshold in (0.5, 1]; the comparison and the indicator both use the effective AUC 0.5 + \|AUC − 0.5\|]*** | ***[\|AUC − 0.5\| / (threshold − 0.5)]*** |
 | ***[Bounded similarity ratio where 1 means no disclosure (e.g. NNDR) — higher is safer]*** | ***[Value in [0, 1]; threshold in [0, 1)]*** | ***[(1 − value) / (1 − threshold)]*** |
-| ***[Unbounded distance where larger is safer (e.g. DCR percentile) — higher is safer]*** | ***[Value ≥ 0; threshold > 0, set from the holdout baseline. A value of 0 (an exact copy of a source record) is an unacceptable qualitative path under G-M2 and is not normalised]*** | ***[threshold / value]*** |
-| ***[Formal DP parameters (ε, δ)]*** | ***[ε ≥ 0; 0 ≤ δ < 1]*** | ***[Not normalised and not averaged; checked as configuration gates (G-M1/G-M4) and documented in the DP statement (Section 3.3.5)]*** |
+| ***[Unbounded distance where larger is safer (e.g. DCR percentile) — higher is safer]*** | ***[Value ≥ 0; threshold > 0, set from the holdout baseline. A value of 0 (an exact copy of a source record) is a material disclosure observation; the reciprocal is undefined, so this configuration does not yield a complete score]*** | ***[threshold / value]*** |
+| ***[Formal DP parameters (ε, δ)]*** | ***[ε ≥ 0; 0 ≤ δ < 1]*** | ***[Not normalised and not averaged; reported separately as formal-claim and configuration evidence and documented in the DP statement (Section 3.3.5)]*** |
 
-***[A threshold equal to the baseline, or on the wrong side of it (for example an accuracy threshold of 0.5 or less), makes the configuration invalid; the module is then INCOMPLETE (G-M5). A value outside its allowed domain is an invalid result (G-M5). Each threshold states whether it is inclusive. Unless the project passport states otherwise, thresholds of lower-is-safer metrics are exclusive upper limits (the metric passes only if its unfavourable bound is strictly below the threshold) and thresholds of higher-is-safer metrics are exclusive lower limits (it passes only if its unfavourable bound is strictly above the threshold); a value exactly at an exclusive threshold fails.]***
+***[A threshold equal to the baseline, or on the wrong side of it (for example an accuracy threshold of 0.5 or less), makes the configuration invalid; the calculation is then INCOMPLETE. A value outside its allowed domain is an invalid result. Each threshold states whether it is inclusive. Unless the project passport states otherwise, thresholds of lower-is-safer metrics are exclusive upper limits (the metric passes only if the reported comparison value is strictly below the threshold) and thresholds of higher-is-safer metrics are exclusive lower limits (it passes only if the reported comparison value is strictly above the threshold); equality at an exclusive threshold is reported as a threshold deviation.]***
 
-***[Weights are non-negative and sum to 1 over the weighted metrics. Gate-only and diagnostic metrics have no weight and are outside the indicator.]***
+***[Weights are non-negative and sum to 1 over the weighted metrics. Review-only and diagnostic metrics have no weight and are outside the indicator.]***
 
 ***[Membership-inference tests are run on a balanced set of members and non-members; the organisation also reports the true-positive rate at a low false-positive rate (for example, at FPR = 0.1%), because average accuracy or AUC can hide a small group of highly exposed records.]***
 
-**Disclosure indicator.** ***[Disclosure indicator = Σ (normalised value × weight) over the weighted metrics. It is an uncalibrated ordinal summary for comparison between runs and is **not** a probability. It is translated into a likelihood level only for a module that has passed all gates. Because every weighted metric of a passing module has a normalised value of at most 1 and the weights sum to 1, the indicator of a passing module lies between 0 and 1; an indicator above 1 can arise only when a metric has failed, and the outcome is then FAIL.]***
+**Disclosure indicator.** ***[I = Σ (normalised metric value × final weight). This is an ordinal indicator, not a calibrated probability of harm. A complete valid indicator is mapped directly, even where individual comparisons show deviations. The following illustrative calibration retains the original project's ranges, with explicit non-overlapping boundaries:]***
 
-| Module outcome | Likelihood level of the disclosure scenario |
+| Integrated indicator I | Likelihood band |
 | :---- | :---- |
-| ***[PASS, indicator < 0.5]*** | ***[Low]*** |
-| ***[PASS, 0.5 ≤ indicator ≤ 1.0]*** | ***[Medium]*** |
-| ***[INCOMPLETE (G-M5)]*** | ***[Not assessed — release blocked; no likelihood level is assigned]*** |
-| ***[FAIL (any gate)]*** | ***[High (as-proposed; not available for acceptance)]*** |
-| ***[FAIL reproduced (internal routing rule above)]*** | ***[Near-certain (as-proposed; internal routing convention; observed success reported separately; not available for acceptance)]*** |
+| ***[0 ≤ I < 0.5]*** | ***[Low]*** |
+| ***[0.5 ≤ I ≤ 1.0]*** | ***[Medium]*** |
+| ***[1.0 < I ≤ 2.0]*** | ***[High]*** |
+| ***[I > 2.0]*** | ***[Near-certain — an ordinal scale label, not a measured event frequency]*** |
+| ***[Missing or invalid selected input]*** | ***[INCOMPLETE — no computed tier]*** |
 
-**Uncertainty.** ***[Attack metrics are estimates. The evidence pack records, for each attack metric, the evaluation sample size, the number of repetitions and a 95% confidence interval. The gate uses the unfavourable bound: the upper bound for a lower-is-safer metric, the lower bound for a higher-is-safer metric. For accuracy and AUC the unfavourable bound is orientation-invariant: it is the larger effective value over both ends of the interval, max(0.5 + \|lower − 0.5\|, 0.5 + \|upper − 0.5\|), so that an interval lying below chance, or crossing 0.5, is evaluated as strictly as one above it. For signed advantages the unfavourable bound is max(0, upper bound). Where that bound crosses the threshold while the point estimate does not, the metric fails unless the test is repeated with a larger sample. The disclosure indicator uses effective point estimates.]***
+**Uncertainty and calibration.** ***[Report sample size, repetitions and uncertainty where the test supports them. The versioned passport states whether point estimates or a specified conservative statistic enter the weighted calculation. In Part B the point estimates shown in the tables are used. Uncertainty informs DPO advice and the business decision; it is not a second automatic tier calculation. Thresholds, weights and calibration require a separate methodological/statistical justification. No new logarithmic or exponential transformation is introduced by this version. Detailed validation techniques belong in a separate technical companion.]***
 
-***[Interval methods. Binomial proportions (accuracy of a balanced test, hit rates, singling-out and linkage rates, precision at k, share of records reconstructed) use Wilson score intervals. AUC, advantages, information-gain measures and distance-based metrics use bootstrap percentile intervals; the passport states the resampling unit (record or person) and the number of resamples. "Repetitions" are independent re-runs of the attack with fresh random seeds and, where applicable, fresh member/non-member splits; the evidence pack reports the spread across repetitions as well as the interval. Where an example in this document is illustrative, interval bounds may be stated as assumptions; they must then be labelled as such and never presented as computed from real observations.]***
-
-***[Boundary check (accuracy threshold exclusive, < 0.60):]***
-
-| ***[Observed accuracy or interval]*** | ***[Effective unfavourable value]*** | ***[Gate]*** |
-| :---- | :---- | :---- |
-| ***[0.50]*** | ***[0.50]*** | ***[pass]*** |
-| ***[0.40]*** | ***[0.60 (inverted)]*** | ***[fail — exactly at the exclusive threshold]*** |
-| ***[0.60]*** | ***[0.60]*** | ***[fail — exactly at the exclusive threshold]*** |
-| ***[0.10, interval [0.09, 0.11]]*** | ***[0.91]*** | ***[fail — an inverted attack is near-perfect]*** |
-| ***[0.90]*** | ***[0.90]*** | ***[fail]*** |
-| ***[0.52, interval [0.45, 0.58] (crosses 0.5)]*** | ***[max(0.55, 0.58) = 0.58]*** | ***[pass]*** |
-| ***[0.45, interval [0.38, 0.52] (crosses 0.5)]*** | ***[max(0.62, 0.52) = 0.62]*** | ***[fail]*** |
-
-**Default thresholds.** ***[The default thresholds in Part B are organisation-set illustrative values calibrated for a stated adversary profile and disclosure channel. They are not derived from a normative source. Releases to a broad or unlimited audience normally require stricter, context-based values; ISO/IEC 27559 and NIST SP 800-188 describe context-based approaches.]***
+**Defaults.** ***[Part B thresholds and calibration are illustrative internal choices, not statutory limits or evidence of anonymity. The project explains its population, adversary and output channel. A low integrated indicator does not negate a demonstrated disclosure, confer lawfulness or establish anonymity.]***
 
 ### **3.3.1 De-identification of Records ("Anonymisation Techniques")**
 
@@ -325,7 +310,7 @@ G-L and DPIA duties apply under every mechanism. PETs, trusted execution environ
 | Inference | ***[Correct-attribution-probability (CAP) family, e.g. categorical ZCAP, reported as advantage over the prior; normalised information gain (1 − H(S\|Q)/H(S)); ML-based inference attack, reported as advantage over a baseline model]*** | ***[0–1 after the stated transformation]*** | ***[Decrease]*** |
 | Proxy metrics | ***[k-anonymity, l-diversity, t-closeness, uniqueness rate]*** | ***[k, l ≥ 1; t 0–1; uniqueness 0–1]*** | ***[Increase k and l; decrease t and uniqueness]*** |
 
-> **Guidance.** k-anonymity does not protect against attribute inference within homogeneous classes (WP216); l-diversity and t-closeness address this only partially. Proxy metrics are reported but are not sufficient on their own. Each project states which metrics are mandatory (gated) and which are diagnostic only.
+> **Guidance.** k-anonymity does not protect against attribute inference within homogeneous classes (WP216); l-diversity and t-closeness address this only partially. Proxy metrics are reported but are not sufficient on their own. Each project states which metrics enter the weighted indicator and which are review-only observations.
 
 ### **3.3.2 Data Synthesis**
 
@@ -338,7 +323,7 @@ G-L and DPIA duties apply under every mechanism. PETs, trusted execution environ
 | ***[Nearest-Neighbour Distance Ratio (NNDR)]*** | ***[Whether a synthetic record sits unusually close to one specific training record]*** | ***[0 – 1]*** | ***[Increase towards 1]*** |
 | ***[Linkability test for synthetic data — linkage of synthetic records to records of an auxiliary dataset representing attacker knowledge, scored as advantage over a control set]*** | ***[Whether a synthetic record can be linked to a real person's record]*** | ***[Advantage 0 – 1]*** | ***[Decrease]*** |
 | ***[Attribute-inference test for synthetic data — scored as advantage over a control set]*** | ***[Whether secret attributes of real people can be inferred]*** | ***[Advantage 0 – 1]*** | ***[Decrease]*** |
-| ***[DP parameters of the generator (ε, δ) and accountant]*** | ***[The formal guarantee of the training mechanism — Section 3.3.5]*** | ***[ε ≥ 0; δ ≥ 0]*** | ***[Configuration gate, not averaged]*** |
+| ***[DP parameters of the generator (ε, δ) and accountant]*** | ***[The formal guarantee of the training mechanism — Section 3.3.5]*** | ***[ε ≥ 0; δ ≥ 0]*** | ***[Configuration comparison, outside the indicator]*** |
 
 > **Guidance.** Published methods exist for testing singling out, linkability and inference on synthetic data by comparing attack success on training records with success on a control set of unseen records. Reconstruction of training records from the generator's parameters (model inversion) is a separate threat. If the organisation has no validated test for it, it records the limitation and restricts access to the generator's parameters accordingly; it does not claim the risk is covered.
 
@@ -348,7 +333,7 @@ G-L and DPIA duties apply under every mechanism. PETs, trusted execution environ
 
 | Method / Metric | What It Measures | Value Range | Direction to Reduce Risk |
 | :---- | :---- | :---- | :---- |
-| ***[DP on model updates (ε, δ, accountant, composition across all rounds)]*** | ***[Formal guarantee for the privacy unit across the whole training — Section 3.3.5]*** | ***[ε ≥ 0; δ ≥ 0]*** | ***[Configuration gate]*** |
+| ***[DP on model updates (ε, δ, accountant, composition across all rounds)]*** | ***[Formal guarantee for the privacy unit across the whole training — Section 3.3.5]*** | ***[ε ≥ 0; δ ≥ 0]*** | ***[Configuration comparison]*** |
 | ***[Secure aggregation / output restriction]*** | ***[Whether individual updates are visible to the coordinator or to other participants]*** | ***[Yes/No, with scope]*** | ***[Control (L3 of Section 3.2 for the access scenario)]*** |
 | ***[Membership inference on the final model]*** | ***[Whether membership of a record in a participant's data can be inferred from the shared model]*** | ***[Accuracy/AUC 0.5 – 1]*** | ***[Decrease]*** |
 | ***[Gradient-leakage / reconstruction test on updates]*** | ***[Whether records can be reconstructed from updates]*** | ***[Method-specific]*** | ***[Decrease]*** |
@@ -357,16 +342,16 @@ G-L and DPIA duties apply under every mechanism. PETs, trusted execution environ
 
 ### **3.3.4 Aggregate Statistics and Tabular Releases**
 
-***[Aggregates are not anonymous by construction. Tables, counts, means and model outputs can disclose information through small cells, differencing between overlapping tables or successive releases, and database-reconstruction attacks that solve for the underlying records from many published statistics. For archetype 2b the module applies statistical disclosure control (SDC) gates before any record-level test:]***
+***[Aggregates are not anonymous by construction. Tables, counts, means and model outputs can disclose information through small cells, differencing between overlapping tables or successive releases, and database-reconstruction attacks that solve for the underlying records from many published statistics. For archetype 2b the module applies statistical disclosure control (SDC) observations alongside record-level tests:]***
 
-| Check | What It Measures | Typical gate |
+| Check | What It Measures | Illustrative comparison |
 | :---- | :---- | :---- |
 | ***[Minimum cell size (threshold rule)]*** | ***[Smallest number of persons contributing to any published cell after suppression]*** | ***[≥ [10] — illustrative internal SDC setting, calibrated to context; not an anonymity guarantee]*** |
 | ***[Dominance rule (for magnitude tables)]*** | ***[Whether one or a few contributors dominate a cell total]*** | ***[(n, k) rule set by the project]*** |
 | ***[Differencing check]*** | ***[Whether any cell below the minimum can be derived by subtracting published cells, within the release and against all previous releases from the same population]*** | ***[No derivable cell below the minimum]*** |
 | ***[Reconstruction test]*** | ***[Share of source records that can be reconstructed exactly from the full set of published statistics]*** | ***[≤ project threshold]*** |
 | ***[Record-level attack battery on reconstructed records (Section 3.3.1)]*** | ***[Singling out, linkability and inference on what an attacker can reconstruct]*** | ***[Project thresholds]*** |
-| ***[Prohibited-attribute check]*** | ***[Presence of an attribute the project prohibits for the recipient: identifiable special-category data without an Art. 9(2) condition (also a G-L failure), or an attribute excluded by internal policy (labelled as such)]*** | ***[None (G-M3)]*** |
+| ***[Attribute and release-condition review]*** | ***[Identify any legal restriction or separately adopted internal exclusion, with its scope and reason.]*** | ***[Legal prerequisite or documented internal policy; not a metric-driven tier override]*** |
 
 ***[Where the volume or granularity of statistics makes these checks unreliable, the organisation either reduces the release or uses a differentially private release mechanism with a full DP statement (Section 3.3.5).]***
 
@@ -399,7 +384,7 @@ G-L and DPIA duties apply under every mechanism. PETs, trusted execution environ
 
 * ***[Budget accounting covers every observable output: committed releases, but also failed or cancelled runs whose outputs, previews or logs were visible, outputs used for model or hyper-parameter selection, and parallel or reserved runs. "Commit-only" accounting (counting only released outputs) is not adopted unless an analysis shows that no other output was observable.]***
 
-* ***[Where Document 8 sets a lifetime cumulative budget (ε and δ) or an operational cap per source population, a release that would exceed either fails the module (G-M4). A PASS that relies on the ledger states the ledger's assumptions (runs included, composition method, observer assumption).]***
+* ***[Where Document 8 sets a lifetime or operational disclosure budget, compare the composed ledger with it and record the release decision under that policy. A budget deviation does not change the integrated risk tier. Do not misstate the actual composed guarantee.]***
 
 ## **3.4 Severity Assessment Factors (Track (a)) and Organisational Consequences (Track (b))**
 
@@ -599,7 +584,7 @@ These metrics are reported in the evidence pack alongside the risk metrics, but 
 
 ## **4. Privacy Risk Calculation Project**
 
-> **Guidance.** A Risk Calculation Project is a finished, versioned configuration of the methodology for a specific business case: the harm scenarios to be assessed; the likelihood factors (Section 3.2) or the PET-module metrics, thresholds, weights and gates (Section 3.3); the severity factors with their scores (Section 3.4); and the quality/utility metrics (Section 3.5). Not every catalogue element applies to every project. The organisation maintains as many projects as it has cases with distinct risk profiles. In the terminology of some technical platforms, a project corresponds to a pipeline. Subsections 4.1–4.6 below give the structure of one project; the organisation reproduces it for each project.
+> **Guidance.** A Risk Calculation Project is a finished, versioned configuration of the methodology for a specific business case: the harm scenarios to be assessed; the likelihood factors (Section 3.2) or the PET-module metrics, thresholds, weights and review observations (Section 3.3); the severity factors with their scores (Section 3.4); and the quality/utility metrics (Section 3.5). Not every catalogue element applies to every project. The organisation maintains as many projects as it has cases with distinct risk profiles. In the terminology of some technical platforms, a project corresponds to a pipeline. Subsections 4.1–4.6 below give the structure of one project; the organisation reproduces it for each project.
 
 ## **4.1 Purpose and Characteristics of the Project**
 
@@ -621,11 +606,11 @@ These metrics are reported in the evidence pack alongside the risk metrics, but 
 | ***[G-L Record]*** | ***[Reference to the G-L record for the processing (lawful basis, Art. 9/10 condition where relevant, purpose compatibility, transparency, Art. 22, Chapter V); mandatory for archetype 4 and for any release]*** |
 | ***[Harm Scenarios]*** | ***[List of scenarios assessed (threat source → data action/event → harm type, Factor A), and the reasons why other harm types are not relevant]*** |
 | ***[Adversary Profile × Disclosure Channel (archetypes 2–3)]*** | ***[Declared explicitly with reference to the recipient and the means reasonably likely to be used (Recital 26); if not declared, the strictest profile defined by the organisation applies]*** |
-| ***[Mandatory (Gated) Metrics and Diagnostic Metrics (archetypes 2–3)]*** | ***[Which metrics are mandatory and gated (G-M1); which are diagnostic only]*** |
-| ***[Unacceptable-Attack Definitions (G-M2, archetypes 2–3)]*** | ***[For each attack in the project's attack set: scope (records, population, auxiliary data), baseline, unacceptable-success level and uncertainty rule; qualitative paths treated as unacceptable regardless of rate]*** |
+| ***[Weighted and review-only metrics (archetypes 2–3)]*** | ***[State which inputs enter the indicator and which are reported only; version the choice before use.]*** |
+| ***[Attack observations (archetypes 2–3)]*** | ***[Record attack scope, baseline, observed success, uncertainty and any material disclosure path for professional review.]*** |
 | ***[DP Statement (where DP is used)]*** | ***[Privacy unit; adjacency; mechanism and accountant; ε at the stated δ; composition; output access — Section 3.3.5; lifetime ledger entry (cumulative ε and δ) and any operational cap — Section 3.3.6]*** |
 | ***[Weight Vector (w\_B, w\_C, w\_D, w\_E, w\_G)]*** | ***[Default (1, 1, 1, 1, 1); a corridor of 0.5–2.0 per factor, with written justification for any deviation; outside the corridor — EPPO approval with DPO advice]*** |
-| ***[Diagnostic Alert Mode]*** | ***[Applies to diagnostic (non-gated) metrics only: Strict (halt and escalate to the Privacy Operations Lead and EPPO) or Lenient (continue, log for audit, Document 27). Mandatory metrics are always gated; no lenient mode applies to them.]*** |
+| ***[Review response]*** | ***[Record material deviations, DPO advice and the decider's response. The business decider may request redesign or impose conditions while preserving the computed tier. Missing selected weighted inputs remain incomplete.]*** |
 | ***[Data Provenance Attribution (Factor G)]*** | ***[Reference to the "Data Source" field of the RoPA (Document 21); without attribution the calculation cannot be completed — a gate]*** |
 | ***[Vulnerable Categories]*** | ***[Categories of vulnerable persons recognised for this project (Factor B)]*** |
 
@@ -643,20 +628,20 @@ These metrics are reported in the evidence pack alongside the risk metrics, but 
 
 **B. PET Assessment Module (Section 3.3).**
 
-| Metric (from the catalogue) | Mandatory (gated) or diagnostic? | Threshold for the project | Difference from the default threshold |
+| Metric (from the catalogue) | Weighted or review-only? | Threshold for the project | Difference from the default threshold |
 | :---- | :---- | :---- | :---- |
-| ***[Metric 1]*** | ***[Mandatory/Diagnostic]*** | ***[Value]*** | ***[Same as default / differs — justification]*** |
-| ***[Metric 2]*** | ***[Mandatory/Diagnostic]*** | ***[Value]*** | ***[Same as default / differs — justification]*** |
+| ***[Metric 1]*** | ***[Weighted/Review-only]*** | ***[Value]*** | ***[Same as default / differs — justification]*** |
+| ***[Metric 2]*** | ***[Weighted/Review-only]*** | ***[Value]*** | ***[Same as default / differs — justification]*** |
 | ***[…]*** | ***[…]*** | ***[…]*** | ***[…]*** |
 
 | Step | Options / Sub-steps | Description |
 | :---- | :---- | :---- |
 | ***[Step 1 — Per-metric results]*** | ***[All selected metrics]*** | ***[Each metric is computed and reported with its confidence interval (Section 3.3.0)]*** |
-| ***[Step 2 — Failure gates]*** | ***[G-M1 to G-M5]*** | ***[If any gate fails, the module FAILS (or is INCOMPLETE under G-M5) regardless of Steps 3–5; the release is not made in its current form; the as-proposed likelihood is recorded as High, or Near-certain under the internal routing rule (Section 3.3.0)]*** |
+| ***[Step 2 — Record observations]*** | ***[Per-metric deviations and evidence limitations]*** | ***[Retain them beside the calculation; obtain DPO advice and the decider's response. No automatic change of tier. Missing selected weighted inputs make the calculation INCOMPLETE.]*** |
 | ***[Step 3 — Normalisation]*** | ***[Baseline-aware normalisation with allowed domains and orientation (Section 3.3.0)]*** | ***[0 = no-disclosure baseline; 1 = project threshold. Formal DP parameters are not normalised]*** |
 | ***[Step 4 — Weighting]*** | ***[Category weight (e.g. a WP216 criterion or a group of technology metrics); metric weight within the category]*** | ***[Non-negative, summing to 1; justified and versioned separately from the thresholds]*** |
 | ***[Step 5 — Disclosure indicator]*** | ***[Weighted average]*** | ***[Disclosure indicator = Σ (normalised value × weight). An uncalibrated ordinal summary; not a probability]*** |
-| ***[Step 6 — Likelihood level]*** | ***[Module outcome table (Section 3.3.0)]*** | ***[PASS, indicator < 0.5 → Low; PASS, 0.5 ≤ indicator ≤ 1.0 → Medium; INCOMPLETE → not assessed; FAIL → High, or Near-certain under the internal routing rule (as-proposed only)]*** |
+| ***[Step 6 — Likelihood level]*** | ***[Versioned calibration table (Section 3.3.0)]*** | ***[I < 0.5 → Low; 0.5 ≤ I ≤ 1.0 → Medium; 1.0 < I ≤ 2.0 → High; I > 2.0 → Near-certain. No tier for INCOMPLETE inputs.]*** |
 
 ## **4.3 Severity**
 
@@ -695,7 +680,7 @@ These metrics are reported in the evidence pack alongside the risk metrics, but 
 | ***[Step 1 — Likelihood per scenario]*** | ***[Result of Section 4.2 (inherent and residual)]*** |
 | ***[Step 2 — Severity per scenario]*** | ***[Result of Section 4.3, after severity floors]*** |
 | ***[Step 3 — Scenario tier]*** | ***[Both levels are mapped through the Document 8 matrix — result Low/Medium/High/Critical (inherent and residual)]*** |
-| ***[Step 4 — PET-module outcome]*** | ***[For archetypes 2–3: if the module failed, the release is not available for acceptance, whatever the tier]*** |
+| ***[Step 4 — Review and release conditions]*** | ***[Record technical observations and DPO advice; the business decider records benefits, consequences and the response. Check applicable legal, budget and release conditions separately from the computed tier.]*** |
 | ***[Step 5 — Track (a) tier]*** | ***[Highest residual scenario tier]*** |
 | ***[Step 6 — Additional project rules (if any)]*** | ***[For example, a mandatory increase by one step when a project-specific condition is met; such rules may only make the result stricter and require justification]*** |
 | ***[Step 7 — G-36]*** | ***[Evaluate the Art. 36(1) test for every DPIA: does high risk to rights and freedoms remain in the absence of further mitigating measures? A High or Critical track (a) tier is a strong indicator. The legal conclusion and its reasons are recorded separately (Legal, with DPO advice). Where the test is met, the supervisory authority is consulted before processing starts (Section 2.1)]*** |
@@ -724,7 +709,7 @@ These metrics are reported in the evidence pack alongside the risk metrics, but 
 
 * ***[Threat-based scenarios: L1–L4 with evidence references for L3 (controls), inherent and residual index and level.]***
 
-* ***[PET Assessment Module: every metric with value, threshold, normalised value, confidence interval and pass/fail; each failure gate and its outcome; disclosure indicator; module outcome (PASS/FAIL); DP statement; cumulative privacy-loss ledger entry (Section 3.3.6).]***
+* ***[PET Assessment Module: every metric with value, threshold, normalised value, confidence interval and pass/fail; each failure gate and its outcome; disclosure indicator; calculation completeness, indicator, tier and observations; DP statement; cumulative privacy-loss ledger entry (Section 3.3.6).]***
 
 * ***[Justification for any deviation of a threshold from the default, with reference to the declared adversary profile and channel.]***
 
@@ -808,6 +793,9 @@ This document was adopted by ***[Executive Management]*** on ***[date]***. Docum
 
 # **Part B — Worked Example: PanEuropean Bank AG**
 
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
+
 **PanEuropean Bank AG — Privacy Risk Assessment Methodology**
 
 *Effective Date: 20 October 2026  ·  Version: 1.2  ·  Document Owner: Chief Privacy Officer (EPPO)  ·  Adopted by: Management Board*
@@ -818,7 +806,7 @@ This document was adopted by ***[Executive Management]*** on ***[date]***. Docum
 
 | Version | Date | Changes |
 | :---- | :---- | :---- |
-| 1.0 | 1 March 2026 | First version of the methodology: two-track model, threat-based likelihood, PET Assessment Module with failure gates, four Risk Calculation Projects. Owner at the time: Group DPO |
+| 1.0 | 1 March 2026 | First version of the methodology: two-track model, threat-based likelihood, PET Assessment Module with assessment observations, four Risk Calculation Projects. Owner at the time: Group DPO |
 | 1.1 | 22 August 2026 | Linked the privacy-loss ledger to the cumulative disclosure budget introduced in the Privacy Risk Appetite Statement (Document 8, version 2.0). Owner at the time: Group DPO |
 | 1.2 | 20 October 2026 | Re-baselined to the new role model on the creation of the Chief Privacy Officer (EPPO) position: the Chief Privacy Officer becomes owner and approves project configurations; the Group DPO's role limited to advice; acceptance by the single decider under Document 8, version 3.0; lifetime privacy-loss ledger with an operational annual cap |
 
@@ -828,13 +816,13 @@ This document was adopted by ***[Executive Management]*** on ***[date]***. Docum
 
 | Term | Definition / Reference |
 | :---- | :---- |
-| Risk Calculation Project | A versioned configuration of the methodology for a PanEuropean processing case: archetype, harm scenarios, likelihood factors, PET-module metrics, thresholds and gates, severity scores and weights. Structure — Section 4. |
+| Risk Calculation Project | A versioned configuration of the methodology for a PanEuropean processing case: archetype, harm scenarios, likelihood factors, PET-module metrics, thresholds and review observations, severity scores and weights. Structure — Section 4. |
 | Pseudonymisation | As in Part A (Art. 4(5)). At PanEuropean, tokenised customer identifiers used in analytics are pseudonymised data and remain personal data; they are assessed as archetype 1 or 4, never as archetype 2. |
 | Anonymous information | As in Part A (Recital 26). At PanEuropean, the conclusion is taken by the Processing Owner on Legal's assessment, with Group DPO advice, and is re-assessed at least annually. |
 | Data Synthesis | As in Part A. At PanEuropean, synthetic datasets are generated on the Bank's privacy engineering platform (PEP, illustrative) and remain within the scope of personal-data controls until a documented anonymity conclusion is taken. |
 | Federated Learning | As in Part A. Used in the anti-fraud consortium with other EU banks (Section 3.3.3). |
 | SMPC | As in Part A. Addressed within Section 3.3.3. |
-| PEP | The Bank's privacy engineering platform (PEP, illustrative) — a fictional internal platform on which the Bank runs the calculations of this methodology. The methodology does not depend on PEP; the connection to tooling is governed by Document 9. |
+| PEP | PAMOLA implementation profile for the fictional Bank, including separately integrated systems. Workflows, deployment and numerical records are illustrative. Implementation, testing and deployment claims require actual versioned evidence. The method does not require this product. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). |
 
 ## **1. Purpose**
 
@@ -865,7 +853,7 @@ PanEuropean applies the four likelihood factors of Part A, Section 3.2, with the
 | L3 — Control gap | Evidence from the Bank's register of technical and organisational measures: access control and "white room" regime, encryption, logging, tested incident-response plan for the processing (Document 14), Art. 28 data processing agreement or Art. 26 arrangement with due-diligence status (Document 17), human review and contestation (Art. 22(3); Document 15), bias testing and independent model validation |
 | L4 — Event history | 1: incidents in comparable processing reported in the sector; 2: events or near misses in PanEuropean's own processing within the last 24 months |
 
-Likelihood index bands, the override rule and the inherent/residual distinction are as in Part A. Consent or another lawful basis never lowers likelihood.
+Likelihood index bands and the inherent/residual distinction are as in Part A, with direct mapping of the sum and no separate control-factor override. Consent or another lawful basis never lowers likelihood.
 
 **Base-dataset disclosure diagnostics (archetype 1).** Computed on the quasi-identifier view of a base dataset (direct identifiers removed), as a baseline for PET planning. They are not the likelihood of any scenario concerning the base dataset.
 
@@ -899,7 +887,7 @@ Deterministic linkage is mapped to both singling out and linkability: an exact m
 
 ### **3.3.0 Module Rules**
 
-The Part A rules apply unchanged: results are evidence, not a legal safe harbour; anonymity is a contextual conclusion under Recital 26 relative to the recipient (C-582/14 *Breyer*; C-413/23 P *EDPS v SRB*); pseudonymised data remain personal data (EDPB Guidelines 01/2025); EDPB Guidelines 02/2026 on anonymisation are a public-consultation draft (8 July 2026) used as orientation only. Per-metric results, the failure gates G-M1 to G-M5, baseline-aware normalisation with its allowed domains, the disclosure indicator (not a probability), confidence intervals and the module outcome table apply as in Part A. For attack metrics, PanEuropean uses at least 5,000 evaluation records per class (members and non-members, or training and control records) and five repetitions, and reports a 95% confidence interval; the gate uses the unfavourable bound. The G-M2 attack set is defined in each project passport; unless a project states otherwise, the unacceptable-success level of an attack is the threshold of the corresponding metric in Sections 3.2 and 3.3.2–3.3.4, and two qualitative paths are unacceptable regardless of rate: an exact copy of a source record in a synthetic release (DCR = 0), and a published cell or combination of cells that attributes a sensitive value to fewer than 10 identifiable persons. G-M3 at PanEuropean: as **internal policy** (stricter than the legal test), health-related and other special-category attributes are excluded from every open release; separately, a release that would disclose identifiable special-category data without an applicable Art. 9(2) condition fails G-L. Every anonymity conclusion for a released artefact is re-assessed at least annually and upon any new release from the same source population.
+The Part A rules apply: PAMOLA supplies the versioned weighted calculation and individual observations. Part B uses the point estimates in the example tables. It maps the indicator directly using I < 0.5: Low; 0.5 ≤ I ≤ 1.0: Medium; 1.0 < I ≤ 2.0: High; I > 2.0: Near-certain. Uncertainty, observed attacks and configuration differences remain visible to the Group DPO and the business decider; none automatically substitutes another likelihood. Anonymity and legal conclusions remain separately reasoned. The reported test designs and confidence intervals are illustrative assumptions, not actual product measurements.
 
 ### **3.3.1 De-identification of Records**
 
@@ -911,12 +899,12 @@ The proxy metrics and attack battery of Section 3.2 are applied to the transform
 | :---- | :---- | :---- |
 | MIA accuracy (balanced evaluation set; shadow-model attack) | Whether an attacker can tell if a record was in the generator's training data; normalised as advantage 2 × \|accuracy − 0.5\| (orientation-invariant; the gate uses the effective accuracy 0.5 + \|accuracy − 0.5\|) | < 60% (advantage < 0.20) |
 | MIA AUC-ROC (loss-based attack) | The same, threshold-free | < 0.60 |
-| MIA TPR at FPR = 0.1% | Exposure of the most vulnerable records | ≤ 1.0% (gate only) |
+| MIA TPR at FPR = 0.1% | Exposure of the most vulnerable records | ≤ 1.0% (review only) |
 | DCR P5 | 5th percentile of the distance from synthetic records to the closest training record, compared with the same statistic for a holdout of real records | ≥ holdout baseline (project value) |
 | NNDR median | Ratio of distances to the nearest and second-nearest training record | > 0.70 |
-| Linkability advantage | Bank test procedure TP-SYN-LINK (illustrative): linkage of synthetic records to an auxiliary dataset representing attacker knowledge, success on training records minus success on a control set | ≤ 0.05 (gate only) |
-| Attribute-inference advantage | Bank test procedure TP-SYN-INF (illustrative): inference of a secret attribute for training records versus a control set | ≤ 0.05 (gate only) |
-| ε (generator, at the configured δ) | Formal DP guarantee of training (DP statement, Section 3.3.5) | ≤ 3.0 (configuration gate) |
+| Linkability advantage | Bank test procedure TP-SYN-LINK (illustrative): linkage of synthetic records to an auxiliary dataset representing attacker knowledge, success on training records minus success on a control set | ≤ 0.05 (review only) |
+| Attribute-inference advantage | Bank test procedure TP-SYN-INF (illustrative): inference of a secret attribute for training records versus a control set | ≤ 0.05 (review only) |
+| ε (generator, at the configured δ) | Formal DP guarantee of training (DP statement, Section 3.3.5) | ≤ 3.0 (configuration comparison) |
 | δ (configured) | Additive term of approximate DP, fixed by design | Set by the project with stated n, privacy unit and accountant (engineering heuristic: well below 1/n) |
 
 TP-SYN-LINK and TP-SYN-INF are the Bank's own documented test procedures, following the published approach of comparing attack success on training records with success on a control set. Reconstruction of training records from the generator's parameters (model inversion) is not tested by the Bank. The limitation is recorded in every evidence pack and mitigated by keeping the generator's parameters inside the PEP environment, accessible only to named Privacy Engineers; only the synthetic dataset leaves that environment.
@@ -927,24 +915,24 @@ The only federated scheme is the anti-fraud consortium with other EU banks (Cros
 
 | Metric / control | Default threshold |
 | :---- | :---- |
-| ε for the whole training (all rounds composed), per customer of a participating bank, at the configured δ | ≤ 3.0 (configuration gate) |
+| ε for the whole training (all rounds composed), per customer of a participating bank, at the configured δ | ≤ 3.0 (configuration comparison) |
 | δ (configured) | Set with stated n (customers of the participating bank), privacy unit and accountant |
 | Secure aggregation — the coordinator sees only the aggregate update | Required (control) |
 | MIA on the final consortium model (balanced set) | AUC < 0.60 |
 | Gradient-reconstruction test on updates | Not available at the Bank — documented limitation |
 
-Because no validated gradient-reconstruction test is available, the Bank does not claim a measured result for that attack class. In the project passport the test is classified as not applicable for the observers in scope, not as passed: validated secure aggregation and access restriction mean that no consortium member and no coordinator can observe an individual bank's updates, so the threat that the test addresses is excluded for them by control; the residual threat from aggregate updates and the final model is covered by the DP guarantee across all rounds and by the mandatory MIA test on the final model. The mandatory set is therefore: the DP configuration gates, validated secure aggregation, and the MIA test. If the validation of secure aggregation lapses, or an observer gains access to individual updates, the gradient-reconstruction test becomes mandatory and the module outcome is INCOMPLETE (G-M5) until evidence exists. Its decision on the consortium rests on the legal assessment (lawful basis, Art. 26 arrangement, Chapter V where relevant — Documents 12 and 20), the DP statement across all rounds, secure aggregation and restricted access to updates, with the limitation recorded in EVP-2026-0041.
+No validated gradient-reconstruction test is available in the example. The passport records this limitation and why validated secure aggregation/access controls restrict observers to aggregates. If those controls or observers change, re-assess the threat, evidence and configuration; do not mark the missing test as passed. The documented DP statement, aggregation controls, MIA results, Group DPO advice and authorised business decision remain distinct parts of DPIA-FL-01.
 
 ### **3.3.4 Aggregate Statistics and Tabular Releases**
 
-| Check | Default gate |
+| Check | Illustrative comparison |
 | :---- | :---- |
 | Minimum cell size after suppression | ≥ 10 persons (illustrative internal SDC setting, calibrated to the release context; not an anonymity guarantee) |
 | Differencing check within the release and against all previous releases from the same population | No derivable cell below 10 |
 | Reconstruction test (exact reconstruction of source records from the published tables) | ≤ 1% of source records |
 | Record-level attack battery on reconstructed records (Section 3.2 attack battery) | Project thresholds |
-| Prohibited-attribute check | No health-related or other special-category attribute in an open release — PanEuropean internal policy (G-M3); a release disclosing identifiable special-category data without an Art. 9(2) condition would also fail G-L |
-| Test scope | Every published table is within the scope of the checks above; a table outside the scope makes the module INCOMPLETE (G-M5) |
+| Attribute and release-condition review | No health-related or other special-category attribute in an open release under PanEuropean internal policy. Actual identifiable special-category disclosure without the necessary condition also fails G-L. |
+| Test scope | Identify the tables and releases tested; record an untested table as outside scope, never as successfully tested. An anonymity claim must cover the actual output. |
 
 ### **3.3.5 Differential Privacy Statements**
 
@@ -952,7 +940,7 @@ Every DP claim at PanEuropean carries the DP statement of Part A, Section 3.3.5.
 
 ### **3.3.6 Repeated Releases and Cumulative Disclosure**
 
-The Privacy Operations Lead keeps a lifetime privacy-loss ledger per source population (for example, the retail customer population) and per privacy unit, recording ε and δ, the accountant and the observers of each run; there is no calendar reset. Every mechanism run on source data is recorded, including runs used for model selection, previews and failed or cancelled runs whose outputs were observable; copies and post-processing of a released DP output are not charged again. Cumulative values are computed by basic composition (sum of ε, sum of δ) unless every run's accounting state allows a tighter, compatible method. All runs on the retail customer population are composed as if one party had observed all outputs, because the observer sets (consortium members, Data Science, Privacy Engineers) cannot be shown to be unable to combine them. A release that would exceed the lifetime budget or the operational annual cap set in Document 8, Section 3, fails the module (G-M4). Every new aggregate release is checked for differencing against all earlier releases from the same population.
+The Privacy Operations Lead keeps a lifetime privacy-loss ledger per source population and privacy unit, including ε/δ, accountant, observers and every observable run, including cancelled or unsuccessful evaluations. There is no calendar reset. Basic composition sums ε and δ unless a justified compatible accountant permits a tighter method. The Bank conservatively treats observers as able to combine outputs. Compare the ledger with Document 8's adopted caps and record any hold or redesign separately from the integrated tier. Check repeated aggregate releases for differencing. A failed experiment does not refund privacy loss already observable.
 
 ## **3.4 Severity Assessment Factors and Organisational Consequences**
 
@@ -1145,7 +1133,7 @@ Severity index = B + C + D + E + G (default weights), mapped with the intervals 
 | :---- | :---- |
 | Step 0 — G-L | Confirm the G-L record; any processing outside it (for example, special-category data without an Art. 9(2) condition for the audit purpose) is a G-L failure — stop and remediate |
 | Steps 1–3 | Likelihood (4.A.2) and severity (4.A.3) of S1 mapped through the Document 8 matrix |
-| Step 4 — PET outcome | Not applicable (no release) |
+| Step 4 — Review and release conditions | Preserve the calculated tier; record Group DPO advice and the business decider's response. Confirm legal, budget and adopted release conditions before release. |
 | Step 5 — Track (a) tier | The S1 tier |
 | Step 6 — Project rules | None |
 | Step 7 — G-36 | Evaluated where the processing is subject to a DPIA |
@@ -1181,7 +1169,7 @@ Not applicable — no PET has been applied. Quality and utility metrics (Section
 | Harm scenarios | S1 — disclosure of information about source customers through the synthetic dataset (membership, linkage, attribute inference) — PET Assessment Module. S2 — misuse of the source data or of the generator's parameters by persons with access inside PEP — threat-based. The fairness of decisions made with the calibrated model is assessed in the scoring scenario of Project 4 (Example 4.3), not here |
 | Adversary profile × disclosure channel | Moderately resourced insider or contractor in Data Science with access to the synthetic dataset and to public or commercially available auxiliary data — matches the default |
 | Mandatory (gated) metrics | MIA accuracy, MIA AUC, MIA TPR at FPR = 0.1%, DCR P5, NNDR median, linkability advantage (TP-SYN-LINK), attribute-inference advantage (TP-SYN-INF), ε, configured δ |
-| Unacceptable attacks (G-M2) | Membership inference — baseline: chance on a balanced member/non-member set; unacceptable: upper 95% bound of accuracy ≥ 60%, of AUC ≥ 0.60, or of TPR at FPR 0.1% > 1.0%. TP-SYN-LINK and TP-SYN-INF — baseline: success on a control set of records not used in training; unacceptable: upper 95% bound of the advantage > 0.05. Qualitative: any exact copy of a training record (DCR = 0) |
+| Attack observations | Report membership, linkage, inference, reconstruction and differencing results as applicable, with baseline, scope and uncertainty. Record any exact copies or small-cell disclosures; obtain Group DPO advice without substituting a separate likelihood tier. |
 | DP statement | Privacy unit: one customer (all records of the customer, contribution bound per customer); adjacency: add/remove one customer; mechanism: DP-SGD in the generator's training; accountant: Rényi DP; δ configured at 1×10⁻⁹ for a source population of about 1.2 million customers (engineering heuristic δ ≤ 1/(100·n)); output access: the synthetic dataset only — generator parameters and checkpoints stay in PEP; lifetime ledger and caps per Document 8, Section 3 (Section 3.3.6) |
 | Weight vector (w\_B, w\_C, w\_D, w\_E, w\_G) | (1, 1, 1, 1, 1) — default |
 | Diagnostic alert mode | Lenient for diagnostic metrics; all listed metrics are mandatory and gated |
@@ -1198,22 +1186,22 @@ Not applicable — no PET has been applied. Quality and utility metrics (Section
 | :---- | :---- | :---- | :---- | :---- |
 | Membership inference | MIA accuracy | 0.25 | < 60% (advantage < 0.20) | Matches the default |
 | Membership inference | MIA AUC-ROC | 0.25 | < 0.60 | Matches the default |
-| Membership inference | MIA TPR at FPR = 0.1% | Gate only | ≤ 1.0% | Matches the default |
+| Membership inference | MIA TPR at FPR = 0.1% | Review only | ≤ 1.0% | Matches the default |
 | Memorisation | DCR P5 | 0.25 | ≥ 0.15 (holdout baseline for this source population) | Project value of the default rule |
 | Memorisation | NNDR median | 0.25 | > 0.70 | Matches the default |
-| Linkability | Linkability advantage (TP-SYN-LINK) | Gate only | ≤ 0.05 | Matches the default |
-| Inference | Attribute-inference advantage (TP-SYN-INF) | Gate only | ≤ 0.05 | Matches the default |
-| Formal DP | ε (at configured δ) | Gate only | ≤ 2.0 (instead of 3.0) | Stricter: the synthetic data calibrate a model used for automated credit decisions; the project chooses a tighter configuration than the default |
-| Formal DP | δ (configured) | Gate only | 1×10⁻⁹ | Set from n ≈ 1.2 million with the heuristic of Section 3.3.5 |
+| Linkability | Linkability advantage (TP-SYN-LINK) | Review only | ≤ 0.05 | Matches the default |
+| Inference | Attribute-inference advantage (TP-SYN-INF) | Review only | ≤ 0.05 | Matches the default |
+| Formal DP | ε (at configured δ) | Review only | ≤ 2.0 (instead of 3.0) | Stricter: the synthetic data calibrate a model used for automated credit decisions; the project chooses a tighter configuration than the default |
+| Formal DP | δ (configured) | Review only | 1×10⁻⁹ | Set from n ≈ 1.2 million with the heuristic of Section 3.3.5 |
 
 | Step | Description |
 | :---- | :---- |
 | Step 1 — Per-metric results | All metrics with 95% confidence intervals |
-| Step 2 — Failure gates | G-M1 (a metric outside its threshold on its unfavourable 95% bound); G-M2 (the attack set and qualitative paths of the passport); G-M4 (incomplete DP statement, or the Document 8 lifetime budget or annual cap exceeded); G-M5 (a missing or invalid result → INCOMPLETE) |
-| Step 3 — Normalisation | MIA accuracy: \|accuracy − 0.5\| / 0.10 (equivalently advantage / 0.20); AUC: \|AUC − 0.5\| / 0.10; DCR P5: 0.15 / value (DCR = 0 fails G-M2 and is not normalised); NNDR: (1 − value) / 0.30 |
-| Step 4 — Weighting | Membership inference 0.50, memorisation 0.50; equal shares within a category. ε and δ are gates and are not weighted |
+| Step 2 — Record observations | Report threshold deviations, evidence limitations, configuration differences and relevant release conditions. The Group DPO may dissent; the decider records the response. Do not replace the integrated likelihood. |
+| Step 3 — Normalisation | MIA accuracy: \|accuracy − 0.5\| / 0.10; AUC: \|AUC − 0.5\| / 0.10; DCR P5: 0.15 / value; NNDR: (1 − value) / 0.30. DCR = 0 is a material exact-copy observation and makes this reciprocal configuration undefined; do not invent a score. |
+| Step 4 — Weighting | Membership inference 0.50, memorisation 0.50; equal shares within a category. ε and δ are comparisons and are not weighted |
 | Step 5 — Disclosure indicator | Σ (normalised value × weight) — not a probability |
-| Step 6 — Likelihood level | PASS, indicator < 0.5 → Low; PASS, 0.5 ≤ indicator ≤ 1.0 → Medium; INCOMPLETE → not assessed; FAIL → High, or Near-certain under the internal routing rule for a reproduced failure |
+| Step 6 — Likelihood level | I < 0.5 → Low; 0.5 ≤ I ≤ 1.0 → Medium; 1.0 < I ≤ 2.0 → High; I > 2.0 → Near-certain. Missing or invalid selected inputs → INCOMPLETE, not a guessed tier. |
 
 **S2 — threat-based.** L1 = 1 (named Privacy Engineers in the "white room"), L2 = 1 (accidental or low-capability misuse), L3 = 0 residual (white-room regime and logging tested; evidence in the Bank's register of measures) / 3 inherent, L4 = 1 (sector events). Residual index 3 → Low; inherent index 6 → Medium.
 
@@ -1242,7 +1230,7 @@ Severity index for S1 and S2 = 3 + 0 + 0 + 3 + 1 + 0 + 0 + 0 = 7 → Significant
 | :---- | :---- |
 | Step 0 — G-L | Confirmed (G-L record above) |
 | Steps 1–3 | S1: module outcome (4.B.2) × Significant; S2: Low × Significant = Medium (residual), Medium × Significant = Medium (inherent) |
-| Step 4 — PET outcome | If the module fails, the synthetic dataset may not be released to Data Science |
+| Step 4 — Review and release conditions | Preserve the calculated tier; record Group DPO advice and the business decider's response. Confirm legal, budget and adopted release conditions before release. |
 | Step 5 — Track (a) tier | Highest of S1 and S2 |
 | Step 6 — Project rules | None |
 | Step 7 — G-36 | Evaluated in DPIA-CS-TRAIN-01 |
@@ -1253,7 +1241,7 @@ Numerical examples — Appendix to Part B, Examples 2.1, 2.1-R and 2.2.
 
 ## **4.B.5 Traceability and Evidence Pack**
 
-PEP compiles the evidence pack for every calculation under this project, whatever the result: Block 0 — G-L record and the G-DPIA outcome (DPIA-CS-TRAIN-01); Block 1 — archetype 3, scenarios S1–S2, adversary profile, DP statement, gated metrics; Block 2 — every metric with value, threshold, normalised value, 95% confidence interval and pass/fail, each gate, the disclosure indicator, the module outcome, the privacy-loss ledger entry, and the documented limitation on model-inversion testing; L1–L4 for S2; Block 3 — Factors B–G and the track (b) level; Block 4 — tiers, the G-36 conclusion, Group DPO advice and the decision of the single designated decider.
+PEP compiles the evidence pack for every calculation under this project, whatever the result: Block 0 — G-L record and the G-DPIA outcome (DPIA-CS-TRAIN-01); Block 1 — archetype 3, scenarios S1–S2, adversary profile, DP statement, weighted and review-only metrics; Block 2 — every metric with value, threshold, normalised value, 95% confidence interval and pass/fail, each observation, the disclosure indicator, the calculation and review record, the privacy-loss ledger entry, and the documented limitation on model-inversion testing; L1–L4 for S2; Block 3 — Factors B–G and the track (b) level; Block 4 — tiers, the G-36 conclusion, Group DPO advice and the decision of the single designated decider.
 
 ## **4.B.6 Other PET Application Metrics**
 
@@ -1281,11 +1269,11 @@ Both are reported in a separate block and do not affect Section 4.B.2.
 | Review cadence | Before every release, annually for the anonymity conclusion, and upon any change in the composition of published aggregates |
 | Effective date | 20 October 2026 (configuration 1.1, re-approved by the Chief Privacy Officer on re-baselining) |
 | Archetype | 2b — aggregate/tabular release (Section 3.1) |
-| G-L record | Publication purpose and compatibility confirmed by Legal & Compliance. A release that would disclose identifiable special-category data without an applicable Art. 9(2) condition fails G-L; in addition, PanEuropean's **internal policy** excludes health-related and other special-category attributes from every open release (G-M3; stricter than the legal test) |
+| G-L record | Publication purpose and compatibility confirmed by Legal & Compliance. An actual identifiable special-category disclosure without the necessary condition fails G-L. The Bank's separate internal policy excludes such attributes from open releases; record its application in the decision. |
 | Harm scenarios | S1 — identification of customers or disclosure of their credit attributes from the published statistics (singling out, linkability, inference, differencing, reconstruction) — PET Assessment Module. Handling of the source microdata during preparation is covered by Project 1 |
 | Adversary profile × disclosure channel | Broad range of attackers, public channel, with public registers and social-network data as auxiliary sources — stricter than the default; the recipient of an open release is anyone |
 | Mandatory (gated) metrics | All SDC gates of Section 3.3.4 and all seven attack metrics on reconstructed records |
-| Unacceptable attacks (G-M2) | Reconstruction — baseline 0; unacceptable: highest value over five runs > 1% of source records. Differencing — qualitative: any derivable cell below 10. Record-level attacks on reconstructed records — unacceptable levels = the metric thresholds, on the upper 95% bound. Qualitative: any cell attributing a sensitive value to fewer than 10 persons. Every published table must be within the test scope (otherwise G-M5) |
+| Attack observations | Report membership, linkage, inference, reconstruction and differencing results as applicable, with baseline, scope and uncertainty. Record any exact copies or small-cell disclosures; obtain Group DPO advice without substituting a separate likelihood tier. |
 | Weight vector (w\_B, w\_C, w\_D, w\_E, w\_G) | (1, 1, 1, 1, 1) — default |
 | Diagnostic alert mode | Not used — all metrics are gated |
 | Data provenance attribution (Factor G) | Direct collection from the customer (credit-portfolio data, same source as Project 1; RoPA, Document 21) |
@@ -1313,11 +1301,11 @@ The linkability category weight (0.50) is higher than in Project 1 (0.35): for a
 | Step | Description |
 | :---- | :---- |
 | Step 1 — Per-metric results | All SDC checks and attack metrics with confidence intervals |
-| Step 2 — Failure gates | Any SDC gate or attack metric outside its threshold on its unfavourable bound fails the module (G-M1/G-M2); an attribute excluded by internal policy fails G-M3; a table outside the test scope makes the module INCOMPLETE (G-M5); identifiable special-category data without an Art. 9(2) condition also fail G-L |
+| Step 2 — Record observations | Report threshold deviations, evidence limitations, configuration differences and relevant release conditions. The Group DPO may dissent; the decider records the response. Do not replace the integrated likelihood. |
 | Step 3 — Normalisation | All seven attack metrics have a zero baseline: value / threshold |
 | Step 4 — Weighting | Singling out 0.20, linkability 0.50, inference 0.30; equal shares within a category |
 | Step 5 — Disclosure indicator | Σ (normalised value × weight) — not a probability |
-| Step 6 — Likelihood level | PASS, indicator < 0.5 → Low; PASS, 0.5 ≤ indicator ≤ 1.0 → Medium; INCOMPLETE → not assessed; FAIL → High, or Near-certain under the internal routing rule (e.g. a reconstruction failure reproduced in every run) |
+| Step 6 — Likelihood level | I < 0.5 → Low; 0.5 ≤ I ≤ 1.0 → Medium; 1.0 < I ≤ 2.0 → High; I > 2.0 → Near-certain. Missing or invalid selected inputs → INCOMPLETE, not a guessed tier. |
 
 Numerical examples — Appendix to Part B, Examples 3.1, 3.2 and 3.3.
 
@@ -1341,9 +1329,9 @@ Severity index for S1 = 3 + 0 + 3 + 0 + 2 + 0 + 0 = 8 → Significant.
 
 | Step | Description |
 | :---- | :---- |
-| Step 0 — G-L | Confirmed. A release that would disclose identifiable special-category data without an applicable Art. 9(2) condition fails G-L and is blocked (Example 3.3); the internal no-health-attribute policy is checked under G-M3 |
-| Steps 1–3 | S1: module outcome × Significant through the Document 8 matrix |
-| Step 4 — PET outcome | A failed module blocks the release, whatever the tier |
+| Step 0 — G-L | Confirmed for the assessed design. Example 3.3 fails G-L on its facts. Record the internal attribute exclusion separately; it does not replace the calculated tier. |
+| Steps 1–3 | S1: calculated likelihood band × Significant through the Document 8 matrix |
+| Step 4 — Review and release conditions | Preserve the calculated tier; record Group DPO advice and the business decider's response. Confirm legal, budget and adopted release conditions before release. |
 | Step 5 — Track (a) tier | The S1 tier |
 | Step 6 — Project rules | None |
 | Step 7 — G-36 | Evaluated where the preparation of the release is subject to a DPIA |
@@ -1352,7 +1340,7 @@ Severity index for S1 = 3 + 0 + 3 + 0 + 2 + 0 + 0 = 8 → Significant.
 
 ## **4.C.5 Traceability and Evidence Pack**
 
-PEP compiles the evidence pack for every calculation: Block 0 — G-L record including the prohibited-attribute check; Block 1 — archetype 2b, scenario S1, the broad adversary profile and its justification, gated metrics; Block 2 — every SDC check and attack metric with values, thresholds, normalised values, confidence intervals and pass/fail, the disclosure indicator and the module outcome, and the differencing check against all earlier releases; Block 3 — Factors B–G and the track (b) level; Block 4 — tier, Group DPO advice, the anonymity conclusion with its reasons and re-assessment date, and the decision of the single designated decider.
+PEP compiles the evidence pack for every calculation: Block 0 — G-L record including the prohibited-attribute check; Block 1 — archetype 2b, scenario S1, the broad adversary profile and its justification, weighted and review-only metrics; Block 2 — every SDC check and attack metric with values, thresholds, normalised values, confidence intervals and pass/fail, the disclosure indicator and the calculation and review record, and the differencing check against all earlier releases; Block 3 — Factors B–G and the track (b) level; Block 4 — tier, Group DPO advice, the anonymity conclusion with its reasons and re-assessment date, and the decision of the single designated decider.
 
 ## **4.C.6 Other PET Application Metrics**
 
@@ -1419,7 +1407,7 @@ Threat-based for every scenario (Section 3.2), with inherent (L3 = 3) and residu
 | :---- | :---- |
 | Step 0 — G-L | Mandatory record; a G-L failure stops the processing or sends it back for redesign (Example 4.2) |
 | Steps 1–3 | Each scenario's likelihood and severity mapped through the Document 8 matrix (inherent and residual) |
-| Step 4 — PET outcome | Not applicable |
+| Step 4 — Review and release conditions | Preserve the calculated tier; record Group DPO advice and the business decider's response. Confirm legal, budget and adopted release conditions before release. |
 | Step 5 — Track (a) tier | Highest residual scenario tier |
 | Step 6 — Project rules | Group DPO advice is sought for every archetype-4 calculation that concerns automated decisions or a high-risk AI system, whatever the tier (Document 8, Section 5, triggers) |
 | Step 7 — G-36 | Evaluated for every DPIA; Legal & Compliance records the conclusion with Group DPO advice |
@@ -1590,7 +1578,7 @@ All three examples concern the same source population (about 1.2 million retail 
 
 The first DP-CTGAN generator, trained before the project configuration was finalised: ε = 2.1 at δ = 8×10⁻⁶ (Rényi DP accountant; privacy unit one customer).
 
-| Metric | Value | Threshold | Normalised | Weight | Contribution | Gate |
+| Metric | Value | Threshold | Normalised | Weight | Contribution | Metric comparison |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
 | MIA accuracy | 54% (advantage 0.08) | < 60% (advantage < 0.20) | 0.40 | 0.25 | 0.100 | Pass |
 | MIA AUC-ROC | 0.57 | < 0.60 | 0.70 | 0.25 | 0.175 | Pass |
@@ -1599,12 +1587,12 @@ The first DP-CTGAN generator, trained before the project configuration was final
 | NNDR median | 0.78 | > 0.70 | 0.73 | 0.25 | 0.183 | Pass |
 | Linkability advantage (TP-SYN-LINK) | 0.02 | ≤ 0.05 | — | — | — | Pass |
 | Attribute-inference advantage (TP-SYN-INF) | 0.03 | ≤ 0.05 | — | — | — | Pass |
-| ε | 2.1 | ≤ 2.0 | — | — | — | **Fail (G-M1)** |
-| δ (configured) | 8×10⁻⁶ | 1×10⁻⁹ | — | — | — | **Fail (G-M4 — DP statement does not match the project configuration)** |
+| ε | 2.1 | ≤ 2.0 | — | — | — | **Configuration difference** |
+| δ (configured) | 8×10⁻⁶ | 1×10⁻⁹ | — | — | — | **Configuration difference** |
 
-Disclosure indicator = 0.656. The attack metrics pass on their unfavourable 95% bounds (evaluation design as in Example 2.1-R; for example, MIA accuracy 53.0%–55.0%, TPR at FPR 0.1% 0.26%–0.62%). **Module outcome: FAIL** — the ε gate and the DP-configuration gate fail, whatever the indicator. No attack was reproduced, so the as-proposed likelihood of S1 is **High**; High × Significant = High, recorded as "not available for acceptance". The synthetic dataset is not released to Data Science; the generator is reconfigured (Example 2.1-R).
+Disclosure indicator = 0.656 → likelihood **Medium**; Medium × Significant = **Medium** for S1. The ε and δ values differ from the selected project configuration. The Group DPO records the concern; the Head of Credit Decisions chooses redesign rather than release under that configuration (Example 2.1-R). The recorded tier remains Medium; the release decision is not an automatic High/Near-certain override. The attack confidence intervals are illustrative (for example MIA accuracy 53.0%–55.0%).
 
-The run is charged to the lifetime privacy-loss ledger (ε 2.1, δ 8×10⁻⁶), because its synthetic output was observed by Privacy Engineers inside PEP during the evaluation (Section 3.3.6). For comparison: the previous version of the method averaged the ε breach into a "probability" of 0.901 and, in a lenient mode, only logged it; under this methodology a breached mandatory threshold cannot be averaged away.
+The run is charged to the lifetime privacy-loss ledger (ε 2.1, δ 8×10⁻⁶), because Privacy Engineers observed its output in the PAMOLA implementation environment. The actual DP parameters remain visible; a low or Medium integrated result does not establish that the configured DP claim was met.
 
 # **Example 2.1-R**
 
@@ -1624,11 +1612,11 @@ Evaluation design (illustrative assumptions, not the results of a real test): me
 | ε | 1.8 | — (accountant output) | ≤ 2.0 | Pass | — | — | — |
 | δ (configured) | 1×10⁻⁹ | — | 1×10⁻⁹ | Pass | — | — | — |
 
-Observed membership success is close to chance (advantage 0.06; upper bound 0.08). It is reported, and it does not fail G-M2, whose unacceptable level for this attack is an accuracy of 60% or more.
+Observed membership success is close to chance (advantage 0.06; upper bound 0.08). Report the observation and its uncertainty. The configured point estimate contributes to the indicator; it does not select a second likelihood tier.
 
-Disclosure indicator = 0.537. **Module outcome: PASS**, 0.5 ≤ indicator ≤ 1.0 → likelihood of S1 **Medium** — conditional on the ledger check below (G-M4).
+Disclosure indicator = 0.537 → likelihood of S1 **Medium**, directly from the calibration table. Assessment evidence and the separate lifetime-budget review are recorded below. The indicator is not a probability.
 
-**Cumulative privacy loss (Section 3.3.6; G-M4).** Lifetime ledger for the retail customer population (privacy unit: one customer):
+**Cumulative privacy loss (Section 3.3.6).** Lifetime ledger for the retail customer population (privacy unit: one customer):
 
 | Run | ε | δ | Accountant | Observers |
 | :---- | :---- | :---- | :---- | :---- |
@@ -1649,7 +1637,7 @@ Assumptions: no other DP mechanism has been run on this population; each run's (
 
 A hypothetical alternative configuration, shown for comparison: more DP-SGD epochs and a lower noise multiplier — that is, weaker privacy (privacy loss grows with the number of training steps and falls as the noise multiplier rises). ε = 3.8 at δ = 1.6×10⁻⁵.
 
-| Metric | Value | Threshold | Normalised | Weight | Contribution | Gate |
+| Metric | Value | Threshold | Normalised | Weight | Contribution | Metric comparison |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
 | MIA accuracy | 63% (advantage 0.26) | < 60% (advantage < 0.20) | 1.30 | 0.25 | 0.325 | **Fail** |
 | MIA AUC-ROC | 0.66 | < 0.60 | 1.60 | 0.25 | 0.400 | **Fail** |
@@ -1661,7 +1649,7 @@ A hypothetical alternative configuration, shown for comparison: more DP-SGD epoc
 | ε | 3.8 | ≤ 2.0 | — | — | — | **Fail** |
 | δ (configured) | 1.6×10⁻⁵ | 1×10⁻⁹ | — | — | — | **Fail** |
 
-Disclosure indicator = 1.441. **Module outcome: FAIL** (G-M1, G-M2, G-M4). The membership failure was reproduced in all five repetitions with the whole 95% interval beyond the threshold (accuracy 62.1%–63.9%; TPR at FPR 0.1% 2.2%–3.1%), so under the internal routing rule the as-proposed likelihood is recorded as **Near-certain**. This is a routing convention: the observed success — an attack that is right about 63% of the time on a balanced set and identifies about 2.6% of members at a 0.1% false-positive rate — is reported alongside it, and it does not mean that every customer's membership is disclosed. Near-certain × Significant = High — not available for acceptance. Had this configuration been run on the source population, the lifetime ledger would have reached ε 10.3 and δ ≈ 2.4×10⁻⁵, above the Document 8 lifetime budget (G-M4).
+Disclosure indicator = 1.441 → likelihood **High**; High × Significant = **High**. The repeated attack deviations are recorded beside that result (accuracy 62.1%–63.9%; TPR at FPR 0.1% 2.2%–3.1%). They do not replace High with Near-certain. The hypothetical run would take the lifetime ledger to ε 10.3 and δ ≈ 2.4×10⁻⁵, exceeding the adopted Document 8 budget. The design is not used under that budget; the financial and operational implications, Group DPO dissent and the decider's redesign response are retained as a separate business decision.
 
 ## **Project 3 — Aggregate Statistics for the Open Data Portal**
 
@@ -1671,7 +1659,7 @@ Severity of S1 in Examples 3.1 and 3.2: severity index 8 → **Significant** (Se
 
 Sufficiently aggregated statistics: generalised categories, small cells suppressed. Singling-out threshold 0.5% (stricter than the default 1%); other thresholds at default.
 
-**SDC gates:** smallest published cell 14 (≥ 10 — pass); differencing within the release and against the two previous releases — no derivable cell below 10 (pass); exact reconstruction 0.4% of source records, 0.35%–0.45% over five attack runs (highest value ≤ 1% — pass); every published table within the test scope (G-M5 — pass); attributes excluded by internal policy — none (G-M3 — pass).
+**SDC observations:** smallest published cell 14 (comparison ≥ 10); no derivable cell below 10; exact reconstruction 0.4% of source records (illustrative interval 0.35%–0.45% over five attack runs). All published tables are within scope; no attribute excluded by the Bank's internal policy is present. These observations inform the anonymity assessment and business decision.
 
 Evaluation design (illustrative assumptions, not the results of a real test): record-level attacks on a random sample of 20,000 reconstructed records against an auxiliary dataset simulating public registers and social-network data; Fellegi-Sunter precision@100 over six repetitions (600 candidate pairs; independent re-runs with fresh random samples); 95% intervals — Wilson score intervals for proportions (precision@100, share of records reconstructed, singling-out and linkage rates), bootstrap percentile intervals (2,000 resamples of records) for information-gain and inference-advantage measures; all interval bounds shown are illustrative assumptions, not computed from real observations. The gate uses the unfavourable bound.
 
@@ -1687,13 +1675,13 @@ Evaluation design (illustrative assumptions, not the results of a real test): re
 | ML inference advantage | 0.03 | 0.02 – 0.04 | < 0.10 | 0.30 | 0.10 | 0.030 |
 | ZCAP advantage | 0.04 | 0.03 – 0.05 | < 0.10 | 0.40 | 0.10 | 0.040 |
 
-The observed success is not zero — for example, 0.3% of reconstructed records can be singled out and 0.4% of source records are reconstructed exactly — but every value, including its unfavourable bound, is below the project's unacceptable-success level, so neither G-M1 nor G-M2 fails. The observed values are recorded in the evidence pack and taken into account in the legal anonymity assessment.
+Observed success is not zero: 0.3% of reconstructed records can be singled out and 0.4% of source records reconstructed exactly. Record these observations for the DPO, decider and legal anonymity assessment. The likelihood still comes from the configured weighted indicator, not a second metric override.
 
-Disclosure indicator = 0.363 (0.303 at the default singling-out threshold of 1%). **Module outcome: PASS**, indicator < 0.5 → likelihood **Low**.
+Disclosure indicator = 0.363 (0.303 at the default singling-out threshold of 1%). **Calculation complete**, indicator < 0.5 → likelihood **Low**.
 
 **Severity — S1:** B: Restricted 3 + special categories 0 + vulnerability 0; C: > 1,000,000 → 3, aggregation 0; D: open publication +2; E: 0; G: 0. Severity index = 8 → **Significant**.
 
-**Result:** Low × Significant = **Medium**. The likelihood is Low because the module passed all gates; the tier is Medium because the consequences would be significant if the anonymity conclusion proved wrong. Track (b): reputational 1 → Minor.
+**Result:** Low × Significant = **Medium**. The likelihood is Low because the integrated indicator is below 0.5; the tier is Medium because the consequences would be significant if the anonymity conclusion proved wrong. Track (b): reputational 1 → Minor.
 
 **Decision.** The Processing Owner for the publication records the conclusion that the statistics are anonymous information, on Legal & Compliance's assessment against Recital 26 with "anyone" as the recipient, and with Group DPO advice; the module result is the evidence, not the conclusion. Acceptance of the Medium residual risk: the Processing Owner with the Chief Privacy Officer's concurrence; Group DPO advice recorded; conditional acceptance expiring after 12 months; re-assessment before each new release and at least annually.
 
@@ -1701,7 +1689,7 @@ Disclosure indicator = 0.363 (0.303 at the default singling-out threshold of 1%)
 
 Insufficiently generalised statistics — small groups in some categories of the credit portfolio. Same thresholds.
 
-**SDC gates:** smallest published cell 3 (**fail**); differencing — two cells below 10 derivable from overlapping tables (**fail**); exact reconstruction 2.7% of source records (**fail** — attack reproduced); special-category attributes — none (pass).
+**SDC observations:** smallest published cell 3 (**fail**); differencing — two cells below 10 derivable from overlapping tables (**fail**); exact reconstruction 2.7% of source records (**fail** — attack reproduced); special-category attributes — none (pass).
 
 **Attack battery on reconstructed records:**
 
@@ -1715,7 +1703,7 @@ Insufficiently generalised statistics — small groups in some categories of the
 | ML inference advantage | 0.08 | 0.10 | 0.80 | 0.10 | 0.080 |
 | ZCAP advantage | 0.08 | 0.10 | 0.80 | 0.10 | 0.080 |
 
-Disclosure indicator = 1.203 (1.023 at the default singling-out threshold; even then three linkage metrics and all three SDC gates fail). **Module outcome: FAIL** (G-M1, G-M2). The reconstruction failure was reproduced in all five runs (2.6%–2.8% of source records, wholly above 1%), so under the internal routing rule the as-proposed likelihood is recorded as **Near-certain**; the observed success — about 2.7% of source records reconstructed exactly, and singling out of 0.9% of reconstructed records (95% CI 0.78%–1.04%) — is reported alongside it. Near-certain × Significant = **High** — not available for acceptance. Publication is blocked; the statistics are redesigned (coarser categories, further suppression or a differentially private release mechanism with a DP statement) and re-assessed.
+Disclosure indicator = 1.203 (1.023 at the catalogue default singling-out threshold) → likelihood **High**; High × Significant = **High**. Reconstruction of 2.7% of source records (illustrative 95% interval 2.6%–2.8%) and singling out of 0.9% of reconstructed records (0.78%–1.04%) are material observations. They do not trigger a separate Near-certain override. On Group DPO advice and Legal's assessment of the disclosure evidence, the business decider chooses not to publish and requests coarser categories, suppression or a suitable DP design. No anonymity conclusion is inferred from the weighted score.
 
 # **Example 3.3 — Blocked Case (G-L failure)**
 
@@ -1723,7 +1711,7 @@ The same portal and source data. The configured tests were run with a wide margi
 
 Facts established in the pre-publication review: (1) several cells of the late table contain fewer than 10 customers and, combined with the public branch directory and age information, attribute PPI status to identifiable customers — the statistics would therefore disclose identifiable special-category data (health), not anonymous information; (2) no Art. 9(2) condition applies to publishing this information on an open portal; (3) customers were not informed of such a publication (Arts. 13/14); (4) the attribute is not necessary for the purpose of the portfolio statistics (data minimisation, Art. 5(1)(c)).
 
-**Step 0 — G-L: failed** on facts (1)–(4). **The release is blocked.** No likelihood level, tier, risk appetite, metric or DPO opinion can make it acceptable. Independently, the late table was outside the test scope (G-M5 — INCOMPLETE), and the attribute is excluded from open releases by PanEuropean's internal policy (G-M3 — internal policy). The blocking reason is the G-L failure on these facts, not a general rule that a health-related attribute can never appear in anonymous statistics.
+**Step 0 — G-L: failed** on facts (1)–(4). **The release is blocked.** The late table is outside the test scope and breaches the separately adopted attribute policy. These facts are recorded explicitly; no technical indicator or business-risk acceptance cures the established G-L failure. This is not an automatic per-metric risk-tier override.
 
 For the record only, the attack battery returned:
 
@@ -1737,7 +1725,7 @@ For the record only, the attack battery returned:
 | ML inference advantage | 0.01 | 0.10 | 0.10 | 0.10 | 0.010 |
 | ZCAP advantage | 0.01 | 0.10 | 0.10 | 0.10 | 0.010 |
 
-Disclosure indicator = 0.100. The example shows why per-metric scores cannot replace gates: the attack battery tested the tables and attributes within its configured scope and could not detect a disclosure in a table outside it. Severity, recorded for information: B: Restricted 3 + special categories 2 = 5; C: 3; D: +2; E: 0; G: 0 → index 10 → Catastrophic (the severity floor for identifiable special-category data released to an unlimited audience would in any case require at least Significant).
+Disclosure indicator = 0.100. The example shows why the integrated score cannot replace a legal assessment: the attack battery tested the tables and attributes within its configured scope and could not detect a disclosure in a table outside it. Severity, recorded for information: B: Restricted 3 + special categories 2 = 5; C: 3; D: +2; E: 0; G: 0 → index 10 → Catastrophic (the severity floor for identifiable special-category data released to an unlimited audience would in any case require at least Significant).
 
 **Consequences.** The release is stopped before publication; the attribute is removed and the full module is re-run, including the prohibited-attribute check, before any new publication decision. Had the statistics already been published, the event would be handled under Document 14 (personal data breach assessment, Art. 33(5) record and notification tests) and the release withdrawn from the portal as far as possible.
 
@@ -1877,3 +1865,4 @@ The GDPR is the baseline of this methodology. The rights-and-freedoms scenarios,
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: two-track model (rights and freedoms vs organisational consequences, never offset) with seven harm types; threat-based likelihood for identified processing replaces fixed "Near-certain" for archetype 4; PET Assessment Module with per-metric results, failure gates, baseline-aware normalisation and a disclosure indicator that is not called a probability; ZCAP remapped to inference; undefined in-house metric removed; DP statement requirements (privacy unit, adjacency, accountant, composition, output access); narrow use of the e^ε/(1+e^ε) bound; neutral description of δ; repeated-release rules with a lifetime ε/δ ledger (no calendar reset) and an optional operational cap; G-M2 defined by project-specific attack sets with baselines and uncertainty rules, and a labelled internal routing rule for reproduced failures; normalisation domains and orientation, non-negative weights and an INCOMPLETE outcome for missing results; contiguous severity intervals for weighted indices; G-M3 distinguishing the Art. 9 legal test from internal policy; aggregate/SDC checks; pseudonymisation separated from anonymisation; Recital 26, C-413/23 P and EDPB Guidelines 02/2026 (draft) cited; G-L, G-DPIA and G-36 added to the decision sequence and G-TIA branched by transfer mechanism; DPO role limited to advice; consent and controls removed from severity; all worked examples recomputed (Example 3.3 rewritten as a G-L blocked case; Examples 2.1-R, 4.2-R and 4.3 added); product names and unsupported capability claims removed; example dates shifted by −12 months; references added. Integration pass: status of Example 4.2-R stated (assessed and conditionally accepted; advertising-partner placement not in operation at 26 October 2026). Review correction: Part B Factor B special-category modifier aligned with Part A (Art. 9 and Art. 10 data); no worked example of this document processes Art. 10 data, so no example changes (the re-assessment of the anti-fraud matching is in Document 19) |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

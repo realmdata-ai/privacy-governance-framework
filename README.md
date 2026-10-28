@@ -1,53 +1,32 @@
 # Privacy Governance Framework (PGF)
 
-**Release 1.0.0-rc.1** (release candidate) · Authors: **Alexey Neyman and Val Khvatov** · Regulatory reference date: **26 October 2026**
+**1.0.0-rc.2 — author-conditioned content freeze, 28 October 2026**
+Authors: **Alexey Neyman; Val Khvatov**. Regulatory reference date: **26 October 2026**.
 
-PGF is a set of **31 documents organised in four levels**. Each document has two parts:
-- **Part A**, a reusable template;
-- **Part B**, a worked example for a fictional pan-European bank.
-
-The set comes with a 23-process governance model and is designed to help an organisation build and run a privacy programme:
-- policies and governance mandates;
-- risk appetite and risk assessment;
-- DPIA and transfer impact assessment;
-- records and inventories;
-- process ownership;
-- audit, metrics and board reporting.
-
-> PGF is a **framework of templates and worked examples**. It is not a law, a standard or a certification scheme, and it is not legal advice. Using PGF does not by itself make an organisation compliant with the GDPR or any other law. It is not affiliated with, and should not be confused with, other privacy frameworks that have similar names. Its relationship to the NIST Privacy Framework, ENISA guidance and Canadian accountability guidance is a **conceptual mapping** ([`PGF/STANDARDS_CROSSWALK.md`](PGF/STANDARDS_CROSSWALK.md)).
+PGF contains an Overview and 31 components in four levels, with reusable **Part A templates** and **Part B worked examples** for a fictional bank. It supports practical business decisions about privacy risk, benefits, controls and accountability.
 
 ## Start here
 
-- [`PGF/00_Framework_Overview_EN.md`](PGF/00_Framework_Overview_EN.md) — purpose, architecture, quick start, document register, limitations, how to cite.
-- [`PGF/GLOSSARY.md`](PGF/GLOSSARY.md) — roles, gates, data states, incident terms.
-- [`PGF/STANDARDS_CROSSWALK.md`](PGF/STANDARDS_CROSSWALK.md) — GDPR/EDPB, NIST PF 1.0, ENISA, Canada.
-- [Curated privacy references](references/README.md) — a dated catalogue of official laws, regulations and guidance with stable source IDs ([`references/CATALOGUE.md`](references/CATALOGUE.md), machine-readable [`references/registry.json`](references/registry.json)).
+- [Framework Overview](PGF/00_Framework_Overview_EN.md)
+- [Risk methodology — Document 18](PGF/18_Privacy_Risk_Assessment_Methodology_EN.md)
+- [Risk appetite and business decisions — Document 8](PGF/08_Privacy_Risk_Appetite_Statement_EN.md)
+- [PAMOLA implementation example](IMPLEMENTATION_PROFILE.md)
+- [Glossary](PGF/GLOSSARY.md) · [Standards crosswalk](PGF/STANDARDS_CROSSWALK.md) · [Official references](references/README.md)
 
-## The four levels
+## What changed in rc.2
 
-| Level | Documents |
-|---|---|
-| 1 — Strategic documents | 01 Privacy Policy and Notice · 02 Governance Charter · 03 Interface and Integration Model · 04 Organisational Design Strategy · 05 RACI Matrix · 06 Role Competency Framework · 07 Regulatory Applicability Matrix · 08 Risk Appetite Statement · 09 Automation and Tooling Strategy |
-| 2 — Policies and standards | 10 Data Classification · 11 Retention and Disposal · 12 Cross-Border Transfers · 13 Consent · 14 Breach Response · 15 Data Subject Rights · 16 Privacy by Design and by Default · 17 Vendor and Third-Party Risk · 18 Risk Assessment Methodology · 19 DPIA · 20 Transfer Impact Assessment · 21 Records of Processing · 22 Privacy Risk Register · 23 Data Inventory and Flow Maps |
-| 3 — Process model | 24 Process Map (23 processes: G1–G9, C1–C5, S1–S9) · 25 Process Owner Register · 26 Operational Role and Staffing Model |
-| 4 — Control, reporting and improvement | 27 Audit and Monitoring · 28 Metrics Dashboard · 29 Policy Review Cycle · 30 Awareness and Training · 31 Governance Reporting |
+The configured integrated score maps directly to a risk band and matrix result. An individual metric deviation does not automatically replace that result with High or Near-certain. Observations, uncertainty and DPO dissent remain visible beside the authorised business decision. Legal prerequisites, evidence completeness, valid privacy claims and adopted release conditions remain separate. Templates are tool-neutral; examples name PAMOLA and distinguish illustrative workflows from actual capability evidence.
 
-## Repository contents
+[Author approval and conditions](AUTHOR_APPROVAL.md) · [Freeze record](FREEZE.md) · [Validation scope/results](release/RC2_VALIDATION.md) · [Remaining publication work](PGF/RELEASE_READINESS.md)
 
-- `references/` — curated catalogue of primary sources (laws, regulations, guidance), with its JSON registry and schema.
-- `PGF/` — the canonical English Markdown: Overview, 31 components, glossary, crosswalk, changelog, source manifest, release-readiness report.
-- `tools/validate_release.py` — completeness, metadata, links and cross-reference checks, plus rule-based checks for known incorrect claims.
-- `tools/export_publication.py` — builds the clean export from an allowlist.
-- `CITATION.cff` — citation metadata (draft until the DOI exists).
+## Reproducibility
 
-## Citation
+`python tools/validate_release.py --quiet` checks structure and cross-references. `python tools/check_rc2.py` checks the rc.2 decision semantics, example arithmetic and integration. These checks do not prove legal compliance, anonymity, product capabilities or empirical calibration.
 
-> Neyman, A., & Khvatov, V. (2026). *Privacy Governance Framework (PGF): A Four-Level Model for Enterprise Privacy Governance* (Version 1.0.0-rc.1). DOI pending.
+The separately versioned [companion previews](companions/README.md) remain tied to rc.1 and are not rc.2 conformance evidence.
 
-## Licence
+## Licence and citation
 
-**Proposed:** CC BY 4.0 for the framework text and templates; MIT for the scripts. See `LICENCE_PROPOSED.md`. **No licence is in effect until the rights holders confirm it.**
+**CC BY 4.0 for framework text/templates is author-approved.** Final rights-owner attribution and licence issuance are tracked in [LICENCE_PROPOSED.md](LICENCE_PROPOSED.md); no script licence is invented. No DOI exists yet. See [CITATION.cff](CITATION.cff).
 
-## Status
-
-This is a release candidate under review. See `PGF/RELEASE_READINESS.md` for the status of each finding and any known open items.
+PGF is not a law, certification or guarantee of compliance. It is not affiliated with other similarly named frameworks.

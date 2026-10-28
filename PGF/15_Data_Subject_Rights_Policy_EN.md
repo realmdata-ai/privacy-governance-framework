@@ -2,19 +2,19 @@
 title: "Data Subject Rights Policy"
 document_id: PGF-15
 level: 2
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level2/15. Data-Subject-Rights-Policy_ENG.docx.md; sha256 591d1db24e35e12f0e3c4dc0398e7d57dce3ed38fa7af29ce37a7307cf51dfb3"
 ---
 
 # PGF-15 — Data Subject Rights Policy
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # **About This Document**
 
@@ -243,6 +243,9 @@ This document was adopted by ***[Executive Management]*** on ***[date]***. Docum
 
 # **Part B — Worked Example: PanEuropean Bank AG**
 
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
+
 **PanEuropean Bank AG — Data Subject Rights Policy**
 
 *Effective date: 20 October 2026  ·  Version: 2.0  ·  Document owner: Chief Privacy Officer (EPPO)  ·  Adopted by: Management Board, 20 October 2026*
@@ -411,3 +414,4 @@ Version 1.0 (1 March 2026) was adopted by the Management Board; the Group DPO wa
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: applicability by lawful basis corrected (Art. 21(1) covers Art. 6(1)(e) and (f); Art. 21(2)–(3) direct marketing absolute; Art. 21(6) research and statistics); "right to be informed of an incident" renamed communication of a personal data breach (Art. 34); Art. 15 content checklist added with CJEU C-487/21 (copy), C-154/21 (identity of recipients), C-579/21 *Pankki S* (consultation logs) and C-307/22 (first copy free); Art. 18(1)(a)–(d) grounds corrected (the "data is excessive" ground removed); Art. 17(2), Art. 19 notification of recipients and the erasure cascade (Document 11) added; portability scope corrected (observed data included, inferred data excluded; WP242 rev.01); Art. 22 section added with C-634/21 and C-203/22, referencing the Art. 22 module and necessity record of Document 19, with the AI Act Art. 86 right described as forthcoming; restrictions table added (Art. 12(5) with repetition as a review trigger, Art. 15(4), AML tipping-off under applicable AML law, Art. 23 national restrictions, Art. 11(2), legal hold); Art. 12(4) refusal content including judicial remedy; Art. 77 complaint options corrected (habitual residence, place of work, place of infringement); Art. 12(3) "complexity and number" added; Art. 12(6) identity loop instead of rejection, with the SLA-suspension rule replaced by a jurisdiction-aware rule; Art. 38(5) confidentiality of requests to the DPO added; the DPO's power to decide refusals removed — the Privacy Operations Lead decides on Legal's assessment with DPO advice; Part B aligned with the planned status of automated credit decisions (launch planned 1 February 2027 after the HBDI consultation), the "Request a Review" channel, retention rules of Document 11 (no blanket 10-year period) and the device-only biometric template (server-side biometric erasure removed); adoption moved to Executive Management; example dates shifted by −12 months; Normative basis and International adaptation (UK reasonable and proportionate search, Switzerland, PIPEDA 30-day access with extension, Québec) added |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

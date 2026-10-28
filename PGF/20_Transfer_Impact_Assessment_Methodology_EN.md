@@ -2,19 +2,22 @@
 title: "Transfer Impact Assessment Methodology"
 document_id: PGF-20
 level: 2
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level2/20. Transfer-Impact-Assessment-Methodology_ENG.docx.md; sha256 7961cc029d3bb5adef2e8931bf90ab4cdc83728c0f90d75050424abb2bf66c07"
 ---
 
 # PGF-20 — Transfer Impact Assessment Methodology
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+> **Legal uncertainty and business decision.** A disputed legal interpretation is recorded as a reasoned position with its assumptions, alternatives, consequences for the organisation, Legal/DPO advice and a review date. Uncertainty is not automatically a confirmed G-L failure. The designated Legal function records whether the proposed design has a supportable basis under the applicable rules; the authorised business role decides within those rules and its delegation. A confirmed missing prerequisite or prohibition remains a stop/redesign condition. The decision record presents benefits and consequences for individuals and the organisation together, without silently lowering the individual-harm score.
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # **About This Document**
 
@@ -243,6 +246,9 @@ This document is reviewed under the ***[Policy Review Cycle, Document 29]***, an
 This document is adopted by ***[Executive Management]*** on ***[date]***. Document Owner: ***[EPPO]***.
 
 # **Part B — Worked Example: PanEuropean Bank AG**
+
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
 
 **PanEuropean Bank AG — Transfer Impact Assessment Methodology**
 
@@ -477,3 +483,4 @@ The GDPR is the baseline of this methodology. Where other regimes apply:
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: transfer defined by the three cumulative criteria of EDPB Guidelines 05/2021 v2.0 (same-entity employee remote access is not a transfer; remote access by a separate entity is); G-TIA branched by mechanism (Art. 45 scope/eligibility/validity check and monitoring; Art. 46 full TIA with supplementary measures; Art. 49 exceptional and restrictive, subject to the conditions of each derogation); separate lawful-basis and Chapter V tests; Art. 48 pointer; mandatory legal module on laws and practices of the destination (public-authority access against the European Essential Guarantees, practices, enforceable rights and redress, other laws), performed in this document, with Document 18 limited to requested elements; supplementary-measure effectiveness assessed against the specific problem; "no start or suspension" where equivalence cannot be ensured, with SCC Clause 14(f) suspension, Clause 16(b)–(d) and the Clause 16(c) information duty cited correctly; the statement that Art. 36 is "unrelated to cross-border transfer" removed (DPIA and Art. 36 may apply in parallel); PETs, TEEs, homomorphic encryption and remote access not treated as exemptions; the former three-condition test for PET schemes (with a DPO determination and a numerical threshold) replaced by a controller transfer-status conclusion by Legal on documented evidence, with DPO advice; DPO decision and approval roles removed; single decider for the decision to proceed under Document 8; re-evaluation tied to legal and monitoring events, not to tool recertification; the three worked TIAs redone: TIA-CLOUD-01 (Processing Owner CIO; clear-text access from India excluded), TIA-PSI-01 (Head of Fraud Prevention; anti-fraud purpose; SCC Module 1; mutual-output design failed and was suspended under Clause 14(f); one-sided design passed), TIA-LLM-01 (replaces the former TIA naming a real AI vendor; Head of Customer Service; fictional Example AI Provider Inc. not DPF-certified as an illustrative assumption, which closes only the Art. 45 branch; dated US legal snapshot — FISA s.702 sunset of 12 June 2026 not treated as ending collection, status after that date recorded as legal assessment incomplete pending verification; EO 14086 and DPF status with dated sources); PSI observable leakage and illustrative partner-input assumptions stated; C-413/23 P and EDPB-EDPS Joint Opinion 2/2026 cited as context only (importer inability to attribute does not remove the exporter from Chapter V); intra-EEA flows and international organisations distinguished; the FL evidence pack renumbered EVP-2026-0041 and the FL consortium treated as intra-EU; evidence packs in EVP-YYYY-NNNN format; product names removed; example dates shifted by −12 months and the fictional history re-baselined (version 2.0 of 20 October 2026); International adaptation (UK IDTA/Addendum, Switzerland, PIPEDA, Québec assessment before communication outside Québec) and references added. Integration pass: TIA-LLM-01 data description aligned with DPIA-LLM-01 (knowledge-base articles; no retrieval of customer records). Review correction: in TIA-PSI-01, the Document 18 elements and the decision updated after the re-assessment of the parallel DPIA on 26 October 2026 (Art. 10 severity modifier; G-36 met; Chief Risk Officer decision pending; sessions paused); G-TIA unchanged |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

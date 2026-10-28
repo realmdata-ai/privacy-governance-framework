@@ -7,8 +7,8 @@
 PGF/[0-3][0-9]_*_EN.md
 
 # Supporting files
-PGF/README.md                -> README.md
-PGF/CHANGELOG.md             -> CHANGELOG.md
+README.md
+CHANGELOG.md
 PGF/GLOSSARY.md              -> PGF/GLOSSARY.md
 PGF/STANDARDS_CROSSWALK.md   -> PGF/STANDARDS_CROSSWALK.md
 PGF/SOURCE_MANIFEST.json     -> PGF/SOURCE_MANIFEST.json
@@ -21,11 +21,20 @@ references/MAINTENANCE.md
 references/registry.json
 references/registry.schema.json
 
-# Citation / licence drafts (final LICENSE file only after rights confirmation; see publication/README.md)
-publication/CITATION.cff     -> CITATION.cff
-publication/LICENCE_PROPOSED.md -> LICENCE_PROPOSED.md
+# Citation / licence drafts (final LICENSE file only after rights confirmation; see LICENCE_PROPOSED.md)
+CITATION.cff
+LICENCE_PROPOSED.md
 
 # Build and check tools (own code; MIT proposed)
 tools/validate_release.py
 tools/export_publication.py
 publication/ALLOWLIST.txt
+
+# Author-approved rc.2 content-freeze metadata and conformance checks
+AUTHOR_APPROVAL.md
+IMPLEMENTATION_PROFILE.md
+FREEZE.md
+FREEZE.json
+release/RC2_VALIDATION.md
+release/RC2_VALIDATION.json
+tools/check_rc2.py

@@ -2,18 +2,18 @@
 title: "Data Breach Response Policy"
 document_id: PGF-14
 level: 2
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level2/14. Data-Breach-Response-Policy_ENG.docx.md; sha256 e925faf43209b77dd3626df9cc9b1c919249c72d1117fff6cf0b6acb901b8c4c"
 ---
 # PGF-14 — Data Breach Response Policy
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # About This Document
 
@@ -247,6 +247,9 @@ This document was adopted by ***[Executive Management]*** on ***[date]***. Docum
 
 # Part B — Worked Example: PanEuropean Bank AG
 
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
+
 **PanEuropean Bank AG — Data Breach Response Policy**
 
 *Effective date: 20 October 2026 · Version: 2.0 · Document owner: Chief Privacy Officer · Adopted by: Management Board*
@@ -279,7 +282,7 @@ The Part A sequence applies. At PanEuropean: the CISO and the Security Operation
 
 * **Example 1 — security event on an archive previously concluded anonymous (tabletop scenario, 2026).** Unauthorised access to an archived analytics dataset that the responsible Processing Owner had concluded was anonymous information, on General Counsel's assessment with Group DPO advice. The CISO handles the security event. Because the facts of the access (the attacker also obtained a public customer-reference table) could open a re-identification path, the anonymity conclusion is re-assessed at once (Document 18 PET Assessment Module, re-run with the attacker's auxiliary data). Until General Counsel records that the conclusion still holds, the event is handled as a potential personal data breach and the 72-hour clock is tracked. Had the archive contained pseudonymised data, it would have been a personal data breach from the outset.
 * **Example 2 — misdirected account statement (actual fictional case, 14 July 2026).** A Retail Lending employee attached one customer's account statement (balances and twelve months of transactions) to a letter addressed to another customer. Not detected by security monitoring; reported by the recipient by telephone on 16 July 2026 at 10:20. A breach of security (failure of an organisational measure) leading to unauthorised disclosure: a personal data breach, qualified at 13:05 the same day and recorded.
-* **Example 3 — re-identification from open statistics (tabletop scenario, 2026).** The aggregated credit-portfolio statistics released on the open-data portal (Document 18, Project 3, Example 3.1: PET module PASS; residual Medium; anonymity conclusion by the Processing Owner on Legal & Compliance's assessment, Group DPO advice) are assumed, in the scenario, to allow a journalist to identify three customers in a large-loan cell by combining public commercial registers. Legal characterisation recorded by General Counsel: the publication was the bank's intended act, so the event is primarily an unlawful disclosure (Arts. 5(1)(a), 6 and 25) — a privacy incident; because it results from the failure of a protective measure, the bank applies the breach procedure as a precaution. Both the incident response and the re-assessment of the anonymity conclusion start in parallel; the release is withdrawn pending the re-assessment.
+* **Example 3 — re-identification from open statistics (tabletop scenario, 2026).** The aggregated credit-portfolio statistics released on the open-data portal (Document 18, Project 3, Example 3.1: PET assessment complete; residual Medium; anonymity conclusion by the Processing Owner on Legal & Compliance's assessment, Group DPO advice) are assumed, in the scenario, to allow a journalist to identify three customers in a large-loan cell by combining public commercial registers. Legal characterisation recorded by General Counsel: the publication was the bank's intended act, so the event is primarily an unlawful disclosure (Arts. 5(1)(a), 6 and 25) — a privacy incident; because it results from the failure of a protective measure, the bank applies the breach procedure as a precaution. Both the incident response and the re-assessment of the anonymity conclusion start in parallel; the release is withdrawn pending the re-assessment.
 
 ## 3. Breach Risk Assessment and Severity
 
@@ -393,3 +396,4 @@ The PIPEDA record and the Québec register are independent statutory records and
 | Release | Date | Summary |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: harm-based incident definition replaced by the sequence security event → personal data breach (Art. 4(12), no harm threshold) → breach record for every breach (Art. 33(5)) → risk assessment → separate SA (Art. 33) and data-subject (Art. 34) decisions; likelihood restored in the risk assessment (EDPB Guidelines 9/2022; ENISA 2013 as calibration reference); consent removed as a severity factor; Art. 33(1) statutory test, awareness, reasons for delay, phased notification (Art. 33(4)), Art. 33(3) content incl. DPO contact, Art. 34(2)–(4) content and exceptions added; notification decision moved from the DPO to the controller's designated Executive Management member on mandatory DPO advice (DPO never "prevails"; recorded reasons and escalation); CISO owns containment and may not decide or block notification; anonymity conclusions attributed to the Processing Owner on Legal's assessment (Document 18 PET module as evidence); lead SA / concerned SA wording corrected (one-stop-shop, local case Art. 56(2)); processor → controller path and processor-extension (S7.5) added; DORA separated as its own track (major ICT-related incident; Delegated Regulations 2024/1772 and 2025/301 with points of reference and late classification; client information Art. 19(3)); NIS2 relationship stated; undefined oversight label replaced by Executive Management and the Governing Body committee in escalation; IMS no longer cross-refers to a non-existent Document 11 register; evidence preservation, ransom and retention rules added; EuroCredit Bureau corrected to independent controller; fictional providers used; Canadian (PIPEDA, Québec), UK and Swiss variants added; owner EPPO, adopted by Executive Management; example dates shifted by −12 months, Examples 1 and 3 recast as tabletop scenarios consistent with Document 18, Example 3.1. Integration pass: criminal-offence and inferred special-category data named among severity inputs; public-authority access at importers linked to the TIA record; Part B processor list aligned with Document 17; cross-reference to the master escalation matrix (Document 31) |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

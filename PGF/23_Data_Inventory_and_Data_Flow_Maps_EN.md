@@ -2,19 +2,19 @@
 title: "Data Inventory and Data Flow Maps"
 document_id: PGF-23
 level: 2
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level2/23. Data-Inventory-and-Data-Flow-Maps_ENG.docx.md; sha256 e98bc3bbb5ef8af0d0cf3a005e14153b8a2da61c83dee759d7b90e12168f0863"
 ---
 
 # PGF-23 — Data Inventory and Data Flow Maps
 
-*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 2 — Policies and Standards · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # **About This Document**
 
@@ -200,6 +200,9 @@ This document is reviewed under the Policy Review Cycle (Document 29). An unsche
 This document is adopted by ***[Executive Management]*** on ***[date]***. Document owner: ***[Head of Data Governance]***; privacy overlay maintained by ***[the EPPO]***.
 
 # **Part B — Worked Example (fictional): PanEuropean Bank AG**
+
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
 
 **PanEuropean Bank AG — Data Inventory and Data Flow Maps [DG]**
 
@@ -431,3 +434,4 @@ Status at 26 October 2026. Residual tiers are track (a) tiers taken from the DPI
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: title block and structure per the editorial rules; translation residue removed (guillemets, duplicated title, hyphenated "privacy-" compounds); headings harmonised ("Relationship to Other Framework Documents", "Review and Amendment"); scope extended to datasets, derived datasets, unstructured repositories and AI artefacts, and to all categories of data subjects; privacy metadata extended (data state, categories of data subjects and data, access jurisdictions including remote access, external recipients with roles, transfer reference, RoPA references, lineage, retention and erasure propagation route); cross-border flag defined by the three cumulative criteria of EDPB Guidelines 05/2021 v2.0 (not intra-EEA flows as such, not geography alone; international organisations included; employee remote access is not a transfer, remote access by a separate entity is); four link types for flow maps; the former three-condition PET-scheme exclusion test and the DPO's role in it removed (transfer-status conclusion by Legal, DPO advice); synthetic generation no longer a ground for declassification (Document 11, Section 3.2); automated discovery; erasure propagation hooks (Document 11, Section 3.5: contextual conclusion on the current artefact, restriction and erasure by a deadline, no extension by batch runs, automatic expiry of short-period categories); single document owner (Data Governance) with the privacy overlay maintained by the EPPO; reviews decoupled from tool re-certification; Part B rebuilt: DI-CRM-014 consistent with the RoPA (Confidential customer profile, no DPIA, not the credit-scoring training record — the training data are DI-CS-0873 and DI-CS-0874, Restricted, DPIA-CS-TRAIN-01 Medium); DI-CLOUD-01 Confidential as in TIA-CLOUD-01, hosted in the EEA with remote access from India; residual tiers aligned with the Privacy Risk Register; real-vendor LLM record replaced by DI-LLM-01 (Example AI Provider Inc.; on hold, suspended); PSI with no output to the partner; federated-learning, data warehouse, document management, AML, customer-service, consent management, delivery-provider, PEP and video records added; flow-map excerpt added; example dates shifted by −12 months; normative basis and international adaptation added. Review correction: DI-PSI-01 marked with Art. 10 content and the DPIA-PSI-01 tier updated (High, 26 October 2026; sessions paused) |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

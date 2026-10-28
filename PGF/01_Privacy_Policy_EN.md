@@ -2,18 +2,18 @@
 title: "Privacy Policy and Notice (01A Internal Data Protection Policy; 01B External Privacy Notice)"
 document_id: PGF-01
 level: 1
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level1/1. Privacy_Policy_Template and Example_ENG.docx.md; sha256 cb28ef8e5729d8719e7f9f6ce26b519d6ba0754a0a72eb41bb64da2b66482f24"
 ---
 # PGF-01 — Privacy Policy and Notice (01A Internal Data Protection Policy · 01B External Privacy Notice)
 
-*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # About This Document
 
@@ -357,6 +357,9 @@ You have the right to lodge a complaint with a supervisory authority, in particu
 
 # Part B — Worked Example (fictional)
 
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
+
 PanEuropean Bank AG is a fictional German stock corporation (AG) headquartered in Frankfurt am Main, with branches in France, Italy, Spain and Poland. Lead supervisory authority: the Hessian Commissioner for Data Protection and Freedom of Information (HBDI). Financial supervision: ECB (SSM) and BaFin. Illustrative snapshot: 26 October 2026.
 
 ## 01A — PanEuropean Bank AG Internal Data Protection Policy
@@ -679,3 +682,4 @@ You have the right to lodge a complaint with any supervisory authority, in parti
 | Release | Date | Summary |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: component split into 01A Internal Data Protection Policy (Art. 24(2); Art. 5 principles applied; roles aligned with the Charter and the RACI role model; gates and acceptance tiers) and 01B External Privacy Notice (Arts. 12–14 complete: sources of data, statutory/contractual requirement, legitimate interests named, Art. 9 condition for PPI health data, meaningful information about the credit-scoring logic with C-634/21 and C-203/22, Art. 22(3) safeguards, separate Art. 21(4) right-to-object box, one-month deadline stated as a duty, complaint to the lead SA or any SA); EuroCredit Bureau reclassified as an independent controller; concerned SAs replace "joint supervision"; blanket ten-year retention replaced by per-category periods and criteria (AML, German example: 5 years under GwG §8(4) from the end of the calendar year in which the relationship ended, branch-country law may differ; AMLR Art. 77 shown separately as the scheduled rule from 10 July 2027); customer-service AI assistant, anti-fraud matching with the partner bank and the federated-learning consortium disclosed with transfer mechanisms per Art. 45/46; fictional providers used; internal governance content removed from the notice; CCD2 and AI Act (as amended by the AI Omnibus) information added with application dates; definition of privacy aligned with the Charter; international adaptation (UK, Switzerland, Canada/Québec) added; example dates shifted by −12 months. Integration pass: 01B Section 7 lists the app's biometric log-in (explicit consent, Art. 9(2)(a)) in line with Document 13; Processing Owner list aligned with Document 25, Section 10 |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

@@ -2,19 +2,19 @@
 title: "Operational Role and Staffing Model"
 document_id: PGF-26
 level: 3
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level3/26. Operational-Role-Staffing-Model_ENG.docx.md; sha256 92bbdbd8af5a0b4af7248382b1a813c61dc01beef2fd1a681c83e15d966ee2fe"
 ---
 
 # PGF-26 — Operational Role and Staffing Model
 
-*Privacy Governance Framework (PGF) · Level 3 — Process Model · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+*Privacy Governance Framework (PGF) · Level 3 — Process Model · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # **About This Document**
 
@@ -519,6 +519,9 @@ This document is updated whenever the triggers of Sections 3 and 8 occur and is 
 This document is adopted by ***[Executive Management]*** on ***[date]***. Document owner: ***[EPPO]***.
 
 # **Part B — Worked Example (fictional): PanEuropean Bank AG**
+
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
 
 ***PanEuropean Bank AG — Operational Role and Staffing Model***
 
@@ -1026,3 +1029,4 @@ Version 3.0 of this document was adopted by the Management Board of PanEuropean 
 | Release | Date | Changes |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: title block and structure per the editorial rules (real Part A and Part B headings); job descriptions re-derived from the RACI Matrix role model — EPPO (Chief Privacy Officer) and Deputy DPO descriptions added; the DPO description limited to the statutory tasks of Arts. 38–39 (advice, monitoring including DPO-organised audits, DPIA advice, SA cooperation and contact point, data subject contacts under Art. 38(4)–(5), own report) with no programme ownership, strategy, risk limits, policy or DPIA approval, evidence-pack or TIA approval, safeguard selection, breach-notification decision, budget or staffing approval, line management of the programme team, or launch veto; DPO reporting directly to Executive Management (Management Board), not to the CDO; Privacy Operations Lead reporting to the EPPO, accountable for operations including DSR decisions on Legal's assessment, vendor due diligence, consent proof and the incident management system; new sub-processes G4.1, G4.2, G5.1, C2.2, C2.3, S6.3 and the S7.3 notification roles covered; statutory DPO safeguards section added (Arts. 37–39; BDSG §38(2) with §6(4); no penalty for performing tasks; no automatic suspension for a certificate lapse; expertise funded by the organisation; Art. 38(5) confidentiality; conflict-of-interest assessment; review limited to conduct, availability and resources); BaFin no longer described as recipient of GDPR notifications (DORA reporting is a separate track); "represents the bank before regulators" replaced by "contact point"; vendor certificates and the tool vendor removed from Part A and Part B, with vendor-neutral qualifications and an internal tooling proficiency assessment; Data Protection Coordinators defined as in Document 5; segregation-of-duties and capacity notes added; the truncated sentence in the Privacy Operations Lead description completed; the garbled identity-verification right rewritten (request additional information instead of refusing); the DPC vacancy contradiction fixed (two filled, one vacant); headcount stated as two Privacy Engineer positions with a third on the growth trigger; Privacy Officers' onboarding review no longer implies decision rights; temporary cover no longer passes Accountable authority to the DPO or concentrates cover on one Privacy Officer; "Supervision" replaced by named bodies; committee and document names harmonised; adoption moved to Executive Management; example dates shifted by −12 months and the fictional history re-baselined; normative basis and international adaptation added |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |

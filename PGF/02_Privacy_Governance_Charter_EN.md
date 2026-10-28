@@ -2,18 +2,21 @@
 title: "Privacy Governance Charter"
 document_id: PGF-02
 level: 1
-release_version: 1.0.0-rc.1
+release_version: 1.0.0-rc.2
 status: release-candidate
 authors: ["Alexey Neyman", "Val Khvatov"]
 regulatory_reference_date: 2026-10-26
-licence_proposed: "CC BY 4.0 (proposed; subject to rights-holder confirmation)"
+licence_proposed: "CC BY 4.0 (author-approved; source-rights confirmation pending)"
 source_provenance: "Derived from internal source set ver.2: Level1/2. Privacy_Governance_Charter_Template and Example_ENG.docx.md; sha256 40f7731fd790b7658c18dbd9da747dd322f3f0904760173ddc585ee19c39bdbd"
 ---
 # PGF-02 — Privacy Governance Charter
 
-*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.1 · Regulatory reference date: 26 October 2026*
+> **Legal uncertainty and business decision.** A disputed legal interpretation is recorded as a reasoned position with its assumptions, alternatives, consequences for the organisation, Legal/DPO advice and a review date. Uncertainty is not automatically a confirmed G-L failure. The designated Legal function records whether the proposed design has a supportable basis under the applicable rules; the authorised business role decides within those rules and its delegation. A confirmed missing prerequisite or prohibition remains a stop/redesign condition. The decision record presents benefits and consequences for individuals and the organisation together, without silently lowering the individual-harm score.
 
-> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); all names, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
+
+*Privacy Governance Framework (PGF) · Level 1 — Strategic Documents · Release 1.0.0-rc.2 · Regulatory reference date: 26 October 2026*
+
+> **Status and use.** Part A is a reusable template. Part B is a worked example for a fictional organisation (PanEuropean Bank AG); the named implementation profile identifies a real product; the Bank, deployment, figures, dates and records in Part B are illustrative. Nothing in this document is legal advice or a statement about any real organisation, product or provider.
 
 # About This Document
 
@@ -512,6 +515,9 @@ This Charter was adopted by ***[Executive Management]*** on ***[date]*** ***[wit
 
 # Part B — Worked Example
 
+> **Implementation example.** In this Part B, PEP denotes the Bank's **PAMOLA implementation profile**, including separately integrated systems. The product is real; the Bank, deployment, configurations, records and numerical results are illustrative. The example demonstrates the intended workflow and is not evidence that every function is implemented in a released product or that these numbers were measured in a product run. See [the implementation profile](../IMPLEMENTATION_PROFILE.md). Part A remains tool-neutral.
+
+
 PanEuropean Bank AG — Privacy Governance Charter
 
 Effective date: 20 October 2026   ·   Version: 3.0   ·   Document owner: Chief Privacy Officer (EPPO)   ·   Adopted by: Management Board   ·   Supervisory Board consent: given 23 October 2026 (reserved consent matter under the Supervisory Board's rules of procedure)
@@ -916,3 +922,4 @@ Alberta and British Columbia PIPA, and public-sector and health-sector privacy l
 | Release | Date | Summary |
 | :---- | :---- | :---- |
 | 1.0.0-rc.1 | 2026-10-26 | Canonical English Markdown; changes from internal ver.2: framework-wide role model defined (Controller, Executive Management, Governing Body, EPPO, Processing Owner, DPO, Privacy Operations Lead, Privacy Risk Committee, Independent Internal Audit); Processing Owner mandate kept and bounded by delegated tiers; DPO approval rights, vetoes and binding status determinations removed — DPO advises, monitors and escalates, with direct reporting to Executive Management and access to the Governing Body committee; DPO independence clause rewritten (Arts. 37–39; WP243 rev.01 §§2.6, 3.3–3.5; *X-FAB*; EDPB CEF 2023), including the Art. 38(5) confidentiality safeguard; G-TIA branched by transfer mechanism (Art. 45 / 46 / 49) for the DPO's work; Internal Audit governance stated (Audit Committee approves the internal-audit charter and plan — IIA GIAS 2024, a professional-practice basis); mandatory gates G-L, G-DPIA, G-36 and G-TIA added to Section 11; residual-risk acceptance table aligned with EDITORIAL_RULES §4.3 (one named decider at High; G-36 evaluated for every DPIA; Critical not acceptable); Art. 5 principles stated in Section 7; privacy risk limited to rights and freedoms of individuals with organisational consequences on a separate track; risk limits made non-fungible; Part B re-modelled on Management Board decision / Supervisory Board oversight with reserved consent for the Charter (AktG §111(4)); EuroCredit Bureau recorded as an independent controller; cross-references corrected (Section 4 for what is governed and who governs; Privacy Policy Section 13 for protective measures); fictional providers and PEP used; product capability promises removed; example dates shifted by −12 months; normative basis and international adaptation (UK, Switzerland, Canada with OPC/OIPC programme mapping) added. Integration pass: Part B 90% value for "privacy as a condition for using data" restated as a diagnostic reference value (Document 28, CG-05); Part B Processing Owner list aligned with Document 25, Section 10, with the CRO concurring at Medium where the CPO is the Processing Owner |
+| 1.0.0-rc.2 | 2026-10-28 | Author-approved publication direction; named PAMOLA implementation examples with tool-neutral templates; direct integrated-score mapping without automatic per-metric risk-tier overrides; observations, DPO dissent and the authorised business decision recorded separately from legal/release conditions. |
