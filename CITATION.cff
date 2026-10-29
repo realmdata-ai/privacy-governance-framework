@@ -26,5 +26,7 @@ keywords:
   - PIPEDA
   - NIST Privacy Framework
 
-date-released: "2026-10-28"
+date-released: "2026-10-29"
 license: CC-BY-4.0
+doi: "10.5281/zenodo.23764105"
+url: "https://github.com/realmdata-ai/privacy-governance-framework"

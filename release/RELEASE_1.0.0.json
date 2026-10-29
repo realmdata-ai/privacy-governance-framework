@@ -6,6 +6,11 @@
   "method_basis_commit": "4feefbcbc75ba2abdba252981288dd820c68ee7c",
   "method_basis_tag": "freeze-pgf-1.0.0-rc.2-2026-10-28",
   "method_changes": false,
-  "external_publication": "not performed; DOI not yet assigned",
-  "companions": "outside this documentation release"
+  "external_publication": "published",
+  "companions": "outside this documentation release",
+  "publication_date": "2026-10-29",
+  "doi": "10.5281/zenodo.23764105",
+  "zenodo_record": "https://zenodo.org/records/23764105",
+  "github_visibility": "public",
+  "deposited_source_commit": "91e8c0d3d34862155992243c344690a7f5519ef7"
 }

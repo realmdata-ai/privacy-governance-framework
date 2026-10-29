@@ -1,0 +1,65 @@
+{
+  "verified": "2026-10-29T07:58:11.327988-04:00",
+  "version": "1.0.0",
+  "publication_date": "2026-10-29",
+  "github": "https://github.com/realmdata-ai/privacy-governance-framework",
+  "github_visibility": "public",
+  "default_branch": "main",
+  "deposited_source_commit": "91e8c0d3d34862155992243c344690a7f5519ef7",
+  "zenodo": "https://zenodo.org/records/23764105",
+  "doi": "10.5281/zenodo.23764105",
+  "concept_doi": "10.5281/zenodo.23764104",
+  "rights_holder": "REALM INVEO",
+  "license": "CC-BY-4.0",
+  "creators": [
+    "Alexey Neyman",
+    "Val Khvatov"
+  ],
+  "public_record_verified_without_auth": true,
+  "doi_resolves": "https://zenodo.org/records/23764105",
+  "files": [
+    {
+      "name": "CHECKSUMS.sha256",
+      "bytes": 451,
+      "sha256": "00964025d6601ee131fc4d5896cf847dd9c8470038a05daf7229791a4fe31b79",
+      "md5": "7dd567f6054ad0f5e95ae21190bcb6f6",
+      "download_url": "https://zenodo.org/api/records/23764105/files/CHECKSUMS.sha256/content"
+    },
+    {
+      "name": "LICENSE.txt",
+      "bytes": 19532,
+      "sha256": "0fa6d813a0d16a4d965f8befa7f68c2a636050060eb3636ff4e8fa7ecb358c88",
+      "md5": "d6d79aae423ac4e12d2b0c2831f28554",
+      "download_url": "https://zenodo.org/api/records/23764105/files/LICENSE.txt/content"
+    },
+    {
+      "name": "PGF_1.0.0_Editable_Framework.zip",
+      "bytes": 785126,
+      "sha256": "65536f1d919fb56b597d58d512c34a37068110ed2a468a874eb4599578abb410",
+      "md5": "87d8cb823d505fa5dcd334766ffed9f6",
+      "download_url": "https://zenodo.org/api/records/23764105/files/PGF_1.0.0_Editable_Framework.zip/content"
+    },
+    {
+      "name": "PGF_1.0.0_Validation_Summary.md",
+      "bytes": 1623,
+      "sha256": "489def6571c29c9d712804cde1ac6a7eb7274454fc73ea77bd95a7691c5dc729",
+      "md5": "d92e8deff35bb783263b34382a79adf4",
+      "download_url": "https://zenodo.org/api/records/23764105/files/PGF_1.0.0_Validation_Summary.md/content"
+    },
+    {
+      "name": "PGF_Framework_Overview_1.0.0.pdf",
+      "bytes": 159247,
+      "sha256": "e4ae4607785e574050405cc8132408c0a61537fe4845d603f4362b036ece1771",
+      "md5": "240806b774f6feed1a29a797ddb96956",
+      "download_url": "https://zenodo.org/api/records/23764105/files/PGF_Framework_Overview_1.0.0.pdf/content"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1126,
+      "sha256": "fc4adbc21e8492fbcf8bc6ad45241572131011a22bc3e62a98a3279304c9d80a",
+      "md5": "0d24fc4efe58ea6978ea16e03606f7ca",
+      "download_url": "https://zenodo.org/api/records/23764105/files/README.txt/content"
+    }
+  ],
+  "method_changes": false
+}

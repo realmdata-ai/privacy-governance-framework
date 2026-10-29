@@ -12,8 +12,10 @@
 
 The structural check and the 174 targeted arithmetic/integration checks are repeated for the publication copy and editable supplement. They are not empirical calibration, product certification, a legal opinion or independent external peer review. Product deployments, numerical cases and stated confidence intervals remain illustrative unless actual evidence is supplied. Regulatory reference date: 26 October 2026.
 
-## Publication steps
+## Publication completed — 29 October 2026
 
-Prepare and visually check the master PDF, verify the final payload and metadata, then obtain the user's final operational instruction to publish/open the repository. DOI is assigned or reserved in Zenodo; no DOI is invented. No additional author or rights-holder approval is requested merely because those already-confirmed items were previously pending.
+The user authorised the public release. PGF 1.0.0 was transferred to `main`, the GitHub repository was made public, and all six prepared files were published in [one Zenodo report record](https://zenodo.org/records/23764105). Version DOI: [10.5281/zenodo.23764105](https://doi.org/10.5281/zenodo.23764105).
+
+The public record, DOI resolution and every deposited file were verified without authentication. Deposited files match the prepared package byte for byte. The source snapshot is commit `91e8c0d3d34862155992243c344690a7f5519ef7`; subsequent GitHub changes record publication identifiers and status only. See [publication receipt](../release/PUBLISHED_1.0.0.json).
 
 Third-party laws/standards are referenced under their own terms, not relicensed. The Zenodo supplement excludes raw legacy files, private correspondence, internal coordination records, unreviewed companions and software utilities.
