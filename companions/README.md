@@ -1,21 +1,20 @@
 # PGF Companion Resources
 
-> **Applicability — 28 October 2026.** This preview describes the frozen rc.1 methodology, including its earlier metric-gate logic. It has not been migrated or validated against rc.2. Use it as separately versioned research material; it does not add requirements to the rc.2 framework.
+**Updated 29 October 2026.** These independently versioned previews support review and feedback. Adoption Guide and Privacy Red-Team Playbook **0.2.0-preview.1** target published **PGF 1.0.0**, tag `v1.0.0`, DOI [10.5281/zenodo.23764105](https://doi.org/10.5281/zenodo.23764105). They do not change that release or form part of its Zenodo deposit.
 
+The **risk-model companion remains 0.1.0-preview.1 and describes rc.1**. It has not been migrated to the published method. Its earlier metric-gate logic is not a requirement of PGF 1.0.0; full specification and independent reference reconciliation remain pending. Do not transfer its rules or test results to the updated companions without a separate review.
 
-**Preview 0.1.0-preview.1 · 27 October 2026**
-
-These separately versioned resources support reading, implementing and testing the Privacy Governance Framework. They target the accepted English PGF 1.0.0-rc.1 and do not change its frozen content. Preview means ready for review and feedback; the scope and limitations of each resource remain explicit.
-
-| Resource | Start here | Contents |
-|---|---|---|
-| Risk model | [README](risk-model/README.md) | Introduction, two worked examples, formula review and 27 research counterexample tests. Full specification and reference/golden reconciliation remain pending. |
-| Privacy red teaming | [README](privacy-red-team/README.md) | Playbook, twelve test cards, a worked campaign and thirteen artificial fixtures. |
-| Adoption | [README](adoption-guide/README.md) | Adoption routes, a complete worked case, checklist and filled evidence records. |
+| Resource | Version / baseline | Start here | Contents |
+|---|---|---|---|
+| Adoption | 0.2.0-preview.1 / PGF 1.0.0 | [README](adoption-guide/README.md) | Adoption routes, complete case, eight filled records, JSON contracts and portable verifier |
+| Privacy red teaming | 0.2.0-preview.1 / PGF 1.0.0 | [README](privacy-red-team/README.md) | Twelve test cards, worked campaign, thirteen attack/evaluation fixtures and six governance-handoff controls |
+| Risk model | 0.1.0-preview.1 / rc.1 | [README](risk-model/README.md) | Introduction, two worked examples, formula review and 27 research counterexample tests; full specification/reference reconciliation pending |
 
 ## Reading order
 
-Begin with the adoption guide and its complete case for an end-to-end view. Read the risk-model introduction for calculation concepts, then the red-team playbook for evidence production. Mathematical and implementation details can be reviewed independently.
+Begin with the adoption guide and complete case, then the red-team playbook for evidence production. Both packages include an explicit [Doc 08 / Doc 18 compatibility note](adoption-guide/PGF_1_0_0_COMPATIBILITY.md). They follow Document 18's final direct calculation rules, retain individual observations and distinguish legal/budget/release constraints from the business decision. The source inconsistency is disclosed rather than silently edited.
+
+Read the risk-model material separately, with its rc.1 baseline and errata visible. Neither updated package depends on that companion's completion.
 
 ## Reproducibility and interpretation
 
@@ -25,4 +24,4 @@ The risk-model package separates tests of research counterexamples from reconcil
 
 ## Version and distribution
 
-These previews are independent of the PGF v1 release package. Open questions are recorded locally, including in the risk-model errata register. Changes proposed there are not silently applied to PGF v1. Licensing and public distribution terms are to be confirmed before public release; this preview does not grant a new licence.
+See each package's README, limitations and migration record. The repository documentation licence applies within its stated scope; this update grants no new software licence or rights in third-party material. Provenance/licensing limitations in the unchanged risk-model snapshot remain explicit. No companion changes PGF 1.0.0 content, tag, master PDF or DOI deposit.

@@ -1,6 +1,6 @@
 # Worked campaign: one dataset, two release channels
 
-Preview 0.1.0-preview.1 · Review date: 27 October 2026
+Preview 0.2.0-preview.1 · Review date: 29 October 2026
 **Teaching case WC-01.** Every person, value and observation below is invented. This is a complete reasoning exercise, not a measured result for a PET product. Run `python verify_examples.py` to reproduce the selected observations. The campaign intentionally starts with leaky toy designs.
 
 ## 1. Business question and scope
@@ -36,7 +36,7 @@ The controls include a deliberately unique row for RT-01 and a deliberately coun
 | RT-03, model-output channel | No model or score channel exists in this target | NOT APPLICABLE | Only this access channel is excluded |
 | RT-03, released-data-only channel | Generation/membership/attack evidence is not specified | INCOMPLETE | Missing model access does not exclude released-data-only attacks |
 
-These two findings remain distinct; neither is an estimate of total probability of harm. The existence of a strong cryptographic protocol would not remove an intended-output leak.
+These two findings remain distinct criterion FAILs; neither is an estimate of total probability of harm, a computed PGF tier or an automatic High/Near-certain override. RT-07 also violates the scenario's explicitly approved output contract: this is a separate release condition that requires correction before use under that contract. RT-01 is preserved for the owner's assessment and decision; a real legal conclusion needs the applicable facts and analysis. No integrated tier is computed by this campaign. The existence of a strong cryptographic protocol would not remove an intended-output leak.
 
 ## 5. Treatment and a narrow retest
 
@@ -48,7 +48,7 @@ The exercise's retest verifies that the removed quasi-identifier channel is abse
 
 The record contains target versions A/B; fixture and configuration hashes; observer and auxiliary-data descriptions; declared criteria; the selected query/response transcript; the target-match observation; controls; results; limitations; and reviewer/disposition references. Personal source records are unnecessary because the whole exercise is fabricated.
 
-The Processing Owner takes the findings into the release decision under the adopted PGF process. Document18 receives the test evidence and missing-test scope; a DPIA under Document19 considers possible harm; a TIA under Document20, if applicable to a real arrangement, still requires its legal assessment; Document27 receives the remediation and retest evidence. The DPO advises and monitors. This exercise does not create a real legal or risk-acceptance decision.
+The Processing Owner takes the findings into one release decision under the adopted PGF process: purpose and benefit, alternatives A/B or no release, individual-harm evidence, separate organisational consequences, DPO/Legal advice and response, conditions and review date. Cost amounts and real signatures are not supplied. Version A cannot meet the adopted partner-output contract. No criterion status itself grants permission to release. Document18 receives the test evidence and missing-test scope; a DPIA under Document19 considers possible harm; a TIA under Document20, if applicable to a real arrangement, still requires its legal assessment; Document27 receives the remediation and retest evidence. The DPO advises and monitors. This exercise does not create a real legal or risk-acceptance decision.
 
 ## 7. What to carry into a real campaign
 

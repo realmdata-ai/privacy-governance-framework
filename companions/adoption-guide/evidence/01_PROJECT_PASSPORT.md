@@ -13,9 +13,11 @@ Status: teaching reconstruction; no new run or release authorised.
 | Assessed observers | Internal Data Science insider/contractor with synthetic output and public or commercial auxiliary information; source/parameter access assessed separately |
 | Observable output | Synthetic dataset to Data Science; generator parameters/checkpoints stay inside the controlled engineering environment |
 | Scenarios | S1 disclosure through synthetic output; S2 misuse of source/parameters by authorised personnel |
-| Mandatory test set | MIA accuracy/AUC/TPR@FPR0.1%; DCR P5; NNDR median; TP-SYN-LINK and TP-SYN-INF advantages; epsilon/configured delta and full DP statement/ledger |
+| Weighted inputs | MIA accuracy, MIA AUC, DCR P5 and NNDR median; four weights of 0.25; use point estimates |
+| Review-only observations | TPR@FPR0.1%, TP-SYN-LINK and TP-SYN-INF advantages, intervals and coverage |
+| Separate claim/release evidence | Actual epsilon/delta and full DP statement; ledger and adopted budget; decision conditions |
 | Test design | Source assumes5,000 members+5,000 non-members for balanced MIA;5,000 training+5,000 control records for linkage/inference; five fresh-seed/fresh-split repetitions; illustrative 95% intervals |
 | Test boundary | Model inversion from generator parameters is not measured; source keeps parameters inside the controlled environment and records that limitation rather than a measured PASS |
-| Rule version | Calculation reconstructed from frozen PGF1.0.0-rc.1; historical decision under then-effective rules, later current-authority conditions separately recorded |
+| Rule version | Calculation reconstructed from published PGF 1.0.0 (tag `v1.0.0`); historical decision under then-effective rules, later current-authority conditions separately recorded |
 
 All thresholds are adopted project settings in the fictional bank. An adopter needs its own measurement design and validation of the mechanism, accountant, implementation and observation boundary. Reproducing this passport's text does not supply those facts.

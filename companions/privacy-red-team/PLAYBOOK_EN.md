@@ -1,6 +1,6 @@
 # Privacy Red-Team Playbook
 
-Version 0.1.0-preview.1 · Preview · Reference/review date: 27 October 2026
+Version 0.2.0-preview.1 · Preview · Reference/review date: 29 October 2026
 
 ## 1. Why this playbook exists
 
@@ -95,7 +95,7 @@ This calculation assumes those operating characteristics apply to the deployment
 
 Name the interval method, confidence level, independent unit and resampling design. A binomial interval for a simple fixed-rate experiment is not automatically an appropriate AUC or clustered-identity interval. Use a method compatible with dependencies and report subgroup sizes.
 
-The verifier shows the two-sided Wilson 95% interval for simple binomial teaching cases. With zero false positives among 1,000 negatives, the upper endpoint is about 0.00383. That experiment cannot establish FPR below 0.001 at that confidence level. The confidence conclusion is that the ceiling has not been established; it is not evidence of zero risk. This is still a valid interval estimate. Under the frozen PGF routing, a valid mandatory measurement whose unfavourable confidence bound crosses its configured threshold maps to **G-M1 FAIL** and blocks release. Missing, invalid or unestimated mandatory evidence maps to **G-M5 INCOMPLETE**. Do not convert a valid threshold failure into INCOMPLETE merely because a larger sample might narrow the interval.
+The verifier shows the two-sided Wilson 95% interval for simple binomial teaching cases. With zero false positives among 1,000 negatives, the upper endpoint is about 0.00383. That experiment cannot establish FPR below 0.001 at that confidence level. The confidence conclusion is that the ceiling has not been established; it is not evidence of zero risk. This is still a valid interval estimate and FAIL against the card's declared confidence criterion. Under published PGF 1.0.0 it is an assessment observation, not an automatic framework-wide gate failure or High/Near-certain override. If the ceiling is an explicitly adopted release condition, record that separate constraint. Missing or invalid measurement evidence makes the card INCOMPLETE; missing/invalid selected weighted inputs or calculation configuration make the integrated calculation INCOMPLETE. Missing diagnostics are coverage limitations and cannot support a positive test or claim. Do not convert the valid interval comparison into missing evidence merely because a larger sample might narrow it.
 
 Run-to-run variation and statistical uncertainty are different. Document both. Do not treat five repeated runs of the same 100 persons as 500 independent people. Adjust a pre-registered multiple-comparison strategy when searching many subgroups or attack variants.
 
@@ -109,7 +109,7 @@ Use a result per card, observer and configuration:
 
 - **PASS:** the declared criteria are met, required evidence and controls exist, and uncertainty is within the pre-registered acceptance rule.
 - **FAIL:** a declared unacceptable observation or criterion is established; show the result and uncertainty.
-- **INCOMPLETE:** mandatory evidence or applicability is missing, a control or evaluation design is invalid, or a required measurement has not been estimated. A valid confidence interval that exceeds a configured threshold remains a FAIL under the PGF mapping; it is not moved here solely because its precision is insufficient to establish compliance.
+- **INCOMPLETE:** mandatory evidence or applicability is missing, a control or evaluation design is invalid, or a required measurement has not been estimated. A valid interval that does not establish the card's configured ceiling remains a criterion FAIL; it is not missing evidence merely because its precision is insufficient. This card status is not the computed PGF tier or a release authorisation.
 - **NOT APPLICABLE:** the question does not arise for the stated observer and version, with a documented reason and validation of any control excluding it.
 
 Report attack success separately from these criterion outcomes. PASS can coexist with non-zero measured disclosure below an illustrative internal threshold; it never means zero risk. A successful observation can be provisional if the test has failed its controls. Resolve that uncertainty without suppressing the observation.
@@ -128,10 +128,12 @@ Different audiences may receive redacted extracts from one traceable evidence re
 
 | PGF interface | Evidence supplied | Decision retained by governance |
 |---|---|---|
-| Document 18: risk method and PET module | Declared adversary/channel, controls, metrics, intervals, failed or missing tests | Method application, legal anonymity conclusion and applicable module gates |
+| Document 18: risk method and PET module | Observer/channel, controls, weighted-input versus review-only role, comparisons, intervals and gaps | Direct integrated calculation and separate observations; no per-card tier override; anonymity/DP claims require their own evidence |
 | Document 19: DPIA | Harm scenarios, affected populations, demonstrated residual disclosure and uncertainties | Lawfulness, necessity, proportionality, G-36 conclusion and risk decision |
 | Document 20: TIA | What each recipient can observe, recover, combine or be compelled to provide; effectiveness limits of measures | Destination-law assessment and transfer mechanism determination |
 | Document 27: monitoring and assurance | Reproducible findings, evidence references, unresolved scope and retest results | Independent assurance and remediation oversight under the adopted model |
+
+The handoff records the target version, observation and criterion outcome separately from any computed tier. Name any confirmed legal failure, adopted budget cap or explicit output/release condition that constrains the decision, with its source and owner. Keep DPO/Legal advice, dissent and the authorised decider's response in one decision record with business benefits, alternatives, organisational consequences and review date. Organisational benefits do not lower the individual-harm score. A disputed legal interpretation needs reasons and review; it is not automatically a confirmed prohibition. Read the [compatibility note](PGF_1_0_0_COMPATIBILITY.md) for residual source terminology.
 
 A disclosure finding may also require assessment under the breach-response process. The red team records facts; it does not apply a harm filter to decide that a personal data breach does not exist.
 

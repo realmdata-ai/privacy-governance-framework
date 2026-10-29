@@ -1,10 +1,10 @@
 # Privacy Red-Team Playbook
 
-**Preview 0.1.0-preview.1 — 27 October 2026. Private repository review copy.** This independent companion targets the accepted English PGF 1.0.0-rc.1. It is outside the PGF v1 release, creates no release dependency, and changes no PGF document. Authorship, rights and public distribution terms remain to be confirmed; no licence is granted by this preview.
+**Preview 0.2.0-preview.1 — 29 October 2026. Public review copy.** This independent companion targets published PGF 1.0.0 (tag `v1.0.0`). It remains outside the Zenodo deposit, creates no PGF release dependency and changes no PGF document. Read the [compatibility note](PGF_1_0_0_COMPATIBILITY.md), including the disclosed Doc 08 / Doc 18 inconsistency, and [migration record](CHANGES.md). See the repository documentation licence for scope; this migration grants no new software licence.
 
 Start with [the playbook](PLAYBOOK_EN.md), read the [complete worked campaign](WORKED_CAMPAIGN_EN.md), then follow the [worked test cards](cards/TEST_CARDS_EN.md). Use the [blank card](TEST_CARD_TEMPLATE.md) for a new assessment. [Primary references](REFERENCES.md) identify the evidence behind the method. [Coverage and limitations](COVERAGE_AND_LIMITATIONS.md) distinguish specified procedures from implemented tests.
 
-The accompanying [toy fixtures](fixtures/examples.json) are wholly invented. Run `python verify_examples.py` from this directory to reproduce their arithmetic and observations with Python 3.11+ and the standard library. The verifier does not attack a system, train a model, validate a PET implementation or establish anonymity. Its fixed examples are teaching controls, not a benchmark of any product. No private attack library or client assessment has been copied into this package.
+The accompanying [toy fixtures](fixtures/examples.json) are wholly invented. Run `python verify_examples.py` from this directory to reproduce their arithmetic and observations with Python 3.11+ and the standard library. The verifier also checks the separation between test criteria, supplied calculation status and release constraints. It does not attack a system, calculate a real deployment's risk, train a model, validate a PET implementation or establish anonymity. Its fixed examples are teaching controls, not a benchmark of any product. No private attack library or client assessment has been copied into this package.
 
 ## Intended readers
 
@@ -23,5 +23,7 @@ Privacy engineers use the cards to produce evidence. Processing Owners and Legal
 | COVERAGE_AND_LIMITATIONS.md | Coverage, gaps and remaining review work |
 
 The preview validation record is in [reports/validation_preview.json](reports/validation_preview.json). Reproduce it with `python verify_examples.py > reports/validation_preview.json`. This record covers the invented examples only.
+
+The 0.2.0 preview checks 19 fixtures: thirteen attack/evaluation examples and six handoff controls. The [quality report](reports/quality_checks_preview.json) records standalone execution, negative controls, local links and the unchanged PGF baseline. A supplied likelihood in a handoff fixture is not an independently calculated deployment risk.
 
 Use an approved assessment scope and minimise retained personal information in a real deployment. The examples require no real identifiers or production data. Thresholds in the cards are illustrative policy choices. An assessment must justify its own criteria before observing results.

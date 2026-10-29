@@ -4,7 +4,7 @@ These are illustrative source values. Basic composition is used over one overlap
 
 | Existing expenditure | Epsilon | Delta | Observation |
 |---|---|---|---|
-| Initial generator, Example 2.1 | 2.1 | 8×10^-6 | Output observed by Privacy Engineers; release to Data Science failed |
+| Initial generator, Example 2.1 | 2.1 | 8×10^-6 | Output observed by Privacy Engineers; business decider chose redesign; no release to Data Science |
 | Reconfigured generator, Example 2.1-R | 1.8 | 1×10^-9 | Privacy Engineers and Data Science observe the synthetic output |
 | Federated consortium, all rounds included in the 26 October snapshot | 2.6 | 1×10^-9 | Consortium members |
 | **26 October cumulative total** | **6.5** | **8.002×10^-6** | All three are already accounted for |
@@ -23,6 +23,6 @@ Delta utilisation is 8.002×10^-6 / 1×10^-5 = **80.02%**, reaching the internal
 
 A proposed further run requests epsilon 0.4 at delta 3×10^-6. Prospective totals are epsilon **6.9** and delta **1.1002×10^-5**. Epsilon passes the illustrative lifetime and annual caps. Delta fails the lifetime cap by **1.002×10^-6**. The proposed configured delta also differs from the accepted project's 1×10^-9 setting. The old acceptance expires at the next calibration and cannot be stretched to cover this changed configuration.
 
-**Disposition:** budget preflight FAIL; do not run; reopen the passport, applicable gates, evidence and decision for any revised proposal. No full-module PASS is claimed; test results for the proposal do not exist. This is a new teaching event, not a source event or a fictitious completed run. It adds no actual charge because it was not executed and no output was observed. An executed failed or cancelled run with observable output would require accounting.
+**Disposition:** budget preflight FAIL; do not run; reopen the passport, applicable gates, evidence and decision for any revised proposal. No new tier is computed: selected weighted inputs for the proposal are absent (calculation INCOMPLETE). The complete old indicator is not reused for the changed proposal. The budget failure is a separate release constraint, not a tier override. This is a new teaching event, not a source event or a fictitious completed run. It adds no actual charge because it was not executed and no output was observed. An executed failed or cancelled run with observable output would require accounting.
 
 In a real system, concurrent proposals require atomic reservation and charge logic. This record is not a production ledger implementation.

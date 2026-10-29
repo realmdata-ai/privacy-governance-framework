@@ -11,11 +11,17 @@
   "properties": {
     "baseline_release": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "enum": [
+        "PGF 1.0.0"
+      ]
     },
     "content_commit": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "enum": [
+        "8ac8026aec3620f84c3046f2e13b2d747d321f57"
+      ]
     },
     "scope": {
       "type": "string",

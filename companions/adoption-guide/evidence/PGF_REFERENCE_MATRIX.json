@@ -1,7 +1,7 @@
 {
-  "baseline_release": "PGF 1.0.0-rc.1",
+  "baseline_release": "PGF 1.0.0",
   "source_path": "PGF/08_Privacy_Risk_Appetite_Statement_EN.md",
-  "source_sha256": "a5bfae04fb0c3a86a1e593cca144d877f1187d982e8a40e633538bd12a15ce3c",
+  "source_sha256": "168a0f18908e60771e391969b22f7a017eb1378109b4661c5faec318d4659bbe",
   "source_part_section": "Part B, Section 4",
   "matrix": {
     "Minor": {

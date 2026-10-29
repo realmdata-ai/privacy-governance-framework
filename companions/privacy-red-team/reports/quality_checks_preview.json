@@ -1,18 +1,25 @@
 {
-  "companion_version": "0.1.0-preview.1",
+  "companion_version": "0.2.0-preview.1",
   "status": "preview",
-  "review_date": "2026-10-27",
+  "review_date": "2026-10-29",
+  "baseline_release": "PGF 1.0.0",
+  "baseline_tag": "v1.0.0",
+  "baseline_commit": "8ac8026aec3620f84c3046f2e13b2d747d321f57",
   "verifier_exit_code": 0,
-  "fixtures_checked": 13,
-  "all_expected_observations_match": true,
-  "fixture_sha256": "676c29a8dc45730a46f0fe262470b00e505cde3a9bf0034c1c22e56768f16547",
-  "valid_measurement_gate_mapping": "G-M1_FAIL",
-  "paired_invalid_measurement_control": "verified by the verifier: G-M5_INCOMPLETE",
   "python_syntax_checked": [
     "verify_examples.py"
   ],
   "missing_local_links": [],
-  "neutrality_match_count": 0,
-  "frozen_pgf_manifest_output_mismatch_count": 0,
-  "scope": "Teaching observations and package checks only; no deployed PET, attack library or external target validated."
+  "legacy_gate_routing_matches": [],
+  "excluded_output_terms_match_count": 0,
+  "private_absolute_paths_match_count": 0,
+  "published_pgf_changed_files": 0,
+  "risk_model_snapshot_changed_files": 0,
+  "source_inconsistency_disclosed": true,
+  "scope": "Artificial teaching arithmetic and package consistency; no real PET, legal or release authorisation validated.",
+  "fixtures_checked": 19,
+  "all_expected_observations_match": true,
+  "fixture_sha256": "87d82a609e43945b30f6b850a686681f2432741ba4a0858f927b264df0f1b4d1",
+  "standalone_verifier_pass": true,
+  "negative_controls": "empty sample, missing evidence, failed detector, invalid measurement and three invalid handoffs rejected"
 }

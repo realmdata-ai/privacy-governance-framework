@@ -18,9 +18,11 @@
     "ledger",
     "hypothetical_change",
     "evidence_ids",
-    "gates",
     "companion_version",
-    "preview_date"
+    "preview_date",
+    "metric_observations",
+    "initial_design",
+    "business_decision"
   ],
   "properties": {
     "package_status": {
@@ -29,7 +31,10 @@
     },
     "baseline_release": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "enum": [
+        "PGF 1.0.0"
+      ]
     },
     "case_id": {
       "type": "string",
@@ -217,9 +222,9 @@
         "expected_total_delta",
         "expected_delta_excess",
         "budget_preflight",
-        "full_module",
         "new_charge",
-        "also_violates_current_project_delta_configuration"
+        "also_violates_current_project_delta_configuration",
+        "calculation_status"
       ],
       "properties": {
         "status": {
@@ -250,16 +255,18 @@
           "type": "string",
           "minLength": 1
         },
-        "full_module": {
-          "type": "string",
-          "minLength": 1
-        },
         "new_charge": {
           "type": "string",
           "minLength": 1
         },
         "also_violates_current_project_delta_configuration": {
           "type": "boolean"
+        },
+        "calculation_status": {
+          "type": "string",
+          "enum": [
+            "INCOMPLETE"
+          ]
         }
       },
       "additionalProperties": false
@@ -274,7 +281,18 @@
       },
       "uniqueItems": true
     },
-    "gates": {
+    "companion_version": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "0.2.0-preview.1"
+      ]
+    },
+    "preview_date": {
+      "type": "string",
+      "minLength": 1
+    },
+    "metric_observations": {
       "type": "array",
       "minItems": 7,
       "maxItems": 7,
@@ -283,7 +301,9 @@
         "required": [
           "name",
           "threshold",
-          "comparison"
+          "comparison",
+          "role",
+          "criterion_result"
         ],
         "properties": {
           "name": {
@@ -311,18 +331,149 @@
               ">",
               ">="
             ]
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "weighted",
+              "review_only"
+            ]
+          },
+          "criterion_result": {
+            "type": "string",
+            "enum": [
+              "PASS",
+              "FAIL"
+            ]
           }
         },
         "additionalProperties": false
       }
     },
-    "companion_version": {
-      "type": "string",
-      "minLength": 1
+    "initial_design": {
+      "type": "object",
+      "required": [
+        "source_example",
+        "epsilon",
+        "delta",
+        "expected_likelihood",
+        "expected_risk",
+        "decision",
+        "metrics",
+        "expected_indicator",
+        "configuration_difference",
+        "observed_output_charged"
+      ],
+      "properties": {
+        "source_example": {
+          "type": "string",
+          "minLength": 1
+        },
+        "epsilon": {
+          "type": "string",
+          "minLength": 1
+        },
+        "delta": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_likelihood": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_risk": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "metrics": {
+          "type": "object",
+          "required": [
+            "accuracy",
+            "auc",
+            "dcr_p5",
+            "nndr_median"
+          ],
+          "properties": {
+            "accuracy": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "auc": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "dcr_p5": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "nndr_median": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "expected_indicator": {
+          "type": "number"
+        },
+        "configuration_difference": {
+          "type": "boolean"
+        },
+        "observed_output_charged": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
     },
-    "preview_date": {
-      "type": "string",
-      "minLength": 1
+    "business_decision": {
+      "type": "object",
+      "required": [
+        "purpose_and_benefit",
+        "individual_risk",
+        "organisational_consequences",
+        "alternatives",
+        "advice_and_response",
+        "conditions_and_review",
+        "cost_limitations"
+      ],
+      "properties": {
+        "purpose_and_benefit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "individual_risk": {
+          "type": "string",
+          "minLength": 1
+        },
+        "organisational_consequences": {
+          "type": "string",
+          "minLength": 1
+        },
+        "alternatives": {
+          "type": "string",
+          "minLength": 1
+        },
+        "advice_and_response": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conditions_and_review": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cost_limitations": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false

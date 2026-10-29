@@ -1,0 +1,84 @@
+{
+  "companion_version": "0.2.0-preview.1",
+  "status": "preview",
+  "review_date": "2026-10-29",
+  "baseline_release": "PGF 1.0.0",
+  "baseline_tag": "v1.0.0",
+  "baseline_commit": "8ac8026aec3620f84c3046f2e13b2d747d321f57",
+  "verifier_exit_code": 0,
+  "python_syntax_checked": [
+    "verify_examples.py"
+  ],
+  "missing_local_links": [],
+  "legacy_gate_routing_matches": [],
+  "excluded_output_terms_match_count": 0,
+  "private_absolute_paths_match_count": 0,
+  "published_pgf_changed_files": 0,
+  "risk_model_snapshot_changed_files": 0,
+  "source_inconsistency_disclosed": true,
+  "scope": "Artificial teaching arithmetic and package consistency; no real PET, legal or release authorisation validated.",
+  "checks": 74,
+  "failures": 0,
+  "portability_and_negative_cases": [
+    {
+      "case": "portable published-PGF tree",
+      "exit_code": 0,
+      "status": "PASS",
+      "expected_result_confirmed": true
+    },
+    {
+      "case": "standalone companion",
+      "exit_code": 0,
+      "status": "PASS_COMPANION_ONLY_PGF_NOT_CHECKED",
+      "expected_result_confirmed": true
+    },
+    {
+      "case": "standalone with required PGF",
+      "exit_code": 1,
+      "status": "FAIL",
+      "expected_result_confirmed": true
+    },
+    {
+      "case": "tampered PGF rejected",
+      "exit_code": 1,
+      "status": "FAIL",
+      "expected_result_confirmed": true
+    },
+    {
+      "case": "missing weighted input rejected",
+      "exit_code": 1,
+      "status": "FAIL",
+      "expected_result_confirmed": true
+    },
+    {
+      "case": "unknown record field rejected",
+      "exit_code": 1,
+      "status": "FAIL",
+      "expected_result_confirmed": true
+    },
+    {
+      "case": "negative weight rejected",
+      "exit_code": 1,
+      "status": "FAIL",
+      "expected_result_confirmed": true
+    },
+    {
+      "case": "missing schema rejected",
+      "exit_code": 1,
+      "status": "FAIL",
+      "expected_result_confirmed": true
+    },
+    {
+      "case": "non-finite input rejected",
+      "exit_code": 1,
+      "status": "FAIL",
+      "expected_result_confirmed": true
+    },
+    {
+      "case": "wrong metric criterion result rejected",
+      "exit_code": 1,
+      "status": "FAIL",
+      "expected_result_confirmed": true
+    }
+  ]
+}

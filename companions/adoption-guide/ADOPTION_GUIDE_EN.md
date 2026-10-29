@@ -1,6 +1,6 @@
 # PGF Adoption Guide
 
-Preview 0.1.0-preview.1 · English (UK) · 27 October 2026 · Review copy
+Preview 0.2.0-preview.1 · English (UK) · 29 October 2026 · Review copy
 
 ## 1. What this guide helps you do
 
@@ -27,7 +27,7 @@ Start by naming the processing activity, purpose, people affected, intended outp
 3. If a DPIA is required, does the statutory test for prior consultation apply? G-36 is a reasoned legal conclusion, evaluated independently of the internal risk label.
 4. After those steps and any other applicable gates, who may decide whether to proceed, with what conditions and expiry?
 
-A low internal score does not settle the first three questions. An internally accepted High score does not substitute for a required prior consultation. An elapsed consultation period does not by itself authorise processing.
+A disputed legal interpretation needs a reasoned position, assumptions, alternatives, Legal/DPO advice and a review date; it is not automatically a confirmed G-L failure. A confirmed missing prerequisite or prohibition remains a stop/redesign condition. A low internal score does not settle the first three questions. An internally accepted High score does not substitute for a required prior consultation. An elapsed consultation period does not by itself authorise processing.
 
 ## 3. Choose a route by scope
 
@@ -59,8 +59,8 @@ For one activity, begin with a coherent set of records rather than parallel spre
 - A processing record describes purpose, lawful-basis references, data subjects/categories, recipients, transfers, retention and ownership. The data inventory adds actual datasets, systems, states, access and lineage.
 - The project passport defines the assessed version, privacy unit, adversary and observable outputs. It fixes the relevant tests and thresholds before results are used.
 - The legal and triage records state the conclusions, reasons, responsible roles and source references. A template cannot supply a real organisation's legal analysis.
-- Measured or assumed evidence is labelled accurately. Missing mandatory evidence is visible and prevents a positive module result; an expert view is not a substitute for an absent required test.
-- The decision identifies the authorised decider and conditions. The risk register links to it; it does not create approval by listing a tier.
+- Measured or assumed evidence is labelled accurately. A missing selected weighted input makes the calculation INCOMPLETE. A missing diagnostic test stays a coverage limitation; it is not PASS and does not automatically invalidate an otherwise complete calculation. Evidence for a DP guarantee or anonymity claim must support that particular claim. Adopted release conditions remain separate.
+- The single business decision records purpose and benefits, individual-risk tier, organisational consequences, alternatives, DPO/Legal advice including dissent, the decider's response, conditions and review date. Benefits do not reduce the individual-harm score. The risk register links to this decision; it does not create approval by listing a tier.
 - The monitoring record states what changes or expires, who notices and what happens before further processing.
 
 A sealed evidence pack is an integrity mechanism, not an indefinite-retention exemption. Minimise personal information in the pack; apply appropriate access and deletion rules to any separately retained personal component.
@@ -76,7 +76,7 @@ A regulated organisation may use its existing executive, risk and assurance arra
 | Situation | Appropriate decision record | Evidence needed before closing it |
 |---|---|---|
 | An owner is missing | Name the accountable business role and record the mandate; restrict the proposed change until required decisions are possible | Scope, competence/conflict checks and written delegation |
-| A mandatory PET test is missing | Keep the outcome INCOMPLETE and assign a validation action | A valid result for the declared threat/output scope, not a retrospective opinion |
+| A PET test is missing | Identify whether it is a selected weighted input, diagnostic evidence, claim evidence or an adopted release condition | No computed tier without required weighted inputs; no claimed test PASS, DP guarantee or anonymity conclusion without its evidence; apply release constraints separately |
 | A transfer mechanism is uncertain | Restrict or suspend the affected flow while the lawful route is resolved | Applicability, current mechanism, recipient/coverage check and assessment appropriate to that route |
 | A DPIA indicates a need for prior consultation | Complete the statutory consultation step before the processing starts or resumes | Reasoned G-36 conclusion, submission/advice/order records as applicable and a valid subsequent decision |
 | A conditional acceptance expires or inputs change | Reassess before further use that relies on the expired or out-of-scope decision | Updated facts, gates/evidence, risk assessment and current authorised decision |
@@ -91,4 +91,4 @@ Useful initial indicators include the share of in-scope activities with a confir
 
 ## 9. How to use the companion
 
-Read the [complete worked case](COMPLETE_WORKED_CASE_EN.md), inspect the filled records in [the evidence index](evidence/00_INDEX.md), and use the [adoption checklist](ADOPTION_CHECKLIST.md) against your own circumstances. The [sources and limitations](SOURCES_AND_LIMITATIONS.md) explain the baseline, illustrative evidence and jurisdictional boundaries. This companion does not add requirements to the accepted PGF v1 or change its source files.
+Read the [complete worked case](COMPLETE_WORKED_CASE_EN.md), inspect the filled records in [the evidence index](evidence/00_INDEX.md), and use the [adoption checklist](ADOPTION_CHECKLIST.md) against your own circumstances. The [sources and limitations](SOURCES_AND_LIMITATIONS.md) explain the baseline, illustrative evidence and jurisdictional boundaries. Read the [PGF 1.0.0 compatibility note](PGF_1_0_0_COMPATIBILITY.md) before interpreting older gate terminology in the source. This companion does not add requirements to PGF 1.0.0 or change its source files.

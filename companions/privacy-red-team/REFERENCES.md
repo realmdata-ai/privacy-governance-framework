@@ -1,6 +1,6 @@
 # Primary references and method provenance
 
-Preview 0.1.0-preview.1 — review date: 27 October 2026. Bibliographic source pages last checked: 26 October 2026. These references support particular concepts; no blanket conformance claim is made. Official publication pages and paper abstracts/metadata were reviewed during preparation on 26 October 2026. A full technical literature review and validation of particular attack implementations remain separate work. No third-party paper, private code or restricted report is reproduced here.
+Preview 0.2.0-preview.1 — review date: 29 October 2026. Bibliographic source pages last checked: 26 October 2026. These references support particular concepts; no blanket conformance claim is made. Official publication pages and paper abstracts/metadata were reviewed during preparation on 26 October 2026. A full technical literature review and validation of particular attack implementations remain separate work. No third-party paper, private code or restricted report is reproduced here.
 
 | ID | Primary source | Status and date | Use in this preview |
 |---|---|---|---|

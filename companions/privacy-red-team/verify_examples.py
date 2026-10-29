@@ -28,6 +28,30 @@ def criterion_status(result_present, positive_control, threshold_met=True):
         return "INCOMPLETE"
     return "PASS" if threshold_met else "FAIL"
 
+def governance_handoff(d):
+    """Teaching status handoff; the supplied likelihood is not calculated here."""
+    if d["criterion_result"] not in {"PASS", "FAIL", "INCOMPLETE", "NOT APPLICABLE"}:
+        raise ValueError("Unknown card criterion status")
+    if not isinstance(d["weighted_inputs_valid"], bool) or not isinstance(d["claim_evidence_present"], bool):
+        raise ValueError("Evidence flags must be booleans")
+    valid = d["weighted_inputs_valid"]
+    supplied = d["supplied_likelihood"]
+    if valid and supplied not in {"Low", "Medium", "High", "Near-certain"}:
+        raise ValueError("A complete handoff requires an explicit supplied band")
+    if not valid and supplied is not None:
+        raise ValueError("Missing weighted inputs cannot retain a computed band")
+    constraint = d["release_constraint"]
+    if constraint not in {"none", "confirmed_legal_failure", "adopted_budget_cap", "adopted_release_condition"}:
+        raise ValueError("Unknown separate release constraint")
+    return {"criterion_result": d["criterion_result"],
+            "calculation_status": "COMPLETE" if valid else "INCOMPLETE",
+            "supplied_likelihood": supplied,
+            "claim_status": "SUPPORTED_BY_DECLARED_EVIDENCE" if d["claim_evidence_present"] else "NOT_SUBSTANTIATED",
+            "release_constraint": constraint,
+            "release_status": "BLOCKED_BY_SEPARATE_CONSTRAINT" if constraint != "none" else
+                              "CALCULATION_INCOMPLETE" if not valid else "BUSINESS_DECISION_REQUIRED",
+            "automatic_tier_override": False}
+
 def close(a, b):
     if not math.isclose(a, b, rel_tol=1e-10, abs_tol=1e-12):
         raise AssertionError(f"Expected {b!r}, observed {a!r}")
@@ -53,11 +77,15 @@ def reproduce(f):
         exceeds = upper > d["claimed_fpr_ceiling"]
         if not d["measurement_valid"]:
             actual = {"wilson_95_upper": upper, "criterion_result": "INCOMPLETE",
-                      "confidence_conclusion": "invalid_measurement", "pgf_module_mapping": "G-M5_INCOMPLETE"}
+                      "confidence_conclusion": "invalid_measurement", "governance_observation": "invalid_measurement",
+                      "automatic_tier_override": False, "computed_pgf_tier": "NOT_CALCULATED"}
         else:
             actual = {"wilson_95_upper": upper, "criterion_result": "FAIL" if exceeds else "PASS",
                       "confidence_conclusion": "ceiling_not_established" if exceeds else "ceiling_established",
-                      "pgf_module_mapping": "G-M1_FAIL" if exceeds else "MEASUREMENT_CRITERION_PASS"}
+                      "governance_observation": "confidence_ceiling_not_established" if exceeds else "confidence_ceiling_established",
+                      "automatic_tier_override": False, "computed_pgf_tier": "NOT_CALCULATED"}
+    elif fid.startswith("HANDOFF-"):
+        actual = governance_handoff(d)
     elif fid == "SYN-SUBGROUP-01":
         sub = d["exposed_subgroup"]/d["subgroup"]
         actual = {"aggregate_rate": d["exposed"]/d["population"], "subgroup_rate": sub,
@@ -108,19 +136,32 @@ def main():
     assert criterion_status(False,None) == "INCOMPLETE"
     assert criterion_status(True,False) == "INCOMPLETE"
     assert criterion_status(True,True,False) == "FAIL"
-    # Valid confidence-bound failure and missing evidence have distinct PGF mappings.
+    # Valid confidence-criterion failure and invalid evidence remain distinct observations.
     power = next(f for f in data["fixtures"] if f["fixture_id"] == "MIA-POWER-01")
-    assert reproduce(power)["observations"]["pgf_module_mapping"] == "G-M1_FAIL"
+    assert reproduce(power)["observations"]["governance_observation"] == "confidence_ceiling_not_established"
     invalid = json.loads(json.dumps(power))
     invalid["data"]["measurement_valid"] = False
     invalid["expected_observations"] = {"wilson_95_upper": power["expected_observations"]["wilson_95_upper"],
                                         "criterion_result": "INCOMPLETE", "confidence_conclusion": "invalid_measurement",
-                                        "pgf_module_mapping": "G-M5_INCOMPLETE"}
-    assert reproduce(invalid)["observations"]["pgf_module_mapping"] == "G-M5_INCOMPLETE"
+                                        "governance_observation": "invalid_measurement",
+                                        "automatic_tier_override": False, "computed_pgf_tier": "NOT_CALCULATED"}
+    assert reproduce(invalid)["observations"]["governance_observation"] == "invalid_measurement"
+    assert reproduce(invalid)["observations"]["criterion_result"] == "INCOMPLETE"
+    bad_inputs = [
+        {"criterion_result": "PASS", "weighted_inputs_valid": False, "supplied_likelihood": "Low", "release_constraint": "none", "claim_evidence_present": False},
+        {"criterion_result": "FAIL", "weighted_inputs_valid": True, "supplied_likelihood": "Safe", "release_constraint": "none", "claim_evidence_present": True},
+        {"criterion_result": "PASS", "weighted_inputs_valid": True, "supplied_likelihood": "Medium", "release_constraint": "unknown", "claim_evidence_present": True},
+    ]
+    for bad in bad_inputs:
+        try: governance_handoff(bad)
+        except ValueError: pass
+        else: raise AssertionError("Invalid governance handoff was silently accepted")
     assert sorted(["time","amount"]) == sorted(["amount","time"])
     print(json.dumps({"companion_version": data["companion_version"],
                       "companion_status": data["companion_status"],
                       "review_date": data["review_date"],
+                      "baseline_release": data["baseline_release"], "baseline_tag": data["baseline_tag"],
+                      "negative_controls": "empty sample, missing evidence, failed detector, invalid measurement and three invalid handoffs rejected",
                       "scope":"invented teaching examples only; no product/privacy guarantee",
                       "fixture_sha256":hashlib.sha256(raw).hexdigest(),
                       "fixtures_checked":len(observations), "observations":observations},indent=2))

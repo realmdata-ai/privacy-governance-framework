@@ -1,6 +1,6 @@
 {
   "package_status": "teaching_reconstruction",
-  "baseline_release": "PGF 1.0.0-rc.1",
+  "baseline_release": "PGF 1.0.0",
   "case_id": "ADP-CS-TRAIN-01",
   "source_case": "DPIA-CS-TRAIN-01 / Example 2.1-R",
   "original_decision_date": "2026-03-25",
@@ -57,9 +57,9 @@
     "expected_total_delta": "0.000011002",
     "expected_delta_excess": "0.000001002",
     "budget_preflight": "FAIL",
-    "full_module": "not_assessed",
     "new_charge": "0",
-    "also_violates_current_project_delta_configuration": true
+    "also_violates_current_project_delta_configuration": true,
+    "calculation_status": "INCOMPLETE"
   },
   "evidence_ids": [
     "ADP-01",
@@ -71,50 +71,90 @@
     "ADP-07",
     "ADP-08"
   ],
-  "gates": [
+  "companion_version": "0.2.0-preview.1",
+  "preview_date": "2026-10-29",
+  "metric_observations": [
     {
       "name": "MIA accuracy",
       "upper": "0.54",
       "threshold": "0.60",
-      "comparison": "<"
+      "comparison": "<",
+      "role": "weighted",
+      "criterion_result": "PASS"
     },
     {
       "name": "MIA AUC",
       "upper": "0.56",
       "threshold": "0.60",
-      "comparison": "<"
+      "comparison": "<",
+      "role": "weighted",
+      "criterion_result": "PASS"
     },
     {
       "name": "TPR at FPR 0.1%",
       "upper": "0.0037",
       "threshold": "0.01",
-      "comparison": "<="
+      "comparison": "<=",
+      "role": "review_only",
+      "criterion_result": "PASS"
     },
     {
       "name": "DCR P5",
       "lower": "0.20",
       "threshold": "0.15",
-      "comparison": ">="
+      "comparison": ">=",
+      "role": "weighted",
+      "criterion_result": "PASS"
     },
     {
       "name": "NNDR median",
       "lower": "0.80",
       "threshold": "0.70",
-      "comparison": ">"
+      "comparison": ">",
+      "role": "weighted",
+      "criterion_result": "PASS"
     },
     {
       "name": "linkability advantage",
       "upper": "0.025",
       "threshold": "0.05",
-      "comparison": "<="
+      "comparison": "<=",
+      "role": "review_only",
+      "criterion_result": "PASS"
     },
     {
       "name": "attribute-inference advantage",
       "upper": "0.035",
       "threshold": "0.05",
-      "comparison": "<="
+      "comparison": "<=",
+      "role": "review_only",
+      "criterion_result": "PASS"
     }
   ],
-  "companion_version": "0.1.0-preview.1",
-  "preview_date": "2026-10-27"
+  "initial_design": {
+    "source_example": "2.1",
+    "metrics": {
+      "accuracy": 0.54,
+      "auc": 0.57,
+      "dcr_p5": 0.19,
+      "nndr_median": 0.78
+    },
+    "epsilon": "2.1",
+    "delta": "0.000008",
+    "expected_indicator": 0.6557017543859649,
+    "expected_likelihood": "Medium",
+    "expected_risk": "Medium",
+    "decision": "REDESIGN",
+    "configuration_difference": true,
+    "observed_output_charged": true
+  },
+  "business_decision": {
+    "purpose_and_benefit": "Calibrate the credit model without source-record access by Data Science.",
+    "individual_risk": "Medium",
+    "organisational_consequences": "Moderate; no offset against individual risk.",
+    "alternatives": "First design, redesign, restricted access or no release; source records redesign.",
+    "advice_and_response": "DPO conditions followed; no extra historical dissent invented.",
+    "conditions_and_review": "Per-run epsilon <= 2.0; ledger caps; access boundary; next calibration or 25 March 2027.",
+    "cost_limitations": "Monetary and operational cost amounts not supplied; no new cost-benefit evidence claimed."
+  }
 }

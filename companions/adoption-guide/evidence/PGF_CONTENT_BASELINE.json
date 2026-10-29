@@ -1,135 +1,135 @@
 {
-  "baseline_release": "PGF 1.0.0-rc.1",
-  "content_commit": "02ff78357f3b24f607651f0bf9f01c6c279b587b",
+  "baseline_release": "PGF 1.0.0",
+  "content_commit": "8ac8026aec3620f84c3046f2e13b2d747d321f57",
   "scope": "32 frozen numbered content files; support metadata is not covered",
   "files": [
     {
       "path": "PGF/00_Framework_Overview_EN.md",
-      "sha256": "12774b035eb7c37fd28fe4144ffcbcc6a1b6b028c03e6b1296f80f4b3d290846"
+      "sha256": "4d217993ec8edf075286a0bfd81150bc76352e093d6adc2c1aa627f3e8e569ca"
     },
     {
       "path": "PGF/01_Privacy_Policy_EN.md",
-      "sha256": "9a0d9417531e643fdf922dfda537929dd7abca72121ea24fd3f50a2053d485f2"
+      "sha256": "0257acb0eb92d613f85064c8a121b200f5fb79e4d5e5ee953d934689a8f500f9"
     },
     {
       "path": "PGF/02_Privacy_Governance_Charter_EN.md",
-      "sha256": "bf16546df691e642a8d968093bed2f1f27dff784cb3932bd73f4ce19a5e95b62"
+      "sha256": "741e86cd98acbb4feb26958733238327e82c2d3a841c505ffb8832498a5d8998"
     },
     {
       "path": "PGF/03_Privacy_Interface_Integration_Model_EN.md",
-      "sha256": "2cf4d02bb163312d917d09c72dc9d8855d09c61f23b3b76ad0cf587097ebc8f8"
+      "sha256": "db6b6a2047c925aa64ca9d4cdee7446c85d7b9da1432215360d2ad3bef31ef73"
     },
     {
       "path": "PGF/04_Privacy_Organisational_Design_Strategy_EN.md",
-      "sha256": "cdbf41e9bc5e4c9c1a1bd8751be4bc04f7f80adcb3ba028949e3d33dbcec75ca"
+      "sha256": "e78033e0440b8f9f2121bd5b6b4ab94acace380ea22491388cb61a69089c2422"
     },
     {
       "path": "PGF/05_Privacy_RACI_Matrix_EN.md",
-      "sha256": "fb18359909737b6c1c9af2fba25b236c25378d668b487f8c9f3e158521025f91"
+      "sha256": "81f2ad56b7a3659699814e025826884389a1122f36aebbde073a1951c89be9d2"
     },
     {
       "path": "PGF/06_Privacy_Role_Competency_Framework_EN.md",
-      "sha256": "045b512a89829e6cc5509d762bd843802883aedf1eb745c34ff2760067da9612"
+      "sha256": "6967798ab2be31701f2f06264ec0c503cd85ce00aa589a9d37d8cf5268dfe69f"
     },
     {
       "path": "PGF/07_Regulatory_Applicability_Matrix_EN.md",
-      "sha256": "d3c73be0cbce01617b2dcbb65ab5c81606fdc394debade66954c7f9706852504"
+      "sha256": "35521b7f92a7a8badb981e04f6a12d0c03f064736ac553744921b3b2312535b7"
     },
     {
       "path": "PGF/08_Privacy_Risk_Appetite_Statement_EN.md",
-      "sha256": "a5bfae04fb0c3a86a1e593cca144d877f1187d982e8a40e633538bd12a15ce3c"
+      "sha256": "168a0f18908e60771e391969b22f7a017eb1378109b4661c5faec318d4659bbe"
     },
     {
       "path": "PGF/09_Privacy_Automation_and_Tooling_Strategy_EN.md",
-      "sha256": "23e5be7bf64f73798b00da0798a1709d58d4c19fdc012614beb25e6573fae8e3"
+      "sha256": "8246734601852e19e74b7c18be470b9a22a53ab1e93f482939fc2c80368eb307"
     },
     {
       "path": "PGF/10_Data_Classification_Policy_EN.md",
-      "sha256": "9e6f7d154ca5223b858f3d425e337d8c85fd2f4d39a26fcc12bc10896beca963"
+      "sha256": "fc49557fde954eaf64aa8cf12d8ea78d6dfa001fc54781b30e540b1b0a6a317e"
     },
     {
       "path": "PGF/11_Data_Retention_and_Disposal_Policy_EN.md",
-      "sha256": "bab959a239849ef098179d1f145f8d90f0f4a54ccb656081615f83a5b7ab8e2b"
+      "sha256": "85ec0958cf43bec6207d7def2087cec5b4b490f656e926061104082adbb368a5"
     },
     {
       "path": "PGF/12_Cross_Border_Data_Transfer_Policy_EN.md",
-      "sha256": "43a5bca731287fc3fe1b1b849a600a58a993e5e2b747011050fb541a6103f165"
+      "sha256": "19f427973aa542bce2122fb7f5a099cfdb0c16450eba9b1ad2b46dfbc15aaf4f"
     },
     {
       "path": "PGF/13_Consent_Management_Policy_EN.md",
-      "sha256": "2f129f0deff842b014b189f746b693110a98fc850393413460dc3376d16f90a5"
+      "sha256": "84642a1349eb2138fdea4df463c8bd99662a142265ebea8e83dbad64d22709b7"
     },
     {
       "path": "PGF/14_Data_Breach_Response_Policy_EN.md",
-      "sha256": "291b44b3e6a24d3da37da8fcf689a7b9e7d8e0100bbd256f03ee5e34f6cc3ef7"
+      "sha256": "3230e0892692cdc16350b84fdafe5ddd1d2509340bc52f3950fcaf42d4a22b79"
     },
     {
       "path": "PGF/15_Data_Subject_Rights_Policy_EN.md",
-      "sha256": "99e5765d63e55a6832d5dba5fdb729165d36de03eebe74d1a36daf7b17e7a233"
+      "sha256": "03d24c5538ab65f591c8ce97679e58ae53182e621de0a18d4a8dc7549c185e86"
     },
     {
       "path": "PGF/16_Privacy_by_Design_and_by_Default_Policy_EN.md",
-      "sha256": "677971a086c64d9229828a1b89fd67f708cd286303a43d798ff533e78703cb5f"
+      "sha256": "acd1c72d28c154583461645bcbd4e84d475016c169f83100de46138cf7a71048"
     },
     {
       "path": "PGF/17_Vendor_and_Third_Party_Privacy_Risk_Policy_EN.md",
-      "sha256": "34b41a929a2bd5d6d93632474a7f7f5d77b7fa8e8616a8677d7b574b46c9743e"
+      "sha256": "428ee062369b4461cd4a61c92a43f2a801d2a03399803dcce7c9fb69e0fd5cc4"
     },
     {
       "path": "PGF/18_Privacy_Risk_Assessment_Methodology_EN.md",
-      "sha256": "e1e405a582c666735e67477b5cfbe9a0cd1aab711bb40c2e12f878a39ea9568e"
+      "sha256": "0f7373056ba8ae4a10ce42b2cd8d39fc3dc9353fe0ee123d15ca4aebeb26c383"
     },
     {
       "path": "PGF/19_DPIA_Methodology_and_Template_EN.md",
-      "sha256": "1be4e7e8ddf5ed793281b3ed091314764ef1d90212ab2fb765ec5b1a61a47b6c"
+      "sha256": "0c00ce29a6b11715021a7614d71f998dc64ad44c705f925f0a48a69dc1c95540"
     },
     {
       "path": "PGF/20_Transfer_Impact_Assessment_Methodology_EN.md",
-      "sha256": "1179d04be7008a773230214df59d99f4a512b78a986ebd3e3d79a03f0202329d"
+      "sha256": "dd3db63e0bad7c93b97856d6fb6f6f5660ed87ca538dd1c07f13f5d63b670758"
     },
     {
       "path": "PGF/21_Record_of_Processing_Activities_EN.md",
-      "sha256": "fe69c25cba7f934d3797d03762a5c7cb704e26b323fefaf2fce103ff4c6531a9"
+      "sha256": "46fe8306cef0403ef707d58b21adb6a1694e446e0c3956028a254dc45e1b104e"
     },
     {
       "path": "PGF/22_Privacy_Risk_Register_EN.md",
-      "sha256": "33dbcf4eb65b89d5e39eb529f269843113f54dc40588b4a69c1ebc43244a34f9"
+      "sha256": "7c6e061c0626b10c244ef217e32a4ecc807340ef2931dc1236394f73a49b78e6"
     },
     {
       "path": "PGF/23_Data_Inventory_and_Data_Flow_Maps_EN.md",
-      "sha256": "6a46bf84cbc364bec8f626a5da783bfeb361e8beb8634c5338377cb7508d47bd"
+      "sha256": "066632272275c6377803ee56b47edee435af71585f6a3bc21b50a16f8c264340"
     },
     {
       "path": "PGF/24_Privacy_Governance_Process_Map_EN.md",
-      "sha256": "3cd0814261e6f01f8f469a93f15e68ff13bb43784d8c27b539fa17ee79b1f8a8"
+      "sha256": "9f00daaeedca1603ef7e11df66e5ee6b4fa777da4e87195824934524de153350"
     },
     {
       "path": "PGF/25_Process_Owner_Register_EN.md",
-      "sha256": "66fbae1dcb5010f3994a4eac111391d47153320ca71438e8f37153993f56f7f5"
+      "sha256": "c17173c66772f1302be69f754b28f91dfc73dae1274c385b0332189b1444941a"
     },
     {
       "path": "PGF/26_Operational_Role_and_Staffing_Model_EN.md",
-      "sha256": "78e0c8e2e3f6b37ed820e5c464e2460cb0c6445409da86c727012a24fbd72702"
+      "sha256": "c76ea223a29b6b45fb8ca0e991e42ab23e3a3e991cdf8eb701e23294548f10b8"
     },
     {
       "path": "PGF/27_Privacy_Audit_and_Monitoring_Programme_EN.md",
-      "sha256": "f02e85d665c456274fe786ed8b2b03c14e84dffedc211f220709f0fa4827bedd"
+      "sha256": "56a1b75bcd9edaf1d56e4d7d12580312a657853cee50f405b03a2624d6eb651e"
     },
     {
       "path": "PGF/28_Privacy_Metrics_Dashboard_EN.md",
-      "sha256": "7d28fc3dd5ca327ca9bbd4dc25dd6826e178e147bc9e94e26031ab714d20190e"
+      "sha256": "c32aa7119b5f3a002d69ae40cb55a1d3f01a08e6df0418bc65acce664bc9b4d4"
     },
     {
       "path": "PGF/29_Policy_Review_Cycle_EN.md",
-      "sha256": "4892c26cb64c754c8d5d0f648f6d78d12885b5d89500e22ca46349599cf5b7da"
+      "sha256": "c6dc782ca3943db27ffd542d6f1d15c3c1821e2abaf9a81c34a15cbe4874bfea"
     },
     {
       "path": "PGF/30_Privacy_Awareness_and_Training_Programme_EN.md",
-      "sha256": "6c4a84d77355aff46bc0180a48d283083212e6a524e1137a4334f15fa0920d08"
+      "sha256": "972f1c362346eba0a4f4ef65fa78da21838e7d85d0c6045a33d6bf6995a49fcb"
     },
     {
       "path": "PGF/31_Governance_Reporting_Template_EN.md",
-      "sha256": "cafde39af2b6705e3a656466746a03b5c9936c7f2d6c9a208831d34d9e6a8778"
+      "sha256": "06370fef3b2d2dc2f30c34eb915aad4f20f9fce945736d7321a3d86919ee1ecc"
     }
   ]
 }

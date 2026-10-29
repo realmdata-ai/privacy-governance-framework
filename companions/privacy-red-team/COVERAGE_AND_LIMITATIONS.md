@@ -1,6 +1,6 @@
 # Coverage and limitations
 
-Preview 0.1.0-preview.1, reviewed 27 October 2026. This record separates a written procedure from a reproduced observation and from product implementation evidence.
+Preview 0.2.0-preview.1, reviewed 29 October 2026. This record separates a written procedure from a reproduced observation and from product implementation evidence.
 
 | Card | Written procedure | Reproduced in this package | Outside the current implementation |
 |---|---|---|---|
@@ -22,16 +22,16 @@ Preview 0.1.0-preview.1, reviewed 27 October 2026. This record separates a writt
 - Every reproduced example is wholly artificial. Matching its expected observation verifies a teaching calculation, not a PET or a real release.
 - No private attack suite, application or archived client assessment was executed in this pass. Existing repository statements about attack counts, maturity or measured performance are not independently confirmed here.
 - A fixture with a PASS status states that its explicit assertion is met. It does not establish a general defence, a formal privacy guarantee or lawful anonymity. Individual FAIL observations are preserved even if campaign coverage is incomplete.
-- Card statuses describe measurement/evidence. When supplied to PGF, preserve its routing: a valid mandatory result with an unfavourable confidence bound beyond its configured threshold is G-M1 FAIL (release blocked); absent, invalid or unestimated mandatory evidence is G-M5 INCOMPLETE. In MIA-POWER-01 the confidence conclusion is "ceiling not established", while the module mapping is G-M1 FAIL. This companion does not relax a PGF failure condition or replace its legal gates.
+- Card statuses describe test criteria and evidence, separately from the PGF calculation and business decision. In MIA-POWER-01 the valid Wilson interval does not establish the declared ceiling, so the card criterion is FAIL. There is no automatic tier override. A missing selected weighted input prevents calculation; missing diagnostics are coverage limitations; missing evidence prevents the corresponding claim. An adopted release condition can block release separately. Six additional artificial handoff fixtures exercise these distinctions; they do not calculate a real risk or grant permission. The [compatibility note](PGF_1_0_0_COMPATIBILITY.md) explicitly records residual Doc 08 / Doc 18 inconsistencies.
 - The Wilson calculation assumes a simple binomial experiment and independent trials; it is not an AUC interval or a general clustered-data method. Sampling design, repetitions, dependence and multiplicity need a real assessment design.
 - The examples do not specify a universal unacceptable-success threshold. Local thresholds require a rationale tied to the protected population, harm, channel and adversary.
 - The playbook has received an internal first review; it has not had independent methodological peer review. The primary-source check is not an exhaustive state-of-the-art survey.
 - This preview does not define a calibrated probability-of-harm model, a scalar cross-attack risk score or a mathematical upper bound for unknown attacks. Those are distinct modelling questions.
 
-## Before public release or deployment
+## Before a real deployment or further release
 
-Confirm authorship/rights and distribution terms; review anonymisation and indirect identifiability of any adapted real case; review the method against the risk-model companion; independently validate attack implementations selected for real use; review the source references and any legal interpretation. A public methodology may describe an attack family without distributing internal operational code or findings. Those review tasks do not create new requirements for the already accepted PGF v1 release.
+Maintain attribution and the repository licence scope; confirm rights and terms for any newly introduced material; review anonymisation and indirect identifiability of any adapted real case; review the method against the risk-model companion; independently validate attack implementations selected for real use; review the source references and any legal interpretation. A public methodology may describe an attack family without distributing internal operational code or findings. Those review tasks do not create new requirements for the already accepted PGF v1 release.
 
 ## Verification performed on this preview
 
-The author ran the standard-library verifier against 13 invented fixtures and checked local link targets, Python syntax and neutralisation terms. Detailed validation evidence and protected-source mapping are retained outside the companion. No PGF v1 file was edited.
+The author ran the standard-library verifier against 19 invented fixtures (13 attack/evaluation examples and six governance-handoff controls) and checked local link targets, Python syntax and neutralisation terms. Detailed validation evidence and protected-source mapping are retained outside the companion. No PGF v1 file was edited.

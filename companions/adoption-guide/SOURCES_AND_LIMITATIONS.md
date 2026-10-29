@@ -1,6 +1,6 @@
 # Sources and limitations
 
-Preview 0.1.0-preview.1 · 27 October 2026 · Reference baseline: accepted English PGF 1.0.0-rc.1, content commit `02ff78357f3b24f607651f0bf9f01c6c279b587b`; later metadata freeze does not change the 32 content files used here. The package includes a relative-path SHA-256 baseline for those 32 files and a separately attributed matrix snapshot. This companion is separately versioned and does not amend PGF v1.
+Preview 0.2.0-preview.1 · 29 October 2026 · Reference baseline: published PGF 1.0.0, tag `v1.0.0`, content commit `8ac8026aec3620f84c3046f2e13b2d747d321f57`. The [compatibility note](PGF_1_0_0_COMPATIBILITY.md) records the Doc 08 / Doc 18 source inconsistency and this companion's explicit calculation interpretation. The package includes a relative-path SHA-256 baseline for those 32 files and a separately attributed matrix snapshot. This companion is separately versioned and does not amend PGF v1.
 
 ## 1. PGF source map
 
@@ -34,7 +34,7 @@ No claim is made that these organisations endorse this companion or PGF.
 
 The companion reproduces arithmetic from given illustrative inputs: metric normalisation/weighting; severity and likelihood sums; matrix results; track (b); lifetime and proposed-budget calculations. It also checks record links and IDs and verifies that the accepted PGF content hashes are unchanged. The included verifier and its [report](reports/verification_report.json) record the checks performed. An absent adjacent PGF source is explicitly not checked unless required by the command option.
 
-It has not reproduced attack experiments, raw-sample confidence intervals, generator training, DP-SGD implementation, a Rényi accountant, secure infrastructure, legal conclusions or actual decisions. None of those missing activities is filled by the arithmetic check. The source's intervals and measurements remain clearly labelled illustrative assumptions. The activity-level inherent Medium is inherited from the source DPIA; this companion derives S2's inherent calculation but does not invent a separate pre-PET S1 likelihood. It keeps the first generator's as-proposed failure distinct from the accepted configuration's inherent record. The narrow DP membership bound in the source is not used as a probability of re-identification here.
+It has not reproduced attack experiments, raw-sample confidence intervals, generator training, DP-SGD implementation, a Rényi accountant, secure infrastructure, legal conclusions or actual decisions. None of those missing activities is filled by the arithmetic check. The source's intervals and measurements remain clearly labelled illustrative assumptions. The activity-level inherent Medium is inherited from the source DPIA; this companion derives S2's inherent calculation but does not invent a separate pre-PET S1 likelihood. It keeps the first generator's computed Medium tier and separate redesign decision distinct from the accepted configuration's inherent record. The narrow DP membership bound in the source is not used as a probability of re-identification here.
 
 ## 4. Scope boundaries
 
@@ -48,4 +48,4 @@ It has not reproduced attack experiments, raw-sample confidence intervals, gener
 
 ## 5. Review and distribution status
 
-The materials are a preview for author and technical review. Placement in the existing private repository is authorised separately from public distribution. They remain outside the accepted PGF v1 release and its public export. Authorship, rights, licence, public release and future integration retain their applicable approval gates. Existing source repositories remain unchanged.
+The materials are a publicly distributed, separately versioned preview for review and feedback, outside the PGF 1.0.0 Zenodo deposit. They target the published method without changing its source. See the repository documentation licence and the compatibility note for scope; no new software licence is granted. Bibliographic references were not re-audited during this migration.

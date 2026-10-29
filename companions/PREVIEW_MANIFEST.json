@@ -1,209 +1,249 @@
 {
-  "version": "0.1.0-preview.1",
+  "version": "0.2.0-preview.1",
   "status": "preview",
-  "scope": "GitHub preview snapshot; independent of the concurrent development workspace",
-  "review_date": "2026-10-27",
-  "pgf_content_baseline": "02ff78357f3b24f607651f0bf9f01c6c279b587b",
+  "scope": "Public GitHub companion snapshots; package-specific baselines; outside PGF 1.0.0 Zenodo deposit",
+  "review_date": "2026-10-29",
   "packages": {
-    "privacy-red-team": "preview; 13 artificial fixtures checked",
-    "adoption-guide": "preview; 48 checks, including adjacent frozen PGF",
-    "risk-model": "document and research preview; full specification/reference reconciliation pending"
+    "adoption-guide": {
+      "version": "0.2.0-preview.1",
+      "baseline": "PGF 1.0.0",
+      "content_commit": "8ac8026aec3620f84c3046f2e13b2d747d321f57",
+      "checks": 74,
+      "failures": 0
+    },
+    "privacy-red-team": {
+      "version": "0.2.0-preview.1",
+      "baseline": "PGF 1.0.0",
+      "content_commit": "8ac8026aec3620f84c3046f2e13b2d747d321f57",
+      "fixtures_checked": 19
+    },
+    "risk-model": {
+      "version": "0.1.0-preview.1",
+      "baseline": "PGF 1.0.0-rc.1",
+      "content_commit": "02ff78357f3b24f607651f0bf9f01c6c279b587b",
+      "status": "unchanged research preview; full specification/reference reconciliation pending"
+    }
   },
   "files": [
     {
       "path": ".gitignore",
-      "sha256": "82ed0bc2ce26f6bcfaa39410d7668362a60b5774857970228379d27b6cedef38",
-      "bytes": 33
+      "sha256": "22bc478fc0eb97818e8c2efd9a6c8f9dce55490bdd8074a3f2b6b8653c5c12d5",
+      "bytes": 30
     },
     {
       "path": "adoption-guide/ADOPTION_CHECKLIST.md",
-      "sha256": "33aa56701bfa88bed6459b607928fbdd02891240b8f6beb0166fd183b22ed024",
-      "bytes": 4761
+      "sha256": "1905566f219b920f4c780016b40c2951653e21f92262c2d391def4f1498729d4",
+      "bytes": 5378
     },
     {
       "path": "adoption-guide/ADOPTION_GUIDE_EN.md",
-      "sha256": "e6b498e4bfde6937829bd5745e36f103048cd0161f47151eb9ba0213b53536b3",
-      "bytes": 12341
+      "sha256": "97beebe05cf6bc1d08992c709f766e7481255554ac4beaff18a9ba08eb6f3804",
+      "bytes": 13161
+    },
+    {
+      "path": "adoption-guide/CHANGES.md",
+      "sha256": "4a51bb6049e08dc833a6e8760dccddb416361fd43b2a9e60fcfbcb16f8d907b6",
+      "bytes": 1288
     },
     {
       "path": "adoption-guide/COMPLETE_WORKED_CASE_EN.md",
-      "sha256": "b2327eb1340203278060714c9c0a200b417b57c031b30aeb4bfc66f62e53ef4f",
-      "bytes": 10019
+      "sha256": "4bf616e402ac008aee06a513a93249afe6708f1c1cb4f629867a14eaaccbccb6",
+      "bytes": 11178
     },
     {
       "path": "adoption-guide/evidence/00_INDEX.md",
-      "sha256": "d8632a3aa4600fea84e27953b0071097d1a70d5e0363dab5f09d9eb8ff047c4b",
-      "bytes": 2938
+      "sha256": "75f4e690a058c555002b98826e8e202a6a207e2aa6c27f355ebc30273dcdd684",
+      "bytes": 3020
     },
     {
       "path": "adoption-guide/evidence/01_PROJECT_PASSPORT.md",
-      "sha256": "a7f4c5c4c0aa6defe9febd03b860e9628428948c3dabac74c3523d91072fe504",
-      "bytes": 2310
+      "sha256": "a395a50253dee33a287ee93f3fcf9feb9ae78a0b08fb9a48fc6aea7f0315457f",
+      "bytes": 2480
     },
     {
       "path": "adoption-guide/evidence/02_PROCESSING_RECORD.md",
-      "sha256": "22c23b986405d22273e4bd37cab2acf750501fb167f0eed2bf97f97bf18484ad",
-      "bytes": 2005
+      "sha256": "b873af395e6c71c6b0d3f477510282c553b0fb95f8abc76179c92e2af7a0cecf",
+      "bytes": 1985
     },
     {
       "path": "adoption-guide/evidence/03_TRIAGE_AND_LEGAL.md",
-      "sha256": "97a8a31ffa3ebf2c73d8789f283a99b1acfeea35a4931b6b54f1643fc7182513",
-      "bytes": 2177
+      "sha256": "e7d68b0d0f953aff13264d304fe986d1d565e23bc44185386a4e2b77c0958fde",
+      "bytes": 2475
     },
     {
       "path": "adoption-guide/evidence/04_METRICS_AND_GATES.md",
-      "sha256": "b9c59cd89b345b86c15110fdafd7e32e4ebaaf75f00dca1fe7b4b794fca13642",
-      "bytes": 2325
+      "sha256": "8bc1f324e72004b87677d7fc43de141cfc0860a21d3e7188c47b2baa13d31481",
+      "bytes": 2691
     },
     {
       "path": "adoption-guide/evidence/05_RISK_CALCULATION.md",
-      "sha256": "5e70394eb78325c1fbe9ff0849d604ccdd74c6aff9a813fa38571815e5fc4052",
-      "bytes": 1969
+      "sha256": "d0d08ddc3125a10b74c64f875f5ac14ecb75f3a91f435af36218a702bb15eac6",
+      "bytes": 2260
     },
     {
       "path": "adoption-guide/evidence/06_DECISION_AND_CHRONOLOGY.md",
-      "sha256": "80cd0a86c5ebdd52421ac28ef6ef862f6fbd7e15c3cba431a0039c6bd4686101",
-      "bytes": 2872
+      "sha256": "f3693dc8f95a59c97f5822e8b7bf69c334117c8cda4ca1c92ecca445f5530be6",
+      "bytes": 3705
     },
     {
       "path": "adoption-guide/evidence/07_LEDGER_AND_CHANGE.md",
-      "sha256": "8f1967c735b74a2e2d48277f396d6492c31e6f214ac2628347f5e29aefe7f3ff",
-      "bytes": 2871
+      "sha256": "e6365427b23af2959b683ee3284a6907e3dbbe85c4a6067617bba240243c11d7",
+      "bytes": 3041
     },
     {
       "path": "adoption-guide/evidence/08_MONITORING_AND_RETENTION.md",
-      "sha256": "259b7845d4036682d1fe14aa9428a7c43b8509a070b66a0724be74579466888d",
-      "bytes": 2944
+      "sha256": "98144a2a81732f3af399df8d3f64a5d0ee7d092bf6ad3f9270329762bcd5e6a0",
+      "bytes": 2922
     },
     {
       "path": "adoption-guide/evidence/CASE_RECORDS.json",
-      "sha256": "8f2f0d05d5602c36eacb811336c848a8fb3730f6527b5fac956402bcb5404cae",
-      "bytes": 2908
+      "sha256": "9589345cccf40bc142bdca2a62779fb7698dd7962161a8e65fdf06372067d93b",
+      "bytes": 4349
     },
     {
       "path": "adoption-guide/evidence/PGF_CONTENT_BASELINE.json",
-      "sha256": "e6d0fb3b18390598683ac792af387a722a10afd1fac364de55fd85e4ec3cf24c",
-      "bytes": 5364
+      "sha256": "565c4f8610e3149a2339fa578b23f2fe6f143b13eaf55c94767bcb6070a39c32",
+      "bytes": 5224
     },
     {
       "path": "adoption-guide/evidence/PGF_REFERENCE_MATRIX.json",
-      "sha256": "5c4d24233ca442cdffe1d94f4b830c456f03cf2095f056ba164a092b172ac7d9",
-      "bytes": 789
+      "sha256": "bebca30a91122df2c31fb12f20134b37d0b2546da6e70f28a5b6555cac6d4532",
+      "bytes": 752
     },
     {
       "path": "adoption-guide/MANIFEST.sha256",
-      "sha256": "96dfb758d029767f6eed26bfe9c6f4e62bdb7e5021f0a5149e62faa92a745f53",
-      "bytes": 2140
+      "sha256": "d029367e059c38fa3a80151df82c900df8cee95070fe3de135cd5e55858873a3",
+      "bytes": 2390
+    },
+    {
+      "path": "adoption-guide/PGF_1_0_0_COMPATIBILITY.md",
+      "sha256": "4841a4e1a2808809a2ded2f5f1c3f188a4c569f4354501070eb2c69f4698591e",
+      "bytes": 3772
     },
     {
       "path": "adoption-guide/README.md",
-      "sha256": "b53df27f68f82f1ab89e3fedb6a799e85dcb7f4e5456f3b6d06e5d33babb2bc2",
-      "bytes": 3826
+      "sha256": "edeaf6135fd37a85b4e71397e1e2385bd94157365b4cdef3e6402213b894cfae",
+      "bytes": 4379
+    },
+    {
+      "path": "adoption-guide/reports/quality_checks_preview.json",
+      "sha256": "7502d67f84bbae0c74733c4b1f1915fc375e452d6625a915f458d14e144f2f98",
+      "bytes": 2251
     },
     {
       "path": "adoption-guide/reports/verification_report.json",
-      "sha256": "9649e61d94fccd354e1db8a89e89cf1884f8c7b6e75ce2b47ac90833819c4af7",
-      "bytes": 8542
+      "sha256": "b87325dc84238b1402bb20cb244c85ad078410e17d141893477c7fa449be2df9",
+      "bytes": 12511
     },
     {
       "path": "adoption-guide/schemas/case-records.schema.json",
-      "sha256": "41328c47aee2dfaf91c33c79e0c788d3184e8b85e38d2070902373b2dbe79229",
-      "bytes": 7513
+      "sha256": "c9327d60826d7482b67d6a0e9480e325e0cf34ef0eb256ee7f14742a7553e9b9",
+      "bytes": 10715
     },
     {
       "path": "adoption-guide/schemas/pgf-content-baseline.schema.json",
-      "sha256": "31e4c55c314e68715450372c1f4d7b34d7f7a6b74f6c349d6a55fe3de9e7ede2",
-      "bytes": 1115
+      "sha256": "4fff882f8104332e3aee93fb1acad0f3a9de94864767d05c04021426f8a6b670",
+      "bytes": 1185
     },
     {
       "path": "adoption-guide/schemas/pgf-reference-matrix.schema.json",
-      "sha256": "48024e5fe10d0325c8e0c6481e1a8303aa163a6fadd93a9b4ac3759f0603cdc4",
-      "bytes": 6050
+      "sha256": "509ea15dd62f1019693e5ae3c389aec9f1029bcd02af271526fca4d592802444",
+      "bytes": 5843
     },
     {
       "path": "adoption-guide/SOURCES_AND_LIMITATIONS.md",
-      "sha256": "7baf12d95457a3cb3d5c01370a5e850d54e1f0fe9d8a4589d65a492dc108178e",
-      "bytes": 7015
+      "sha256": "dfee1d1a0c9998e514e052e046716c0c6bd6f54d5acba5c9d346b1916535dbd0",
+      "bytes": 7085
     },
     {
       "path": "adoption-guide/verify_examples.py",
-      "sha256": "e21df1161633d5cb3e952b3022f0e00f69296e9e94306a224fd2477ad516c295",
-      "bytes": 14244
+      "sha256": "edef4332702064e625da7c60c6e4021a7a545f4758648c4523e545da622b289a",
+      "bytes": 21039
     },
     {
       "path": "privacy-red-team/cards/TEST_CARDS_EN.md",
-      "sha256": "a927382e87def6e585a3228e743150e59bd668cc1e6f5c0acde26212b529c539",
-      "bytes": 20837
+      "sha256": "08707e79ae3387d6bff03961e1ba7e0d7876816a49760dd1fb2e10b50cd3116b",
+      "bytes": 21801
+    },
+    {
+      "path": "privacy-red-team/CHANGES.md",
+      "sha256": "81c2804862f2f8a41e826a41831a7446d766a578e7bdb819e2bc6de73c443abb",
+      "bytes": 1262
     },
     {
       "path": "privacy-red-team/COVERAGE_AND_LIMITATIONS.md",
-      "sha256": "4781681b65c1a895ca17dbd144d227bd7d420bd5a5e2ac53c50d05b4864146a8",
-      "bytes": 5098
+      "sha256": "81d186b3f2a9cc093beb8f80f7773de5fdb80439ac2e1979556ce7c91aa4a367",
+      "bytes": 5437
     },
     {
       "path": "privacy-red-team/fixtures/examples.json",
-      "sha256": "676c29a8dc45730a46f0fe262470b00e505cde3a9bf0034c1c22e56768f16547",
-      "bytes": 10192
+      "sha256": "87d82a609e43945b30f6b850a686681f2432741ba4a0858f927b264df0f1b4d1",
+      "bytes": 15776
     },
     {
       "path": "privacy-red-team/MANIFEST.sha256",
-      "sha256": "239e068f624989bbce97369b5c5d198b8924576526ff645e708bab83b77f1795",
-      "bytes": 981
+      "sha256": "12053721f5d01a84f21ffc27f3a524b43bf847a14940ca1a1c363c232c3b8d0b",
+      "bytes": 1140
+    },
+    {
+      "path": "privacy-red-team/PGF_1_0_0_COMPATIBILITY.md",
+      "sha256": "4841a4e1a2808809a2ded2f5f1c3f188a4c569f4354501070eb2c69f4698591e",
+      "bytes": 3772
     },
     {
       "path": "privacy-red-team/PLAYBOOK_EN.md",
-      "sha256": "580db38143cfc772e1194828efeadd7be744a8d6758db77a6a985c630a46d86d",
-      "bytes": 15927
+      "sha256": "fa5b640b8a853d7381314a0cd48c03a50b77342e95c9761764a91dac19a92679",
+      "bytes": 16903
     },
     {
       "path": "privacy-red-team/README.md",
-      "sha256": "0886d08c7bbd029e9f7ea286dcfa7b9b7f5f0c361c07b0e1660d8b5232c5a7bb",
-      "bytes": 2863
+      "sha256": "4ee1369b454aaa82ea83d580311a84a637495a7633af1845b0c494f73063fcde",
+      "bytes": 3457
     },
     {
       "path": "privacy-red-team/REFERENCES.md",
-      "sha256": "41f484964b276d823c7882a3b4999c693a95ff57275f80e50fe4a66cd36d585b",
-      "bytes": 4918
+      "sha256": "6a19d562066b2bac86ad1ef018576c6bf34b7d52662661331bfdc9e0fe39093e",
+      "bytes": 4887
     },
     {
       "path": "privacy-red-team/reports/quality_checks_preview.json",
-      "sha256": "b9876210b1170b882e2ac99326a8c32f419de0cab8494234eb7c19b0591307ce",
-      "bytes": 727
+      "sha256": "f8ce3de8e555d44243c0fe95e1b460fa8e4754b92af377c6c9515b5ceeac9e52",
+      "bytes": 1033
     },
     {
       "path": "privacy-red-team/reports/validation_preview.json",
-      "sha256": "178fc966488c186cdf842f06577b1829f300061ec80b476fb1c4495274610729",
-      "bytes": 6084
+      "sha256": "69b6e55a1054537bc65cdef6006f68e65729cf5d61793a7505e180899bf65280",
+      "bytes": 10395
     },
     {
       "path": "privacy-red-team/TEST_CARD_TEMPLATE.md",
-      "sha256": "d38b51cd7ee675ab05b6775180fe89ab1467b1b755e1b3c91e069481265fc203",
-      "bytes": 1778
+      "sha256": "5ab41675b7e84a0e1961d7b091f054e33ad34cd621ebcb7833e507a21ad304ca",
+      "bytes": 2616
     },
     {
       "path": "privacy-red-team/verify_examples.py",
-      "sha256": "4c14dd219a32906580be0bf4b6ec520d9649369e5c2eeb9f498b80d74e341210",
-      "bytes": 7871
+      "sha256": "55bbf58614b1f7f96a5d5c362f58c4211025145cb5485553314866d558cb1a38",
+      "bytes": 10836
     },
     {
       "path": "privacy-red-team/WORKED_CAMPAIGN_EN.md",
-      "sha256": "a8dfacc40871e61bc977b79ef05cdfc93300578291964cb638eba3ad87b2963d",
-      "bytes": 5969
+      "sha256": "ca2a77db62346ae9696c6d159f143ddfd89c4be9958498342a15344da48dccef",
+      "bytes": 6677
     },
     {
       "path": "README.md",
-      "sha256": "907004e7356c4e45a644d38af147225da949a837d88cf843f9beb32322d38335",
-      "bytes": 2217
+      "sha256": "d11aaf0ba69a7f48702a6972752f6af6e5eb65fbd32ede2806e18f8bd9ac51ff",
+      "bytes": 3056
     },
     {
       "path": "risk-model/docs/01_Introduction_EN.md",
-      "sha256": "38a117c24ef7a7e1f966a1b46920c9342342a5b5f78afa84c82fe5f8de899386",
-      "bytes": 22793
+      "sha256": "10e8d63ae1b925cb51989ec4edf8f422fb357056a814c4fb3e610e554da416dc",
+      "bytes": 22573
     },
     {
       "path": "risk-model/docs/03_Worked_Examples_EN.md",
-      "sha256": "c53141958318bffae9b9a5afa9e5573b78cf3b25dabc87f083e4afd41dea7d03",
-      "bytes": 20415
+      "sha256": "e9bf48818c9808ef9a7005ff5aa3c14b309ea368c99d7767bbf5ce0a46c2b7e8",
+      "bytes": 20160
     },
     {
       "path": "risk-model/docs/05_Legacy_Formula_Review_EN.md",
@@ -227,13 +267,13 @@
     },
     {
       "path": "risk-model/examples/RM-EX-02/expected.json",
-      "sha256": "b7fd1b62446d4dd0ee761339f27d4be3a9d512d428739586986c4a2e9a96ce41",
-      "bytes": 5381
+      "sha256": "3f00cf487745cfa6890f3a64a48256047276831e4c9ea768000fb7cd2fe2084b",
+      "bytes": 5293
     },
     {
       "path": "risk-model/examples/RM-EX-02/input.json",
-      "sha256": "385f47dbfaa5dc7da84d07cc3353644558d988f6672a5b64891ec5fac8dca21f",
-      "bytes": 14009
+      "sha256": "ce2470a23f08acfab541262b8b92ee7129dd48e4172d962e8419f24219a5c655",
+      "bytes": 13633
     },
     {
       "path": "risk-model/examples/RM-GRID/expected_grid.json",
@@ -267,8 +307,10 @@
     },
     {
       "path": "risk-model/SOURCE_REGISTER.json",
-      "sha256": "f163a2e852d0f2ac3f72288cf24498b11f2a5940a51bc1e2e1dec424937b7333",
-      "bytes": 49455
+      "sha256": "4835e1eab2cffa5528bceab86eafebc9affec6c01593465842000d40016f0999",
+      "bytes": 47953
     }
-  ]
+  ],
+  "version_scope": "collection index; see package-specific versions and baselines",
+  "hash_basis": "Repository file bytes (Git blobs); platform checkout newline conversion may change working-copy bytes."
 }

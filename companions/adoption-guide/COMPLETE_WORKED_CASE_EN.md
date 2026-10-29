@@ -1,6 +1,6 @@
 # Complete worked case — a synthetic calibration dataset
 
-Preview 0.1.0-preview.1 · 27 October 2026 · Reconstructed PGF teaching case
+Preview 0.2.0-preview.1 · 29 October 2026 · Reconstructed PGF teaching case
 
 ## 1. What the case establishes
 
@@ -12,7 +12,7 @@ Two times must remain distinct: the original processing decision was made on **2
 
 ## 2. Scope and data flow
 
-Customer/application records and independently controlled credit-bureau data → controlled source extract → generator training inside the privacy engineering environment → gated synthetic output → internal Data Science calibration. Source extracts, generator parameters and checkpoints stay inside the controlled environment. There are no external recipients or third-country transfers in this activity. A separate supplier or transfer would change those facts and reopen the assessment.
+Customer/application records and independently controlled credit-bureau data → controlled source extract → generator training inside the privacy engineering environment → authorised synthetic output → internal Data Science calibration. Source extracts, generator parameters and checkpoints stay inside the controlled environment. There are no external recipients or third-country transfers in this activity. A separate supplier or transfer would change those facts and reopen the assessment.
 
 The protected unit for DP is **one customer, including that customer's records**, with a contribution bound. The adjacency relation is add/remove one customer. The relevant observer for the synthetic output is a moderately resourced insider or contractor in Data Science with public or commercially available auxiliary information. Personnel with access to the source or generator are covered by a separate misuse scenario.
 
@@ -26,11 +26,11 @@ The protected unit for DP is **one customer, including that customer's records**
 | Transfer triage | No importer outside the EEA and no external recipient in scope; no TIA for this flow | [ADP-02](evidence/02_PROCESSING_RECORD.md) |
 | Project passport | Output, observers, mandatory tests, thresholds and DP statement are fixed | [ADP-01](evidence/01_PROJECT_PASSPORT.md) |
 
-These are reconstructed fictional conclusions, not legal advice for another bank. An adopter must provide its own applicable-law analysis, actual data facts and evidence. Consent is not added as a scoring mitigant, and utility is not used to offset a failed legal or PET gate.
+These are reconstructed fictional conclusions, not legal advice for another bank. An adopter must provide its own applicable-law analysis, actual data facts and evidence. Consent is not added as a scoring mitigant, and utility is not used to offset a legal failure or silently lower the individual-harm score. Adopted release conditions are checked separately.
 
-## 4. First design: stop at failed gates
+## 4. First design: Medium calculation, separate redesign decision
 
-Example 2.1 used epsilon 2.1 and configured delta 8×10^-6. It failed the project's epsilon condition of at most 2.0 and its DP-configuration requirement. The output was not released to Data Science. Because Privacy Engineers observed the run's output inside the engineering environment, its privacy loss remains charged in the lifetime ledger. Cancelling the external release does not erase that observation.
+Example 2.1 used epsilon 2.1 and delta 8×10^-6, differing from the selected project's epsilon at most 2.0 at configured delta 1×10^-9. Its four point-estimate terms give `(0.40 + 0.70 + 0.15/0.19 + (1-0.78)/0.30)/4 = 0.6557018`, rounded to **0.656 -> Medium likelihood**. Severity remains Significant, so the computed S1 risk is **Medium**. The configuration differences are recorded, the Group DPO raises the concern and the Head of Credit Decisions chooses redesign. The output is not released to Data Science; no automatic High or Near-certain override is applied. Because Privacy Engineers observed the output, epsilon 2.1 and delta 8×10^-6 remain charged in the lifetime ledger. Withholding the release does not erase that observation.
 
 ## 5. Reconfigured design: the numerical assessment
 
@@ -46,7 +46,7 @@ The four weighted terms are:
 | NNDR median | (1−0.81)/0.30 = 0.6333333 | 0.1583333 |
 | **Disclosure indicator** | Sum of weighted terms | **0.5369048 ≈ 0.537** |
 
-The indicator is a diagnostic index, not a probability of re-identification. Gates use the unfavourable uncertainty bound; weighting uses the point estimates. All mandatory gates pass on the stated illustrative inputs. With a PASS and an indicator in the source band 0.5–1.0, scenario S1 likelihood is **Medium**.
+The indicator is an ordinal index, not a probability of re-identification. The configured point estimates enter this calculation. Comparisons against the stated unfavourable interval bounds remain evidence observations; they are not a second tier calculation. The complete indicator falls in the source band 0.5–1.0, so S1 likelihood is **Medium**. DP/configuration evidence, claim support, the adopted budget and decision conditions are checked separately. See the [source-compatibility note](PGF_1_0_0_COMPATIBILITY.md) for retained gate terminology in the published tables.
 
 Severity is 3 for Restricted data + 0 special-category/offence modifier + 0 vulnerability modifier + 3 for scale + 1 for source aggregation + 0 internal reach + 0 automated-decision effect in this disclosure scenario + 0 provenance = **7 → Significant**. S1 is therefore **Medium likelihood × Significant severity = Medium**.
 
@@ -54,21 +54,21 @@ S2 concerns misuse of source data or generator parameters inside the controlled 
 
 ## 6. Consultation and the historical decision
 
-The source records Group DPO advice on 24 March 2026: a per-run epsilon condition of at most 2.0, disclosure of the model-inversion test limitation and reassessment before the next calibration. The advice was followed. Legal & Compliance separately evaluated G-36 on 24 March and recorded that the statutory test was not met, with reasons; this is not an automatic conclusion derived from the word Medium.
+The source records Group DPO advice on 24 March 2026: a per-run epsilon condition of at most 2.0, disclosure of the model-inversion test limitation and reassessment before the next calibration. The advice was followed. The business record presents the calibration benefit (avoid source-record access by Data Science), the Medium individual-risk result, separate Moderate organisational consequences, alternatives (redesign, restricted use or no release), the advice and response, conditions and review triggers. No monetary cost or additional historical dissent is invented. Legal & Compliance separately evaluated G-36 on 24 March and recorded that the statutory test was not met, with reasons; this is not an automatic conclusion derived from the word Medium.
 
 On **25 March 2026**, the Head of Credit Decisions accepted Medium with conditions under the then-effective authority. The CPO did not concur in that March decision: that position was created later. The acceptance expires on **25 March 2027 or the next calibration, whichever comes first**. Reassessment under the rules effective from 23 October 2026 requires the Processing Owner with CPO concurrence for Medium. The DPO advises rather than accepts the risk. [ADP-06](evidence/06_DECISION_AND_CHRONOLOGY.md) distinguishes the two authority periods.
 
 ## 7. Lifetime accounting at 26 October
 
-The source snapshot includes three already-observable expenditures: failed generator 2.1/8×10^-6; reconfigured generator 1.8/1×10^-9; and the federated model's all-rounds expenditure 2.6/1×10^-9. Basic composition gives **epsilon 6.5; delta 8.002×10^-6**. The illustrative lifetime caps are epsilon 10 and delta 1×10^-5. The 2026 epsilon pacing cap is7. All are respected, but delta utilisation is **80.02%**, so the adopted warning level is reached.
+The source snapshot includes three already-observable expenditures: initial generator (not released) 2.1/8×10^-6; reconfigured generator 1.8/1×10^-9; and the federated model's all-rounds expenditure 2.6/1×10^-9. Basic composition gives **epsilon 6.5; delta 8.002×10^-6**. The illustrative lifetime caps are epsilon 10 and delta 1×10^-5. The 2026 epsilon pacing cap is7. All are respected, but delta utilisation is **80.02%**, so the adopted warning level is reached.
 
 This reconstruction adds **zero** new expenditure. It reports the source ledger and does not manufacture another release. The conservative observer/overlap assumptions and exact arithmetic are in [ADP-07](evidence/07_LEDGER_AND_CHANGE.md).
 
 ## 8. A change that the old decision cannot authorise
 
-For teaching, suppose a proposed further run requests epsilon0.4 and delta3×10^-6. This proposal is **not a source event** and has not been run. The lifetime preflight would be epsilon6.9 and delta 1.1002×10^-5. Epsilon is within both illustrative caps; delta exceeds the lifetime cap by1.002×10^-6. Its configured delta also falls outside the existing project's1×10^-9 setting. This is intentionally a failure of two distinct checks, not a claim that the proposal otherwise passed its module.
+For teaching, suppose a proposed further run requests epsilon0.4 and delta3×10^-6. This proposal is **not a source event** and has not been run. The lifetime preflight would be epsilon6.9 and delta 1.1002×10^-5. Epsilon is within both illustrative caps; delta exceeds the lifetime cap by1.002×10^-6. Its configured delta also falls outside the existing project's1×10^-9 setting. These are two separate release-constraint observations. The proposal has no new measurement inputs, so no new calculated tier or complete assessment is claimed; the old Medium acceptance does not cover it.
 
-The action is to stop before execution, record the proposal as unapproved and reopen the passport, gates and decision for any changed design. New mandatory test evidence is not available, so no new PASS or acceptance is claimed. The proposal is not charged merely because it was calculated: no run or observable output occurred. If an actual failed or cancelled run had produced observable output, it would require accounting under the observation boundary. Calendar rollover would not reset either lifetime total.
+The action is to stop before execution, record the proposal as unapproved and reopen the passport, gates and decision for any changed design. New selected weighted inputs and claim evidence are not available: calculation INCOMPLETE, no computed tier, no new claim of test PASS or acceptance. The proposal is not charged merely because it was calculated: no run or observable output occurred. If an actual failed or cancelled run had produced observable output, it would require accounting under the observation boundary. Calendar rollover would not reset either lifetime total.
 
 ## 9. Monitoring and disposal
 

@@ -118,7 +118,9 @@
         "wilson_95_upper": 0.003826758485555123,
         "criterion_result": "FAIL",
         "confidence_conclusion": "ceiling_not_established",
-        "pgf_module_mapping": "G-M1_FAIL"
+        "governance_observation": "confidence_ceiling_not_established",
+        "automatic_tier_override": false,
+        "computed_pgf_tier": "NOT_CALCULATED"
       }
     },
     {
@@ -364,9 +366,155 @@
         ],
         "reassessment_required": true
       }
+    },
+    {
+      "fixture_id": "HANDOFF-DIAGNOSTIC-FAIL",
+      "attack_id": "RT-11",
+      "observer": "teaching governance reviewer",
+      "auxiliary_data": "No personal records; declared statuses only",
+      "output_scope": "Handoff semantics for a supplied Medium likelihood; no independent risk calculation",
+      "evidence_status": "constructed_teaching_fixture",
+      "data": {
+        "criterion_result": "FAIL",
+        "weighted_inputs_valid": true,
+        "supplied_likelihood": "Medium",
+        "release_constraint": "none",
+        "claim_evidence_present": true
+      },
+      "expected_observations": {
+        "criterion_result": "FAIL",
+        "calculation_status": "COMPLETE",
+        "supplied_likelihood": "Medium",
+        "claim_status": "SUPPORTED_BY_DECLARED_EVIDENCE",
+        "release_constraint": "none",
+        "release_status": "BUSINESS_DECISION_REQUIRED",
+        "automatic_tier_override": false
+      }
+    },
+    {
+      "fixture_id": "HANDOFF-DIAGNOSTIC-GAP",
+      "attack_id": "RT-11",
+      "observer": "teaching governance reviewer",
+      "auxiliary_data": "No personal records; declared statuses only",
+      "output_scope": "Handoff semantics for a supplied Medium likelihood; no independent risk calculation",
+      "evidence_status": "constructed_teaching_fixture",
+      "data": {
+        "criterion_result": "INCOMPLETE",
+        "weighted_inputs_valid": true,
+        "supplied_likelihood": "Medium",
+        "release_constraint": "none",
+        "claim_evidence_present": false
+      },
+      "expected_observations": {
+        "criterion_result": "INCOMPLETE",
+        "calculation_status": "COMPLETE",
+        "supplied_likelihood": "Medium",
+        "claim_status": "NOT_SUBSTANTIATED",
+        "release_constraint": "none",
+        "release_status": "BUSINESS_DECISION_REQUIRED",
+        "automatic_tier_override": false
+      }
+    },
+    {
+      "fixture_id": "HANDOFF-WEIGHTED-GAP",
+      "attack_id": "RT-11",
+      "observer": "teaching governance reviewer",
+      "auxiliary_data": "No personal records; declared statuses only",
+      "output_scope": "Handoff semantics for a supplied Medium likelihood; no independent risk calculation",
+      "evidence_status": "constructed_teaching_fixture",
+      "data": {
+        "criterion_result": "INCOMPLETE",
+        "weighted_inputs_valid": false,
+        "supplied_likelihood": null,
+        "release_constraint": "none",
+        "claim_evidence_present": false
+      },
+      "expected_observations": {
+        "criterion_result": "INCOMPLETE",
+        "calculation_status": "INCOMPLETE",
+        "supplied_likelihood": null,
+        "claim_status": "NOT_SUBSTANTIATED",
+        "release_constraint": "none",
+        "release_status": "CALCULATION_INCOMPLETE",
+        "automatic_tier_override": false
+      }
+    },
+    {
+      "fixture_id": "HANDOFF-LEGAL-STOP",
+      "attack_id": "RT-11",
+      "observer": "teaching governance reviewer",
+      "auxiliary_data": "No personal records; declared statuses only",
+      "output_scope": "Handoff semantics for a supplied Medium likelihood; no independent risk calculation",
+      "evidence_status": "constructed_teaching_fixture",
+      "data": {
+        "criterion_result": "PASS",
+        "weighted_inputs_valid": true,
+        "supplied_likelihood": "Medium",
+        "release_constraint": "confirmed_legal_failure",
+        "claim_evidence_present": true
+      },
+      "expected_observations": {
+        "criterion_result": "PASS",
+        "calculation_status": "COMPLETE",
+        "supplied_likelihood": "Medium",
+        "claim_status": "SUPPORTED_BY_DECLARED_EVIDENCE",
+        "release_constraint": "confirmed_legal_failure",
+        "release_status": "BLOCKED_BY_SEPARATE_CONSTRAINT",
+        "automatic_tier_override": false
+      }
+    },
+    {
+      "fixture_id": "HANDOFF-BUDGET-STOP",
+      "attack_id": "RT-11",
+      "observer": "teaching governance reviewer",
+      "auxiliary_data": "No personal records; declared statuses only",
+      "output_scope": "Handoff semantics for a supplied Medium likelihood; no independent risk calculation",
+      "evidence_status": "constructed_teaching_fixture",
+      "data": {
+        "criterion_result": "PASS",
+        "weighted_inputs_valid": true,
+        "supplied_likelihood": "Medium",
+        "release_constraint": "adopted_budget_cap",
+        "claim_evidence_present": true
+      },
+      "expected_observations": {
+        "criterion_result": "PASS",
+        "calculation_status": "COMPLETE",
+        "supplied_likelihood": "Medium",
+        "claim_status": "SUPPORTED_BY_DECLARED_EVIDENCE",
+        "release_constraint": "adopted_budget_cap",
+        "release_status": "BLOCKED_BY_SEPARATE_CONSTRAINT",
+        "automatic_tier_override": false
+      }
+    },
+    {
+      "fixture_id": "HANDOFF-CONDITION-STOP",
+      "attack_id": "RT-11",
+      "observer": "teaching governance reviewer",
+      "auxiliary_data": "No personal records; declared statuses only",
+      "output_scope": "Handoff semantics for a supplied Medium likelihood; no independent risk calculation",
+      "evidence_status": "constructed_teaching_fixture",
+      "data": {
+        "criterion_result": "PASS",
+        "weighted_inputs_valid": true,
+        "supplied_likelihood": "Medium",
+        "release_constraint": "adopted_release_condition",
+        "claim_evidence_present": true
+      },
+      "expected_observations": {
+        "criterion_result": "PASS",
+        "calculation_status": "COMPLETE",
+        "supplied_likelihood": "Medium",
+        "claim_status": "SUPPORTED_BY_DECLARED_EVIDENCE",
+        "release_constraint": "adopted_release_condition",
+        "release_status": "BLOCKED_BY_SEPARATE_CONSTRAINT",
+        "automatic_tier_override": false
+      }
     }
   ],
-  "companion_version": "0.1.0-preview.1",
+  "companion_version": "0.2.0-preview.1",
   "companion_status": "preview",
-  "review_date": "2026-10-27"
+  "review_date": "2026-10-29",
+  "baseline_release": "PGF 1.0.0",
+  "baseline_tag": "v1.0.0"
 }

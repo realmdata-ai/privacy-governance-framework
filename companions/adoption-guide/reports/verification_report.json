@@ -1,8 +1,8 @@
 {
-  "package_version": "0.1.0-preview.1",
+  "package_version": "0.2.0-preview.1",
   "status": "PASS",
   "scope": "teaching arithmetic and documentation/link checks, not PET validation",
-  "checks": 48,
+  "checks": 74,
   "failures": 0,
   "external_pgf_status": "PASS",
   "external_pgf_links_not_checked": [],
@@ -26,6 +26,12 @@
     },
     {
       "check": "input contract: PGF_REFERENCE_MATRIX.json",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "consistent published baseline and companion version",
       "passed": true,
       "scope": "companion",
       "detail": null
@@ -76,13 +82,13 @@
       "detail": null
     },
     {
-      "check": "source misuse residual sum",
+      "check": "source misuse residual sum and band",
       "passed": true,
       "scope": "companion",
       "detail": null
     },
     {
-      "check": "source misuse inherent sum",
+      "check": "source misuse inherent sum and band",
       "passed": true,
       "scope": "companion",
       "detail": null
@@ -106,81 +112,245 @@
       "detail": null
     },
     {
-      "check": "given interval gate: MIA accuracy",
+      "check": "teaching calculator agrees with independent Fraction derivation",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "first design arithmetic and direct mapping",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "first design configuration observation with separate redesign decision",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "single decision retains business and individual consequences",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "individual interval comparison: MIA accuracy",
       "passed": true,
       "scope": "companion",
       "detail": {
         "bound": "0.54",
         "operator": "<",
         "threshold": "0.60",
+        "role": "weighted",
+        "automatic_tier_override": false,
         "input_status": "illustrative interval; not recomputed from raw observations"
       }
     },
     {
-      "check": "given interval gate: MIA AUC",
+      "check": "individual interval comparison: MIA AUC",
       "passed": true,
       "scope": "companion",
       "detail": {
         "bound": "0.56",
         "operator": "<",
         "threshold": "0.60",
+        "role": "weighted",
+        "automatic_tier_override": false,
         "input_status": "illustrative interval; not recomputed from raw observations"
       }
     },
     {
-      "check": "given interval gate: TPR at FPR 0.1%",
+      "check": "individual interval comparison: TPR at FPR 0.1%",
       "passed": true,
       "scope": "companion",
       "detail": {
         "bound": "0.0037",
         "operator": "<=",
         "threshold": "0.01",
+        "role": "review_only",
+        "automatic_tier_override": false,
         "input_status": "illustrative interval; not recomputed from raw observations"
       }
     },
     {
-      "check": "given interval gate: DCR P5",
+      "check": "individual interval comparison: DCR P5",
       "passed": true,
       "scope": "companion",
       "detail": {
         "bound": "0.20",
         "operator": ">=",
         "threshold": "0.15",
+        "role": "weighted",
+        "automatic_tier_override": false,
         "input_status": "illustrative interval; not recomputed from raw observations"
       }
     },
     {
-      "check": "given interval gate: NNDR median",
+      "check": "individual interval comparison: NNDR median",
       "passed": true,
       "scope": "companion",
       "detail": {
         "bound": "0.80",
         "operator": ">",
         "threshold": "0.70",
+        "role": "weighted",
+        "automatic_tier_override": false,
         "input_status": "illustrative interval; not recomputed from raw observations"
       }
     },
     {
-      "check": "given interval gate: linkability advantage",
+      "check": "individual interval comparison: linkability advantage",
       "passed": true,
       "scope": "companion",
       "detail": {
         "bound": "0.025",
         "operator": "<=",
         "threshold": "0.05",
+        "role": "review_only",
+        "automatic_tier_override": false,
         "input_status": "illustrative interval; not recomputed from raw observations"
       }
     },
     {
-      "check": "given interval gate: attribute-inference advantage",
+      "check": "individual interval comparison: attribute-inference advantage",
       "passed": true,
       "scope": "companion",
       "detail": {
         "bound": "0.035",
         "operator": "<=",
         "threshold": "0.05",
+        "role": "review_only",
+        "automatic_tier_override": false,
         "input_status": "illustrative interval; not recomputed from raw observations"
       }
+    },
+    {
+      "check": "four weighted and three review-only observations",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "integrated band boundary 0",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "integrated band boundary 0.4999",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "integrated band boundary 0.5",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "integrated band boundary 1",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "integrated band boundary 1.0001",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "integrated band boundary 2",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "integrated band boundary 2.0001",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "diagnostic FAIL and dissent do not replace calculated band",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "diagnostic gap preserves calculation but does not substantiate a claim",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "missing weighted input has no computed tier",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "separate constraint: confirmed_legal_failure",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "separate constraint: adopted_budget_cap",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "separate constraint: adopted_release_condition",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "threat sum 6 maps to Medium without weak-control floor",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "reject missing selected input",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "reject undefined distance",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "reject invalid AUC",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "reject non-finite input",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "reject silent weight redistribution",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
+    },
+    {
+      "check": "reject negative weight",
+      "passed": true,
+      "scope": "companion",
+      "detail": null
     },
     {
       "check": "lifetime epsilon sum",
@@ -312,7 +482,7 @@
       "check": "local Markdown links inspected",
       "passed": true,
       "scope": "companion",
-      "detail": 49
+      "detail": 59
     },
     {
       "check": "required local Markdown link targets exist",
