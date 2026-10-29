@@ -16,4 +16,6 @@ The method is unchanged from the [rc.2 content freeze](https://github.com/realmd
 
 Published 29 October 2026: [Zenodo record](https://zenodo.org/records/23764105), version DOI [10.5281/zenodo.23764105](https://doi.org/10.5281/zenodo.23764105). Download the [32-page master PDF](https://zenodo.org/records/23764105/files/PGF_Framework_Overview_1.0.0.pdf?download=1) and [complete editable Markdown supplement](https://zenodo.org/records/23764105/files/PGF_1.0.0_Editable_Framework.zip?download=1) from the same record. The edition was prepared on 28 October 2026; the public release date is 29 October 2026. Advanced companions remain separately versioned rc.1 previews and are not part of this deposit. No raw legacy/internal material or private correspondence is included.
 
+Also available on [ResearchGate](https://www.researchgate.net/publication/417125470_Privacy_Governance_Framework_PGF_Framework_Overview_and_Component_Guide) as a Technical Report with the public master PDF and the same Zenodo version DOI.
+
 Build/validation utilities are outside the documentation-licence scope and the Zenodo supplement. PGF is not a certification, a law, legal advice or a compliance guarantee. No external peer review or empirical calibration is claimed.
